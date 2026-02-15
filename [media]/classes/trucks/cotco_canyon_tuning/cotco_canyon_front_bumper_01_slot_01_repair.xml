@@ -1,0 +1,31 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_front_bumper_01_slot_01_repair">	
+		<Body Collisions="None" Mass="20" ModelFrame="BoneFrontBumper01Slot01_cdt">
+			<Constraint Type="Fixed"/>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="cotco_canyon_front_bumper_01_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_front_bumper_01" />
+		<InstallSocket Type="CotcoCanyonFrontBumper01Slot" />
+	</GameData>
+</TruckAddon>

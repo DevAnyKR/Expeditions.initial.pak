@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="haukka_ns420_invslot_00_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_invslot_00_wheel" AcceptVisualDamage="false">
+		<Body Collisions="None" Mass="70" ModelFrame="BoneInvSlot00SpareWheel_cdt">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-4.5 "
+				MaxLimit="0"
+			>
+				<Motor Damping="150" Spring="1000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l_supplies"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_invslot_00" />
+		<InstallSocket Type="HaukkaNS420InvSlotWheel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Mass="10"/>
+	</PhysicsModel>
+	<HeadLight Color="(255; 255; 128) x 50" Pos="(0; 0; 0)" Dir="(1; 1; 0)" AttenEnd="50.0"/>
+	<Landmark Mesh="landmarks/fob_delivery_drone_lmk"/>
+</ModelBrand>

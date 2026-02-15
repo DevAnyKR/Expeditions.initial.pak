@@ -1,0 +1,16 @@
+<_parent File="khan_lo4f_invslot_01_slot_01_fuel" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_invslot_01_slot_02_fuel">
+		<Body ModelFrame="BoneInvSlot01Slot02Fuel_cdt">
+			<Constraint>
+				<Motor Damping="600" Spring="2500" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FInvSlot01Slot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="khan_lo4f_invslot_01_slot_02_fuel" />
+	</FuelHide>
+</TruckAddon>

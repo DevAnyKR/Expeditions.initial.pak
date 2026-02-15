@@ -1,0 +1,594 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="25"
+			SteeringCastor="6"
+			SteeringJointOffset="0.325"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+			CamberAnglePhysics="0"
+			CamberAngleRender="3"
+		/>
+	</Wheel>
+	<Body>
+		<Sunshield Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.8" Spring="15" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="75.0"
+		ElectricChargeCapacity="8"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="0.9"
+		EngineStartDelay="1.7"
+		ExhaustStartTime="1.6"
+		FuelCapacity="50"
+		Responsiveness="0.375"
+		SteerSpeed="0.035"
+		BackSteerSpeed="0.035"
+		TruckImage="don71mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_scout2"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.139; 0.191; 0.896)" ParentFrame="BoneChassis_cdt" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.139; 0.191; 0.896)" ParentFrame="BoneChassis_cdt" />
+			<Wheel _template="RearWheel" Pos="(-1.089; 0.191; 0.896)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.089; 0.191; 0.896)" />
+		</Wheels>
+		<CompatibleWheels Offset="0.2" Scale="0.4" Type="wheels_scout2" />
+		<CompatibleWheels Offset="0.2" Scale="0.42" Type="wheels_scout_yar_871" />
+		
+		<SuspensionSocket
+			Default="don_71_suspension_crawler"
+			Type="s_don_71"
+			MaxWheelRadiusWithoutSuspension="0.45"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.573"
+		/>
+		<Steam Origin="(1; 0.78; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(1.013; 0.784; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_old" />
+			<Reverse		Sound="trucks/don_71/don_71_reverse" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/cotco_canyon/cotco_canyon_brakes_squeal" />
+			<Handbrake		Sound="trucks/don_71/don_71_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/don_71/don_71_handbrake_off" />
+			<AWD			Sound="trucks/don_71/don_71_awd" />
+			<Gear			Sound="trucks/don_71/don_71_gear_shift" />
+			<HeadLight		Sound="trucks/don_71/don_71_headlight" />
+			<Honk			Sound="trucks/don_71/don_71_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/don_71/don_71_acc" />
+			<EngineStart	Sound="trucks/don_71/don_71_start" />
+			<EngineStop		Sound="trucks/don_71/don_71_stop" />
+			<EngineIdle		Sound="trucks/don_71/don_71_idle" />
+			<EngineIdle_2d	Sound="trucks/don_71/don_71_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/don_71/don_71_low" />
+			<EngineLow_2d	Sound="trucks/don_71/don_71_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/don_71/don_71_high" />
+			<EngineHigh_2d	Sound="trucks/don_71/don_71_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/don_71/don_71_heavy" />
+			<EngineHeavy_2d	Sound="trucks/don_71/don_71_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_swing_small_rnd_set/truck_swing_small_rnd" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.15; 0.15; 0.15)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="4" />
+			<Shaker Frame="BoneGearstick" MinAngle="(0.8; 0.8; 0.8)" MaxAngle="(3; 3; 3)" MaxFrequency="3" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.4"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.1"
+			MaxX="2.2"
+		/>
+		<GearboxSocket Default="g_scout_don_71_default" Type="gearboxes_scouts_don_71, gearboxes_scouts_light_experimental" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-1; 0; 0)"
+			IsLight="true"
+			Origin="(-1.955; 0.454; 0.542)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="ru_scout_don_71_engine_0" Type="e_ru_scout_old_don, e_scout_light_experimental" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(0.00; 0.14; -0.1)"
+			Pos="(-0.091; 0.722; 0.349)"
+			SteeringWheelPos="(0.214; 1.125; 0.342)"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.987; 0.158; -0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/don_71_arrow_01" Org="(0.504; 1.109; 0.516)" OutputAngles="(-153;-207)" />
+			<Gauge Damping="0.9" Dir="(-0.985; 0.175; -0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/don_71_arrow_02" Org="(0.503; 1.124; 0.428)" OutputAngles="(-125;125)" />
+			<Gauge Damping="0.9" Dir="(-0.985; 0.174; -0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/don_71_arrow_01" Org="(0.517; 1.174; 0.337)" OutputAngles="(-155;-180)" />
+			<Gauge Damping="0.9" Dir="(-0.985; 0.175; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/don_71_arrow_02" Org="(0.503; 1.124; 0.247)" OutputAngles="(-137;137)" />
+			<Gauge Damping="0.9" Dir="(-0.985; 0.171; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/don_71_arrow_01" Org="(0.504; 1.109; 0.158)" OutputAngles="(-155;-160)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.9; 0.5; -0.25)" Max="(1.5; 0.9; 0.25)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.8; 0.4; -0.5)" Max="(-1.2; 0.7; 0.1)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.1; 0.35; -0.2)" Max="(0.9; 0.55; 0.2)" ParentFrame="BoneChassis_cdt" />
+		</Damage>		
+		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/don_71_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/don_71_glass__sh_d.tga"
+				ViewPos="(-0.32; 1.45; 0.349)"
+				LimitsHor="(-2.8; 2.3)"
+				LimitsVer="(-0.7; 0.3)"
+				ViewDir="(1; -0.05; 0)"
+				ZoomViewPosOffset="(0.5; 0.0; 0)"
+			>
+				<Rear ViewPosOffset="(0; -0.15; 0.5)" />
+				<Mirror ClipDir="(-0.933; 0.159; -0.322)" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.953; 0.161; -0.255)" Size="(0.16; 0.1)" Pos="(0.421; 1.202; 0.83)" />
+				<Mirror ClipDir="(-0.885; -0; 0.465)" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.876; 0.102; 0.472)" Size="(0.16; 0.1)" Pos="(0.408; 1.2; -0.829)" />
+				<Mirror ClipDir="(-0.942; -0.065; 0.329)" ClipOffset="0.1" FOVScale="1.2" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.946; -0.065; 0.319)" Size="(0.18; 0.065)" Pos="(0.282; 1.476; 0)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(0.3; 2.9; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.9; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleL" IsIndependent="true" />
+			<Axle Frame="BoneAxleR" IsIndependent="true" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<DeployCost Cost = "1"/>
+		<Inventory MaxLimit="3"/>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 3.8; 0.0)"/>
+	</TruckData>
+	<Snorkel Origin="(1.748; 0.766; 0)" />
+
+	<PhysicsModel Mesh="trucks/don_71_1">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.15; -0.25; 0)"
+			ImpactType="Truck"
+			Mass="800"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.275; -0.3; 0)"
+				ImpactType="Truck"
+				Mass="850"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body Mass="0.2" ModelFrame="BoneWiperRight_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="3"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.1" Spring="1.0" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="0.2" ModelFrame="BoneWiperLeft_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="1.5"
+						MaxLimit="4.5"
+					>
+						<Motor Damping="0.3" Spring="1.6" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="10" ModelFrame="BoneChairBack_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-3.0"
+						MaxLimit="4"
+					>
+						<Motor Damping="18.0" Spring="600" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirror_cdt" Collisions="None">
+					<Constraint>
+						<Motor Damping="0.1" Spring="10" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt">
+					<Constraint>
+						<Motor Damping="2" Spring="50" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="0.2" ModelFrame="BoneKeyFobRing_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-50"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+					<Body Mass="0.2" ModelFrame="BoneKeyFob_cdt" Collisions="None">
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-20"
+							MaxLimit="20"
+						>
+							<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+			
+			<Body Mass="1" ModelFrame="BoneTieRodLeft_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-45"
+						MaxLimit="45"
+						Name="TieRodSteerLeft"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+			</Body>
+			<Body Mass="1" ModelFrame="BoneTieRodRight_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-45"
+						MaxLimit="45"
+						Name="TieRodSteerRight"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1" Pos="(-1.851; 0.783; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.3" DirAngle="180" Pos="(-1.772; 0.83; -0.67)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.3" DirAngle="180" Pos="(-1.772; 0.83; 0.67)" />
+			<!-- <Flare _template="StopSignal" Pos="(-1.797; 0.806; -0.545)" />
+			<Flare _template="StopSignal" Pos="(-1.797; 0.806; 0.545)" /> -->
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.825; 0.829; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 1" Size="0.3" Pos="(-1.793; 0.848; -0.543)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 1" Size="0.3" Pos="(-1.793; 0.848; 0.543)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.4" Dir="(-1; 0; 0)" Size="0.2" Pos="(-1.793; 0.848; -0.543)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.4" Dir="(-1; 0; 0)" Size="0.2" Pos="(-1.793; 0.848; 0.543)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(2; 1.013; 0.5)" />
+			<Light _template="IgnitionSignalWhite" Pos="(2; 1.013; -0.5)" />
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.65" Pos="(-2; 1.025; -0)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(1.663; 0.795; -0.55)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(1.663; 0.795; 0.55)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(242; 226; 222) x 0.2" Dir="(1; 0; 0)" DirAngle="270" Size="0.10" Pos="(1.71; 0.729; 0.73)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(242; 226; 222) x 0.2" Dir="(1; 0; 0)" DirAngle="270" Size="0.10" Pos="(1.71; 0.729; -0.73)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.8" Size="0.15" Pos="(-1.797; 0.806; -0.545)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.8" Size="0.15" Pos="(-1.797; 0.806; 0.545)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.663; 0.795; -0.55)" />
+			<Model _template="HeadLightRay" Org="(1.663; 0.795; 0.55)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.45" Pos="(1.663; 0.795; -0.55)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.45" Pos="(1.663; 0.795; 0.55)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 0.5" Size="0.07" Pos="(1.663; 0.795; -0.55)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 0.5" Size="0.07" Pos="(1.663; 0.795; 0.55)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(220; 220; 255) x 0.1" Size="0.75" Pos="(1.663; 0.795; -0.55)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(220; 220; 255) x 0.1" Size="0.75" Pos="(1.663; 0.795; 0.55)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/don_71_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.858; 0.74; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="9000"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		RecoveryPrice="1000"
+	>
+		<WinchSocket Pos="(1.642; 0.428; -0.428)" />
+		<WinchSocket Pos="(1.642; 0.428; 0.428)" />
+		<WinchSocket Pos="(-1.454; 0.442; 0.102)" />
+		<WinchSocket Pos="(-0.02; 0.336; 0.381)" />
+		<WinchSocket Pos="(-0.02; 0.336; -0.381)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_DON_71_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgDon71"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_DON_71_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(12.254; 1.3; -2.45)" InterestPosition="(6.676; 0.8; 0.04)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="roof" Position="(8.509; 4.4; -0.6)" InterestPosition="(4.6; 0.911; 0.2)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"   />
+			<CameraPos FOV="32.0" Name="rear" Position="(0.229; 1.302; 2.288)" InterestPosition="(3.766; 0.955; 0.737)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(2.0; 2.0; 3.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  Position="(11.5; 1.8; -5.389)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(-19.0; 2.0; -8.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  Position="(11.5; 1.8; 5.389)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(6.5; 2.0; -0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  Position="(10.0; 5.8; -1.389)" />
+			<CameraPos FOV="32.0" Name="wheels" Position="(0.35; 1.1; -6.05)" InterestPosition="(7.3; 0.8; 0.737)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  />
+		</CustomizationCameras>	
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->
+	</GameData>
+	
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteerLeft" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteerRight" />
+	</ControlledConstraints>
+	
+	<AutomaticIK>
+		<!-- FRONT WISHBONES -->
+		<!-- Front Bottom Right Wihbone -->
+		<IKBone ModelFrame="IK_BoneArmBR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR"
+				ModelFrame="IK_BoneArmBR_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Front Top Right Wihbone -->
+		<IKBone ModelFrame="IK_BoneArmTR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR"
+				ModelFrame="IK_BoneArmTR_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- Front Bottom Left Wihbone -->
+		<IKBone ModelFrame="IK_BoneArmBL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL"
+				ModelFrame="IK_BoneArmBL_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Front Top Left Wihbone -->
+		<IKBone ModelFrame="IK_BoneArmTL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL"
+				ModelFrame="IK_BoneArmTL_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	
+		<!-- FRONT SHOCKS AND SPRINGS -->
+		<!-- Front Right Shock -->
+		<IKBone ModelFrame="IK_BoneShockFrontR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneArmBR_A"
+				ModelFrame="IK_BoneShockFrontR_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>		
+		<!-- Front Left Shock -->
+		<IKBone ModelFrame="IK_BoneShockFrontL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneArmBL_A"
+				ModelFrame="IK_BoneShockFrontL_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- Front Right Spring -->
+		<IKBone ModelFrame="IK_BoneSpringFrontR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(-1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneArmBR_A"
+				ModelFrame="IK_BoneSpringFrontR_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Front Left Spring -->
+		<IKBone ModelFrame="IK_BoneSpringFrontL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneArmBL_A"
+				ModelFrame="IK_BoneSpringFrontL_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- REAR SHOCKS AND SPRINGS -->
+		<!-- Rear Right Spring -->
+		<IKBone ModelFrame="IK_BoneSpringRearR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSpringRearR_B"
+			>
+				<IKJoint AxisLocal="(1; 0; -1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Rear Left Spring -->
+		<IKBone ModelFrame="IK_BoneSpringRearL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSpringRearL_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- Rear Right Shock -->
+		<IKBone ModelFrame="IK_BoneShockRearR_B" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneShockRearR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Rear Left Shock -->
+		<IKBone ModelFrame="IK_BoneShockRearL_B" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneShockRearL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- STEER MECHANISM -->
+		<!-- Steering Rack -->
+		<IKBone ModelFrame="IK_BoneRackRight" ParentFrame="BoneTieRodRight_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodLeft_cdt"
+				ModelFrame="IK_BoneRackLeft"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Steer Link Left -->
+		<IKBone ModelFrame="IK_BoneSteerLinkL_B" ParentFrame="BoneRackL">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneRackLeft"
+				ModelFrame="IK_BoneSteerLinkL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Steer Link Right -->
+		<IKBone ModelFrame="IK_BoneSteerLinkR_B" ParentFrame="BoneRackR">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneRackRight"
+				ModelFrame="IK_BoneSteerLinkR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- REAR ARMS -->
+		<!-- Left Arm -->
+		<IKBone ModelFrame="IK_BoneArmRearL_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneArmRearL_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Right Arm -->
+		<IKBone ModelFrame="IK_BoneArmRearR_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneArmRearR_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- PANAR REAR -->
+		<IKBone ModelFrame="IK_PanarRear_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_PanarRear_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	
+	</AutomaticIK>
+
+</Truck>

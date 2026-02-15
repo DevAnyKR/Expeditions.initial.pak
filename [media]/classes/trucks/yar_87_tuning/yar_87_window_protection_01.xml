@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_window_protection_01">
+		<Body Collisions="None" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_WINDOW_PROTECTION_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_WINDOW_PROTECTION_02_NAME"
+		/>
+		<InstallSocket Type="Yar87windowprotection" />
+	</GameData>
+</TruckAddon>

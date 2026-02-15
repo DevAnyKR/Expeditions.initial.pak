@@ -1,0 +1,93 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false" StaticModelWithDynamicParts="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Body
+				Collisions="Dynamic"
+				Mass="8000"
+				ModelFrame="BoneWall01"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="20000" Type="Fixed" Name="Rock1"/>
+				<Body
+					Collisions="Dynamic"
+					Mass="2500"
+					ModelFrame="BoneWall022"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="10000" Type="Fixed" Name="Rock2"/>
+				</Body>
+				<Body
+					Collisions="Dynamic"
+					Mass="6500"
+					ModelFrame="BoneWall02"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="10000" Type="Fixed" Name="Rock3"/>
+					<Body
+						Collisions="Dynamic"
+						Mass="5000"
+						ModelFrame="BoneWall03"
+						NoSoftContacts="True"
+					>
+						<Constraint BreakOffThreshold="10000" Type="Fixed"/>
+						<Body
+							Collisions="Dynamic"
+							Mass="4000"
+							ModelFrame="BoneWall04"
+							NoSoftContacts="True"
+						>
+							<Constraint BreakOffThreshold="10000" Type="Fixed" Name="Rock4"/>
+						</Body>
+						<Body
+							Collisions="Dynamic"
+							Mass="4000"
+							ModelFrame="BoneWall05"
+							NoSoftContacts="True"
+						>
+							<Constraint BreakOffThreshold="10000" Type="Fixed"/>
+							<Body
+								Collisions="Dynamic"
+								Mass="2500"
+								ModelFrame="BoneWall06"
+								NoSoftContacts="True"
+							>
+								<Constraint BreakOffThreshold="10000" Type="Fixed"/>
+							</Body>	
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<OnBreakEvents ConstraintNames="Rock1,Rock2,Rock3,Rock4">
+		  <Sound Name ="actors/actor_interactive_walls/actor_interactive_wall_drone_break_rnd/actor_interactive_wall_drone_break_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+  		  <SFX Pos="(-0.1; 2.5; 0.0)" Dir="(0; ; 0)" Name="stone_wall"/>
+	</OnBreakEvents>
+	
+	<GameData ModelBreakageQuestConstraints="Rock1">
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall01" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall02" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall03" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall04" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall05" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.000; 0; 0)" ParentFrame="BoneWall06" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+	</GameData>
+
+</ModelBrand>

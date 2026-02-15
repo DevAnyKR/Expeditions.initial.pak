@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutMudtires _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Semisoft" />
+			<WheelFriction _template="ScoutMudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</ScoutMudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="125" Radius="1" Width="0.8">
+	<TruckTires>
+		<TruckTire _template="ScoutMudtires" IsBuoyant="true" PushUpFactor="13.5" RowingFactor="30" Mesh="wheels/tire_tuz_302_capricon" Name="mudtires_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="20000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+			
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_YAR_87_4_NAME" />
+			</GameData>
+		</TruckTire> 
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_tuz_302_capricon" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_TUZ_302_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckRim>	
+	</TruckRims>
+</TruckWheels>

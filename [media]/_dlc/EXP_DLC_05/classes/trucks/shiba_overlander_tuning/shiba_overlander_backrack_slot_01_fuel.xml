@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_backrack_01_slot_01_fuel">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_addon_1"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_backrack" />
+		<InstallSocket Type="ShibaOverlanderPickupSlot01" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="shiba_backrack_01_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

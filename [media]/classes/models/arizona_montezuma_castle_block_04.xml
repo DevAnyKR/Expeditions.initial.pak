@@ -1,0 +1,11 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_montezuma_castle_block_04_lmk" />
+</ModelBrand>

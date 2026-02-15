@@ -1,0 +1,12 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ru01_power_place_01_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,38 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	NeedPreload="true"
+	AnimationStartFrameOffset="0.7"
+
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+	<Sounds>
+		<Initial
+            SoundName="actors/fob_module_helipad_place"
+            MinDist="40"
+            MaxDist="250"
+            ParentFrame="Bone"
+        />
+        <Looping
+            SoundName="actors/fob_module_helipad_loop"
+            MinDist="15"
+            MaxDist="250"
+            ParentFrame="Bone"
+        />
+		<Ending
+			SoundName="actors/break_fob_common"
+			MinDist="40"
+			MaxDist="250"
+			Offset="(0; 0; 1)"
+			ParentFrame="Bone"
+			isEnding = "true"
+		/>
+	</Sounds>	
+	
+	<Landmark Mesh="landmarks/fob_module_helicopter_small_lmk" />
+</ModelBrand>

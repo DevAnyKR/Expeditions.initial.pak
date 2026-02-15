@@ -1,0 +1,40 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_front_bumper_default">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneFrontBumperDefault_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<HeadLight>
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 235; 225) x 1.5" Size=".25" Pos="(2.799; 1.063; -0.65)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 235; 225) x 1.5" Size=".25" Pos="(2.799; 1.063; 0.65)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.799; 1.063; -0.65)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.799; 1.063; 0.65)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Yar87FrontBumper" />
+	</GameData>
+</TruckAddon>

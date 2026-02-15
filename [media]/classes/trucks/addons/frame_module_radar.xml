@@ -1,0 +1,358 @@
+<_templates Include="Trucks">
+	<Body>
+		<TopDoors Collisions="None" Friction="0" Mass="40">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Name="BoneTopDoorRotL"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="110"
+			>
+				<Motor Force="5000000" Tau="1.0" Type="Position" />
+			</Constraint>
+			<Body Collisions="None" Friction="0" Mass="20">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="BoneTopDoorHingeRot"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="95"
+				>
+					<Motor Force="5000000" Tau="1.0" Type="Position" />
+				</Constraint>
+				<Body Collisions="None" Friction="0" Mass="10">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="BoneTopDoorShift"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="92"
+					>
+						<Motor Force="5000000" Tau="1.0" Type="Position" />
+					</Constraint>
+					<Body Collisions="None" Friction="0" Mass="4">
+						<Constraint
+							Name="TopDoorRotShift"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="0.12"
+						>
+							<Motor Force="5000000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</TopDoors>
+		<Panel Collisions="None" Mass="40">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Name="BonePanel"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.07"
+			>
+				<Motor Force="5000000" Tau="1.0" Type="Position" />
+			</Constraint>
+			<Body Collisions="None" Mass="10">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="BonePanel02"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.175"
+				>
+					<Motor Force="5000000" Tau="1.0" Type="Position" />
+				</Constraint>
+				<Body Collisions="None" Mass="4">
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="BonePanel03"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="13"
+					>
+						<Motor Force="5000000" Tau="1.0" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Panel>
+		<BottomDoor Collisions="None" Mass="40">
+			<Constraint
+				Name="BottomDoor"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.45"
+			>
+				<Motor Force="20000" Tau="1.0" Type="Position" />
+			</Constraint>
+			<Body Collisions="None" Mass="10">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="150"
+				>
+					<Motor Force="30000" Tau="1.0" Type="Position" />
+				</Constraint>
+			</Body>
+		</BottomDoor>
+		<Aerial Collisions="None" Mass="120">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Name="BoneAerialShift"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.42"
+			>
+				<Motor Force="50000" Tau="1.0" Type="Position" />
+			</Constraint>
+			<Body Collisions="None" Mass="60">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="BoneAerialRot"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="90"
+				>
+					<Motor Force="50000" Tau="1.0" Type="Position" />
+				</Constraint>
+				<Body Collisions="None" Mass="20">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="BoneAerialSpin"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="360"
+					>
+						<Motor Force="1000" Tau="1.0" Type="Position" />
+					</Constraint>
+					<Body Collisions="None" Mass="4">
+						<Constraint
+							AxisLocal="(0; -1; 0)"
+							Name="BoneAerialRotL"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="176.7"
+						>
+							<Motor Force="300000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+					<Body Collisions="None" Mass="4">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Name="BoneAerialRotR"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="180"
+						>
+							<Motor Force="300000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+					<Body Collisions="None" Mass="2">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Name="BoneAerialMirrorShift"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="0.405"
+						>
+							<Motor Force="5000000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+					<Body Collisions="None" Mass="4">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Name="BoneAerialTowerShift"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="0.711"
+						>
+							<Motor Force="5000000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+					<Body Collisions="None" Mass="1">
+						<Constraint
+							AxisLocal="(0; -1; 0)"
+							Name="BoneAerialShiftL"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="90"
+						>
+							<Motor Force="5000000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+					<Body Collisions="None" Mass="1">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Name="BoneAerialShiftR"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="90"
+						>
+							<Motor Force="5000000" Tau="1.0" Type="Position" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Aerial>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData HasRadar="true" RadarElectricChargeCost="5.0"/>
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_SCAN_WATCHPOINT"
+			Name="Watchpoint_Trailer"
+			ParentBodies="BoneAddon_cdt"
+			ResetOnLoad="true"
+		>
+			<Group FoldingDelay="0.2" Id="anim_part_0.5" UnfoldingDelay="0.2">
+				<Constraint InitialFix="true" Name="TopDoorRotShift" SpeedMultUnfolding="0.2" SpeedMultFolding="0.4" TerminalFix="false" Position="0.12" />
+			</Group>
+			<Group FoldingDelay="0.2" Id="anim_part_01" UnfoldingDelay="0.2">
+				<Constraint InitialFix="true" Name="BottomDoor" SpeedMultUnfolding="0.8" SpeedMultFolding="1.6" TerminalFix="false" Position="0.6" />
+				<Constraint InitialFix="true" Name="BonePanel" SpeedMultUnfolding="0.4" SpeedMultFolding="0.8" TerminalFix="false" Position="0.07" />
+			</Group>
+			<Group FoldingDelay="0.2" Id="anim_part_02" UnfoldingDelay="0.2">
+				<Constraint InitialFix="true" Name="RightAnchorBase" SpeedMult="1.3" TerminalFix="false" Position="150" />
+				<Constraint InitialFix="true" Name="LeftAnchorBase" SpeedMult="1.3" TerminalFix="false" Position="150" />
+				<Constraint InitialFix="true" Name="BoneTopDoorRotL" TerminalFix="true" Position="115" />
+				<Constraint InitialFix="true" Name="BoneTopDoorHingeRot" SpeedMult="0.3" TerminalFix="false" Position="22" />
+				<Constraint InitialFix="true" Name="BoneTopDoorShift" TerminalFix="true" Position="89" />
+				<Constraint InitialFix="true" Name="BonePanel02" SpeedMult="0.2" TerminalFix="false" Position="0.175" />
+			</Group>
+			<Group Id="anim_part_03" UnfoldingDelay="0.2" FoldingDelay="0.2">
+				<Constraint
+					InitialFix="true"
+					Name="BoneAerialRot"
+					SpeedMultUnfolding="0.7"
+					SpeedMultFolding="1.2"
+					TerminalFix="false"
+					Position="90.0"
+				/>
+			</Group>
+			<Group Id="anim_part_04" UnfoldingDelay="0.05" FoldingDelay="0.05">
+				<Constraint
+					InitialFix="true"
+					Name="BoneAerialShift"
+					SpeedMult="0.7"
+					TerminalFix="false"
+					Position="0.42"
+				/>
+				<Constraint InitialFix="true" Name="BonePanel03" SpeedMult="0.25" TerminalFix="false" Position="13" />
+			</Group>
+			<Group Id="anim_part_05" UnfoldingDelay="0.2" FoldingDelay="0.2">
+				<Constraint InitialFix="true" Name="BoneAerialRotL" SpeedMult="2.0" TerminalFix="false" Position="176.7" />
+				<Constraint InitialFix="true" Name="BoneAerialRotR" SpeedMult="2.0" TerminalFix="false" Position="180" />
+				<Constraint InitialFix="true" Name="BoneAerialShiftL" SpeedMult="0.95" TerminalFix="false" Position="90" />
+				<Constraint InitialFix="true" Name="BoneAerialShiftR" SpeedMult="0.95" TerminalFix="false" Position="90" />
+			</Group>
+			
+			<Group FoldingDelay="0.2" Id="anim_part_06" UnfoldingDelay="0">
+				<Constraint InitialFix="true" Name="BoneAerialMirrorShift" SpeedMult="0.5" TerminalFix="false" Position="0.405" />
+				<Constraint InitialFix="true" Name="BoneAerialTowerShift" SpeedMult="0.7" TerminalFix="false" Position="0.711" />
+			</Group>
+			
+			<Group Id="anim_part_07" UnfoldingDelay="0.4" FoldingDelay="0.2">
+				<Constraint
+					InitialFix="true"
+					Name="BoneAerialSpin"
+					SpeedMult="1.7"
+					TerminalFix="false"
+					Position="360"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/addons/frame_module_radar">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="400"
+		>
+			<Constraint Type="Rigid" />
+			<Body _template="TopDoors" ModelFrame="BoneTopDoorRotL_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" />
+				<Body ModelFrame="BoneTopDoorHingeRotL_cdt">
+					<Constraint AxisLocal="(-1; 0; 0)" />
+					<Body ModelFrame="BoneTopDoorShiftL_cdt">
+						<Constraint AxisLocal="(-1; 0; 0)" />
+						<Body ModelFrame="BoneTopDoorRotShiftL_cdt">
+							<Constraint AxisLocal="(0; 1; 0)" />
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="TopDoors" ModelFrame="BoneTopDoorRotR_cdt">
+				<Constraint AxisLocal="(-1; 0; 0)" />
+				<Body ModelFrame="BoneTopDoorHingeRotR_cdt">
+					<Constraint AxisLocal="(1; 0; 0)" />
+					<Body ModelFrame="BoneTopDoorShiftR_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" />
+						<Body ModelFrame="BoneTopDoorRotShiftR_cdt">
+							<Constraint AxisLocal="(0; 1; 0)" />
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="Panel" ModelFrame="BonePanel01_cdt">
+				<Body ModelFrame="BonePanel02_cdt">
+					<Body ModelFrame="BonePanel03_cdt" />
+				</Body>
+			</Body>
+			<Body _template="BottomDoor" ModelFrame="BoneBottomDoorShiftL_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" />
+				<Body ModelFrame="BoneBottomDoorRotL_cdt">
+					<Constraint Name="LeftAnchorBase" />
+				</Body>
+			</Body>
+			<Body _template="Aerial" ModelFrame="BoneAerialShift_cdt">
+				<Body ModelFrame="BoneAerialRot_cdt">
+					<Body ModelFrame="BoneAerialSpin_cdt">
+						<Body ModelFrame="BoneAerialRotL_cdt" />
+						<Body ModelFrame="BoneAerialRotR_cdt" />
+						<Body ModelFrame="BoneAerialMirrorShift_cdt" />
+						<Body ModelFrame="BoneAerialTowerShift_cdt" />
+						<Body ModelFrame="BoneAerialShiftL_cdt" />
+						<Body ModelFrame="BoneAerialShiftR_cdt" />
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="BottomDoor" ModelFrame="BoneBottomDoorShiftR_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" />
+				<Body ModelFrame="BoneBottomDoorRotR_cdt">
+					<Constraint AxisLocal="(-1; 0; 0)" Name="RightAnchorBase" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5800"
+		Priority="3"
+		SoundByGroups="true"
+		Subcategory="module"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+		
+		
+		
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_RADAR_DESC"
+			UiIcon30x30="trailerImg30"
+			UiIcon40x40="trailerImg"
+			UiName="UI_MODULE_FRAME_RADAR_NAME"
+		/>
+		<SoundPoweredGroupStop Name="addons/radar/frame_module_radar_stop" Range="20" Volume="1" />
+		<SoundPoweredGroupStart Name="addons/radar/frame_module_radar_full" Range="20" Volume="1" />
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960, frame_module_flatbed_short_workstar_7500, frame_module_flatbed_sideboard_workstar_7500, frame_module_flatbed_workstar_7500" />
+		<InstallSocket Type="FrameModule" />
+		<InstallSlot CargoLength="1" CargoType="Addon" Offset="(0; 0; 0)" />
+		<AddonType Name="Watchtower" />
+	</GameData>
+</TruckAddon>

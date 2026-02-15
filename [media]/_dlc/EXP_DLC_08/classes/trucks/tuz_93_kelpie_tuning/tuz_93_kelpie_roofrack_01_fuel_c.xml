@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_roofrack_01_fuel_c">
+		<Body Mass="6" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="top"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_93_kelpie_roofrack_01" />
+		<InstallSocket Type="TUZ93KelpieRoofrack01SlotC" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="tuz_93_kelpie_roofrack_01_fuel_c" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

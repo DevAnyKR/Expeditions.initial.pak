@@ -1,0 +1,67 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="70"
+			>
+				<Motor Damping="0.05" Spring="0.5" Type="Spring" />
+			</Constraint>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_bumper_01">
+		<Body ImpactType="Truck" Mass="80" ModelFrame="BoneBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneBumper01HitchLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneBumper01HitchRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.889; 1.045; 1.068)" />
+			<Model _template="HeadLightRay" Org="(2.889; 1.045; -1.068)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.074; 1.067)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.046; 1.067)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.055; 1.04)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.055; 1.096)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.021; 1.084)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.021; 1.051)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.074; -1.067)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.046; -1.067)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.055; -1.04)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.055; -1.096)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.021; -1.084)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.07" Pos="(2.872; 1.021; -1.051)" ParentFrame="BoneCabin_cdt" />
+
+		</MainHeadLight>
+		</ModelAttachments>
+	<MainHeadLight _template="Multiply2" AttenEnd="120" ExtraColor="g(255; 238; 200) x 2.0" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.220; 0.924; 0.521)" />
+		<WinchSocket Pos="(3.220; 0.924; -0.521)" />
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_7249_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_7249_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="Step7249AlbatrossBumper" />
+	</GameData>
+</TruckAddon>

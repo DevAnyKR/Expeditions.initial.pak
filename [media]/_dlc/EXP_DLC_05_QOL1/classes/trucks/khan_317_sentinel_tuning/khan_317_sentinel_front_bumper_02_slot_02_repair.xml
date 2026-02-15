@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_front_bumper_02_slot_02_repair">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="None"
+			Mass="10"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default_supplies"
+		Category="fender_front"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="khan_317_sentinel_front_bumper_02" />
+		<InstallSocket Type="Khan317FrontBumperSlot02" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="khan_317_front_bumper_02_slot_02_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

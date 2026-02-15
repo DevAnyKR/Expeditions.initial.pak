@@ -1,0 +1,50 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_roofrack_01_slot_03_battery">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddons_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrack01Slot03Repair_сdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX="(0;0.001)"
+					LinearLimitsY="(0;0)"
+					LinearLimitsZ="(-0.004;0.006)"
+				>
+					<Motor Type="Spring" Damping="300" Spring="300" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneRoofrack01Slot03RepairHinge_cdt">
+				<Constraint
+					Type="Hinge"
+					AxisLocal="(0; 0; 1)"
+					MinLimit="-3.5"
+					MaxLimit="3.5"
+				>
+					<Motor Type="Spring" Damping="0.5" Spring="1" />
+				</Constraint>
+			</Body>			
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="international_loadstar_1700_roofrack_01_slot_03_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"  
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_roofrack_01" />
+		<InstallSocket Type="InternationalLoadstar1700RoofrackSlot03" />
+	</GameData>
+</TruckAddon>

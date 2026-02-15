@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="step_3364_crocodile_spare_wheel_01_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_spare_wheel_01_wheel">
+		<Body Collisions="None" Mass="50" ModelFrame="BoneSpareWheel01_cdt">
+			<Constraint	Type="Fixed" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneAddonExplicit_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="rear"
+		IsConsumable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="step_3364_crocodile_spare_wheel_01" />
+		<InstallSocket Type="Step3364CrocodileSpareWheelAddonWheel" />
+	</GameData>
+</TruckAddon>

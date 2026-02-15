@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.97" Type="Suspension"/>
+			<Multiplier Multiplier="0.99" Type="FuelTank"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_wings_02" >
+		<Body  Mass="10" ModelFrame="BoneWings02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_WINGS_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_WINGS_02_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallWings" />
+	</GameData>
+</TruckAddon>

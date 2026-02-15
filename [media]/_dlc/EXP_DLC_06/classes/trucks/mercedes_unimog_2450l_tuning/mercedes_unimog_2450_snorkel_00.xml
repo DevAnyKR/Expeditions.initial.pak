@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.078; 1.835; 0.977)" />
+	<Snorkel Origin="(2.078; 1.835; -0.977)" />
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_UNIMOG_U2450_SNORKEL_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_UNIMOG_U2450_SNORKEL_00_NAME"
+		/>
+		<InstallSocket Type="MercedesUnimog2450LSnorkel" />
+	</GameData>
+</TruckAddon>

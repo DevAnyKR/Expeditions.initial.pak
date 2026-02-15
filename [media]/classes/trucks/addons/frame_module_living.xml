@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_module_living">
+		<Body Mass="1000">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>
+		
+		<!-- rear -->
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 1.535; -0.736)" Dir="(-1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 1.535; 0.736)" Dir="(-1; 0; 0)" Size="0.3" ParentFrame="BoneKung_cdt"/>
+		<!-- front -->
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 1.535; -0.736)" Dir="(1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 1.535; 0.736)" Dir="(1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+					
+		</Ignition>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+
+		Priority = "1"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_LIVING_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_LIVING_NAME"
+		/>
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960" />
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameModuleShortUNUSED" />
+		<InstallSlot 
+			CargoLength="1"
+			CargoType="Addon"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

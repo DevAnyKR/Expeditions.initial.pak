@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="150"
+		WheelRepairsCapacity="3"
+		FuelCapacity="90"
+		ElectricChargeCapacity="15.0"
+	/>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsEmergencyReserveAddon="true"
+		Price="10000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_EMERGENCY_RESERVE_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_EMERGENCY_RESERVE_2_NAME"
+		/>
+		<InstallSocket Type="krs_63_estock" />
+	</GameData>
+</TruckAddon>

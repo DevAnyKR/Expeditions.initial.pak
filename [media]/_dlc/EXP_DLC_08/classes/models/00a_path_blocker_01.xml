@@ -1,0 +1,104 @@
+<_templates Include="models" />
+<ModelBrand Instanced="true" DynamicModel="True" IsKeepPhysModelAlways="true" StaticModelWithDynamicParts="true">
+	<PhysicsModel>
+		<Body
+			Collisions="None"
+			Mass="10000000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint Type="Fixed" BreakOffThreshold="100000000" />
+			<Body
+				Collisions="Dynamic"
+				Mass="5000"
+				ModelFrame="PB01S00_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="30000" Type="Fixed" Name="Rock1"/>
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="5000"
+				ModelFrame="PB01S01_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="30000" Type="Fixed" Name="Rock2"/>
+				<Body
+					Collisions="Dynamic"
+					Mass="3500"
+					ModelFrame="PB01S02_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="10000" Type="Fixed" />
+				</Body>
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="5000"
+				ModelFrame="PB01S07_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="30000" Type="Fixed" />
+				<Body
+					Collisions="Dynamic"
+					Mass="3500"
+					ModelFrame="PB01S06_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="10000" Type="Fixed" />
+					<Body
+						Collisions="Dynamic"
+						Mass="2000"
+						ModelFrame="PB01S05_cdt"
+						NoSoftContacts="True"
+					>
+						<Constraint BreakOffThreshold="4000" Type="Fixed" />
+						<Body
+							Collisions="Dynamic"
+							Mass="1500"
+							ModelFrame="PB01S03_cdt"
+							NoSoftContacts="True"
+						>
+							<Constraint BreakOffThreshold="4000" Type="Fixed" />
+						</Body>
+						<Body
+							Collisions="Dynamic"
+							Mass="1500"
+							ModelFrame="PB01S04_cdt"
+							NoSoftContacts="True"
+						>
+							<Constraint BreakOffThreshold="4000" Type="Fixed" />
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+
+	<GameData ModelBreakageQuestConstraints="Rock1, Rock2">
+		<WinchSocket Pos="(0.000; 1.018; 0.000)" ParentFrame="PB01S00_cdt" />
+		<WinchSocket Pos="(0.000; 2.131; 1.481)" ParentFrame="PB01S01_cdt" />
+		<WinchSocket Pos="(0.000; 1.004; -1.552)" ParentFrame="PB01S07_cdt" />
+		<WinchSocket Pos="(0.000; 1.961; -0.865)" ParentFrame="PB01S06_cdt" />
+		<WinchSocket Pos="(0.000; 2.981; -0.900)" ParentFrame="PB01S05_cdt" />
+		<WinchSocket Pos="(0.000; 4.236; -0.305)" ParentFrame="PB01S03_cdt" />
+		<WinchSocket Pos="(0.000; 4.632; -1.687)" ParentFrame="PB01S04_cdt" />
+		<WinchSocket Pos="(0.000; 4.441; 1.240)" ParentFrame="PB01S02_cdt" />
+	</GameData>
+
+</ModelBrand>
+<!--
+<Body
+	AngularDamping="25.0"
+	LinearDamping="25.0"
+	CenterOfMassOffset="(0; 0; 0)"
+	Collisions="Dynamic"
+	Mass="1000"
+	ModelFrame="BoneRoot_cdt"
+	NoSoftContacts="True"
+>
+	<Constraint Type="Fixed" BreakOffThreshold="1000" />
+
+
+</Body>
+-->

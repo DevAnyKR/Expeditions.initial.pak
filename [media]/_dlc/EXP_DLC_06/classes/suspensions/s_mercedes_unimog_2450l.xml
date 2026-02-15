@@ -1,0 +1,129 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="125"
+		Name="mercedes_unimog_2450l_suspension_default"
+	>
+		<Suspension 
+			Height="0.215" 
+			Strength="0.029" 
+			SuspensionMin="-0.4"
+			SuspensionMax="-0.15" 
+			
+			BrokenSuspensionMax="0.015" 
+			
+			WheelType="front" 
+			Damping="0.35"
+		/>
+		<Suspension 
+			Height="0.14" 
+			Strength="0.0315" 
+			SuspensionMin="-0.3"
+			SuspensionMax="-0.025" 
+			
+			BrokenSuspensionMax="0.015"
+			
+			WheelType="rear" 
+			Damping="0.35"
+		/>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="175"
+		Name="mercedes_unimog_2450l_suspension_high"
+	>
+		<Suspension 
+			Height="0.3" 
+			Strength="0.032" 
+			SuspensionMin="-0.45"
+			SuspensionMax="-0.05" 
+			
+			BrokenSuspensionMax="0.025" 
+			
+			WheelType="front" 
+			Damping="0.5"
+		/>
+		<Suspension 
+			Height="0.225" 
+			Strength="0.03462" 
+			SuspensionMin="-0.375"
+			SuspensionMax="0.01" 
+			
+			BrokenSuspensionMax="0.025"
+			
+			WheelType="rear" 
+			Damping="0.5"
+		/>
+		<GameData
+			Price="5000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="150"
+		Name="mercedes_unimog_2450l_suspension_crawler"
+	>
+		<Suspension 
+			Height="0.275" 
+			Strength="0.029" 
+			SuspensionMin="-0.525"
+			SuspensionMax="-0.025" 
+			
+			BrokenSuspensionMax="0.05" 
+			
+			WheelType="front" 
+			Damping="0.75"
+		/>
+		<Suspension 
+			Height="0.2" 
+			Strength="0.03151" 
+			SuspensionMin="-0.425"
+			SuspensionMax="0.15" 
+			
+			BrokenSuspensionMax="0.025"
+			
+			WheelType="rear" 
+			Damping="0.75"
+		/>
+		<GameData
+			Price="9000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

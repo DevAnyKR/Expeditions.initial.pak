@@ -1,0 +1,15 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	InBackground="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/wind_turbine_ru08_lmk" />
+</ModelBrand>

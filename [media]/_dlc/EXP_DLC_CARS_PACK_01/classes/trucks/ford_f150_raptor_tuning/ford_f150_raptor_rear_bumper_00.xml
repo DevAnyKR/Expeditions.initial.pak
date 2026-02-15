@@ -1,0 +1,48 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+		<Shakers>
+			<Shaker Frame="SHK_BoneExhuastLeft" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4" />
+			<Shaker Frame="SHK_BoneExhuastRight" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_rear_bumper_00">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-3.166; 0.581; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="FordF150RearBumper" />
+	</GameData>
+	<Exhaust
+		Dir="(-1; 0.0; 0.0)"
+		IsLight="true"
+		Origin="(-2.999; 0.588; -0.738)"
+		Speed="3.5"
+		ParentFrame="SHK_BoneExhuastRight"
+	/>
+	<Exhaust
+		Dir="(-1; 0.0; 0.0)"
+		IsLight="true"
+		Origin="(-2.999; 0.588; 0.738)"
+		Speed="3.5"
+		ParentFrame="SHK_BoneExhuastLeft"
+	/>
+</TruckAddon>

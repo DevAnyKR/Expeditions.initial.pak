@@ -1,0 +1,73 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_front_bumper_01">
+		<Body ImpactType="Truck" Mass="80" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.1"
+				ModelFrame="BoneFrontBumper01BranchSection_cdt"
+			>
+				<Constraint LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" Type="Fixed">
+					<Motor Damping="0.02" Spring="60" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper01WinchHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				>
+					<Motor Damping="0.15" Spring="0.3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.929; 0.842; 0.64)" />
+			<Model _template="HeadLightRay" Org="(3.929; 0.842; -0.64)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.929; 0.842; 0.64)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.929; 0.842; -0.64)" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Pos="(3.929; 0.842; 0.64)" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Pos="(3.929; 0.842; -0.64)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.929; 0.842; 0.64)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.929; 0.842; -0.64)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.016; 0.619; 0.372)" />
+		<WinchSocket Pos="(4.016; 0.619; -0.372)" />
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_KHAN_317_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_KHAN_317_01_NAME"
+		/>
+		<RequiredSuspension Types="khan_317_sentinel_suspension_high, khan_317_sentinel_suspension_crawler" />
+		<InstallSocket Type="Khan317FrontBumper" />
+	</GameData>
+</TruckAddon>

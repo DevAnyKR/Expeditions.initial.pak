@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.875" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_wings_01" AcceptVisualDamage="false">
+		<Body Mass="5" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="Default" Mass="15" ModelFrame="BoneWings01Explicit_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_FENDERS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_FENDERS_01_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVWings" />
+	</GameData>
+</TruckAddon>

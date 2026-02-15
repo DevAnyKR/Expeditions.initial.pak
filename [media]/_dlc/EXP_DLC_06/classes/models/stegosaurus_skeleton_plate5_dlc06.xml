@@ -1,0 +1,13 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	SkipAdjustHeightMap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/stegosaurus_skeleton_plate5_dlc06_lmk" />	
+</ModelBrand>

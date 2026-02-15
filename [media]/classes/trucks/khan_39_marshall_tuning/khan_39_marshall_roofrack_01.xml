@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_roofrack_01">
+		<Body Mass="100" ModelFrame="BoneRoofrack01_cdt" CenterOfMassOffset="(0.75;0; 0)">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 10" Pos="(0.355; 2.496; 0.118)" />
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 10" Pos="(0.355; 2.496; -0.118)" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="5000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallRoofrack" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,34 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<BatteryHide>
+		<Mesh Frame="don_71_roofrack_01_slot_02_repair" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_roofrack_01_slot_02_repair">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrackSlot02_cdt">
+			<Constraint
+				LinearLimitsX="(-0.004;0.005)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.003;0.006)"
+				Type="Fixed"
+			/>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="don_71_roofrack_01" />
+		<InstallSocket Type="Don71SlotRepairKit_2_RR" />
+	</GameData>
+</TruckAddon>

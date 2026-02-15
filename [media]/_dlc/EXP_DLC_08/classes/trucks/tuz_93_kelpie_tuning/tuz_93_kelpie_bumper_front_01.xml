@@ -1,0 +1,57 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_bumper_front_01, tuz_93_kelpie_bumper_front_01_glass" >
+		<Body ImpactType="Truck" Mass="45" ModelFrame="BoneBumperFront_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="5" ModelFrame="BoneBumperFrontHook_cdt">
+				<Constraint Type="Hinge" MinLimit="-18" MaxLimit="20" AxisLocal="(0; 0; 1)">
+					<Motor Type="Spring" Spring="12" Damping="0.3" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.610; 0.983; 0.272)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.610; 0.983; -0.272)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.610; 0.983; 0.272)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(2.610; 0.983; -0.272)" ParentFrame="BoneAddon_cdt" />
+
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.610; 0.983; 0.272)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.610; 0.983; -0.272)" ParentFrame="BoneAddon_cdt" />
+
+			<Flare _template="BlueStreak" Pos="(2.610; 0.983; 0.272)" Size="0.8" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.610; 0.983; -0.272)" Size="0.8" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="3000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"	
+	>
+		<WinchSocket Pos="(2.724; 0.737; 0.0)" />
+		<WinchSocket Pos="(2.727; 0.729; -0.552)" />
+		<WinchSocket Pos="(2.727; 0.729; 0.552)" />
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_93_KELPIE_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_93_KELPIE_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="TUZ93KelpieBumperFront" />
+	</GameData>
+</TruckAddon>

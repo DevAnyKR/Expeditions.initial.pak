@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_backrack_01">
+		<Body Mass="50" ModelFrame="BoneBackrack01_cdt" CenterOfMassOffset="(0;0; 0)">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="12000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BACKRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BACKRACK_NAME"
+		/>
+		<InstallSocket Type="Khan317Backrack" />
+	</GameData>
+</TruckAddon>

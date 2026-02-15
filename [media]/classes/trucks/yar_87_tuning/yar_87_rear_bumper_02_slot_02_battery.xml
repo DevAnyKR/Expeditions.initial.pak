@@ -1,0 +1,24 @@
+<_parent File="yar_87_rear_bumper_02_slot_01_battery" />
+<_templates Include="trucks">
+	<Constraint>
+		<BumperFixed1
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1.3"
+				MaxLimit="1.9"
+		>
+		<Motor Damping="0" Spring="0.5" Type="Spring" />
+		</BumperFixed1>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<BatteryHide>
+		<Mesh Frame="rear_bumper_02_battery_02" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="rear_bumper_02_battery_02">
+		<Body Collisions="None" ModelFrame="BoneRearBumper02Slot02_cdt" />
+	</PhysicsModel>
+	<GameData CameraPreset="supplies_Rear" >
+		<InstallSocket Type="Yar87RearBumper02Slot02" />
+	</GameData>
+</TruckAddon>

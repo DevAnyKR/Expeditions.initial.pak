@@ -1,0 +1,9 @@
+<MaterialType 
+	Texture="tiles/sharp_rock_dlc_08__d_a.tga" 
+    Normal="tiles/sharp_rock_dlc_08_relief__d_a.tga"
+	NoGrass="true"
+	Sound="surfaces/surf_gravel_rnd"
+	EndEffectSound="surfaces/hit/hit_gravel_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	WheelTracks="0"
+/>

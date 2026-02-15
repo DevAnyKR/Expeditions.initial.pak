@@ -1,0 +1,12 @@
+<_parent File="khan_lo4f_roofrack_01_slot_01_fuel" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_roofrack_01_slot_05_fuel">
+		<Body ModelFrame="BoneRoofrack01Slot05Fuel_cdt" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FRoofrack01Slot05" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="khan_lo4f_roofrack_01_slot_05_fuel" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<TruckTire>
+		
+		<Offroad _template="Semiheavy" RearMassScale="1.0">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Semiaverage_ot" />
+			<WheelFriction _template="Offroad" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="75" Radius="1" Width="0.618">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_mercedes_unimog_2450l" Name="offroad_0">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.99"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="0"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_MERCEDES_UNIMOG_2450_0_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_mercedes_unimog_2450l" Name="rim_mercedes_unimog_2450l">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_8_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_MERCEDES_UNIMOG_2450_0_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

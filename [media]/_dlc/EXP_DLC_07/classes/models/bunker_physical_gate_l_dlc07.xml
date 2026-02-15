@@ -1,0 +1,41 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false" StaticModelWithDynamicParts="true" IsComplexPhysModel="true">
+	<PhysicsModel>
+		<Body
+			Mass="10000"
+			NoSoftContacts="true" 
+			Collisions="Dynamic" 
+			ModelFrame="BoneRoot_cdt">
+		<Constraint 
+			Name="MainConstraint"
+			Type="Fixed"
+			>
+			</Constraint>
+			<Body
+				Collisions="Dynamic"
+				Mass="9000"
+				ModelFrame="BoneDoorLeft_cdt"
+				NoSoftContacts="True"
+				DamageMult="0.8"
+			>
+				<Constraint  Type="Hinge" MinLimit="-2" MaxLimit="90" AxisLocal="(0;0;1)" IsSoundedConstraint="true">
+					<Sounds 
+						MechanismSoundStartMovie="actors/actor_bunker_door/actor_bunker_door_start" 
+						MechanismSoundStopMovie="actors/actor_bunker_door/actor_bunker_door_end"
+						MechanismSoundIsMoving="actors/actor_bunker_door/actor_bunker_door_moving"
+					/>
+				</Constraint>
+				<Body Mass="2000" Friction="0.3" NoSoftContacts="True" LinearDamping="15" Collisions="Dynamic" ModelFrame="BoneLatch">
+			    <Constraint Type="Prismatic" MinLimit="-1.3" MaxLimit="0" AxisLocal="(1; 0; 0)" />
+		        </Body>
+			</Body>
+		</Body>
+    </PhysicsModel>
+	<GameData 
+	   ModelBreakageQuestConstraints="MainConstraint"
+	   IgnoresHonkExplosionForce="true" >
+	
+		<WinchSocket Pos="(2.6; 0.2; -2.2)" ParentFrame="BoneDoorLeft_cdt" Color="(1.0; 0.0; 0.0; 1.0)"/>
+		<WinchSocket Pos="(0; 0; 0)" ParentFrame="BoneLatch" Color="(1.0; 0.0; 0.0; 1.0)"/>
+	</GameData>
+</ModelBrand>

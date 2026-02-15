@@ -1,0 +1,51 @@
+<ModelBrand ClipCamera="true">
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" /> 
+	</PhysicsModel>
+	
+	<Subset Name="stage_0" IsDefault="true" >	
+		<CdtMesh Name="frame" />
+		
+		
+	</Subset>
+	
+	<Subset Name="stage_1">
+		<CdtMesh Name="frame" />
+		<CdtMesh Name="cdt_telescope" />
+		<Mesh Name="telescope" />
+		<AnimSubset Name="build_animation_1" />
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+	
+	<AnimSubset Name="build_animation_1">
+		<CdtMesh Name="cdt_frame" />
+		<Mesh Name="telescope_anim" />
+	</AnimSubset>
+	<TrackEvents TrackName="anim_stage_1">
+		
+		<AnimEvent Key="1">
+			<Sound Name="actors/telescope_dlc_06_objective" Range="200" Volume="1"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="25">
+			<SFX Dir="(0.0; 1.0; 0.0)" Pos="( 0; -0.9; 0)" Name="pier_smoke_02" />
+		</AnimEvent>
+		<AnimEvent Key="45">
+			<SFX Dir="(0.0; 1.0; 0.0)" Pos="( -0.093; 1.504; 0)" Name="telescope_sparks" />
+		</AnimEvent>
+		<AnimEvent Key="85">
+			<SFX Dir="(0.0; 1.0; 0.0)" Pos="( -0.13; 1.54; 0)" Name="telescope_sparks" />
+		</AnimEvent>
+		<AnimEvent Key="120">
+			<SFX Dir="(0.0; 1.0; 0.0)" Pos="( -0.048; 1.879; 0.246)" Name="telescope_sparks" />
+		</AnimEvent>
+		<AnimEvent Key="135">
+			<SFX Dir="(0.0; 1.0; 0.0)" Pos="( -0.048; 1.879; -0.246)" Name="telescope_sparks" />
+		</AnimEvent>
+		<AnimEvent Key="174">
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/telescope_dlc_06_objective_lmk" />
+</ModelBrand>
+s

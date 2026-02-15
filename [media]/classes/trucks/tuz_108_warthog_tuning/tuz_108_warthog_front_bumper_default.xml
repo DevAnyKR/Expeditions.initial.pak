@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_108_warthog_tuning" MeshFrame="tuz_108_warthog_bumper_default">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneFrontBumperDefault_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="30.0"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Tuz108WarthogFrontBumper" />
+	</GameData>
+</TruckAddon>

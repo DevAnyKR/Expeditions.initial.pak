@@ -1,0 +1,139 @@
+<AmbientSounds>
+	<Volume Min="0.8" Max="0.8" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_amb_day_loop">
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_chirps/amb_sk_s2_spring_bird_chirps"
+			MinRadius = "15"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_various/amb_sk_s2_spring_bird_various"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_woodpecker/amb_sk_s2_spring_bird_woodpecker"
+			MinRadius = "5"
+			MaxRadius = "45"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</DayForest>
+	<DayWind Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_amb_day_loop">
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_chirps/amb_sk_s2_spring_bird_chirps"
+			MinRadius = "15"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_various/amb_sk_s2_spring_bird_various"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_woodpecker/amb_sk_s2_spring_bird_woodpecker"
+			MinRadius = "5"
+			MaxRadius = "45"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_amb_day_loop">
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_chirps/amb_sk_s2_spring_bird_chirps"
+			MinRadius = "15"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_various/amb_sk_s2_spring_bird_various"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_woodpecker/amb_sk_s2_spring_bird_woodpecker"
+			MinRadius = "5"
+			MaxRadius = "45"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_amb_day_loop">
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_chirps/amb_sk_s2_spring_bird_chirps"
+			MinRadius = "15"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_various/amb_sk_s2_spring_bird_various"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/snd_amb_slovakia_s2_spring/amb_sk_s2_spring_bird_woodpecker/amb_sk_s2_spring_bird_woodpecker"
+			MinRadius = "5"
+			MaxRadius = "45"
+			MinInterval = "15"
+			MaxInterval = "60"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="150"
+		Dist2D="0"
+		Dist3D="45"
+	/>
+</AmbientSounds>

@@ -1,0 +1,12 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/wooden_blockage_01_objective_lmk"/>
+</ModelBrand>

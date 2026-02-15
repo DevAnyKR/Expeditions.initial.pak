@@ -1,0 +1,19 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>	
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+		</Body>
+	</PhysicsModel>
+
+	<Subset Name="build_stage_0" IsDefault="true">
+	</Subset>
+	
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="cdt_stage_0" />
+    </Subset>	
+
+	<Landmark Mesh="landmarks/geodesic_tool_objective_lmk" />
+</ModelBrand>

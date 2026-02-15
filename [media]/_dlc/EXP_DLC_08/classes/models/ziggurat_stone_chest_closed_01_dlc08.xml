@@ -1,0 +1,8 @@
+<ModelBrand
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ziggurat_stone_chest_closed_01_dlc08_lmk"/>
+</ModelBrand>

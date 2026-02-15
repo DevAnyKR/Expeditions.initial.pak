@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-20"
+				MaxLimit="20"
+			/>
+		</Hitch>
+		<Hitch_one Collisions="None" Mass="0.2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="40"
+			/>
+		</Hitch_one>
+	</Body>
+</_templates>
+	
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_rear_bumper_02">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneRearBumper_02_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearLeft_02_cdt" />				
+			<Body _template="Hitch" ModelFrame="BoneHitchRearRight_02_cdt">
+					<Body _template="Hitch_one" ModelFrame="Hook_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_DON_71_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_DON_71_02_NAME"
+		/>
+		<InstallSocket Type="Don71RearBumper" />
+		<RequiredSuspension Types="don_71_suspension_default, don_71_suspension_crawler, don_71_suspension_high, don_71_se_suspension_default, don_71_se_suspension_high, don_71_se_suspension_crawler" />
+	</GameData>
+</TruckAddon>
+
+
+
+
+
+
+
+
+	
+	 
+	 

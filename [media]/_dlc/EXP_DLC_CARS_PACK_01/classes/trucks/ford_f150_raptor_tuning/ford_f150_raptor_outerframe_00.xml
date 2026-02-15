@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.85" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+		</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_outerframe_00">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneOuterframe00_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F150_OUTERFRAME_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F150_OUTERFRAME_01_NAME"
+		/>
+		<InstallSocket Type="FordF150Outerframe" />
+	</GameData>
+</TruckAddon>

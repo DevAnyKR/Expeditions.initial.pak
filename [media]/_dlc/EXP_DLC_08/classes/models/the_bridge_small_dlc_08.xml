@@ -1,0 +1,65 @@
+﻿<_templates Include="models">
+	<Motor>
+		<TheBridge Damping="15000" Spring="350000" />
+	</Motor>
+	<Body>
+		<TheBridgeFriction
+			Collisions="Dynamic"
+			Friction="1.5"
+			NoSoftContacts="True"
+		/>
+	</Body>
+	<Constraint>
+		<BridgeConstraint
+			Type="Hinge"
+			MinLimit="-5.0"
+			MaxLimit="5.0"
+			AxisLocal="(0; 0; 1)"
+		/>
+	</Constraint>
+</_templates>
+<ModelBrand IsKeepPhysModelAlways="true" 
+			NeedPreload="true"
+			DynamicModel="True"
+			IsComplexPhysModel="True">
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Mass="300"
+			ModelFrame="BoneSeg0_cdt"
+		>
+			<Body
+				_template="TheBridgeFriction"
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="300"
+				ModelFrame="BoneSeg1_cdt"
+			>
+				<Constraint	
+					_template="BridgeConstraint"
+					PivotOffset="(-0.973; -0.331; 0)"
+				>
+					<Motor _template="TheBridge" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				_template="TheBridgeFriction"
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="300"
+				ModelFrame="BoneSeg2_cdt"
+			>
+				<Constraint
+					_template="BridgeConstraint"
+					PivotOffset="(0.973; -0.331; 0)"
+				>
+					<Motor _template="TheBridge" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(2.0; -0.140; 1.385)" ParentFrame="BoneSeg1_cdt" />
+		<WinchSocket Pos="(2.0; -0.140; -1.385)" ParentFrame="BoneSeg1_cdt" />
+		<WinchSocket Pos="(-2.0; -0.140; 1.385)" ParentFrame="BoneSeg2_cdt" />
+		<WinchSocket Pos="(-2.0; -0.140; -1.385)" ParentFrame="BoneSeg2_cdt" />
+	</GameData>
+</ModelBrand>

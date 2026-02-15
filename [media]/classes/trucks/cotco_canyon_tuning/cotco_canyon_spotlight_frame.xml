@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_spotlight_frame">
+		<Body ImpactType="Truck" Mass="7" ModelFrame="BoneSpotLightFrame01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+        IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHT_FRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPOTLIGHT_FRAME_NAME"
+		/>
+		<InstallSocket Type="CotcoCanyonSpotlight" />
+	</GameData>
+</TruckAddon>

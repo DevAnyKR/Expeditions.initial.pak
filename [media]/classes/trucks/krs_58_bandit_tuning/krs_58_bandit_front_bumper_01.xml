@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.975" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/krs_58_bandit_tuning" MeshFrame="krs_58_bandit_bumper_01" >
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneBumper01Hook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				/>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneBumper01Rope_cdt">
+				<Constraint
+					AxisLocal="(1; 1; 0)"
+					Type="Hinge"
+					MinLimit="-6"
+					MaxLimit="6"
+				>
+					<Motor Damping="200" Spring="700" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_58_FRONT_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KRS_58_FRONT_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="krs58banditBumper" />
+	</GameData>
+</TruckAddon>

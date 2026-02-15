@@ -1,0 +1,13 @@
+<PlantBrand 
+		PlantingMinSpacing="0.1" 
+		CheckNoGrass="false" 
+		BreakType="MushroomFluF"
+		DeleteOnBreak="true"
+>
+	<PhysicsModel>
+		<Body Mass="1.0" NoSoftContacts="true" DamageMult="0.0" ModelFrame="BoneRoot">
+			<Constraint BreakOffThreshold="5" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	
+</PlantBrand>

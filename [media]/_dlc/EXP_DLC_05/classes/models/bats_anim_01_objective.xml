@@ -1,0 +1,25 @@
+<ModelBrand ClipCamera="true">
+	
+	<PhysicsModel>
+		<Body Collisions="None" DamageMult="0.0"  />
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="stage_0"></Subset>
+	
+	<Subset Name="stage_1">
+		<AnimSubset Name="animation" />
+        <AnimTrack Name="mesh_anim"/>
+    </Subset>
+	
+	<AnimSubset Name="animation">
+		<Mesh Name="animated_mesh" />
+		<CdtMesh Name="cdt" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="mesh_anim">
+		<AnimEvent Key="1">
+			<Sound Name="actors/actor_bats_flyby" Range="75" Volume="1"/>
+		</AnimEvent>
+	</TrackEvents>
+	
+</ModelBrand>

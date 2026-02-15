@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_front_bumper_02">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontRopeBumper02_cdt"
+			>
+				<Constraint Type="Hinge" MinLimit="-50" MaxLimit="60" AxisLocal="(0; 0; -1)" >
+					<Motor Type="Spring" Spring="0" Damping="0.005" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>	
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="2000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.759; 0.927; 0.427)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(2.759; 0.927; -0.427)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(2.718; 1.033; 0.001)" ParentFrame="BoneFrontBumper01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_TRAUN_BR0D_FRONT_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TRAUN_BR0D_FRONT_BUMPER_02_NAME"
+		/>
+		<InstallSocket Type="TraunBr0dBumperFront" />
+	</GameData>
+</TruckAddon>

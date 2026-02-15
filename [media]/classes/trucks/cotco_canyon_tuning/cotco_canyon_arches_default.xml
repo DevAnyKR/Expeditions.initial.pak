@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.98" Type="Suspension"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_arches_default">
+		<Body ImpactType="Truck" Mass="35" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_WINGS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_WINGS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="CotcoCanyonWings" />
+	</GameData>
+</TruckAddon>

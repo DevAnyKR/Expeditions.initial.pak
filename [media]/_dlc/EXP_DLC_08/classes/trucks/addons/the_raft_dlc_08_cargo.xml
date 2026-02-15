@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="rear"
+		Category="frame_addons"
+		IsCustomizable="false"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_TRAUN_BR0D_CARGO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_TRAUN_BR0D_CARGO_NAME"
+		/>
+		<SideboardSlots Quantity="4" />
+		<InstallSocket Offset="(0; 0; 0)" Type="RaftCargo" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None" Mass="0.1">
+			<Constraint LinearLimitsY="(-0.03; 0.03)" LinearLimitsZ="(-0.03;0.03)" Type="Fixed">
+				<Motor Damping="0.1" Spring="150.0" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.97" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_outerframe_01">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneOuterframe01_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Limits" ModelFrame="BoneStringLeft_cdt" />
+			<Body _template="Limits" ModelFrame="BoneStringRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="7000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_OUTERFRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_NAME"
+		/>
+		<RequiredSuspension Types="step_3364_crocodile_suspension_high, step_3364_crocodile_suspension_crawler"  />
+		<RequiredAddon Types="step_3364_crocodile_front_bumper_01, step_3364_crocodile_front_bumper_02" />
+		<InstallSocket Type="Step3364CrocodileOuterFrame" />
+	</GameData>
+</TruckAddon>

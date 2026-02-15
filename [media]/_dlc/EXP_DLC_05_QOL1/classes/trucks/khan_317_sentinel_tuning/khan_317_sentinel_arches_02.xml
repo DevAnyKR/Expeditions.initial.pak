@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+			<Multiplier Multiplier="0.95" Type="FuelTank"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_arches_02">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneArches_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_317_FENDERS_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_317_FENDERS_02_NAME"
+		/>
+		<InstallSocket Type="Khan317Arches" />
+		<RequiredSuspension Types="khan_317_sentinel_suspension_high, khan_317_sentinel_suspension_crawler" />
+	</GameData>
+</TruckAddon>

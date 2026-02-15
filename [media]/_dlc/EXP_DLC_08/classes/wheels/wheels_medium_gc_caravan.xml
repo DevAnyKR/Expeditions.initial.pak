@@ -1,0 +1,175 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Allterrain _template="Semiheavy_2" RearMassScale="1.1">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Semiaverage_at" />
+			<WheelFriction _template="Allterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</Allterrain>
+		<Offroad _template="Semiheavy_2" RearMassScale="1.1">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="Semiaverage_ot" />
+		<WheelFriction _template="Offroad" />
+		<TiresInflationSystemSettings _template="Offroad" />
+	</Offroad>
+		<Mudtires _template="Semiheavy_2" RearMassScale="1.1">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="Semiaverage_mt" />
+		<WheelFriction _template="Mudtires" />
+		<TiresInflationSystemSettings _template="Mudtires" />
+	</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="75"
+	Radius="1"
+	Width="0.65"
+	WidthRear="0.66"
+>
+	<TruckTires>
+	<!-- allterrain -->
+	<TruckTire _template="Allterrain" IsBuoyant="false" PushUpFactor="1" RowingFactor="5" Mesh="wheels/tire_gc_caravan" Name="allterrain_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.1"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" DamageCapacity="80" Width="0.67" WidthRear="0.68" IsBuoyant="false" PushUpFactor="1" RowingFactor="5" Mesh="wheels/tire_medium_allterrain_double_front_4_gc_caravan_t2" Name="allterrain_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_SINGLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" DamageCapacity="85" Width="0.68" WidthRear="0.69" IsBuoyant="false" PushUpFactor="1" RowingFactor="5" Mesh="wheels/tire_mercedes_unimog_2450l_gc_caravan_t2" Name="allterrain_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_SINGLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- offroad -->
+		<TruckTire _template="Offroad" DamageCapacity="100" Width="0.67" WidthRear="0.68" IsBuoyant="false" PushUpFactor="1" RowingFactor="10" Mesh="wheels/tire_medium_offroad_double_front_3_gc_caravan_t2" Name="offroad_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_MEDIUM_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" DamageCapacity="110" Width="0.68" WidthRear="0.69" IsBuoyant="false" PushUpFactor="1" RowingFactor="10" Mesh="wheels/tire_haukka_ns420_gc_caravan_t2" Name="offroad_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.97"
+			/>
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_MEDIUM_OFFROAD_SINGLE_2_NAME" />
+			</GameData>
+			</TruckTire>
+				<TruckTire _template="Offroad" DamageCapacity="120" Width="0.69" WidthRear="0.7" IsBuoyant="false" PushUpFactor="1" RowingFactor="10" Mesh="wheels/tire_tatra_force_815_7_caravan2" Name="offroad_3">
+		<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.98"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_MEDIUM_OFFROAD_SINGLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- mudtires -->
+		<TruckTire _template="Mudtires" DamageCapacity="90" Width="0.69" WidthRear="0.7" IsBuoyant="false" PushUpFactor="1" RowingFactor="10" Mesh="wheels/tire_medium_offroad_double_front_2_gc_caravan_t2" Name="mudtires_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.8"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MEDIUM_MUDTIRES_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_gc_caravan" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_GS_CARAVAN_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_mercedes_unimog_2450l_gc_caravan_t2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_MERCEDES_UNIMOG_2450_0_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_2_gc_caravan_t2" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_5_gc_caravan_t2" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_6_gc_caravan_t2" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+				<TruckRim Mesh="wheels/rim_medium_offroad_double_front_7_gc_caravan_t2" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

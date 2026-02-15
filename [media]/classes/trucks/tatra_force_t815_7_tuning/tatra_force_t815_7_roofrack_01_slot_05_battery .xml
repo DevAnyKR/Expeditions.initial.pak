@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<Body>
+		<ContainerLimits ImpactType="Truck" Mass="20">
+			<Constraint LinearLimitsX="(-0.005;0.005)" LinearLimitsZ="(-0.001;0.001)" Type="Fixed">
+				<Motor Damping="200" Spring="600" Type="Spring" />
+			</Constraint>
+		</ContainerLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="tatra_force_t815_7_roofrack_01_slot_05_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_roofrack_01_slot_05_battery">
+		<Body _template="ContainerLimits" Collisions="None" ModelFrame="BoneRoofrack01Slot05Repair_cdt" />
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="tatra_force_t815_7_roofrack_01" />
+		<InstallSocket Type="TatraForceT8157RoofrackInvSlot05" />
+	</GameData>
+</TruckAddon>

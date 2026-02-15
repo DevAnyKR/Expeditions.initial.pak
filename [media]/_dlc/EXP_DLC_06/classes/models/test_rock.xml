@@ -1,0 +1,14 @@
+<ModelBrand 
+	DynamicModel="true"
+	IsKeepPhysModelAlways="true"
+>
+	<PhysicsModel>
+			<Body Collisions="Dynamic" Mass="1500" ModelFrame="Bone_cdt" NoSoftContacts="True">
+			
+			</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0.0; 0.0; 0.0)" ParentFrame="Bone_cdt" />
+	</GameData>
+</ModelBrand>
+	

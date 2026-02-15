@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_visor_02">
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneVisor02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="Beacon" Size="0.15" Pos="(3.234; 2.417; 0.605)" />
+			<Flare _template="Beacon" Size="0.15" Pos="(3.234; 2.417; -0.605)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_01_NAME"
+		/>
+		<InstallSocket Type="Step310eVisor" />
+	</GameData>
+</TruckAddon>

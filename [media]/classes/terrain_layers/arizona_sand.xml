@@ -1,0 +1,10 @@
+<MaterialType 
+        MinViscosity="4.0"
+	Texture="tiles/arizona_sand__d_a.tga" 
+	Normal="tiles/arizona_sand_relief__d_a.tga"
+	NoGrass="false"
+	GenerateDust="true"
+	AllowHiddenExtrudes="0.5"
+	Sound="surfaces/surf_sand_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+/>

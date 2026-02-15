@@ -1,0 +1,118 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="100"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="khan_317_sentinel_suspension_default"
+	>
+		<Suspension 
+			Damping="0.3"
+			Height="0.21" 
+			Strength="0.016" 
+			WheelType="front" 
+			BrokenSuspensionMax="0.025" 
+			SuspensionMin="-0.35" 
+			SuspensionMax="-0.025" />
+		
+		
+		<Suspension 
+			Damping="0.25"
+			Height="0.15" 
+			Strength="0.0155"
+			WheelType="rear"
+			BrokenSuspensionMax="0.025"
+			SuspensionMin="-0.3"
+			SuspensionMax="-0.0125"/>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="160"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="khan_317_sentinel_suspension_high"
+		TruckReplacement="khan_317_sentinel_susp1"
+	>
+		<Suspension 
+			Damping="0.45"
+			Height="0.37"
+			Strength="0.0155"
+			WheelType="front"
+			BrokenSuspensionMax="0.1"
+			SuspensionMin="-0.4"
+			SuspensionMax="-0.025" />
+		
+		<Suspension
+		
+			Damping="0.4"
+			Height="0.3"
+			Strength="0.01659"
+			WheelType="rear"
+			BrokenSuspensionMax="0.1"
+			SuspensionMin="-0.325"
+			SuspensionMax="-0.025"
+			/>
+		<GameData
+			Price="10000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="130"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="khan_317_sentinel_suspension_crawler"
+		TruckReplacement="khan_317_sentinel_susp1"
+	>
+		<Suspension
+			Damping="0.55"
+			Height="0.35"
+			Strength="0.0135"
+			WheelType="front"
+			BrokenSuspensionMax="0.05"
+			SuspensionMin="-0.375"
+			SuspensionMax="0.035" />
+		<Suspension
+			Damping="0.5"
+			Height="0.27"
+			Strength="0.0136"
+			WheelType="rear"
+			BrokenSuspensionMax="0.05"
+			SuspensionMin="-0.3"
+			SuspensionMax="0.035" />
+		<GameData
+			Price="6000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

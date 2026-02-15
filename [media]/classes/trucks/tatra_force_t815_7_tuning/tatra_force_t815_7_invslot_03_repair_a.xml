@@ -1,0 +1,41 @@
+<_templates Include="trucks">
+	<Body>
+		<ContainerLimits Collisions="None" Mass="20">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="0"
+			>
+				<!-- <Motor Damping="10" Spring="200" Type="Spring" /> -->
+			</Constraint>
+		</ContainerLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="tatra_force_t815_7_invslot_03_repair_a" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_invslot_03_repair_a">
+		<Body _template="ContainerLimits" ModelFrame="BoneInvSlot03Slot01Repair_cdt" />
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_r"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="tatra_force_t815_7_invslot_03" />
+		<InstallSocket Type="TatraForceT8157InvSlot03Slot01" />
+	</GameData>
+</TruckAddon>

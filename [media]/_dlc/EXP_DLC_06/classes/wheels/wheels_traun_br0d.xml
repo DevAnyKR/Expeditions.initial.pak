@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Allterrain _template="Medium" RearMassScale="1.0">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="Allterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</Allterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.618">
+	<TruckTires>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_traun_br0d" Name="allterrain_1m">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.9"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="0"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_TRAUN_BR0D_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_traun_br0d" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_8_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_TRAUN_BR0D_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

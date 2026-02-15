@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_roofrack_00">
+		<Body ImpactType="Truck" Mass="30">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="5000"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_outerframe_00" />
+		<InstallSocket Type="HaukkaNS420Roofrack" />
+	</GameData>
+</TruckAddon>

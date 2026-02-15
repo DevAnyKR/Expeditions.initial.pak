@@ -1,0 +1,9 @@
+<_templates Include="models" />
+<ModelBrand>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_fossils_01_lmk"/>
+</ModelBrand>

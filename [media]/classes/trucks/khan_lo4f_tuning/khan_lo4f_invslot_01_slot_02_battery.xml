@@ -1,0 +1,16 @@
+<_parent File="khan_lo4f_invslot_01_slot_01_battery" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_invslot_01_slot_02_battery">
+		<Body ModelFrame="BoneInvSlot01Slot02Repair_cdt">
+			<Constraint>
+				<Motor Damping="400" Spring="2500" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FInvSlot01Slot02" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="khan_lo4f_invslot_01_slot_02_battery" />
+	</BatteryHide>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<CombineParticles
+	AirResistance="20.0"
+	AspectRatio="0.8"
+	BillboardOffset="(0.5; 0.5)"
+	Gravity="(0; -12.0; 0)"
+	IsAlphaKill="true"
+>
+	<Texture
+		Diffuse="sfx/particles/azurite_02__d_a.tga"
+	/>
+	<Size Function="(2.0; 1.0; 0.5)" Median="2.0" />
+	<Scale Random="0.8" Value="0.5" />
+	<RotationSpeed Value="240" />
+	<Rotation Random="360" />
+	<LifeTime Value="2.0" />
+	
+	<Collisions
+		Enable="true"
+		Friction="0.2"
+		Radius="0.2"
+		Restitution="0.4"
+	/>
+
+</CombineParticles>

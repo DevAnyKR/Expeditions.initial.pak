@@ -1,0 +1,23 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false" 
+	Instanced="true"
+	Fence="False"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="40" ModelFrame="BoneRoot">
+				<Body Mass="300" Collisions="Dynamic" NoSoftContacts="true" Friction="2" ModelFrame="Bone_001">
+					<Constraint Type="Fixed" BreakOffThreshold="1" /> 
+				</Body>
+				<Body Mass="300" Collisions="Dynamic" NoSoftContacts="true" Friction="2" ModelFrame="Bone_002">
+				 <Constraint BreakOffThreshold="1" Type="Fixed"  />
+			    </Body>	
+                <Body Mass="300" Collisions="Dynamic" NoSoftContacts="true" Friction="2" ModelFrame="Bone_003">
+				   <Constraint BreakOffThreshold="1" Type="Fixed"  />
+			    </Body>
+                <Body Mass="300" Collisions="Dynamic" NoSoftContacts="true" Friction="2" ModelFrame="Bone_004">
+				   <Constraint BreakOffThreshold="1" Type="Fixed"  />
+			    </Body>						
+        </Body>
+	</PhysicsModel>
+</ModelBrand>

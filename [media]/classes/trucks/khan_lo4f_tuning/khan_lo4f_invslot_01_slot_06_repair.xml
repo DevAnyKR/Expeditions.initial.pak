@@ -1,0 +1,12 @@
+<_parent File="khan_lo4f_invslot_01_slot_04_repair" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_invslot_01_slot_06_repair">
+		<Body ModelFrame="BoneInvSlot01Slot06Repair_cdt" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FInvSlot01Slot06" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="khan_lo4f_invslot_01_slot_06_repair" />
+	</RepairsHide>
+</TruckAddon>

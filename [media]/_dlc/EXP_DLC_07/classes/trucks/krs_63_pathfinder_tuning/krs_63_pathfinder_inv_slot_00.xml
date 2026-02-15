@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_inv_slot_00">
+		<Body ImpactType="Truck" Mass="15">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_63_INV_SLOT_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KRS_63_INV_SLOT_00_NAME"
+		/>
+		<InstallSocket Type="KRS63InvSlot" />
+	</GameData>
+</TruckAddon>

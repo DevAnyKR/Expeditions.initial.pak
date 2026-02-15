@@ -1,0 +1,558 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			CamberAnglePhysics="-1.0"
+			CamberAngleRender="-1.0"
+			CamberSuspensionMultiplier="0.3"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FirstAxle
+			CamberAnglePhysics="-1.0"
+			CamberAngleRender="-1.0"
+			CamberSuspensionMultiplier="0.3"
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="35"
+			SteeringCastor="6"
+			SteeringJointOffset="0.18"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		SignalRadius="100.0"
+		ElectricChargeCapacity="12"
+		IsResistantToRollover = "true"
+		DiffLockType="Switchable"
+		EngineIconMesh="env/engine_ford_f150_raptor"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.5"
+		ExhaustStartTime="0.9"
+		FuelCapacity="135"
+		Responsiveness="0.5"
+		SteerSpeed="0.051"
+		BackSteerSpeed="0.0495"
+		TruckImage="truck_F150_Raptor"
+		TruckType="SCOUT"
+		template="TruckDefaultVars"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts, winches_scouts_siro_72" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_ford_f150_raptor"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.894; 0.513; 0.88)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.894; 0.513; 0.88)" />
+			<Wheel _template="SecondAxle" Pos="(-1.806; 0.514; 0.88)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.806; 0.514; 0.88)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="s_scout_ford_f150_raptor_suspension_high"
+			Type="s_ford_f150_raptor"
+			MaxWheelRadiusWithoutSuspension="1.0"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.894"
+		/>
+		<Steam Origin="(1.705; 0.958; -0.033)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/ford_f150_raptor/ford_f150_raptor_reverse" />
+			<BrakePull		Sound="trucks/ford_f150_raptor/ford_f150_brake_pull" />
+			<BrakesSqueal	Sound="trucks/ford_f150_raptor/ford_f150_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/ford_f450_limited/ford_f450_limited_brake_release" />
+			<Handbrake		Sound="trucks/ford_f150_raptor/ford_f150_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/ford_f150_raptor/ford_f150_handbrake_off" />
+			<Gear			Sound="trucks/ford_f150_raptor/ford_f150_gear_shift" />
+			<Honk			Sound="trucks/ford_f150_raptor/ford_f150_honk" />
+			<EngineRev		Sound="trucks/ford_f150_raptor/ford_f150_raptor_rev" />
+			<EngineAccel	Sound="trucks/ford_f150_raptor/ford_f150_raptor_acc" />
+			<EngineStart	Sound="trucks/ford_f450_limited/ford_f450_limited_start" />
+			<EngineStop		Sound="trucks/ford_f150_raptor/ford_f150_raptor_stop" />
+			<EngineIdle		Sound="trucks/ford_f150_raptor/ford_f150_raptor_idle" />
+			<EngineIdle_2d	Sound="trucks/ford_f150_raptor/ford_f150_raptor_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ford_f150_raptor/ford_f150_raptor_low" />
+			<EngineLow_2d	Sound="trucks/ford_f150_raptor/ford_f150_raptor_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ford_f150_raptor/ford_f150_raptor_high" />
+			<EngineHigh_2d	Sound="trucks/ford_f150_raptor/ford_f150_raptor_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/ford_f150_raptor/ford_f150_raptor_heavy" />
+			<EngineHeavy_2d	Sound="trucks/ford_f150_raptor/ford_f150_raptor_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.7"
+			MaxX="3.4"
+		/>
+		<LimitedFluid
+			Center="(-0.699, 0.569, 0.282)"
+			SizeX="1.8"
+			SizeY="0.270"
+			SizeZ="0.35"
+			Type="Box"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<Inventory MaxLimit="4" />
+		<DeployCost Cost="0" />
+		<Intake Dir="(1; 0; 0)" Origin="(2.75; 1.095; 0)" Size="1.0" />
+		<GearboxSocket Default="g_scout_ford_f150_raptor_default" Type="gearboxes_scouts_ford_f150_raptor, gearboxes_scouts_light_experimental, gearboxes_scouts_heavy_experimental" />
+		<FuelTank DamageCapacity="85" />
+		<EngineSocket Default="e_us_scout_ford_f150_raptor_engine_0" Type="e_us_scout_modern_ford_f150_raptor, e_scout_light_experimental" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(0.1; 0.028; -0.1)"
+			Pos="(0.443; 1.055; 0.461)"
+			SteeringWheelPos="(0.747; 1.455; 0.459)"
+			PArentFrame="BoneCabin_cdt"
+		/>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.375; 0.725; -0.42)" Max="(2.21; 1.4; 0.42)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="GearBox" Min="(0.335; 0.5; -0.196)" Max="(1.374; 0.8; 0.196)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.65; 0.475; 0.093)" Max="(0.234; 0.7; 0.486)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.14" RearOffsetZ="0.14" Scale="0.49" Type="wheels_ford_f150_raptor" />
+		<CompatibleWheels OffsetZ="0.15" RearOffsetZ="0.15" Scale="0.51" Type="wheels_ford_f150_raptor" />
+		<CompatibleWheels OffsetZ="0.11" Scale="0.49" Type="wheels_ford_f150_raptor_2" />	
+		<CompatibleWheels OffsetZ="0.11" Scale="0.51" Type="wheels_ford_f150_raptor_2" />
+		<Camera
+			Center="(-1.3; -0.3; 0)"
+			RadiusMultiplier="0.8"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Roof
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.8; 0.5)"
+				ViewDir="(1; 0; 0)"
+				ViewPos="(1.35; 3.2; 0)"
+			/>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.53; 0.3)"
+				WindshieldDiffuseTexture="trucks/ford_f150_raptor_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/ford_f150_raptor_glass__sh_d.tga"
+				ViewPos="(0.338; 1.73; 0.47)"
+				ZoomViewPosOffset="(0.42; 0.03; -0.035)"
+			>
+				<Rear ViewPosOffset="(-0.25; 0; 0.7)" />
+				<Mirror ClipDir="(-1; 0.2; -0.38)" ClipOffset="0.15" FOVScale="1.0" MeshFrame="mirror_l" ReflectionDir="(-1; 0.2; -0.38)" Size="(0.25; 0.2)" Pos="(0.934; 1.45; 1.076)" />
+				<Mirror ClipDir="(-1; 0.08; 0.64)" ClipOffset="0.15" FOVScale="1.0" MeshFrame="mirror_r" ReflectionDir="(-1; 0.08; 0.64)" Size="(0.25; 0.2)" Pos="(0.934; 1.45; -1.076)" />
+				<Mirror ClipDir="(-1; -0.07; 0.35)" ClipOffset="0.1" FOVScale="0.8" MeshFrame="hp_cab_mirror" ReflectionDir="(-1; -0.07; 0.35)" Size="(0.23; 0.09)" Pos="(0.893; 1.792; -0)" />
+			</Cockpit>
+		</Camera>
+		<Binocular ViewPosOffset="(0; 3.5; 0)" ParentFrame="BoneChassis_cdt" />
+		<Axles>
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.15; 3.8; 0.0)"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_f150_raptor">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.265; -0.325; 0)"
+			ImpactType="Truck"
+			Mass="1500"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.12; -0.575; 0)"
+				ImpactType="Truck"
+				Mass="900"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunshieldLeft_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Type="Hinge"
+						MinLimit="-16"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.8" Spring="32" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunshieldRight_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-16"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.5" Spring="30" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+		<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.1; 1.160; 0.0)" />
+			<Flare _template="StopSignal" Size="0.35" Pos="(-2.890; 1.17; 0.947)" Dir="(-1; 0; 1)" DirAngle="120" />
+			<Flare _template="StopSignal" Size="0.35" Pos="(-2.890; 1.17; -0.947)" Dir="(-1; 0; -1)" DirAngle="120" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3.1; 1.160; 0.0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.962; 1.041; 0.865)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.960; 1.017; 0.864)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.958; 0.991; 0.863)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.954; 0.966; 0.862)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.962; 1.041; -0.865)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.960; 1.017; -0.864)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.958; 0.991; -0.863)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-2.954; 0.966; -0.862)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-1.081; 1.975; 0.153)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-1.081; 1.975; -0.153)" Dir="(-1; 0; 0)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.6" Pos="(-2.959; 1.003; 0.867)" Dir="(-1; 0; 0)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.6" Pos="(-2.959; 1.003; -0.867)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" Size="0.085" Pos="(-1.082; 1.979; -0.013)" Dir="(-1; 0; 0)" />
+			
+			<Flare _template="ReverseSignal" Size="0.35" Pos="(-2.950; 1.232; 0.884)" Dir="(-1; 0; 1)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.45" Pos="(-2.950; 1.232; 0.884)" Dir="(-1; 0; 1)" />
+			<Flare _template="ReverseSignal" Size="0.35" Pos="(-2.950; 1.232; -0.884)" Dir="(-1; 0; -1)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.45" Pos="(-2.950; 1.232; -0.884)" Dir="(-1; 0; -1)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="StopSignal" Pos="(-3.1; 1.160; 0.0)" />
+			<Flare _template="StopSignal" AspectRatio="0.8" Size="0.4" Pos="(-2.890; 1.17; 0.947)" Dir="(-1; 0; 1)" DirAngle="120" />
+			<Flare _template="StopSignal" AspectRatio="0.8" Size="0.4" Pos="(-2.890; 1.17; -0.947)" Dir="(-1; 0; -1)" DirAngle="120" />
+			
+			<Flare _template="HeadLight" Size="0.2" Pos="(2.510; 1.171; 0.768)" />
+			<Flare _template="HeadLight" Size="0.2" Pos="(2.510; 1.025; 0.768)" />
+			<Flare _template="HeadLight" Size="0.2" Pos="(2.510; 1.171; -0.768)" />
+			<Flare _template="HeadLight" Size="0.2" Pos="(2.510; 1.025; -0.768)" />
+			<Light _template="IgnitionSignalWhite" Pos="(2.510; 1.025; 0.0)" />
+			<!-- Three spotlights -->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.739; 1.272; 0.000)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.732; 1.272; -0.258)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.732; 1.272; 0.258)" Dir="(1; 0; 0)" DirAngle="90" />
+			<!-- Side spotlights -->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.75" Size="0.45" Pos="(2.407; 1.120; 0.911)" Dir="(0; 0; 1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.75" Size="0.45" Pos="(2.407; 1.120; -0.911)" Dir="(0; 0; -1)" DirAngle="90" />
+			<!-- Long Spotlights Top-->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.631; 1.260; 0.629)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.596; 1.262; 0.684)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.558; 1.262; 0.740)" Dir="(1; 0; 0.1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.509; 1.263; 0.803)" Dir="(1; 0; 0.3)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.451; 1.264; 0.859)" Dir="(1; 0; 0.5)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.382; 1.265; 0.892)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.631; 1.260; -0.629)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.596; 1.262; -0.684)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.558; 1.262; -0.740)" Dir="(1; 0; -0.1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.509; 1.263; -0.803)" Dir="(1; 0; -0.3)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.451; 1.264; -0.859)" Dir="(1; 0; -0.5)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="2.0" Size="0.12" Pos="(2.382; 1.265; -0.892)" Dir="(1; 0; -1)" DirAngle="90" />
+			<!-- Long Spotlights Side-->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.497; 0.989; 0.887)" Dir="(1; 0; 1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.494; 1.048; 0.888)" Dir="(1; 0; 1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.489; 1.110; 0.890)" Dir="(1; 0; 1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.476; 1.165; 0.891)" Dir="(1; 0; 1)" DirAngle="120" />
+			
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.497; 0.989; -0.887)" Dir="(1; 0; -1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.494; 1.048; -0.888)" Dir="(1; 0; -1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.489; 1.110; -0.890)" Dir="(1; 0; -1)" DirAngle="120" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="0.7" Size="0.16" Pos="(2.476; 1.165; -0.891)" Dir="(1; 0; -1)" DirAngle="120" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.510; 1.098; 0.768)" />
+			<Model _template="HeadLightRay" Org="(2.510; 1.098; -0.768)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.510; 1.171; 0.768)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.510; 1.025; 0.768)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.510; 1.171; 0.768)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.510; 1.025; 0.768)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.510; 1.171; -0.768)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.510; 1.025; -0.768)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.510; 1.171; -0.768)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.510; 1.025; -0.768)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(2.7; 1.098; 0.000)" />
+	<Landmark Mesh="landmarks/step_310e_01_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData
+		Country="RU,CAS,US"
+		LockedUnconditionally="true"
+		Price="40000"
+		RecoveryPrice="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(0.214; 0.479; 0.8)" />
+		<WinchSocket Pos="(0.214; 0.479; -0.8)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_FORD_F150_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgF150RaptorExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIcon576x640="shopImgF150RaptorExp"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_FORD_F150_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(13.0; 1.7; -5.2)" InterestPosition="(5.0; 1.2; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_l" Position="(12.0; 1.7; -7.5)" InterestPosition="(5.6; 1.2; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_r" Position="(11.15; 2.2; 9.0)" InterestPosition="(4.25; 1.35; 0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="roof" Position="(7.5; 6.0; -2.8)" InterestPosition="(4.5; 1.65; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="wheels" Position="(5.2; 0.55; -3.65)" InterestPosition="(6.2; 0.5; -0.45)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="rear" Position="(-2.9; 4.4; 3.0)" InterestPosition="(3.3; 0.75; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="supplies_default" Position="(13.0; 1.7; -5.2)" InterestPosition="(5.0; 1.2; 0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_roof" Position="(7.5; 6.0; -2.8)" InterestPosition="(4.5; 1.65; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_rear" Position="(-2.9; 4.4; 3.0)" InterestPosition="(3.3; 0.75; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; -3.0)" InterestPosition="(4.7; 1.05; -0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_l_sticker"/>
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; 3.0)" InterestPosition="(6.6; 1.05; 0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_r_sticker"/>
+			<CameraPos FOV="32.0" Position="(7.5; 5.8; -0.288)" InterestPosition="(4.0; 0.631; -0.35)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="roof_sticker"/>
+		</CustomizationCameras>	
+		<AddonSockets DefaultAddon="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<!-- STEERING RACK -->
+		<IKBone ModelFrame="IK_BoneRackLeft_B" ParentFrame="BoneRackL">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneRackLeft_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneRackRight_B" ParentFrame="BoneRackR">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneRackRight_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS -->
+		<!-- Rear -->
+		<IKBone ModelFrame="IK_BoneShockRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Front -->
+		<IKBone ModelFrame="IK_BoneShockFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomLeft_B"
+				ModelFrame="IK_BoneShockFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomRight_B"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- ARMS -->
+		<!-- Rear -->
+		<IKBone ModelFrame="IK_ArmBottomRearLeft_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ArmBottomRearLeft_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ArmTopRearLeft_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ArmTopRearLeft_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ArmBottomRearRight_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ArmBottomRearRight_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ArmTopRearRight_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ArmTopRearRight_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- PANAR -->
+		<IKBone ModelFrame="IK_Panar_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_Panar_B"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- WISHBONES -->
+		<!-- Left -->
+		<IKBone ModelFrame="IK_WishboneBottomLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="IK_WishboneBottomLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_WishboneTopLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="IK_WishboneTopLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Right -->
+		<IKBone ModelFrame="IK_WishboneBottomRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackR"
+				ModelFrame="IK_WishboneBottomRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_WishboneTopRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackR"
+				ModelFrame="IK_WishboneTopRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHRUS -->
+		<IKBone ModelFrame="IK_BoneSHRUSLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="IK_BoneSHRUSLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSHRUSRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackR"
+				ModelFrame="IK_BoneSHRUSRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- ANTI ROLL BAR -->
+		<IKBone ModelFrame="IK_BoneAntiRollBarRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomRight_B"
+				ModelFrame="IK_BoneAntiRollBarRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARBLinkRight_B" ParentFrame="IK_BoneAntiRollBarRight_A">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomRight_B"
+				ModelFrame="IK_BoneARBLinkRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAntiRollBarLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomLeft_B"
+				ModelFrame="IK_BoneAntiRollBarLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARBLinkLeft_B" ParentFrame="IK_BoneAntiRollBarLeft_A">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_WishboneBottomLeft_B"
+				ModelFrame="IK_BoneARBLinkLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

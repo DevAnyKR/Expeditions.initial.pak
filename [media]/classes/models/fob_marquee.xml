@@ -1,0 +1,12 @@
+<ModelBrand
+	ClipCamera="true"
+	DynamicModel="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/fob_marquee_lmk" />
+</ModelBrand>

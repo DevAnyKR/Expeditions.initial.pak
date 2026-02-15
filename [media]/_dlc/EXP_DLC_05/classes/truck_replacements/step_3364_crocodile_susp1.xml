@@ -1,0 +1,362 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="2"
+			SteeringJointOffset="0.2"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Socket>
+		<Cabin2Chassis Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+			<ExtraParent Frame="BoneChassis_cdt" />
+		</Cabin2Chassis>
+	</Socket>
+	<Body>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping=".1" Spring="15" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="100.0"
+		ElectricChargeCapacity="12"
+		BackSteerSpeed="0.02"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_step_3364_crocodile"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0.0"
+		FuelCapacity="130"
+		Responsiveness="0.25"
+		SteerSpeed="0.025"
+		TruckImage="step3364crocodilemchr"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="FrontWheel" Pos="(2.058; 0.512; 0.85)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(2.058; 0.512; 0.85)" />
+			<Wheel _template="RearWheel" Pos="(-2; 0.512; 0.87)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2; 0.512; 0.87)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="step_3364_crocodile_suspension_high"
+			Type="s_step_3364_crocodile"
+			MaxWheelRadiusWithoutSuspension="0.4"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.685"
+		/>
+		<Steam Origin="(0; 0.9; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			MinDist="10.0"
+			Origin="(0; 0; 0)"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="" />
+			<EngineTrans	Sound="" />
+			<BrakePull		Sound="trucks/step_3364_crocodile/step_3364_crocodile_brake_pull" />
+			<BrakeRelease	Sound="trucks/step_3364_crocodile/step_3364_crocodile_brake_release" />
+			<BrakesSqueal	Sound="trucks/step_3364_crocodile/step_3364_crocodile_brakes_squeal" />
+			<Handbrake		Sound="trucks/step_3364_crocodile/step_3364_crocodile_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/step_3364_crocodile/step_3364_crocodile_handbrake_off" />
+			<Honk			Sound="trucks/step_3364_crocodile/step_3364_crocodile_honk" />
+			<EngineRev		Sound="trucks/step_3364_crocodile/step_3364_crocodile_rev" />
+			<EngineAccel	Sound="trucks/step_3364_crocodile/step_3364_crocodile_acc" />
+			<EngineStart	Sound="trucks/step_3364_crocodile/step_3364_crocodile_start" />
+			<EngineStop		Sound="trucks/step_3364_crocodile/step_3364_crocodile_stop" />
+			<EngineIdle		Sound="trucks/step_3364_crocodile/step_3364_crocodile_idle" />
+			<EngineIdle_2d	Sound="trucks/step_3364_crocodile/step_3364_crocodile_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/step_3364_crocodile/step_3364_crocodile_low" />
+			<EngineLow_2d	Sound="trucks/step_3364_crocodile/step_3364_crocodile_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/step_3364_crocodile/step_3364_crocodile_high" />
+			<EngineHigh_2d	Sound="trucks/step_3364_crocodile/step_3364_crocodile_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.1; 0.1; 0.1)"
+				MaxAngle="(0.8; 0.8; 0.8)"
+				MaxFrequency="4"
+			/>
+			<Shaker
+				Frame="Shaker_BoneEngine"
+				MinAngle="(0; 1.5; 0)"
+				MaxAngle="(0; 2; 0)"
+				MaxFrequency="1"
+			/>
+		</Shakers>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="1.8" MinX="-4" MaxX="3.5" />
+		<LimitedFluid
+			Center="(-0.672; 0.756; 0.718)"
+			SizeX="0.773"
+			SizeY="0.336"
+			SizeZ="0.443"
+			Type="Box"
+		/>
+		<Exhaust
+			Dir="(-0.5; 0; -0.866)"
+			IsLight="true"
+			Origin="(-1.47; 0.594; -0.72)"
+			Speed="3.82"
+		/>
+		<Inventory MaxLimit="5" />
+		<Intake Dir="(1; 0; 0)" Origin="(2.75; 1.145; 0)" Size="1" />
+		<GearboxSocket Default="g_truck_step_3364_default" Type="gearboxes_trucks_step_3364_crocodile, gearboxes_trucks_light_experimental" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="ru_truck_step_3364_engine_0" Type="e_ru_truck_step_3364_crocodile, e_truck_light_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			Pos="(0.442; 1.340; 0.383)"
+			SteeringWheelPos="(0.838; 1.668; 0.383)"
+			ParentFrame="BoneCabinDamper_cdt"
+			LegsOffset="(0.07; 0.15; 0.0)"
+		/>
+		<Dashboard>
+			<Gauge Dir="(0.961; -0.277; 0)" InputRange="(0;80)" InputType="speed" Mesh="trucks/arrows/step_3364_crocodile_arrow_1" Org="(1.086; 1.618; 0.335)" OutputAngles="(-42; -318)" />
+			<Gauge Damping="0.99" Dir="(0.964; -0.267; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/step_3364_crocodile_arrow_2" Org="(1.103; 1.665; 0.062)" OutputAngles="(-90; -220)" />
+			<Gauge Damping="0.99" Dir="(0.962; -0.274; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/step_3364_crocodile_arrow_2" Org="(1.103; 1.665; -0.062)" OutputAngles="(-60; -145)" />
+			<Gauge Damping="0.99" Dir="(0.964; -0.267; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/step_3364_crocodile_arrow_3" Org="(1.098; 1.658; 0.469)" OutputAngles="(-20; 5)" />
+			<Gauge Damping="0.99" Dir="(-0.956; 0.294; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/step_3364_crocodile_arrow_3" Org="(1.074; 1.578; 0.421)" OutputAngles="(-20; 25)" />
+			<Gauge Damping="0.99" Dir="(-0.963; 0.271; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/step_3364_crocodile_arrow_3" Org="(1.074; 1.578; 0.25)" OutputAngles="(-13; 0)" />
+			<Gauge Damping="0.99" Dir="(0.954; -0.3; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/step_3364_crocodile_arrow_3" Org="(1.098; 1.657; 0.202)" OutputAngles="(0; 8)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.2; 0.7; -0.35)" Max="(2.4; 1.4; 0.35)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.15; 0.55; 0.44)" Max="(-0.2; 0.95; 1)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.15; 0.5; -0.2)" Max="(1.19; 0.9; 0.2)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.19" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_double" />
+		<CompatibleWheels Scale="0.53" OffsetZ="0.18" Type="wheels_step_3364_crocodile" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.13" Scale="0.53" Type="wheels_medium_mudtires_tayga" />
+		<Camera
+			Center="(-1.0; 0.05; 0)"
+			RadiusMultiplier="0.8"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/step_3364_crocodile_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/step_3364_crocodile_glass__sh_d.tga"
+				ViewPos="(0.4; 2.0; 0.38)"
+				LimitsHor="(-2.8; 2.45)"
+				LimitsVer="(-0.7; 0.3)"
+				ViewDir="(1; -0.05; 0)"
+				ZoomViewPosOffset="(0.4; -0.02; 0)"
+			>
+				<Mirror ClipDir="(-0.814; 0.037; -0.579)" ClipOffset="0.1" CurveAngle="10" FOVScale="2" MeshFrame="mirror_left" ReflectionDir="(-0.814; 0.037; -0.579)" Size="(0.2; 0.35)" Pos="(0.804; 1.715; 1.271)" />
+				<Mirror ClipDir="(-0.768; -0.014; 0.641)" ClipOffset="0.1" CurveAngle="10" FOVScale="2.5" MeshFrame="mirror_right" ReflectionDir="(-0.768; -0.014; 0.641)" Size="(0.2; 0.35)" Pos="(0.804; 1.715; -1.27)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(0.3; 3.195; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.75; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.0; 3.8; 0.0)"/>
+	</TruckData>
+	<Rotator
+		EngineTorqueFactor="0.5"
+		Frame="Rotator_BoneEngineFan"
+		RotationAxis="(1; 0; 0)"
+		RotationSpeed="20"
+	/>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_susp1">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.5; -0.35; 0)"
+			ImpactType="Truck"
+			Mass="2100"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.3; -0.2; 0)"
+				ImpactType="Truck"
+				Mass="1700"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				>
+					<Motor Damping="1500" Spring="30000" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneCord_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Collisions="None"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="2"
+					>
+						<Motor Damping="0.1" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshield_cdt" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneChain01_cdt"
+				Collisions="none"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.25" Spring="3" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneChain02_cdt"
+				Collisions="none"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="40"
+				>
+					<Motor Damping="0.15" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1.0" Pos="(-3.8; 0.8; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.2" Pos="(-3.578; 0.792; -0.631)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.2" Pos="(-3.578; 0.792; 0.631)" />
+		</StopSignals>
+		
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Pos="(-3.8; 0.8; 0)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 1.0" Size="0.2" Pos="(-3.578; 0.792; -0.631)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 1.0" Size="0.2" Pos="(-3.578; 0.792; 0.631)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/step_3364_crocodile_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData 
+		Country="RU,CAS,US"
+		Price="76000" 
+		RecoveryPrice="2800" 
+		UnlockByRank="1">
+		<WinchSocket Pos="(-1.21; 0.748; -0.426)" />
+		<WinchSocket Pos="(-1.21; 0.748; 0.426)" />
+		<WinchSocket Pos="(-3.6; 0.794; 0.0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_STEP_3364_CROCODILE_DESC"
+			UiIcon30x30="offroadVehicleImg30"
+			UiIcon328x458="shopImgStep3364Crocodile"
+			UiIcon40x40="offroadVehicleImg"
+			UiIconLogo="StepLogo80"
+			UiName="UI_VEHICLE_STEP_3364_CROCODILE_NAME"
+		/>
+	<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(15.178; 1.581; -3.541)" InterestPosition="(5.245; 1.416; 0.475)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+	
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(3.686; 1.454; 0.000)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.804; 1.614; 6.544)" />
+			<CameraPos FOV="32.0" Name="side_r_inv_slot" InterestPosition="(3.686; 1.454; 0.000)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(13.804; 1.614; 6.544)" />
+			
+			<CameraPos FOV="32.0" Name="addon_1" Position="(-4.199; 5.896; -9.692)" InterestPosition="(6.468; 1.100; 1.000)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			
+			<CameraPos FOV="32.0" Name="roof" Position="(9.133; 6.430; -1.320)"  MaxXRotation="360" MaxYRotation="360" MaxZoom="2"  InterestPosition="(4.110; 1.607; 0.000)" />
+			<CameraPos FOV="32.0" Name="supplies_roof" Position="(9.133; 6.430; -1.320)"  MaxXRotation="0" MaxYRotation="0" MaxZoom="0"  InterestPosition="(4.110; 1.607; 0.000)"/>
+	
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.710; 1.454; -0.697)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.991; 1.370; -6.440)" />
+			<CameraPos FOV="32.0" Name="side_l_inv_slot" InterestPosition="(6.710; 1.454; -0.697)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(14.991; 1.370; -6.440)" />
+			
+			<CameraPos FOV="32.0" Name="wheels" Position="(4.287; 0.700; -4.558)" InterestPosition="(6.3; 0.7; -0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(3.576; 1.749; 1.032)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2; 2.221; 2.176)" />
+			<CameraPos FOV="32.0" Name="rear_spare_wheel" InterestPosition="(3.576; 1.749; 1.032)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-2; 2.221; 2.176)" />
+					
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(4.244; 1.143; -0.697)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.971; 1.01; -3.058)" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" InterestPosition="(6.256; 1.143; 0.697)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.971; 1.01; 3.058)" />
+			<CameraPos FOV="32.0" Name="roof_sticker" InterestPosition="(5.1; 1.2; -0.7)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.2; 4.8; -0.3)" />
+		</CustomizationCameras>
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->	
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodL" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.2)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneTieRodL1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTieRodR" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.2)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneTieRodR1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

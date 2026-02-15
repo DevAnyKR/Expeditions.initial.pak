@@ -1,0 +1,18 @@
+<ModelBrand>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(255; 220; 195) x 0"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(-0.03; 0.8; -0.01)"
+		/>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</ModelBrand>

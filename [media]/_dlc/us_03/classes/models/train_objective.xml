@@ -1,0 +1,31 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="carriage4" />
+	</PhysicsModel>
+	<Subset IsDefault="true" Name="carriage4">
+		<Mesh Name="carriage4" />
+		<CdtMesh Name="carriage4" />
+	</Subset>
+	<Subset Name="train_animation">
+		<AnimTrack Name="train_move" />
+		<AnimSubset Name="train_animation" />
+	</Subset>
+	<Subset Name="hide_train">
+	</Subset>    
+	<Landmark Mesh="" />
+	<AnimSubset Name="train_animation">
+		<Mesh Name="animated_train1" />
+		<Mesh Name="animated_train2" />
+		<Mesh Name="animated_carriage1" />
+		<Mesh Name="animated_carriage2" />
+		<Mesh Name="animated_carriage3" />
+		<Mesh Name="animated_carriage4" />
+	</AnimSubset>
+	<TrackEvents TrackName="train_move" />    
+</ModelBrand>

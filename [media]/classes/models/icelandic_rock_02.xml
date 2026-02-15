@@ -1,0 +1,11 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/icelandic_rock_02_lmk" />
+</ModelBrand>

@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_wings_00">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMudguardRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				>
+					<Motor Damping="1.0" Spring="15" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMudguardLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				>
+					<Motor Damping="0.7" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Size="0.1" Pos="(-1.462; 0.731; 1.161)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.1" Pos="(-1.462; 0.731; -1.161)" Dir="(1; 0; -1)" DirAngle="90" />
+			
+			<Flare _template="StopSignal" Size="0.075" Pos="(-2.652; 0.745; 1.161)" Dir="(-1; 0; 1)" DirAngle="90" />
+			<Flare _template="StopSignal" Size="0.075" Pos="(-2.652; 0.745; -1.161)" Dir="(-1; 0; -1)" DirAngle="90" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FENDERS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedWings" />
+	</GameData>
+</TruckAddon>

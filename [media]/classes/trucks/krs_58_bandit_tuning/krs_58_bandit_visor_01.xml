@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_58_bandit_tuning" MeshFrame="krs_58_bandit_visor_01">
+		<Body ImpactType="Truck" Mass="8" ModelFrame="BoneVisor01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_02_NAME"
+		/>
+		<InstallSocket Type="krs58banditVisor" />
+	</GameData>
+</TruckAddon>

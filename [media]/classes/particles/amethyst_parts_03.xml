@@ -1,0 +1,24 @@
+<CombineParticles
+	AirResistance="20.0"
+	AspectRatio="0.8"
+	BillboardOffset="(0.5; 0.5)"
+	Gravity="(0; -12; 0)"
+	IsAlphaKill="true"
+>
+	<Texture
+		Diffuse="sfx/particles/amethyst_parts_03__d_a.tga"
+	/>
+	<Size Function="(0.12; 0.06; 0.03)" Median="0.15" />
+	<Scale Random="0.2" Value="0.2" />
+	<RotationSpeed Value="240" />
+	<Rotation Random="360" />
+	<LifeTime Value="1.5" />
+	
+	<Collisions
+		Enable="true"
+		Friction="0.2"
+		Radius="0.1"
+		Restitution="0.4"
+	/>
+
+</CombineParticles>

@@ -1,0 +1,19 @@
+<ModelBrand
+    DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" ModelFrame="stage_0" />
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="build_stage_0">
+	<Mesh Name="stage_0" />
+	<CdtMesh Name="stage_0" />
+	</Subset>
+	
+	<Subset Name="build_stage_1">
+	</Subset>
+	
+	<Landmark Mesh="landmarks/golden_ziggurat_dlc_07_lmk" />
+	
+</ModelBrand>

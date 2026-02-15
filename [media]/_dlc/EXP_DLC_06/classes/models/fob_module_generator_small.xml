@@ -1,0 +1,30 @@
+<ModelBrand Instanced="true" InstancedAsModel="true" DynamicModel="false"
+	ClipCamera="true" NeedPreload="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+		<Sounds>
+		<Initial
+            SoundName=""
+            MinDist="40"
+            MaxDist="250"
+            ParentFrame="RootNode"
+        />
+        <Looping
+            SoundName="actors/actor_fob_generator"
+            MinDist="5"
+            MaxDist="35"
+            ParentFrame="RootNode"
+        />
+		<Ending
+			SoundName=""
+			MinDist="40"
+			MaxDist="250"
+			Offset="(0; 0; 1)"
+			ParentFrame="RootNode"
+			isEnding = "true"
+		/>
+	</Sounds>
+	<GameData SignalRadius="100.0"/>
+	<Landmark Mesh="landmarks/fob_module_generator_small_lmk" />
+</ModelBrand>

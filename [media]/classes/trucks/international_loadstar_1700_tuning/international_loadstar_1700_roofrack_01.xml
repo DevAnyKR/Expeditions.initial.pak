@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_roofrack_01">
+		<Body Mass="95" ModelFrame="BoneRoofrack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="4000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Roofrack" />
+	</GameData>
+</TruckAddon>

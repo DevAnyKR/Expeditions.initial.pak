@@ -1,0 +1,12 @@
+<ModelBrand
+	ClipCamera="true"
+	DynamicModel="false"
+	Instanced="true"
+	InstancedAsModel="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_extra_storage_lmk" />
+</ModelBrand>

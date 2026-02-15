@@ -1,0 +1,14 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/animal_tracks_rus_01__d_a.tga"
+	TextureRelief="overlays/animal_tracks_rus_01_relief__d_a.tga"
+>
+	<Prebuild
+		DefaultWidth="4.0"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_animal_tracks_rus_01__s.tga"
+		SnowmapMask="overlay_animal_tracks_rus_01__s_d.tga"
+		Layer="2"	
+		
+	/>
+</OverlayBrand>

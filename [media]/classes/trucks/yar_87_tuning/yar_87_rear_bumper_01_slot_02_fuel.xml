@@ -1,0 +1,14 @@
+<_parent File="yar_87_rear_bumper_01_slot_01_fuel" />
+<TruckAddon>
+	<TruckData FuelCapacity="15">	
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="rear_bumper_01_canister_big_02">
+		<Body Collisions="None" ModelFrame="BoneRearBumper01Slot02_cdt" />
+	</PhysicsModel>
+	<GameData CameraPreset="supplies_Rear" >
+		<InstallSocket Type="Yar87RearBumper01Slot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="rear_bumper_01_canister_big_02" />
+	</FuelHide>
+</TruckAddon>

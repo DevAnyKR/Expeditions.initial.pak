@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="step_3364_crocodile_invslot_01_slot_02_repair_kit" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_invslot_01_slot_02_repair_kit">
+		<Body Collisions="None" Mass="5" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Fixed" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneAddonExplicit_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r_inv_slot" 
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="step_3364_crocodile_invslot_01" />
+		<InstallSocket Type="Step3364CrocodileInvSlot01Slot02" />
+	</GameData>
+</TruckAddon>

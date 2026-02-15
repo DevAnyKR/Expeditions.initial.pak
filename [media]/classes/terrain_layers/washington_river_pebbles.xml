@@ -1,0 +1,11 @@
+<MaterialType 
+	Texture="tiles/washington_river_pebbles__d_a.tga" 
+	Normal="tiles/washington_river_pebbles_relief__d_a.tga"
+	NoGrass="true"
+	GrassBrush="DebrisPebblesWashington"
+	Sound="surfaces/surf_gravel_rnd"
+	WheelTracks="0"
+	EndEffectSound="surfaces/hit/hit_gravel_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	IsExtrudable="false"
+/>

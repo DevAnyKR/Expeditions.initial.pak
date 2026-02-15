@@ -1,0 +1,26 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Static"
+		/>
+	</PhysicsModel>
+	
+	<Subset Name="stage_visible" IsDefault="true" >	
+		<CdtMesh Name="frame" />
+		<CdtMesh Name="cdt_mesh" />
+		<Mesh Name="mesh" />
+	</Subset>
+	
+	<Subset Name="stage_hidden">
+		<CdtMesh Name="frame" />
+		<AnimSubset Name="build_animation_1" />
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+	
+	<AnimSubset Name="build_animation_1">
+		<CdtMesh Name="cdt_frame" />
+		<Mesh Name="mesh_anim" />
+	</AnimSubset>
+</ModelBrand>

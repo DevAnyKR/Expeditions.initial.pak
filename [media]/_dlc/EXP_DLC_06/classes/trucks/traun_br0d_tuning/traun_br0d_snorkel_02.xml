@@ -1,0 +1,25 @@
+<TruckAddon>
+	<Snorkel Origin="(0.811; 2.340; 0.744)" />
+	<Snorkel Origin="(0.811; 2.340; -0.744)" />
+	<PhysicsModel Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_snorkel_02">
+		<Body Collisions="None" ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="5000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TRAUN_BR0D_SNORKEL_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TRAUN_BR0D_SNORKEL_02_NAME"
+		/>
+		<InstallSocket Type="TraunBr0dSnorkel" />
+	</GameData>
+</TruckAddon>

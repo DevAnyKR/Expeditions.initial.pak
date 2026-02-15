@@ -1,0 +1,10 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ziggurat_interior_wall_arch_01_center_s_dlc08_lmk" />
+</ModelBrand>

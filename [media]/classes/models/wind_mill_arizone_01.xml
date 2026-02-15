@@ -1,0 +1,11 @@
+<ModelBrand 
+	NightLightingShadowsAllowCap="true"
+>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/wind_mill_arizone_01_lmk" />
+	
+</ModelBrand>

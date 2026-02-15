@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(3.073; 2.318; -0.923)" />
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_snorkel_01">
+		<Body ImpactType="Truck" Mass="12" ModelFrame="BoneSnorkel01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="3000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_310_E_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_310_E_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="Step310eSnorkel" />
+	</GameData>
+</TruckAddon>

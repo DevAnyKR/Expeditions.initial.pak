@@ -1,0 +1,9 @@
+<ModelBrand 
+	ClipCamera="false"
+	>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_bunker_vent_03_lmk"/>
+</ModelBrand>

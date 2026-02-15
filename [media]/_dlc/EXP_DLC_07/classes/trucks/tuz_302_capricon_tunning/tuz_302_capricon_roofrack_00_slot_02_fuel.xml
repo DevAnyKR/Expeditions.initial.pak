@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_roofrack_00_slot_02_fuel">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_302_capricon_roofrack_00" />
+		<InstallSocket Type="Tuz302CapriconRoofrackSlot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="tuz_302_capricon_roofrack_00_slot_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

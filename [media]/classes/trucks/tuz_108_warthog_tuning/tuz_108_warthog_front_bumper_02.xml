@@ -1,0 +1,78 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_108_warthog_tuning" MeshFrame="tuz_108_warthog_front_bumper_02">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringRight_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.2" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringLeft_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.25" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02HandLeft_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="120"
+				>
+					<Motor Damping="0.008" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02HandRight_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="120"
+				>
+					<Motor Damping="0.008" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_108_FRONT_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_108_FRONT_BUMPER_2_NAME"
+		/>
+		<InstallSocket Type="Tuz108WarthogFrontBumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="50"
+			AttenStart="20"
+			Color="g(197; 170; 99) x 0.1"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="1.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(1.0; 0.0; 0.0)"
+		/>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+</ModelBrand>

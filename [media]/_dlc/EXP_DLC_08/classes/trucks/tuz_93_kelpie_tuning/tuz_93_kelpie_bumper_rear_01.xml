@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_bumper_rear_01, tuz_93_kelpie_bumper_rear_01_glass" >
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneBumperRear_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.25" Pos="(-2.627; 0.655; 1.025)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.25" Pos="(-2.627; 0.655; -1.025)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="3000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"	
+	>
+		<WinchSocket Pos="(-2.658; 0.451; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_93_KELPIE_REAR_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_93_KELPIE_REAR_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="TUZ93KelpieBumperRear" />
+	</GameData>
+</TruckAddon>

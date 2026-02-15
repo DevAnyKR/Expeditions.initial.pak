@@ -1,0 +1,37 @@
+<_templates Include="trucks" >
+	<TruckTire>
+		<ScoutAllterrain _template="Light">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="ScoutAllterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</ScoutAllterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.66">
+	<TruckTires>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_cotco_canyon" Name="allterrain_4">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.12"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_COTCO_CANYON_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_cotco_canyon" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_COTCO_CANYON_DESC" UiName="UI_RIM_COTCO_CANYON_NAME" />
+			</GameData>
+		</TruckRim>
+		
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.85" Type="FuelTank" />	
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_inv_slot_00" >
+		<Body ImpactType="Truck" Mass="49" ModelFrame="BoneInvSlot00_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneInvSlot00Arch_cdt" >
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GS_CARAVAN_INV_SLOT_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GS_CARAVAN_INV_SLOT_00_NAME"
+		/>
+		<InstallSocket Type="GCCaravanInvSlot00" />
+	</GameData>
+	
+	<AutomaticIK>
+		<!-- SHOCK -->
+		<IKBone ModelFrame="IK_BoneInvSlot00Shock_A" ParentFrame="BoneInvSlot00_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneInvSlot00Arch_cdt"
+				ModelFrame="IK_BoneInvSlot00Shock_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

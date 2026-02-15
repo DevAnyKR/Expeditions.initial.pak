@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.300; 1.357; 0.000)" />
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_snorkel_01">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+
+	<GameData
+		CameraPreset="default"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVSnorkel" />
+	</GameData>
+</TruckAddon>

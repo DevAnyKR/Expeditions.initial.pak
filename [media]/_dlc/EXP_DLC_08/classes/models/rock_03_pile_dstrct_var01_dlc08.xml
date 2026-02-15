@@ -1,0 +1,130 @@
+<_templates Include="models" />
+<ModelBrand Instanced="true" DynamicModel="True" IsKeepPhysModelAlways="true" StaticModelWithDynamicParts="true">
+	<PhysicsModel>
+		<Body
+			Collisions="None"
+			Mass="1000000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="False"
+		>
+			<Constraint Type="Fixed" BreakOffThreshold="100000000" />
+			<Body
+				Collisions="Dynamic"
+				Mass="600"
+				ModelFrame="rock_01_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="300" Type="Fixed" Name="Rock1"/>
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="560"
+				ModelFrame="rock_02_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="300" Type="Fixed" Name="Rock2"/>
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="560"
+				ModelFrame="rock_05_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="1060"
+				ModelFrame="rock_03_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="840"
+				ModelFrame="rock_04_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="500"
+				ModelFrame="rock_06_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="1300"
+				ModelFrame="rock_07_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="1400"
+				ModelFrame="rock_08_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="1600"
+				ModelFrame="rock_09_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+				<Body
+					Collisions="Dynamic"
+					Mass="1000"
+					ModelFrame="rock_11_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="450" Type="Fixed" />
+				</Body>
+				<Body
+					Collisions="Dynamic"
+					Mass="760"
+					ModelFrame="rock_10_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint BreakOffThreshold="450" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_03_pile_lmk" />
+	<GameData ModelBreakageQuestConstraints="Rock1, Rock2">
+		<WinchSocket Pos="(2.114; 0.409; 0.157)" ParentFrame="rock_01_cdt" />
+		<WinchSocket Pos="(1.409; 0.467; -0.426)" ParentFrame="rock_02_cdt" />
+		<WinchSocket Pos="(0.895; 0.926; 0.757)" ParentFrame="rock_03_cdt" />
+		<WinchSocket Pos="(0.536; 0.592; -0.379)" ParentFrame="rock_04_cdt" />
+		<WinchSocket Pos="(0.703; 0.486; -1.572)" ParentFrame="rock_05_cdt" />
+		<WinchSocket Pos="(0.768; 0.432; 1.808)" ParentFrame="rock_06_cdt" />
+		<WinchSocket Pos="(-1.020; 0.893; -1.227)" ParentFrame="rock_07_cdt" />
+		<WinchSocket Pos="(-0.807; 0.829; 0.381)" ParentFrame="rock_09_cdt" />
+		<WinchSocket Pos="(-0.575; 1.945; -0.492)" ParentFrame="rock_10_cdt" />
+		<WinchSocket Pos="(-0.052; 1.843; 1.125)" ParentFrame="rock_11_cdt" />
+	</GameData>
+
+</ModelBrand>
+<!--
+<Body
+	AngularDamping="25.0"
+	LinearDamping="25.0"
+	CenterOfMassOffset="(0; 0; 0)"
+	Collisions="Dynamic"
+	Mass="1000"
+	ModelFrame="BoneRoot_cdt"
+	NoSoftContacts="True"
+>
+	<Constraint Type="Fixed" BreakOffThreshold="1000" />
+
+
+</Body>
+-->

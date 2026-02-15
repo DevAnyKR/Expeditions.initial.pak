@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_backrack_01_slot_05_battery">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="None"
+			Mass="5"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="top"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="khan_317_sentinel_backrack_01" />
+		<InstallSocket Type="Khan317BackrackSlot05" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="khan_317_backrack_01_slot_05_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

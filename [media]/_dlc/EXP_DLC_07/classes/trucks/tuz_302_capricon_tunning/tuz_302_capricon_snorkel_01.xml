@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.699; 1.915; 0.863)" />
+	<Snorkel Origin="(1.699; 1.915; -0.863)" />
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_snorkel_01">
+		<Body ImpactType="Truck" Mass="3">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconSnorkel" />
+	</GameData>
+</TruckAddon>

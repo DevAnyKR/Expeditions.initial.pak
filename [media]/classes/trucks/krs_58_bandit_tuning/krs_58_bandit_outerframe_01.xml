@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/krs_58_bandit_tuning" MeshFrame="krs_58_bandit_outerframe_01">
+		<Body ImpactType="Truck" Mass="250" ModelFrame="BoneOuterframe01_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="2" ModelFrame="BoneShovel01_cdt">
+				<Constraint LinearLimitsX="(0;0.12)" Type="Fixed">
+					<Motor Damping="170" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="5000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_58_OUTERFRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_NAME"
+		/>
+		<InstallSocket Type="OuterFrame" />
+	</GameData>
+</TruckAddon>

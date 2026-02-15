@@ -1,0 +1,36 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="harvester_scout_roofrack_slot_05_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_roofrack_slot_05_battery">
+		<Body Collisions="None" Mass="10" ModelFrame="RoofrackSlot_5_cdt">
+			<Constraint
+				LinearLimitsX="(-0.003;0.005)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(0.0;0.0)"
+				Type="Fixed"
+			>
+				<Motor Damping="450" Spring="300" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_roofrack_01" />
+		<InstallSocket Type="HarvesterScout800RoofrackSlot05" />
+	</GameData>
+</TruckAddon>

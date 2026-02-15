@@ -1,0 +1,33 @@
+<CombineParticles
+	AirResistance="1500.0"
+	SoftDepth="6.0"
+	Wind="(1.0; -0.5; 0)"
+	Gravity = "(0.0; -0.15; 0.0)"
+	WindDivergence = "360.0"
+	>
+
+	
+	<Texture
+		Diffuse="sfx/particles/rolling_dust__d_a.tga"
+		RollEnd="0.05"
+		RollStart="0.1"
+		RollingMask="sfx/particles/rolling_smoke_mask_small__s_d.tga"
+	/>
+	
+	<Size Function="(0.4; 0.6; 1.2)" Median="0.1" />
+	<Scale Random="0.8" Value="2.3" />
+	<RotationSpeed Random="5" />
+	<Rotation Random="360" />
+	<LifeTime Random="5.0" Value="6.0" />
+	<Color>
+		<Key At="0.2" Value="g(213; 167; 112; 100)" />
+		<Key At="0.4" Value="g(211; 166; 117; 100)" />
+		<Key At="0.6" Value="g(208; 163; 120; 100)" />
+		<Key At="0.8" Value="g(205; 160; 123; 10)" />
+	</Color>
+	<Collisions
+		DetectFullOcclusionBox="true"
+		DetectWheels="true"
+		Enable="true"
+	/>
+</CombineParticles>

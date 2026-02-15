@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+		<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension" />			
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_wings_00" >
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 1; 1)" DirAngle="90" Size="0.2" Pos="(1.491; 1.494; 1.167)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 1; -1)" DirAngle="90" Size="0.2" Pos="(1.491; 1.494; -1.167)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FENDERS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="GCCaravanWings" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,116 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_outerframe_01_light">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(0.912; 2.135; 0.295)" />
+			<Model _template="HeadLightRay" Org="(0.912; 2.135; 0)" />
+			<Model _template="HeadLightRay" Org="(0.912; 2.135; -0.295)" />	
+			<!-- Mid -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.199; 0.000)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.190; 0.032)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.164; 0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.135; 0.065)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.106; 0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.080; 0.033)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.071; 0.001)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.190; -0.032)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.164; -0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.135; -0.065)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.106; -0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.080; -0.033)" />
+			<!-- Right -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.197; 0.295)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.190; 0.327)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.167; 0.351)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.135; 0.360)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.105; 0.352)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.081; 0.328)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.072; 0.298)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.079; 0.265)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.849; 2.103; 0.242)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.134; 0.231)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.163; 0.238)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.188; 0.262)" />
+			<!-- Left -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.197; -0.295)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.190; -0.327)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.167; -0.351)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.135; -0.360)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.105; -0.352)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.081; -0.328)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.072; -0.298)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.079; -0.265)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.849; 2.103; -0.242)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.134; -0.231)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.851; 2.163; -0.238)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 1.0" Size="0.08" Pos="(0.850; 2.188; -0.262)" />
+			<Flare _template="BlueStreak" Pos="(0.912; 2.135; 0.295)" />
+			<Flare _template="BlueStreak" Pos="(0.912; 2.135; 0)" />
+			<Flare _template="BlueStreak" Pos="(0.912; 2.135; -0.295)" />
+		</HeadLight>
+		<Ignition>
+			<!-- Mid -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.199; 0.000)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.190; 0.032)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.164; 0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.135; 0.065)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.106; 0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.080; 0.033)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.071; 0.001)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.190; -0.032)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.164; -0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.135; -0.065)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.106; -0.057)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.080; -0.033)" />
+			<!-- Right -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.197; 0.295)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.190; 0.327)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.167; 0.351)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.135; 0.360)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.105; 0.352)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.081; 0.328)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.072; 0.298)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.079; 0.265)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.849; 2.103; 0.242)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.134; 0.231)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.163; 0.238)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.188; 0.262)" />
+			<!-- Left -->
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.197; -0.295)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.190; -0.327)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.167; -0.351)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.135; -0.360)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.105; -0.352)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.081; -0.328)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.072; -0.298)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.079; -0.265)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.849; 2.103; -0.242)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.134; -0.231)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.851; 2.163; -0.238)" />
+			<Flare _template="LED" Color="g(200; 200; 200) x 0.6" Size="0.035" Pos="(0.850; 2.188; -0.262)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 255; 255) x 4.0" />
+	<GameData
+		CameraPreset="supplies_default"
+		Category="miscellenious"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOF_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_ROOF_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_outerframe" />
+		<InstallSocket Type="ShibaOverlanderOuteframeLight" />
+	</GameData>
+</TruckAddon>

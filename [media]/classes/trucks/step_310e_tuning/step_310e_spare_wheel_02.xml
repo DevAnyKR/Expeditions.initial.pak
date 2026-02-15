@@ -1,0 +1,30 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_spare_wheel_02">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneSpareWheel02_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneSpareWheel02Lock_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="5"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="Step310eSpareWheel02" />
+	</GameData>
+</TruckAddon>

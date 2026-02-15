@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/mercedes_unimog_2450L_tuning" MeshFrame="mercedes_unimog_2450l_roofrack_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneRoofrack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="roof"
+		Category="top"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_UNIMOG_U2450_ROOFRACK_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_UNIMOG_U2450_ROOFRACK_01_NAME"
+		/>
+		<RequiredAddon Types="mercedes_unimog_2450_outerframe_00" />
+		<InstallSocket Type="MercedesUnimog2450LRoofrack" />
+	</GameData>
+</TruckAddon>

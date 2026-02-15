@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_harvester_scout_800" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_harvester_scout_800" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_harvester_scout_800" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_harvester_scout_800" />
+	
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_siro_72" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_siro_72" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_siro_72" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_siro_72" />
+	
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_afim_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_afim_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_afim_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_afim_hornet" />
+</TruckSet>

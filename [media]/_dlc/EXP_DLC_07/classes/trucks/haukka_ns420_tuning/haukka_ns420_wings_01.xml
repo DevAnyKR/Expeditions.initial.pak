@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_wings_01">
+		<Body ImpactType="Truck" Mass="45">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HAUKKA_NS420_ARCHES_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HAUKKA_NS420_ARCHES_01_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420Wings" />
+	</GameData>
+</TruckAddon>

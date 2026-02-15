@@ -1,0 +1,11 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_ancient_wall_03_dlc_05_lmk" />
+</ModelBrand>

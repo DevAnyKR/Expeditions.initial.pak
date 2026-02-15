@@ -1,0 +1,13 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+	PlantRejectingAnchors="true"
+	SkipAdjustHeightMap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/arizona_vertrock_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,15 @@
+<ModelBrand
+	ApplyNormalInReference="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+>
+	
+	<PhysicsModel>
+		<Body
+			Collisions="None"
+			DamageMult="0.0"
+		/>
+	</PhysicsModel>
+</ModelBrand>

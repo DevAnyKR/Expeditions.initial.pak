@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_roofrack_00_slot_04_repair">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="200"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_roofrack_00" />
+		<InstallSocket Type="HaukkaNS420RoofrackSlot04" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="haukka_ns420_roofrack_00_slot_04_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

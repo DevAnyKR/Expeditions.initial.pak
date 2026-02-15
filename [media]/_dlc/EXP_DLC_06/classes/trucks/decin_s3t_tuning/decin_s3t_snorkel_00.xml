@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.178; 1.832; 0.760)" />
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_snorkel_00">
+		<Body Mass="3" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_DECIN_S3T_SNORKEL_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DECIN_S3T_SNORKEL_00_NAME"
+		/>
+		<InstallSocket Type="DecinS3TSnorkel" />
+	</GameData>
+</TruckAddon>

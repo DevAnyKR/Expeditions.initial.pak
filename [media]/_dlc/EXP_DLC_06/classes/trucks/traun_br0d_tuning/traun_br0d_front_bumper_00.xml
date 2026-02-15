@@ -1,0 +1,30 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_front_bumper_00">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.49; 0.897; 0)" ParentFrame="BoneAddon_cdt" />
+		<WinchSocket Pos="(2.545; 0.897; -0.408)" ParentFrame="BoneAddon_cdt" />
+		<WinchSocket Pos="(2.545; 0.897; 0.408)" ParentFrame="BoneAddon_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="TraunBr0dBumperFront" />
+	</GameData>
+</TruckAddon>

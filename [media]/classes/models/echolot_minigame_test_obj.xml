@@ -1,0 +1,95 @@
+<_templates>
+	<Constraint>
+		<Fence BreakOffThreshold="25" Type="Fixed" />
+	</Constraint>
+	<Body>
+		<Fence Mass="700" Collisions="Dynamic" NoSoftContacts="true" />
+	</Body>
+</_templates>
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	Fence="true"
+>
+	<PhysicsModel> 
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body _template="Fence" ModelFrame="wood1_cdt">
+				<Constraint _template="Fence" />
+				<Body _template="Fence" ModelFrame="wood2_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood3_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood4_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood5_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood6_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood7_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood8_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood9_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood10_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood11_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood12_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood13_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood14_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood15_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood16_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+					<Body _template="Fence" ModelFrame="wood16_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood17_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood18_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood19_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood20_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood21_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood22_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood23_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="wood24_cdt">
+					<Constraint _template="Fence" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_broken_cart_01_lmk" />
+</ModelBrand>
+

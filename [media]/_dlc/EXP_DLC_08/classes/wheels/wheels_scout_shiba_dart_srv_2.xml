@@ -1,0 +1,82 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutAllterrain _template="Light">
+		<WheelTracks _template="Default" />
+		<WheelSoftness _template="Average" />
+		<WheelFriction _template="ScoutAllterrain" />
+		<TiresInflationSystemSettings _template="Allterrain" />
+	</ScoutAllterrain>
+	<ScoutOffroad _template="Light">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="ScoutStiff" />
+		<WheelFriction _template="ScoutOffroad" />
+		<TiresInflationSystemSettings _template="Offroad" />
+	</ScoutOffroad>
+	<ScoutMudtires _template="Light">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="ScoutStiff2" />
+		<WheelFriction _template="ScoutMudtires" />
+		<TiresInflationSystemSettings _template="Mudtires" />
+	</ScoutMudtires>
+	</TruckTire>
+</_templates>
+
+<TruckWheels 
+DamageCapacity="50" 
+Radius="1" 
+Width="0.64"
+WidthRear="0.65"
+>
+	<TruckTires>
+	<!-- mudtires -->
+		<TruckTire _template="ScoutMudtires" DamageCapacity="75" Width="0.7" WidthRear="0.71" IsBuoyant="true" PushUpFactor="10" RowingFactor="10" Mesh="wheels/tire_scout_mudtires_1" Name="mudtires_3">
+		<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="12500"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_3_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_shiba_dart_srv" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SHIBA_DART_SRV_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_shiba_overlander_shiba_dart_srv" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SHIBA_OVERLANDER_1_NAME" />
+			</GameData>
+		</TruckRim>
+		
+		<TruckRim Mesh="wheels/rim_scout_offroad_2_shiba_dart_srv" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_offroad_3_shiba_dart_srv" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_offroad_4_shiba_dart_srv" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_mudtire1_3_shiba_dart_srv" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_4_NAME" />
+			</GameData>
+		</TruckRim>		
+	</TruckRims>
+</TruckWheels>

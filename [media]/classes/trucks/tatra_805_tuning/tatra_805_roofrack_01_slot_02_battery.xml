@@ -1,0 +1,35 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_roofrack_01_slot_02_battery">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrack01Slot02_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.024;0.02)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.018;0)"
+			>
+				<Motor Type="Spring" Damping="1700" Spring="200" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="tatra_805_roofrack_01_slot_02_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="tatra_805_roofrack_01" />
+		<InstallSocket Type="Tatra805RoofRack01Slot02" />
+	</GameData>
+</TruckAddon>

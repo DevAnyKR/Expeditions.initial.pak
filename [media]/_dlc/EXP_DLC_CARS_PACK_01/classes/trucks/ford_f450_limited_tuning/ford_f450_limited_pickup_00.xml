@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_pickup_00">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CARGO_ANCHORS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CARGO_ANCHORS_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedPickup" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,342 @@
+<_templates Include="trucks">
+	<Constraint>
+		<PatchUnfold Type="Hinge" MinLimit="-45" MaxLimit="0">
+			<Motor Damping="1" Force="10" Type="Position" />
+		</PatchUnfold>
+		<PatchRot Type="Hinge" MinLimit="0" MaxLimit="90">
+			<Motor Damping="1" Force="10" Type="Position" />
+		</PatchRot>
+		<Cover Type="Prismatic" MinLimit="-0.11" MaxLimit="0">
+			<Motor
+				Damping="0.1"
+				Force="0.5"
+				Tau="1"
+				Type="Position"
+			/>
+		</Cover>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData HasMetalDetector="true" />
+	<!-- Bone Rotator -->
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="BoneAerialRotator"
+		RotationSpeed="0.8"
+		IsMetalDetectorRotator="true"
+	/>
+	<ModelAttachments>
+		<Ignition>
+			<!-- EXTERIOR -->
+			<!-- Red Flare  -->
+			<Flare AspectRatio="1.5" Color="(255; 0; 50) x 0.3" ShowType="mdFoundResupplyItem" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.05; 0.64; 0.0)" ParentFrame="BoneAerial_cdt" />
+			<!-- Green Flare  -->
+			<Flare AspectRatio="1.5" Color="(0; 255; 50) x 0.3" ShowType="mdFoundUpgrade" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.263; 0.64; 0.105)" ParentFrame="BoneAerial_cdt" />
+			<!-- Blue Flare  -->
+			<Flare AspectRatio="1.5" Color="(0; 50; 255) x 1" ShowType="mdFoundItem" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.263; 0.64; -0.105)" ParentFrame="BoneAerial_cdt" />
+			<!-- White Flare Aerial -->
+			<Flare AspectRatio="7" Color="(255; 255; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(-1; 0; 0)" DirAngle="360" Reflections="true" Size="0.25" Pos="(-0.05; 0.455; 0)" ParentFrame="BoneAerial_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="5" Color="g(220; 220; 255) x 0.05" ColorMultAtDay="3.0" Size="0.5" Pos="(-0.05; 0.455; 0)" />
+			
+			
+			<Flare AspectRatio="7" Color="(255; 255; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.0" Dir="(1; 0; 0)" DirAngle="360" Reflections="true" Size="0.25" Pos="(0.435; 0.455; 0)" ParentFrame="BoneAerial_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="5" Color="g(220; 220; 255) x 0.05" ColorMultAtDay="3.0" Size="0.5" Pos="(0.435; 0.455; 0)" />
+			
+			<Flare AspectRatio="7" Color="(255; 255; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(0; 0; 1)" DirAngle="360" Reflections="true" Size="0.25" Pos="(0.197; 0.455; 0.245)" ParentFrame="BoneAerial_cdt" />
+			<Flare AspectRatio="7" Color="(255; 255; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(0; 0; -1)" DirAngle="360" Reflections="true" Size="0.25" Pos="(0.197; 0.455; -0.245)" ParentFrame="BoneAerial_cdt" />
+			<!-- White Flare Vent -->
+			<Flare AspectRatio="1.0" Color="(255; 255; 255) x 0.2" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(-1; 0; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(-0.05; 0.2; 0.41)" ParentFrame="BoneAddon_cdt" />
+			<Flare AspectRatio="1.0" Color="(255; 255; 255) x 0.2" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(-1; 0; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(-0.05; 0.2; -0.41)" ParentFrame="BoneAddon_cdt" />
+			
+			<!-- INTERIOR -->
+			<!-- Red Flare  -->
+			<Flare AspectRatio="1" Color="(255; 0; 50) x 0.7" ShowType="mdFoundResupplyItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.055" Pos="(-0.09; -0.01; 0.068)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- Green Flare  -->
+			<Flare AspectRatio="1" Color="(0; 255; 50) x 0.4" ShowType="mdFoundUpgrade" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.05" Pos="(-0.09; -0.01; -0.01)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- Blue Flare  -->
+			<Flare AspectRatio="1" Color="(0; 50; 255) x 1.1" ShowType="mdFoundItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.055" Pos="(-0.09; -0.01; 0.028)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- White Flare Aerial -->
+			<Flare AspectRatio="1" Color="(255; 255; 255) x 0.4" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.08" Pos="(-0.09; -0.01; -0.05)" ParentFrame="BoneInteriorIndicator_cdt" />
+		</Ignition>
+	</ModelAttachments>
+
+	<LightsSettings>
+		<MetalDetector
+			UnknownItemMesh="mesh_detector_white_emissive"
+			InventoryItemMesh="mesh_detector_blue_emissive"
+			UpgradeItemMesh="mesh_detector_green_emissive"
+			ResupplyMesh="mesh_detector_red_emissive"
+		/>
+	</LightsSettings>
+
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_SCAN_WATCHPOINT"
+			Name="DetectorAddon"
+			ParentBodies="BoneAerial_cdt"
+			ResetOnLoad="true"
+		>
+			<!-- Patch Caps Slide -->
+			<Group FoldingDelay="1" Id="detector_patch_cap_slide">
+				<Constraint InitialFix="true" Name="PatchCapSlide" SpeedMult="0.2" Position="-0.16" />
+				<Constraint InitialFix="true" Name="CoverBase" SpeedMult="0.08" Position="-0.05" />
+			</Group>
+			<!-- Patch Caps Rotate -->
+			<Group FoldingDelay="0.2" Id="detector_patch_cap_rot" UnfoldingDelay="0.5">
+				<Constraint InitialFix="true" Name="PatchCapRot" SpeedMult="1.4" Position="150" />
+				<Constraint InitialFix="true" Name="CoverPole" SpeedMult="0.08" Position="0.04" />
+			</Group>
+			<!-- Patch Rotate -->
+			<Group FoldingDelay="0.2" Id="detector_patch_rot" UnfoldingDelay="0.5">
+				<Constraint InitialFix="true" Name="PatchPole" SpeedMult="1.2" Position="102" />
+				<Constraint InitialFix="true" Name="Covers" SpeedMult="0.1" Position="-0.11" />
+			</Group>
+			<!-- Patch Spin -->
+			<Group FoldingDelay="0.2" Id="detector_patch_spin" UnfoldingDelay="0.5">
+				<Constraint InitialFix="true" Name="PatchRotated" SpeedMult="1.4" Position="90" />
+				<Constraint InitialFix="true" Name="AerialPole" SpeedMult="0.55" Position="78" />
+				<Constraint InitialFix="true" Name="Aerial" SpeedMult="0.55" Position="-78" />
+			</Group>
+			<!-- Patch Unfold -->
+			<Group FoldingDelay="0.2" Id="detector_patch_unfold" UnfoldingDelay="0.5">
+				<Constraint
+					InitialFix="true"
+					Name="PatchUnfolded"
+					SpeedMult="1"
+					Position="-45"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/addon_detector">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Mass="40"
+		>
+			<Constraint Type="Rigid" />
+			<!--Patch Cover-->
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="0.1"
+				ModelFrame="BonePatchCapRot_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Name="PatchCapRot"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="150"
+				>
+					<Motor Damping="1" Force="100" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.1"
+					ModelFrame="BonePatchCapSlide_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="PatchCapSlide"
+						Type="Prismatic"
+						MinLimit="-0.16"
+						MaxLimit="0"
+					>
+						<Motor Damping="1" Force="100" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<!--Patch-->
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BonePatchPole_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="PatchPole"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="102"
+				>
+					<Motor Damping="1" Force="10" Type="Position" Tau="0.1"/>
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.1"
+					ModelFrame="BonePatchRotL_cdt"
+				>
+					<Constraint _template="PatchRot" AxisLocal="(-1; 0; 0)" Name="PatchRotated" />
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="0.1"
+						ModelFrame="BonePatchUnfoldfL_cdt"
+					>
+						<Constraint _template="PatchUnfold" AxisLocal="(0; -1; 0)" Name="PatchUnfolded" />
+					</Body>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.1"
+					ModelFrame="BonePatchRotR_cdt"
+				>
+					<Constraint _template="PatchRot" AxisLocal="(1; 0; 0)" Name="PatchRotated" />
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="0.1"
+						ModelFrame="BonePatchUnfoldR_cdt"
+					>
+						<Constraint _template="PatchUnfold" AxisLocal="(0; 1; 0)" Name="PatchUnfolded" />
+					</Body>
+				</Body>
+			</Body>
+			<!--Covers-->
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="0.08"
+				ModelFrame="BoneCoverBase_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Name="CoverBase"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0"
+				>
+					<Motor
+						Damping="0.1"
+						Force="150000000"
+						Tau="1"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.02"
+					ModelFrame="BoneCoverPole_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="CoverPole"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.04"
+					>
+						<Motor
+							Damping="1"
+							Force="150000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="0.01"
+						ModelFrame="BoneCoverL_cdt"
+					>
+						<Constraint
+							_template="Cover"
+							AxisLocal="(0; 0; -1)"
+							Force="10"
+							Name="Covers"
+						/>
+					</Body>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="0.01"
+						ModelFrame="BoneCoverR_cdt"
+					>
+						<Constraint
+							_template="Cover"
+							AxisLocal="(0; 0; 1)"
+							Force="10"
+							Name="Covers"
+						/>
+					</Body>
+				</Body>
+			</Body>
+			<!--Aerial-->
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneAerialPole_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="AerialPole"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="78"
+				>
+					<Motor Damping="0.8" Force="15" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.5"
+					ModelFrame="BoneAerial_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="Aerial"
+						Type="Hinge"
+						MinLimit="-78"
+						MaxLimit="0"
+					>
+						<Motor Damping="0.1" Force="5" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<!--Interior indicator and mount-->
+			<Body Collisions="None" Mass="5" ModelFrame="BoneInteriorMount_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="0.3" ModelFrame="BoneInteriorIndicator_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		IsCustomizable="false"
+		Price="0"
+		SoundByGroups="false"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SCOUT_METAL_DETECTOR_DESC"
+			UiIcon30x30="trailerImg30"
+			UiIcon40x40="trailerImg"
+			UiName="UI_ADDON_SCOUT_METAL_DETECTOR_NAME"
+		/>
+		<InstallSocket Type="TatraMetalDetector" />
+		<RequiredAddon Types="tatra_805_kung" />
+		<AddonType Name="Watchtower" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneActuatorBase_IK" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAerialPole_cdt"
+				ModelFrame="BoneActuatorCyl_IK"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

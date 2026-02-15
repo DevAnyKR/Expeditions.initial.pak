@@ -1,0 +1,10 @@
+<GrassBrand
+	IgnoreNoGrass="true"
+	IsAboveSnow="true"
+	ParticlesType="fragments_silene_acaulis"
+	PlantingGroup="Grass"
+	PlantingMinSpacing="0.05"
+	FadeDistances="10, 20, 30"
+	FadeInterval="10"
+	DissolveInterval="1"
+/>

@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<StaticLights>
+		<StaticLight _template="Red" Dir="(0.569; -0.823; 0)" Pos="(-5.167; 6.751; -8.551)" />
+	</StaticLights>
+	<PhysicsModel>
+		<Flare _template="Red" Dir="(0.569; -0.823; 0)" Pos="(-5.343; 6.9; -8.505)" />
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	
+</ModelBrand>

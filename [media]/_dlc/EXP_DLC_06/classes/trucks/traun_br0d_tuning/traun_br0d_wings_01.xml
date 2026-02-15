@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_wings_01">
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TRAUN_BR0D_FENDERS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TRAUN_BR0D_FENDERS_01_NAME"
+		/>
+		<InstallSocket Type="TraunBr0dWings" />
+	</GameData>
+</TruckAddon>

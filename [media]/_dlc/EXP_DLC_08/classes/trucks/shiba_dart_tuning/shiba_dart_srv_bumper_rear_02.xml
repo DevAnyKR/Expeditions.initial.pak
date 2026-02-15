@@ -1,0 +1,46 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.65" Type="Suspension" />
+			<Multiplier Multiplier="0.65" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_rear_bumper_02">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneBumperRear02_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.15" Pos="(-2.333; 0.762; 0.777)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.15" Pos="(-2.333; 0.762; 0.728)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.15" Pos="(-2.333; 0.762; -0.777)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.15" Pos="(-2.333; 0.762; -0.728)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.15" Pos="(-2.333; 0.762; 0.777)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.15" Pos="(-2.333; 0.762; 0.728)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.15" Pos="(-2.333; 0.762; -0.777)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.15" Pos="(-2.333; 0.762; -0.728)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+		AddonUnlockByObjective="false"
+	>
+		<WinchSocket Pos="(-2.256; 0.718; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_REAR_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_REAR_BUMPER_02_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVRearBumper" />
+	</GameData>
+</TruckAddon>

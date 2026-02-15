@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="shiba_dart_srv_spare_wheel_left" HideThreshold="0.5" />
+		<Mesh Frame="shiba_dart_srv_spare_wheel_right" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" AcceptVisualDamage="false" MeshFrame="shiba_dart_srv_spare_wheel_left, shiba_dart_srv_spare_wheel_right">
+		<Body Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="15" ModelFrame="BoneWheelRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="8"
+				>
+					<Motor Damping="120" Spring="220" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="15" ModelFrame="BoneWheelLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="5"
+				>
+					<Motor Damping="80" Spring="220" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_addon_1"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="shiba_dart_srv_spare_wheel_slot_01" />
+		<InstallSocket Type="ShibaDartSRVSpareWheels" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_parent File="yar_87_roofrack_01_slot_01_fuel" />
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed1 LinearLimitsX="(-0.004;0.005)" LinearLimitsY="(0;0.01)" LinearLimitsZ="(-0.024;0.022)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed1>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15">	
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="roofrack_canister_big_02" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="roofrack_canister_big_02">
+		<Body _inheritRemove="true" />
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneRoofrack01Slot02_cdt">
+			<Constraint _template="TrunkFixed1">
+				<TrunkFixed1/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Yar87Roofrack01Slot02" />
+	</GameData>
+</TruckAddon>

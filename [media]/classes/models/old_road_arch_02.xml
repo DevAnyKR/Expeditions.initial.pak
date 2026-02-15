@@ -1,0 +1,11 @@
+<ModelBrand 
+	Instanced="true" 
+	InstancedAsModel="true" ClipCamera="false"
+	>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/old_road_arch_02_lmk" />
+	
+</ModelBrand>

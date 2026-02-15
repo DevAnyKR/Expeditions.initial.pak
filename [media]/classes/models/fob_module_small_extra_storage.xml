@@ -1,0 +1,80 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	Instanced="true"
+	DynamicModel="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="mesh_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="box_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="120" NoSoftContacts="true" ModelFrame="tent_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="350" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Collisions="Dynamic" Mass="50" NoSoftContacts="true" ModelFrame="cable_cdt">
+					<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+					>
+					<Motor Damping="1" Spring="20" Type="Spring" />
+					</Constraint>
+						<Body Collisions="Dynamic" Mass="60" NoSoftContacts="true" ModelFrame="light_cdt">
+						<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-27"
+						MaxLimit="27"
+						>
+						<Motor Damping="5" Spring="100" Type="Spring" />
+						</Constraint>
+						</Body>
+				</Body>
+			</Body>
+			<Body Collisions="Dynamic" Mass="120" NoSoftContacts="true" ModelFrame="tent2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="350" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Collisions="Dynamic" Mass="50" NoSoftContacts="true" ModelFrame="cable2_cdt">
+					<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+					>
+					<Motor Damping="1" Spring="20" Type="Spring" />
+					</Constraint>
+						<Body Collisions="Dynamic" Mass="60" NoSoftContacts="true" ModelFrame="light2_cdt">
+						<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-27"
+						MaxLimit="27"
+						>
+						<Motor Damping="5" Spring="100" Type="Spring" />
+						</Constraint>
+						</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_extra_storage_lmk" />
+</ModelBrand>

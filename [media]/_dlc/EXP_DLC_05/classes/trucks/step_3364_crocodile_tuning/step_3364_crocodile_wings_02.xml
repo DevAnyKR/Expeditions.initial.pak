@@ -1,0 +1,53 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_wings_02">
+		<Body Mass="60" ModelFrame="BoneWings02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	 <ModelAttachments>
+		<Ignition>
+			
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.5" Pos="(2.726; 1.113; 0.651)" ParentFrame="BoneWings01_cdt"	/>
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.5" Pos="(2.726; 1.113; -0.651)" ParentFrame="BoneWings01_cdt"	/>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.6" Size="0.2" Pos="(2.726; 1.113; 0.651)" ParentFrame="BoneWings01_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.6" Size="0.2" Pos="(2.726; 1.113; -0.651)" ParentFrame="BoneWings01_cdt" />
+			
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.726; 1.113; 0.651)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(2.726; 1.113; -0.651)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 235) x 1.3" Size="0.25" Pos="(2.726; 1.113; 0.651)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 235) x 1.3" Size="0.25" Pos="(2.726; 1.113; -0.651)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 245) x 1.2" Size="0.10" Pos="(2.678; 1.113; 0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 245) x 1.2" Size="0.10" Pos="(2.678; 1.113; -0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.726; 1.113; 0.651)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.726; 1.113; -0.651)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="4.0" Color="g(220; 220; 235) x 0.15" Size="0.125" Pos="(2.678; 1.113; 0.789)"  ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="4.0" Color="g(220; 220; 235) x 0.15" Size="0.125" Pos="(2.678; 1.113; -0.789)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.2; 0.8; 0)" Color="g(230; 230; 235) x 6.5" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_FENDERS_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_3364_CROCODILE_FENDERS_02_NAME"
+		/>
+		<RequiredSuspension Types="step_3364_crocodile_suspension_high, step_3364_crocodile_suspension_crawler"  />
+		<InstallSocket Type="Step3364CrocodileWings" />
+	</GameData>
+</TruckAddon>

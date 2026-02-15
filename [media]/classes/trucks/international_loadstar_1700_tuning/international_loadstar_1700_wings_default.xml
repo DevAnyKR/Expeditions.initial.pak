@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_wings_default">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneWingsDefault_cdt" >
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.2; 1.013; 0.7)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.2; 1.013; -0.7)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.3" Pos="(2.747; 1; -0.875)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.3" Pos="(2.747; 1; 0.875)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.742; 1; -0.875)" />
+			<Model _template="HeadLightRay" Org="(2.742; 1; 0.875)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 1.30" Size="0.4" Pos="(2.742; 1; -0.875)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 1.30" Size="0.4" Pos="(2.742; 1; 0.875)" />
+			<Flare _template="BlueStreak" Pos="(2.742; 1; -0.875)" />
+			<Flare _template="BlueStreak" Pos="(2.742; 1; 0.875)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.294; 0.961; 0)" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_WINGS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_WINGS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Wings" />
+	</GameData>
+</TruckAddon>

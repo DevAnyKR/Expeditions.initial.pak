@@ -1,0 +1,21 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Mass="1800"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+			CenterOfMassOffset="(0; 0; 0)"
+		>
+			<Constraint
+				AxisLocal="(0; 0; -1)"
+				Type="Prismatic"
+				MinLimit="-1.0"
+				MaxLimit="2.5"
+			>
+				<Motor Damping="12000" Spring="25000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

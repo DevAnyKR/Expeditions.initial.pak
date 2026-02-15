@@ -1,0 +1,60 @@
+<_templates Include="environment" />
+<PlantBrand
+	DisableShadows="true"
+	DistSkipPercentage="0.4"
+	LocalYOcclusionOffset="0.1"
+	PlantingGroups="Flower"
+	PlantingMinSpacing="0.2"
+	PlantingMaxWaterFlow="0.2"
+	IsEraseSnow="true"
+>
+	<PhysicsModel>
+		<Body _template="HugeTrunk" Collisions="None" ModelFrame="BoneRoot">
+			<Constraint _template="HugeTrunk" />
+			<Body  AllowedPenetrationDepth="3.0"
+			DamageMult="0.0"
+			ImpactType="Foliage"
+			IsCapsuleCDT="true"
+			Mass="0.5" 
+			ModelFrame="BoneTrunk">
+				<Constraint Cone="90" TwistAxisLocal="(0; 1; 0)" Type="Ragdoll">
+			<PlaneConeMotor Damping="1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+
+			<Body AllowedPenetrationDepth="3.0"
+			DamageMult="0.0"
+			ImpactType="Foliage"
+			IsCapsuleCDT="true"
+			Mass="0.5" 
+			ModelFrame="BoneTrunk1">
+				<Constraint Cone="90" TwistAxisLocal="(0; 1; 0)" Type="Ragdoll">
+			<PlaneConeMotor Damping="1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+
+			<Body AllowedPenetrationDepth="3.0"
+			DamageMult="0.0"
+			ImpactType="Foliage"
+			IsCapsuleCDT="true"
+			Mass="0.5" 
+			ModelFrame="BoneTrunk2">
+				<Constraint Cone="90" TwistAxisLocal="(0; 1; 0)" Type="Ragdoll">
+			<PlaneConeMotor Damping="1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+
+			<Body llowedPenetrationDepth="3.0"
+			DamageMult="0.0"
+			ImpactType="Foliage"
+			IsCapsuleCDT="true"
+			Mass="0.5" 
+			ModelFrame="BoneTrunk3">
+				<Constraint Cone="90" TwistAxisLocal="(0; 1; 0)" Type="Ragdoll">
+			<PlaneConeMotor Damping="1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.2" Size="(2.4; 2.4)" />
+</PlantBrand>

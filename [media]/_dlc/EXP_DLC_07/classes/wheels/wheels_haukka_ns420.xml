@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Semiaverage_mt" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.667">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_haukka_ns420" Name="offroad_1">
+			<WheelFriction
+				_template="Mudtires"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.95"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_tatra_force_815_7_haukka" Name="offroad_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.05"
+			/>
+			<GameData
+				AddonUnlockByObjective="false"
+				Price="5000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_SINGLE_4_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_haukka_ns420" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_SUPERHEAVY_HAUKKA_NS420_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_tatra_force_815_7_haukka" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_4" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

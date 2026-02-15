@@ -1,0 +1,64 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+
+
+	<PhysicsModel>
+		<Body
+			AngularDamping="25.0"
+			LinearDamping="25.0"
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="Dynamic"
+			Mass="1000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-70" MaxLimit="70" >
+				<Motor Type="Spring" Spring="0" Damping="1000000" />
+			</Constraint>
+			<Body
+				AngularDamping="20.0"
+				LinearDamping="20.0"
+				CenterOfMassOffset="(0; 0.6; 0)"
+				Collisions="Dynamic"
+				Mass="800"
+				ModelFrame="BoneSegment01_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-60" MaxLimit="60" >
+					<Motor Type="Spring" Spring="0" Damping="1000000" />
+				</Constraint>
+				<Body
+					AngularDamping="15.0"
+					LinearDamping="15.0"
+					CenterOfMassOffset="(0; 0.6; 0)"
+					Collisions="Dynamic"
+					Mass="600"
+					ModelFrame="BoneSegment02_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="50" >
+						<Motor Type="Spring" Spring="0" Damping="1000000" />
+					</Constraint>
+					<Body
+						AngularDamping="10.0"
+						LinearDamping="10.0"
+						CenterOfMassOffset="(0; 0.6; 0)"
+						Collisions="Dynamic"
+						Mass="400"
+						ModelFrame="BoneSegment03_cdt"
+						NoSoftContacts="True"
+					>
+						<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="40" >
+							<Motor Type="Spring" Spring="0" Damping="1000000" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	
+	<GameData>
+		<WinchSocket Pos="(0.000; 1.000; 1.182)" ParentFrame="BoneSegment03_cdt"/>
+	</GameData>
+</ModelBrand>

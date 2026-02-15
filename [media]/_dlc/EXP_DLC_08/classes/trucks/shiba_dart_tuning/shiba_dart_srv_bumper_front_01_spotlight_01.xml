@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_front_bumper_01_spotlight">
+		<Body Collisions="None" Mass="3" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Flare _template="BlueStreak" Size="0.5" Pos="(2.147; 1.209; 0.210)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.147; 1.210; 0.175)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.147; 1.210; 0.242)" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(2.147; 1.209; -0.210)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.147; 1.210; -0.175)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.147; 1.210; -0.242)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="shiba_dart_srv_bumper_front_01" />
+		<InstallSocket Type="ShibaDartSRVFrontBumperSpotlight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,51 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="step_7249_albatross_spare_wheel_slot_01_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_spare_wheel_slot_01_wheel">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneSpareWheel01_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="200" ModelFrame="BoneHook01Base_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="4"
+				>
+					<Motor Damping="80" Spring="800" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneHook01_cdt">
+					<Constraint
+						Cone="5"
+						PlaneAxisLocal="(1; 0; 0)"
+						TwistAxisLocal="(0; 1; 0)"
+						Type="Ragdoll"
+						PlaneMin="-5"
+						PlaneMax="5"
+					>
+						<Motor Damping="10" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="step_7249_albatross_spare_wheel_01" />
+		<InstallSocket Type="Step7249AlbatrossSpareWheelSlot01" />
+	</GameData>
+</TruckAddon>

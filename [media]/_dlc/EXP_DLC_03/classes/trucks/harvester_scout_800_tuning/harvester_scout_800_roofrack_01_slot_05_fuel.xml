@@ -1,0 +1,38 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_roofrack_slot_05_FuelBig">	
+			<Body Collisions="None" Mass="10" ModelFrame="RoofrackSlot_5_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.0022;0.0015)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.0015;0.0023)"
+			>
+		
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+ 	<FuelHide>
+		<Mesh Frame="harvester_scout_roofrack_slot_05_FuelBig" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_roofrack_01" />
+		<InstallSocket Type="HarvesterScout800RoofrackSlot05" />
+	</GameData>
+</TruckAddon>

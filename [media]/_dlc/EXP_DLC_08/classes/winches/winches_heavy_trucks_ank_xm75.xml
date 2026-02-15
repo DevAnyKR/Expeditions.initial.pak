@@ -1,0 +1,24 @@
+<WinchVariants>
+	<Winch
+		Name="w_heavy_trucks_pow_offline"
+		Length="21"
+		StrengthMult="1.75"
+		IsEngineIgnitionRequired="false"
+	>
+		<GameData
+			Price="30000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<WinchParams
+			/>
+			<UiDesc
+				UiDesc="UI_WINCH_UPGRADE_HVY_TRUCKS_ANK_XM75_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_WINCH_UPGRADE_HVY_TRUCKS_ANK_XM75_NAME"
+			/>
+		</GameData>
+	</Winch>
+</WinchVariants>

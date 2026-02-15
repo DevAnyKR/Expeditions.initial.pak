@@ -1,0 +1,12 @@
+<_parent File="khan_lo4f_roofrack_01_slot_01_battery" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_roofrack_01_slot_05_battery">
+		<Body ModelFrame="BoneRoofrack01Slot05Repair_cdt" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FRoofrack01Slot05" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="khan_lo4f_roofrack_01_slot_05_battery" />
+	</BatteryHide>
+</TruckAddon>

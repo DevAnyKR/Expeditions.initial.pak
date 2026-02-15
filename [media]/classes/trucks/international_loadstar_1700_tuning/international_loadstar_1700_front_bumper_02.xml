@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_front_bumper_02">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LOADSTAR_1700_FRONT_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LOADSTAR_1700_FRONT_BUMPER_2_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Bumper" />
+	</GameData>
+</TruckAddon>

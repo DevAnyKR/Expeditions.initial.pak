@@ -1,0 +1,11 @@
+<ModelBrand
+    NightLightingShadowsAllowCap="true"
+	ClipCamera="false">
+	
+
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</ModelBrand>

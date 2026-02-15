@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_invslot_02">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneInvSlot02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_FORCE_INV_SLOT_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_FORCE_INV_SLOT_02_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157InvSlot02" />
+	</GameData>
+</TruckAddon>

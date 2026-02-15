@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_bumper_front_00">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.523; 0.744; 1.086)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.512; 0.744; 0.972)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.523; 0.744; -1.086)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.512; 0.744; -0.972)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.507; 0.741; 0.731)" />
+		<WinchSocket Pos="(2.507; 0.741; -0.731)" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="TUZ93KelpieBumperFront" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="decin_s3t_wheel_slot_00_wheels" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_wheel_slot_00_wheels">
+		<Body Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="66.5"
+				ModelFrame="BoneWheelSlot00WheelLeft_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-1.5"
+					MaxLimit="1.5"
+				>
+					<Motor Damping="15" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="decin_s3t_wheel_slot_00" />
+		<InstallSocket Type="DecinS3TWheelSlotWheel00" />
+	</GameData>
+</TruckAddon>

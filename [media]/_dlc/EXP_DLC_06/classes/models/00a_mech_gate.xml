@@ -1,0 +1,68 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Mass="1500"
+			ModelFrame="BoneGate_cdt"
+			NoSoftContacts="True"
+			CenterOfMassOffset="(0; 0; 0)"
+		>
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="6.5"
+			>
+				<Motor Damping="10000" Spring="100" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0; 1.608; 0.7486)" />
+	</GameData>
+</ModelBrand>
+
+
+<!--
+DRUM PRISMATIC
+
+<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="All"
+			Mass="2000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint Type="Fixed" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="All"
+				Mass="500"
+				ModelFrame="BoneGate_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="6.87"
+				/>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="All"
+				Mass="500"
+				ModelFrame="BoneDrum_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint AxisLocal="(0; 1; 0)" Type="UnlimitedHinge" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0; 1.604; -1.727)" ParentFrame="BoneDrum_cdt" />
+	</GameData>
+
+-->

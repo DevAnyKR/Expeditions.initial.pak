@@ -1,0 +1,191 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutAllterrain _template="Medium" RearMassScale="1.25">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="ScoutAllterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</ScoutAllterrain>     
+		<ScoutOffroad _template="Medium" RearMassScale="1.25">
+			<WheelTracks _template="Offroad" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="ScoutOffroad" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</ScoutOffroad> 
+		<ScoutMudtires _template="Medium" RearMassScale="1.25">
+			<WheelTracks _template="Offroad" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="ScoutStiff2" />
+			<WheelFriction _template="ScoutMudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</ScoutMudtires> 		
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="60"
+	Radius="1"
+	Width="0.515"
+	WidthRear="1.22"
+>
+	<TruckTires>
+	<!-- allterrain -->
+		<TruckTire _template="ScoutAllterrain" Radius="1.2" RadiusRear="1.8" DamageCapacity="60" Mesh="wheels/tire_ford_f450_limited" Name="allterrain_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" DamageCapacity="60" Width="0.525" WidthRear="1.23" Mesh="wheels/tire_ford_f450_limited_medium_allterrain_double_3" Name="allterrain_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" DamageCapacity="60" Width="0.535" WidthRear="1.24" Mesh="wheels/tire_ford_f450_limited_medium_allterrain_double_2" Name="allterrain_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- offroad -->
+		<TruckTire _template="ScoutOffroad" DamageCapacity="90" Width="0.535" WidthRear="1.24" Mesh="wheels/tire_ford_f450_limited_medium_offroad_double_1" Name="offroad_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutOffroad" DamageCapacity="90" Width="0.545" WidthRear="1.25" Mesh="wheels/tire_ford_f450_limited_afim_1960" Name="offroad_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+			</TruckTire>
+		<TruckTire _template="ScoutOffroad" DamageCapacity="90" Width="0.555" WidthRear="1.26" Mesh="wheels/tire_ford_f450_limited_heavy_offroad_double_1" Name="offroad_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- mudtires -->
+		<TruckTire _template="ScoutMudtires" DamageCapacity="75" Width="0.565" WidthRear="1.27" Mesh="wheels/tire_ford_f450_limited_medium_offroad_double_2" Name="mudtires_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.8"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				UnlockByRank="1"	
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MUDTIRES_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>				
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_FORD_F450_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_medium_offroad_double_1" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_heavy_offroad_double_1" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_heavy_offroad_double_2" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+		
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_heavy_offroad_double_3" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_ank_mk38" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_5_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_5_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_step_3364_crocodile" Name="rim_7">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_6_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_6_NAME" />
+			</GameData>
+		</TruckRim>	
+		<TruckRim Mesh="wheels/rim_ford_f450_limited_heavy_offroad_single_4" Name="rim_8">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_7_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_7_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>
+
+

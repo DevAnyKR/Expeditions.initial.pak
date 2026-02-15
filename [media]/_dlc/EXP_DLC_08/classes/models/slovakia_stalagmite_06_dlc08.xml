@@ -1,0 +1,28 @@
+<ModelBrand 
+	ClipCamera="false" 
+	Instanced="true"
+	Fence="False"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body Mass="1000000" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.001">
+				 <Constraint Type="Fixed" />
+				<Body Mass="600" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.002">
+				 <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			    </Body>	
+                <Body Mass="600" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.003">
+				   <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			    </Body>	
+                <Body Mass="600" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.004">
+				   <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			    </Body>	
+                <Body Mass="600" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.005">
+				   <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			    </Body>	
+                <Body Mass="600" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.003">
+				   <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			    </Body>					
+		    </Body>
+        </Body>
+	</PhysicsModel>
+</ModelBrand>

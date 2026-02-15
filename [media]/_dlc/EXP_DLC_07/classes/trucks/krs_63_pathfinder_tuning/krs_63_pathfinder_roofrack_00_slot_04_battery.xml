@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_roofrack_00_slot_04_battery">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_roofrack_00" />
+		<InstallSocket Type="KRS63RoofrackSlot04" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="krs_63_roofrack_00_slot_04_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

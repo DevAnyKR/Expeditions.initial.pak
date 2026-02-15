@@ -1,0 +1,80 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_front_bumper_02">
+		<Body  Mass="30" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringLeft_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.25" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringRight_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.2" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02Hook_cdt"
+			>
+				<Constraint AxisLocal="(1; 0; 0)" Type="Hinge" MinLimit="-25" MaxLimit="25" >
+					<Motor Damping="0.1" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments _noinherit="true">
+ 		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.11; 1.338; -0.87)" />
+			<Model _template="HeadLightRay" Org="(2.11; 1.338; 0.87)" />
+			<Model _template="HeadLightRay" Org="(2.324; 1.325; -0.318)" />
+			<Model _template="HeadLightRay" Org="(2.324; 1.325; 0.318)" />
+			
+			<Flare _template="HeadLight" Color="g(245; 235; 235) x 1.3" Size="0.30" Pos="(2.11; 1.338; -0.87)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 235) x 1.3" Size="0.30" Pos="(2.11; 1.338; 0.87)" />
+					
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 245; 235) x 1.3" Size=".1" Pos="(2.324; 1.325; -0.318)" />
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 245; 235) x 1.3" Size=".1" Pos="(2.324; 1.325; 0.318)" />
+			
+			<Flare _template="BlueStreak" Pos="(2.11; 1.338; -0.87)" />
+			<Flare _template="BlueStreak" Pos="(2.11; 1.338; 0.87)" />
+			<Flare _template="BlueStreak" AspectRatio="2.0" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.324; 1.325; -0.318)" />
+			<Flare _template="BlueStreak" AspectRatio="2.0" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.324; 1.325; 0.318)" />
+		</MainHeadLight>
+ 		
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_KHAN_39_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_KHAN_39_02_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallFrontBumper" />
+	</GameData>
+</TruckAddon>

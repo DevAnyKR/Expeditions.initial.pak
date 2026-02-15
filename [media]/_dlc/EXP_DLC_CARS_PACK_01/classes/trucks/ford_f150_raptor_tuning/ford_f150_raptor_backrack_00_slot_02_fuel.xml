@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_backrack_00_slot_02_fuel">
+		<Body Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="15" ModelFrame="BoneBackrack00Slot02_cdt" Collisions="None">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="6"
+				>
+					<Motor Damping="70" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="ford_f150_raptor_backrack_00" />
+		<InstallSocket Type="FordF150BackrackSlot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="ford_f150_backrack_00_slot_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

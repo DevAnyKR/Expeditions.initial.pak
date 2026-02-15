@@ -1,0 +1,28 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" PlantingMinSpacing="5.4">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk" Mass="450" IsCapsuleCDT="false" AllowedPenetrationDepth="0.0">
+				<Constraint _template="TrunkHead" Cone="1" />
+				<Body _template="TrunkHead" ModelFrame="BoneBranch1" IsCapsuleCDT="false" AllowedPenetrationDepth="0.0">
+					<Constraint _template="TrunkHead" Cone="2" />
+				</Body>
+				<Body _template="BranchWithLeaves" ModelFrame="BoneBranch2" AllowedPenetrationDepth="0.0" IsCapsuleCDT="false">
+					<Constraint _template="TrunkHead" Cone="2" />
+				</Body>
+			</Body>
+			<Body _template="TrunkHead" ModelFrame="BoneBranch3" AllowedPenetrationDepth="0.0" Mass="450" IsCapsuleCDT="false">
+				<Constraint _template="TrunkHead" Cone="1" />
+				<Body _template="TrunkHead" ModelFrame="BoneBranch4" AllowedPenetrationDepth="0.0" Mass="250" IsCapsuleCDT="false">
+					<Constraint _template="TrunkHead" Cone="2" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/dead_tree_01_lmk"/>
+	<Occlusion Intensity="0.45" Size="(8.0; 8.0)" />
+	<GameData>
+		<WinchSocket Pos="(0.034; 0.376; -0.037)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

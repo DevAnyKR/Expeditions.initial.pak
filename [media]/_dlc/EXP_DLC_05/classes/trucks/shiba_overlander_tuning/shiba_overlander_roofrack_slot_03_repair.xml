@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_roofrack_01_slot_03_repair">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_roofrack" />
+		<InstallSocket Type="ShibaOverlanderRoofrackSlot03" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="shiba_roofrack_01_slot_03_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

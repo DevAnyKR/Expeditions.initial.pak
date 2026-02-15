@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.65" Type="Engine" />
+			<Multiplier Multiplier="0.65" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_front_bumper_02">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneBumperFront02_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>	
+	<ModelAttachments>
+		<HeadLight>
+			<Flare _template="BlueStreak" Size="0.5" Pos="(2.083; 0.761; 0.753)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.083; 0.762; 0.777))" />
+			<Flare _template="LED" Size="0.15" Pos="(2.083; 0.761; 0.727)" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(2.083; 0.761; -0.753)" />
+			<Flare _template="LED" Size="0.15" Pos="(2.083; 0.762; -0.777))" />
+			<Flare _template="LED" Size="0.15" Pos="(2.083; 0.761; -0.727)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+		AddonUnlockByObjective="false"
+	>
+		<WinchSocket Pos="(2.213; 0.902; -0.005)" />
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_FRONT_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_FRONT_BUMPER_02_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVFrontBumper" />
+	</GameData>
+</TruckAddon>

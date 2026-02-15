@@ -1,0 +1,48 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.97" Type="Suspension" />
+			<Multiplier Multiplier="0.85" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_rear_bumper_01">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneRearBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneRearBumper01Ring_cdt"
+			>
+				<Constraint Type="Hinge" MinLimit="-95" MaxLimit="0" AxisLocal="(-1; 0; 0)" >
+					<Motor Type="Spring" Spring="0" Damping="0.005" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-2.538; 0.628; -0.7357)" />
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-2.538; 0.628; 0.7357)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.608; 0.607; 0.361)" ParentFrame="BoneRearBumper01_cdt" />
+		<WinchSocket Pos="(-2.608; 0.607; -0.361)" ParentFrame="BoneRearBumper01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_SIRO_72_REAR_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIRO_72_REAR_BUMPER_01_NAME"
+		/>
+		<RequiredSuspension Types="siro_72_suspension_high, siro_72_suspension_crawler" />
+		<InstallSocket Type="Siro72RearBumper" />
+	</GameData>
+</TruckAddon>

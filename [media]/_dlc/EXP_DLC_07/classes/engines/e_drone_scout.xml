@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<EngineVariants>
+	<Engine
+		BrakesDelay="0.2"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="75"
+		DamagedConsumptionModifier="0.0"
+		EngineResponsiveness="0.3"
+		FuelConsumption="1.0"
+		Name="e_drone_scout_engine_0"
+		Torque="15000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="1.0"
+		MaxDeltaAngVel="0.0175"
+		EngineTowingTorqueModifier="0.25"
+	>
+		<GameData
+			Price="0"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_SCOUT_MODERN_COTCO_2_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_SCOUT_MODERN_COTCO_2_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

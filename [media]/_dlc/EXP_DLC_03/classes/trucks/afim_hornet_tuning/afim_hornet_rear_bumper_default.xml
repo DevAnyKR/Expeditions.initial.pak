@@ -1,0 +1,49 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="Default" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="-90"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/afim_hornet_tuning" MeshFrame="afim_hornet_rear_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneRearBumerDefault_cdt" >
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.453; 0.544; 0.625)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.453; 0.544; -0.625)" />
+		</Ignition>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.486; 0.453; 0.0)" ParentFrame="BoneRearBumerDefault_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="AfimHornetRearBumper" />
+	</GameData>
+</TruckAddon>

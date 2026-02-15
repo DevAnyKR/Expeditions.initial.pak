@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.90" Type="Engine" />
+			<Multiplier Multiplier="0.90" Type="Gearbox" />
+			<Multiplier Multiplier="0.90" Type="Suspension" />
+			<Multiplier Multiplier="0.90" Type="FuelTank" />	
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_outerframe_00">
+		<Body ImpactType="Truck" Mass="120" ModelFrame="BoneOuterframe_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(4.061; 3.377; 0.641)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(4.061; 3.377; -0.641)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="8000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_63_OUTERFRAME_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KRS_63_OUTERFRAME_00_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_bumper_01, krs_63_pathfinder_bumper_02" />
+		<InstallSocket Type="KRS63Outerframe" />
+	</GameData>
+</TruckAddon>

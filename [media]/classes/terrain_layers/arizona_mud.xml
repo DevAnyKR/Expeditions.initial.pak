@@ -1,0 +1,11 @@
+<MaterialType 
+	Texture="tiles/arizona_mud__d_a.tga" 
+	Normal="tiles/arizona_mud_relief__d_a.tga"
+	NoGrass="true"
+	AllowHiddenExtrudes="0.8"
+	Sound="surfaces/surf_dirty_rnd"
+	EndEffectSound="surfaces/hit/hit_mud_rnd"
+	SkidSound="surfaces/skidding/skidding_dirty_loop"
+	MinViscosity="8.0"
+/>
+

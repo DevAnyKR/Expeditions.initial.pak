@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_visor_01">
+		<Body ImpactType="Truck" Mass="2" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="Beacon" Size="0.15" Pos="(1.492; 2.625; 0.571)" />
+			<Flare _template="Beacon" Size="0.15" Pos="(1.492; 2.625; -0.571)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_02_NAME"
+		/>
+		<InstallSocket Type="Step7249AlbatrossVisor" />
+	</GameData>
+</TruckAddon>

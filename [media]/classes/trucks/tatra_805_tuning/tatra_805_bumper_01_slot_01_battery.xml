@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Constraint>
+		<BumperFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</BumperFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="tatra_805_bumper_01_slot_01_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_bumper_01_slot_01_battery">
+		<Body Collisions="None" ImpactType="Truck" Mass="10" ModelFrame="BoneBumper01Slot01_cdt">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="-1"
+			>
+				<Motor Damping="0.15" Spring="1.8" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="tatra_805_bumper_01" />
+		<InstallSocket Type="Tatra805Bumper01Slot01" />
+	</GameData>
+</TruckAddon>

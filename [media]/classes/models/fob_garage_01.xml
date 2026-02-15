@@ -1,0 +1,396 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	CastDayLightmapShadow="false" 
+	CastNightLightmapShadow="false"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-6.17; 5.2; -3.6)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(14.5; 2.6; -3.6)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="3"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-20.82; 6.5; -3.47)"
+			Shadows="true"
+		/>
+//left side windows
+		<StaticLight
+			AttenEnd="3"
+			Color="g(131; 202; 242) x 0.6"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="10"
+			Pos="(-22.1; 3.94; 11.04)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="3"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="35"
+			Pos="(-22.1; 6.54; 6.12)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="3"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="35"
+			Pos="(-22.1; 6.54; 2.45)"
+			Shadows="true"
+		/>
+//back side windows
+		<StaticLight
+			AttenEnd="3"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-6.23; 3.9; 14.54)"
+			Shadows="true"
+		/>
+//second floor windows
+		<StaticLight
+			AttenEnd="5"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="7"
+			Pos="(-5.02; 6.54; -0.07)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="15"
+			Pos="(-5.02; 6.54; 2.74)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(249; 172; 104) x 0.4"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-5.02; 6.54; 6.65)"
+			Shadows="true"
+		/>
+//second floor purple
+		<StaticLight
+			AttenEnd="2"
+			Color="g(213; 104; 249) x 0.8"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-4.95; 7.59; -2.46)"
+			Shadows="true"
+		/>
+//second floor back side light
+	//warm
+		<StaticLight
+			AttenEnd="2"
+			Color="g(242; 220; 131) x 0.8"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-9.74; 7.56; 8.53)"
+			Shadows="true"
+		/>
+	//cold
+		<StaticLight
+			AttenEnd="2"
+			Color="g(131; 209; 242) x 0.8"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-17.13; 7.56; 8.53)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="2"
+			Color="g(131; 209; 242) x 0.8"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-20.93; 7.56; 8.53)"
+			Shadows="true"
+		/>
+//right side purple
+		<StaticLight
+			AttenEnd="3"
+			Color="g(148; 75; 250) x 1.1"
+			CreateSuperLight="false"
+			Dir="(0.5; -1; 0)"
+			InnerCone="0"
+			OuterCone="55"
+			Pos="(15.75; 2.39; 6.8)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="3"
+			Color="g(148; 75; 250) x 1.1"
+			CreateSuperLight="false"
+			Dir="(0.5; -1; 0)"
+			InnerCone="0"
+			OuterCone="55"
+			Pos="(15.75; 2.39; 11.59)"
+			Shadows="true"
+		/>
+//left side purple
+		<StaticLight
+			AttenEnd="2"
+			Color="g(148; 75; 250) x 1.1"
+			CreateSuperLight="false"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="15"
+			Pos="(-22.04; 2.39; 6.09)"
+			Shadows="true"
+		/>
+//roof projectors
+	//purple
+		<StaticLight
+			AttenEnd="3"
+			Color="g(148; 75; 250) x 1.5"
+			CreateSuperLight="false"
+			Dir="(0; -1; -1)"
+			InnerCone="0"
+			OuterCone="55"
+			Pos="(13.52; 6.55; 4.92)"
+			Shadows="true"
+		/>
+	//warm
+		<StaticLight
+			AttenEnd="2"
+			Color="g(242; 220; 131) x 1.1"
+			CreateSuperLight="false"
+			Dir="(0; -1; -1)"
+			InnerCone="0"
+			OuterCone="55"
+			Pos="(-3.73; 6.56; 2.79)"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="Armature.004">
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BoneDoor.001"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-105" MaxLimit="150" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BoneDoor.002"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-21" MaxLimit="194" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BoneDoor.003"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-24" MaxLimit="146" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BoneDoor.004"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-153" MaxLimit="9.5" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+//spots flares
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(231; 169; 81) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(-13.49; 3.43; -3.7)"
+			Size="1.3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(231; 169; 81) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(1.11; 3.43; -3.7)"
+			Size="1.3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(231; 169; 81) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(7.06; 3.43; -3.7)"
+			Size="1.3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+//windows flares
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-6.17; 6.5; -3.4)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-6.17; 3.9; -3.4)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(14.53; 3.9; -3.4)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(14.53; 1.3; -3.4)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-20.82; 6.5; -3.4)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+//left side_windows
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-22; 6.5; 2.45)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+//second floor windows
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.02; 6.54; -0.07)"
+			Size="2.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.02; 6.54; 2.74)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(252; 220; 174) x 0.2"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.02; 6.54; 6.65)"
+			Size="4.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_garage_01_lmk" />
+</ModelBrand>

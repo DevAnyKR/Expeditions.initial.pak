@@ -1,0 +1,41 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.97" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_front_arches_02">
+		<Body Mass="30" ModelFrame="BoneArches02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_ARCHES_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_ARCHES_02_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconArches" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.5; 0.0; -1.0)"
+		IsLight="true"
+		Origin="(-0.865; 0.892; -0.931)"
+		Speed="3.0"
+	/>
+	<Exhaust
+		Dir="(-0.5; 0.0; 1.0)"
+		IsLight="true"
+		Origin="(-0.865; 0.892; 0.931)"
+		Speed="3.0"
+	/>
+</TruckAddon>

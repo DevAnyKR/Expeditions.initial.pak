@@ -1,0 +1,10 @@
+<ModelBrand 
+	Instanced="true" 
+	InstancedAsModel="true" ClipCamera="false"
+	>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_concrete_block_02_lmk"/>
+</ModelBrand>

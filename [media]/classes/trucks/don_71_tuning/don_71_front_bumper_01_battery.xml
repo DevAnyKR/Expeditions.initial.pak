@@ -1,0 +1,36 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="don_71_front_bumper_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_front_bumper_battery">
+		<Body Collisions="None" Mass="5" ModelFrame="BoneFrontBumper_01_Slot_cdt">
+			<Constraint
+				LinearLimitsX="(0.0;0.0)"
+				LinearLimitsY="(0;0.03)"
+				LinearLimitsZ="(-0.01;0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="8.0" Spring="30.0" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="don_71_front_bumper_01" />
+		<InstallSocket Type="Don71SlotRepairKit_1_BF" />
+	</GameData>
+</TruckAddon>

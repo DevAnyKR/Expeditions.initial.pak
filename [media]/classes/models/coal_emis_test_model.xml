@@ -1,0 +1,8 @@
+<_templates Include="environment" />
+<ModelBrand>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</ModelBrand>

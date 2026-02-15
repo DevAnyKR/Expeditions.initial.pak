@@ -1,0 +1,14 @@
+<ModelBrand
+	Instanced="true"
+>
+	<PhysicsModel>
+        <Body
+			Collisions="Dynamic"
+            CenterOfMassOffset="(0; 0.1; 0)"
+            Mass="50"
+            NoSoftContacts="True"
+        >
+            <Constraint BreakOffThreshold="100" Type="Fixed" />
+        </Body>
+	</PhysicsModel>
+</ModelBrand>

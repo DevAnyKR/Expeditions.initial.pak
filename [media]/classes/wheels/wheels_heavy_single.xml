@@ -1,0 +1,112 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Offroad" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</Offroad>
+		<Allterrain _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Allterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</Allterrain>
+		<Mudtires _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.65">
+	<TruckTires>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_heavy_offroad_single_1" Name="allterrain_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.12"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_HEAVY_ALLTERRAIN_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_2" Name="offroad_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.1"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_4" Name="offroad_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.99"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="7000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_SINGLE_4_NAME" />
+			</GameData>
+		</TruckTire>        
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_heavy_offroad_single_3" Name="mudtires_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.9"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="9000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+				<TruckRim Mesh="wheels/rim_heavy_offroad_single_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		
+		
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_4" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

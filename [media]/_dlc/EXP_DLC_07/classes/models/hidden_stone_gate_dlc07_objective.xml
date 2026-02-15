@@ -1,0 +1,42 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" 
+		HidePreviousSubsetBeforeAnim="true"
+		Name="build_stage_0">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="cdt_stage_0" />
+	</Subset>
+
+	<Subset
+		HidePreviousSubsetBeforeAnim="true"
+		Name="build_complete">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+		</Body>
+	</PhysicsModel>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="stage_0" />
+		<Mesh Name="animated_mesh" />
+		<CdtMesh Name="cdt_stage_0" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">
+        <AnimEvent Key="1">
+            <Sound Name="actors/actor_interactive_walls/actor_hidden_stone_gate_dlc07_objective" Range="50" Volume="1"/>
+        </AnimEvent>
+    </TrackEvents>
+	
+	
+
+	<Landmark Mesh="landmarks/stone_gate_dlc07_objective_lmk" />
+</ModelBrand>

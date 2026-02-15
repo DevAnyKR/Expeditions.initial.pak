@@ -1,0 +1,86 @@
+<DayTimeState
+	ColorLUT="lut/day_tr_01__vol_uncmp.tga"
+	FogColor="g(255; 223; 191) x 0.75"
+	FogScatterColor="g(255; 223; 191) x 1.25"
+	HorizonColor="g(255; 223; 191) x 1.9"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="4"
+	SkySharpness="2"
+	SSAOColor="g(255; 255; 255; 125) x 0.001"
+	SkyBloomColor="g(177; 222; 248; 100) x 0.7"
+	SkyColor="g(158; 151; 136) x 0.69"
+	SunColor="g(255; 220; 190) x 2.5"
+	SunDir="(1; -0.369; 0)"
+	
+	WaterCubeMapIntensity="0.3"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 246; 186; 10)"
+	
+	EnvMap="env/day_mich_01__d_ggxrefl.tga"
+	CubeMapScale="1.5"
+	
+	HdrAdaptationMinLum="0.1"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2.0"
+	HdrAdaptationSpeed="0.2"
+	HdrExposureScale="1"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.2"
+	TonemapB="0.19"
+	TonemapC="0.15"
+	TonemapD="0.2"
+	TonemapE="0.02"
+	TonemapF="0.3"
+	
+	BloomEnabled="true"
+	BloomPoint="0.12"
+	BloomIntensity="0.25"
+	BloomGamma="0.7"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="0.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+	ShadowMapResolution="2048"
+>
+    <Sky>
+		<Lightshaft
+			Tint="g(255; 164; 74)"
+			Intensity="0.06"
+			IntensityDayNightTransitionOffset="0.8"
+			IntensityDayNightTransitionLength="0.1"
+			BlurRadius="6.39"
+			FalloffRadius="0.8"
+			FalloffInnerRadius="0.04"
+            IntensityClamp="3.0"
+		/>
+		<Flare
+			AspectRatio="2.0"
+			Color="g(255; 208; 150) x 0.0339"
+			Size="50.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.0005" StartDist="20" ScatterAngle="90" Alpha="1" Height="100" UpperScale="0.015" LowerScale="0.0"/>
+	<SecondaryFog Density="0.001" Height="25" UpperScale="0.1" LowerScale="0.0"/>
+	<DistantFog StartDistance="300" EndDistance="10000" Height="10" DensityMultiplier="12.5"/>
+	<VolumeFog Density="0.3" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(227; 215; 207) x 0.3" MidY="g(232; 220; 204) x 0.5" PosY="g(237; 223; 209) x 1.39" />
+	<WeatherParticles Type="light_rain" MinIntensity="0.0" MaxIntensity="0.1" IntensityChangeInterval="30" />
+	<ShadowBlend BlendFactor="0.5">
+	    <ShadowBlendCurve>
+			<Point Part="0.1" Percent="0.05"/>
+			<Point Part="0.3" Percent="0.225"/>
+            <Point Part="0.8" Percent="0.875"/>
+        </ShadowBlendCurve>
+    </ShadowBlend>
+</DayTimeState>

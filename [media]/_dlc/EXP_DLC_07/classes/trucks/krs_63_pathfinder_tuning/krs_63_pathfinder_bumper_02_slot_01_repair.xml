@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_bumper_02_slot_01_repair">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_bumper_02" />
+		<InstallSocket Type="KRS63BumperSlot01" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="krs_63_bumper_02_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

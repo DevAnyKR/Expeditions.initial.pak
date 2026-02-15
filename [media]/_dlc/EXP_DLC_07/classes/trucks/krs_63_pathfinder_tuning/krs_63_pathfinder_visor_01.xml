@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_visor_00">
+		<Body ImpactType="Truck" Mass="6">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.859; 3.278; 0.735)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.859; 3.278; -0.735)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.859; 3.278; 0.735)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.906; 3.297; 0.003)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_EXTENDED_NAME"
+		/>
+		<InstallSocket Type="KRS63Visor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutHighway _template="Droneheavy">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Soft" SoftForceScale="0.15" />
+			<WheelFriction _template="ScoutHighway" />
+		</ScoutHighway>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.762">
+	<TruckTires>
+		<TruckTire _template="ScoutHighway" IsBuoyant="true" PushUpFactor="25" RowingFactor="20" Mesh="wheels/tire_drone_anchor" Name="tire_drone_anchor_1">
+			<WheelFriction 
+			_template="ScoutHighway" 
+			SubstanceFriction="3.5" 
+			TireSnowFrictionModifier="0.8"
+			BodyFriction="3.5" 
+			BodyFrictionAsphalt="3.5"
+			
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_drone_anchor" Name="rim_drone_anchor_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_1_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

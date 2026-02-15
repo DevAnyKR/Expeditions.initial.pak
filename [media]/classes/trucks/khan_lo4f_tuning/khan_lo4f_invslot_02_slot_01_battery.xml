@@ -1,0 +1,13 @@
+<_parent File="khan_lo4f_invslot_01_slot_01_battery" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_invslot_02_slot_01_battery">
+		<Body ModelFrame="BoneInvSlot02Slot01Repair_cdt" />
+	</PhysicsModel>
+	<GameData CameraPreset="supplies_rear">
+		<InstallSocket Type="KhanLo4FInvSlot02Slot01" />
+		<RequiredAddon Types="khan_lo4f_invslot_02" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="khan_lo4f_invslot_02_slot_01_battery" />
+	</BatteryHide>
+</TruckAddon>

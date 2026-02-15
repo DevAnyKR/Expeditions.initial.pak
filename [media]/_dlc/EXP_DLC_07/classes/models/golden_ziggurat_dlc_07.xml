@@ -1,0 +1,11 @@
+<ModelBrand
+    DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/golden_ziggurat_dlc_07_lmk" />
+	
+</ModelBrand>

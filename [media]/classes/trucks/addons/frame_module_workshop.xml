@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_module_workshop">
+		<Body Mass="1000">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+
+		Priority = "4"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_WORKSHOP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_WORKSHOP_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameModuleShortUNUSED" />
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960" />
+		<InstallSlot 
+			CargoLength="1"
+			CargoType="Addon"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

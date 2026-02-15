@@ -1,0 +1,15 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true">
+
+	<Subset IsDefault="true" Name="stage_visible">
+		<Mesh Name="geo" />
+		<CdtMesh Name="cdt_geo" />
+	</Subset>
+
+	<Subset Name="stage_hidden">
+	</Subset>
+		
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="geo" />
+	</PhysicsModel>
+
+</ModelBrand>

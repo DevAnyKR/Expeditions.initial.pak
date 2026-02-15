@@ -1,0 +1,16 @@
+<_parent File="khan_lo4f_roofrack_01_slot_01_battery" />
+<TruckAddon>
+	<BatteryHide>
+		<Mesh Frame="khan_lo4f_roofrack_01_slot_04_battery" />
+	</BatteryHide>
+	<PhysicsModel MeshFrame="khan_lo4f_roofrack_01_slot_04_battery">
+		<Body ModelFrame="BoneRoofrack01Slot04Repair_cdt">
+			<Constraint LinearLimitsX="(-0.001;0.001)" LinearLimitsZ="(-0.001;0.005)" Type="Fixed">
+				<Motor Damping="1000" Spring="2000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FRoofrack01Slot04" />
+	</GameData>
+</TruckAddon>

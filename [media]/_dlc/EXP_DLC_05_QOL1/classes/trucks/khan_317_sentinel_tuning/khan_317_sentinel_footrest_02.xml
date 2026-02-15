@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+		<Multiplier Multiplier="0.99" Type="Gearbox" />
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_footrest_02">
+		<Body Mass="10" ModelFrame="BoneFootrest_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+		
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_NERF_BARS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_NERF_BARS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="KHAN317Footrest" />
+		<RequiredSuspension Types="khan_317_sentinel_suspension_high, khan_317_sentinel_suspension_crawler" />
+	</GameData>
+</TruckAddon>

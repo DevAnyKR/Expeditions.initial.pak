@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_visor_02">
+		<Body ImpactType="Truck" Mass="3" ModelFrame="BoneVisor02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="LED" Size="0.2" Pos="(0.904; 2.19; 0.552)" />
+			<Flare _template="LED" Size="0.2" Pos="(0.904; 2.19; -0.552)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_EXTENDED_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,37 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true" IsComplexPhysModel="true">
+	<PhysicsModel>
+		<Body
+		Collisions="Dynamic"
+		ModelFrame="BoneRoot_cdt"
+		Mass="100000" >
+		<Constraint 
+			BreakOffThreshold="0"
+			Type="Fixed"
+			>
+			</Constraint>
+			<Body
+				Collisions="Dynamic"
+				Mass="13000"
+				ModelFrame="BoneDoorLeft_cdt"
+				NoSoftContacts="True"
+				DamageMult="0.8"
+			>
+				<Constraint  Type="Hinge" MinLimit="-2" MaxLimit="90" AxisLocal="(0;0;1)"/>
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="13000"
+				ModelFrame="BoneDoorRight_cdt"
+				NoSoftContacts="True"
+				DamageMult="0.8"
+			>
+				<Constraint  Type="Hinge" MinLimit="-90" MaxLimit="2" AxisLocal="(0;0;1)"/>
+			</Body>
+		</Body>
+    </PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(3; 0; 0)" ParentFrame="BoneDoorLeft_cdt" />
+		<WinchSocket Pos="(-3; 0; 0)" ParentFrame="BoneDoorRight_cdt" />
+	</GameData>
+</ModelBrand>

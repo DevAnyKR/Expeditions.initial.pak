@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="yar_87_rear_bumper_01_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_rear_bumper_01_wheel">
+		<Body Collisions="None" Mass="20">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_Rear"
+		Category="rear"
+		IsCustomizable="false"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="yar_87_rear_bumper_01" />
+		<InstallSocket Type="Yar87RearBumperWheel" />
+	</GameData>
+</TruckAddon>

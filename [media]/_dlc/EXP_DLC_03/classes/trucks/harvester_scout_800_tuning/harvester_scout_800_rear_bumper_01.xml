@@ -1,0 +1,29 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_rear_bumper_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="harvester_scout_rear_bumper_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HARVESTER_SCOUT_800_REAR_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HARVESTER_SCOUT_800_REAR_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="HarvesterScout800RearBumper" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.85" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_lo4f_tuning" MeshFrame="khan_lo4f_protective_bottom_02">
+		<Body ModelFrame="BoneProtectiveBottom_cdt" Collisions="Default" Mass="60">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="bottom"
+		Category="fender_front"
+		IsCustomizable="false"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SKIDPLATE_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SKIDPLATE_02_NAME"
+		/>
+		<RequiredSuspension Types="khan_lo4f_suspension_crawler, khan_lo4f_suspension_high" />
+		<InstallSocket Type="KhanLo4FProtectiveBottom" />
+	</GameData>
+</TruckAddon>

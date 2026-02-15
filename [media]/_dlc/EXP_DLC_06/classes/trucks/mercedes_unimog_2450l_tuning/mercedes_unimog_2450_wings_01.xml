@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/mercedes_unimog_2450L_tuning" MeshFrame="mercedes_unimog_2450l_wings_01">
+		<Body Collisions="None" ImpactType="Truck" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneWingsMudGuard_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" MinLimit="-20" MaxLimit="80" Type="Hinge">
+						<Motor Damping="0.01" Spring="0.005" Type="Spring" />
+					</Constraint>
+			</Body>
+			<Body Collisions="Default" Mass="20" ModelFrame="BoneWingsExplicit_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Collisions="None" Mass="0.5" ModelFrame="BoneWingsExplicitMudGuard_cdt">
+					<Constraint AxisLocal="(0; 0; -1)" MinLimit="-20" MaxLimit="80" Type="Hinge">
+						<Motor Damping="0.01" Spring="0.005" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.4" Pos="(-2.177; 1.212; 0.907)" ParentFrame="BoneWingsExplicit_cdt" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.4" Pos="(-2.177; 1.212; -0.907)" ParentFrame="BoneWingsExplicit_cdt" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.177; 1.212; 0.907)" ParentFrame="BoneWingsExplicit_cdt" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.177; 1.212; -0.907)" ParentFrame="BoneWingsExplicit_cdt" />
+		</Ignition>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-2.223; 1.101; 0.908)" ParentFrame="BoneWingsExplicit_cdt" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-2.223; 1.101; -0.908)" ParentFrame="BoneWingsExplicit_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.223; 1.101; 0.908)" ParentFrame="BoneWingsExplicit_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.223; 1.101; -0.908)" ParentFrame="BoneWingsExplicit_cdt" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_UNIMOG_U2450_ARCHES_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_UNIMOG_U2450_ARCHES_01_NAME"
+		/>
+		<InstallSocket Type="MercedesUnimog2450LWings" />
+	</GameData>
+</TruckAddon>

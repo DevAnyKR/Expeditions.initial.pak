@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_visor_01">
+		<Body Mass="4" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 217; 134) x 0.2" Size="0.12" Pos="(1.937; 2.343; -0.559)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 217; 134) x 0.2" Size="0.12" Pos="(1.937; 2.343; 0.559)" />
+		</Ignition> 
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_01_NAME"
+		/>
+		<InstallSocket Type="DecinS3TVisor" />
+	</GameData>
+</TruckAddon>

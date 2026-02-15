@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_wings_01">
+				<Body ImpactType="Truck" Mass="15" ModelFrame="BoneWings_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_DON_71_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DON_71_WINGS_01_NAME"
+		/>
+		<InstallSocket Type="Don71_1Wings" />
+		<RequiredSuspension Types="don_71_suspension_default, don_71_suspension_crawler, don_71_suspension_high, don_71_se_suspension_default, don_71_se_suspension_high, don_71_se_suspension_crawler" />
+	</GameData>
+</TruckAddon>

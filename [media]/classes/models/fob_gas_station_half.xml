@@ -1,0 +1,7 @@
+<ModelBrand Instanced="true" InstancedAsModel="true" DynamicModel="false"
+	ClipCamera="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<!-- <Landmark Mesh="landmarks/fob_gas_station_lmk" /> -->
+</ModelBrand>

@@ -1,0 +1,805 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			CamberSuspensionMultiplier="0.30"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			SteeringAngle="-16"
+			SteeringCastor="4"
+			Torque="default"
+		/>
+		<FirstAxle
+			CamberSuspensionMultiplier="0.30"
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="24"
+			SteeringCastor="4"
+			SteeringJointOffset="0.28"
+			Torque="full"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		DiffLockType="Installed"
+		ElectricChargeCapacity="15"
+		SignalRadius="125.0"
+		EngineIconMesh="env/engine_tuz_93_kelpie"
+		EngineIconScale="1.0"
+		EngineStartDelay="1.5"
+		ExhaustStartTime="0.9"
+		FuelCapacity="115"
+		Responsiveness="0.25"
+		SteerSpeed="0.03"
+		BackSteerSpeed="0.029"
+		TruckImage="tuz_93_Kelpie"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_tuz_93_kelpie"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.498; 0.545; 0.571)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.498; 0.545; 0.571)" />
+			<Wheel _template="SecondAxle" Pos="(-1.498; 0.545; 0.571)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.498; 0.545; 0.571)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="tuz_93_kelpie_suspension_default"
+			Type="s_tuz_93_kelpie"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRack1" FrameSteerLeft="BoneRack1L" FrameSteerRight="BoneRack1R" RackHalfSizeZ="0.5" />
+		<SteeringRack Frame="BoneRack2" FrameSteerLeft="BoneRack2L" FrameSteerRight="BoneRack2R" RackHalfSizeZ="0.5" />
+		<Steam Origin="(0.703; 1.291; -0.61)" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_reverse" />
+			<BrakePull		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_brake_pull" />
+			<BrakesSqueal	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_brakes_squeal" />
+			<BrakeRelease	Sound="" />
+			<Handbrake		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_handbrake_off" />
+			<Gear			Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_gear_shift" />
+			<Honk			Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_honk" />
+			<EngineRev		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_rev" />
+			<EngineAccel	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_acc" />
+			<EngineStart	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_start" />
+			<EngineStop		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_stop" />
+			<EngineIdle		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_idle" />
+			<EngineIdle_2d	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_low" />
+			<EngineLow_2d	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_high" />
+			<EngineHigh_2d	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_heavy" />
+			<EngineHeavy_2d	Sound="trucks/tuz_93_kelpie/tuz_93_kelpie_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+			<ChassisStress	Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="SHK_Gearstick01" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="0.5" />
+			<Shaker Frame="SHK_Gearstick02" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="0.35" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft_tuz_93_kelpie" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft_tuz_93_kelpie" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft_tuz_93_kelpie" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft Mesh="env/minishaft_tuz_93_kelpie" SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2.65"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.5"
+			MaxX="3.5"
+		/>
+		<Inventory MaxLimit="5" />
+		<DeployCost Cost="0" />
+		<Intake Dir="(1; 0; 0)" Origin="(1.8; 1.4; -0.61)" Size="0.45" />
+		<GearboxSocket Default="g_scout_tuz_93_kelpie_default" Type="gearboxes_scouts_tuz_93_kelpie, gearboxes_scouts_heavy_experimental" />
+		<FuelTank DamageCapacity="100" />
+		<EngineSocket Default="e_ru_scout_tuz_93_kelpie_engine_0" Type="e_ru_scout_tuz_93_kelpie, e_scout_heavy_experimental" />
+		<Driver
+			LegsOffset="(0.08; 0.14; -0.16)"
+			Pos="(1.161; 1.027; 0.383)"
+			SteeringWheelPos="(1.477; 1.39; 0.377)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 4.4; 0.0)"/>
+		<Dashboard>
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;100)" InputType="speed" Mesh="trucks/arrows/tuz_93_kelpie_arrow_00" Org="(1.719; 1.411; 0.389)" OutputAngles="(-130; 60)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/tuz_93_kelpie_arrow_00" Org="(1.685; 1.364; 0.509)" OutputAngles="(-125; 120)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/tuz_93_kelpie_arrow_01" Org="(1.718; 1.408; 0.207)" OutputAngles="(-42; 42)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_93_kelpie_arrow_01" Org="(1.668; 1.34; 0.614)" OutputAngles="(-150; 30)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_93_kelpie_arrow_02" Org="(1.714; 1.401; 0.62)" OutputAngles="(-45; 15)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_93_kelpie_arrow_02" Org="(1.66; 1.331; 0.334)" OutputAngles="(-40; 30)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_93_kelpie_arrow_02" Org="(1.718; 1.408; 0.28)" OutputAngles="(-42; 24)" />
+			<Gauge Dir="(-1; 0.77; 0)" InputRange="(0;1)" InputType="engineEnabled" Scale="0.8" Mesh="trucks/arrows/tuz_93_kelpie_arrow_01" Org="(1.668; 1.34; 0.261)" OutputAngles="(-85; 68)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(-0.082; 1.02; -0.845)" Max="(1.621; 1.45; -0.249)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.905; 0.493; -0.361)" Max="(0.905; 0.73; 0.361)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Fuel" Min="(-0.68; 0.867; 0.991)" Max="(0.662; 1.153; 1.23)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Fuel" Min="(-0.68; 0.867; -1.23)" Max="(0.662; 1.153; -0.991)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.57" Scale="0.55" Type="wheels_tuz_93_kelpie" />
+		<CompatibleWheels OffsetZ="0.57" Scale="0.55" Type="wheels_tuz_93_kelpie_2" />
+		<CompatibleWheels OffsetZ="0.57" Scale="0.57" Type="wheels_tuz_93_kelpie" />
+		<CompatibleWheels OffsetZ="0.57" Scale="0.57" Type="wheels_tuz_93_kelpie_2" />
+		<Camera Center="(-1.4; -0.2; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.5; 2.6)"
+				LimitsVer="(-0.55; 0.4)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/tuz_93_kelpie_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/tuz_93_kelpie_glass__sh_d.tga"
+				ViewPos="(0.947; 1.743; 0.381)"
+				ZoomViewPosOffset="(0.6; 0; 0)"
+			>
+				<Rear ViewPosOffset="(0.45; -0.01; 0.75)" />
+				<Mirror ClipDir="(-1; 0.1; -0.3)" FOVScale="1.2" MeshFrame="mirror_l" ReflectionDir="(-1; 0.1; -0.3)" Size="(0.2; 0.3)" Pos="(2.05; 1.449; 1.197)" ParentFrame="BoneCabin_cdt" />
+				<Mirror ClipDir="(-1; 0.05; 0.530)" FOVScale="1.2" MeshFrame="mirror_r" ReflectionDir="(-1; 0.05; 0.530)" Size="(0.2; 0.3)" Pos="(2.05; 1.449; -1.197)" ParentFrame="BoneCabin_cdt" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(1.6; 3.7; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-1.0; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2L" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuz_93_kelpie">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.25; -0.5; 0)"
+			ImpactType="Truck"
+			Mass="2300"
+			NetSync="pv"
+			ForceBodyParams="true"
+				PushUpFactor="5"
+		>
+			<Body
+				CenterOfMassOffset="(0.125; -0.6; 0)"
+				ImpactType="Truck"
+				Mass="1500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				ForceBodyParams="true"
+				PushUpFactor="10"
+			>
+				<Constraint Type="Fixed" />
+				<Body Collisions="None" Mass="5" ModelFrame="BoneCable01_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-2"
+						MaxLimit="2"
+					>
+						<Motor Damping="5" Spring="2" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneCable02_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="40"
+					>
+						<Motor Damping="0.25" Spring="5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneWiper_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-4"
+						MaxLimit="2.8"
+					>
+						<Motor Damping="10" Spring="150" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRodFrontLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="TieRodFrontLeft"
+					MinLimit="-20"
+					MaxLimit="20"
+				/>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRodFrontRight_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="TieRodFrontRight"
+					MinLimit="-20"
+					MaxLimit="20"
+				/>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRodRearLeft_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="TieRodRearLeft"
+					MinLimit="-20"
+					MaxLimit="20"
+				/>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRodRearRight_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="TieRodRearRight"
+					MinLimit="-20"
+					MaxLimit="20"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1" Pos="(-2.509; 1.047; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.084; 1.169)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.084; -1.169)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.011; 1.169)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.011; -1.169)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-2.509; 1.047; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(2.361; 1.015; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.084; 1.169)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.084; -1.169)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.011; 1.169)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.08" Pos="(-2.509; 1.011; -1.169)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" DirAngle="90" Pos="(2.118; 1.092; 1.283)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" DirAngle="90" Pos="(2.118; 1.092; -1.283)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" DirAngle="90" Size="0.18" Pos="(-2.509; 1.156; 1.169)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" DirAngle="90" Size="0.18" Pos="(-2.509; 1.156; -1.169)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.361; 1.015; 1.111)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.361; 1.015; -1.111)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="2.7" Dir="(1; 0; 0)" DirAngle="120" Size="0.08" Pos="(2.479; 1.011; 0.876)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="2.7" Dir="(1; 0; 0)" DirAngle="120" Size="0.08" Pos="(2.479; 1.011; -0.876)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.361; 1.015; 0)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.652; 2.038; 0.768)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(2.361; 1.015; 1.111)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(2.361; 1.015; -1.111)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(1.652; 2.038; 0.768)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 235; 195) x 0.8" Size="0.08" Pos="(2.479; 1.011; 0.876)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 235; 195) x 0.8" Size="0.08" Pos="(2.479; 1.011; -0.876)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.361; 1.015; 1.111)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.361; 1.015; -1.111)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(1.652; 2.038; 0.768)" Seize="0.6" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.361; 1.015; 1.111)" Seize="0.6" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.361; 1.015; -1.111)" Seize="0.6" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/tuz_93_kelpie_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(2.361; 1.015; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="70000"
+		Recallable="true"
+		UnlockByExploration="false"
+		LockedUnconditionally="false"
+		RecoveryPrice="3000"
+		UnlockByRank="0"
+		
+	>
+		<WinchSocket Pos="(-0.198; 0.708; 1.054)" />
+		<WinchSocket Pos="(-0.198; 0.708; -1.054)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_TUZ_93_KELPIE_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgTuz93KelpieExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIcon576x640="shopImgTuz93KelpieExp"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_TUZ_93_KELPIE_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.6; 1.5; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14; 1.5; -4)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(3.85; 1.231; -0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.8; 1.937; 3)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(6.0; 2.2; -0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.85; 6.8; -3.184)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.15; 0.7; -0.55)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(4.5; 0.7; -4.25)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.6; 1.5; 0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.8; 1.5; 6.5)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.4; 1.5; 0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12; 1.5; -7)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(4.2; 1.55; -0.1)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-4; 4.8; -4.4)" />
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(4.1; 1.5; -0.58)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.5; 1.5; -2.7)" />
+			<CameraPos FOV="32.0" Name="roof_sticker" InterestPosition="(5; 1; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(7; 4.5; -2.8)" />
+			
+			<CameraPos FOV="32.0" Name="side_r_supplies" InterestPosition="(4.6; 1.5; 0.2)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(12.8; 1.5; 6.5)" />
+			<CameraPos FOV="32.0" Name="roof_supplies" InterestPosition="(6.0; 2.2; -0.2)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(9.85; 6.8; -3.184)" />
+			<CameraPos FOV="32.0" Name="rear_supplies" InterestPosition="(3.85; 1.231; -0.3)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-4.8; 1.937; 3)" />
+		</CustomizationCameras>
+		<!-- Bumpers -->
+		<AddonSockets DefaultAddon="tuz_93_kelpie_bumper_front_00">
+			<Socket Names="TUZ93KelpieBumperFront" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tuz_93_kelpie_bumper_rear_00">
+			<Socket Names="TUZ93KelpieBumperRear" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- Roofrack -->
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack00SlotA" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack00SlotB" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack00SlotC" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack00SlotD" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01SlotA" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01SlotB" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01SlotC" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01SlotD" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieRoofrack01SlotE" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- Drones and Detectos -->
+		<AddonSockets >
+			<Socket Names="ScoutMetalDetectorTUZ93Kelpie" Offset="(0.778; 2.465; -0.36)" ParentFrame="BoneCabin_cdt" NamesBlock="DroneScoutCarrierTUZ93Kelpie" InCockpit="true">
+				<ExtraParent Offset="(0; 0.0; 0)" Frame="BoneCabin_cdt"/>
+				<ExtraParent Offset="(0.95; -0.593; 0.45)" Frame="BoneCabin_cdt"/>
+			</Socket>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="DroneScoutCarrierTUZ93Kelpie" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" NamesBlock="ScoutMetalDetectorTUZ93Kelpie"/>
+		</AddonSockets>
+		<!-- InvSlot -->
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieInvSlot00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieInvSlot00SlotA" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieInvSlot00SlotB" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- Outerframe -->
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieOuterframe" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieOuterframeSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- SpareWheel -->
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieSpareWheelAddon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieSpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- Wings -->
+		<AddonSockets >
+			<Socket Names="TUZ93KelpieWings" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- FrameAddons -->
+		<AddonSockets DefaultAddon="frame_addon_kung_tuz_93_kelpie">
+			<Socket Names="Tuz93FrameAddon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- Snorkel -->
+		<AddonSockets DefaultAddon="tuz_93_kelpie_snorkel_00">
+			<Socket Names="TUZ93KelpieSnorkel" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<!-- Diff Lock -->
+		<AddonSockets DefaultAddon="tuz_93_kelpie_diff_lock_default">
+			<Socket Names="Tuz93DiffLock" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tuz_93_kelpie_estock_default">
+			<Socket Names="tuz_93_kelpie_estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Stuff -->
+		<AddonSockets>
+			<Socket Names="TUZ93StickerDoor00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="TUZ93StickerDoor01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="TUZ93StickerSide" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodFrontLeft" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodFrontRight" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodRearLeft" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodRearRight" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- A-ARMS FRONT -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_AArmFrontLeftBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_AArmFrontLeftBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmFrontLeftTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_AArmFrontLeftTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_AArmFrontRightBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_AArmFrontRightBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmFrontRightTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_AArmFrontRightTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS FRONT-->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneShockFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmFrontLeftBottom_A"
+				ModelFrame="IK_BoneShockFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmFrontRightBottom_A"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- TIE RODS FRONT -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneRodLinkFrontLeft_B" ParentFrame="BoneRack1L">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodFrontLeft_cdt"
+				ModelFrame="IK_BoneRodLinkFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneRodLinkFrontRight_B" ParentFrame="BoneRack1R">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodFrontRight_cdt"
+				ModelFrame="IK_BoneRodLinkFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- A-ARMS FRONT -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_AArmFrontLeftBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_AArmFrontLeftBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmFrontLeftTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_AArmFrontLeftTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_AArmFrontRightBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_AArmFrontRightBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmFrontRightTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_AArmFrontRightTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS FRONT-->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneShockFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmFrontLeftBottom_A"
+				ModelFrame="IK_BoneShockFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmFrontRightBottom_A"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- TIE RODS FRONT -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneRodLinkFrontLeft_B" ParentFrame="BoneRack1L">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodFrontLeft_cdt"
+				ModelFrame="IK_BoneRodLinkFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneRodLinkFrontRight_B" ParentFrame="BoneRack1R">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodFrontRight_cdt"
+				ModelFrame="IK_BoneRodLinkFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- A-ARMS REAR -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_AArmRearLeftBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="IK_AArmRearLeftBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmRearLeftTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="IK_AArmRearLeftTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_AArmRearRightBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="IK_AArmRearRightBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmRearRightTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="IK_AArmRearRightTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS REAR-->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneShockRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmRearLeftBottom_A"
+				ModelFrame="IK_BoneShockRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneShockRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmRearRightBottom_A"
+				ModelFrame="IK_BoneShockRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- TIE RODS REAR -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneRodLinkRearLeft_B" ParentFrame="BoneRack1L">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodRearLeft_cdt"
+				ModelFrame="IK_BoneRodLinkRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneRodLinkRearRight_B" ParentFrame="BoneRack1R">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodRearRight_cdt"
+				ModelFrame="IK_BoneRodLinkRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- A-ARMS REAR -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_AArmRearLeftBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="IK_AArmRearLeftBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmRearLeftTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="IK_AArmRearLeftTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_AArmRearRightBottom_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="IK_AArmRearRightBottom_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AArmRearRightTop_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="IK_AArmRearRightTop_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS REAR-->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneShockRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmRearLeftBottom_A"
+				ModelFrame="IK_BoneShockRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneShockRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AArmRearRightBottom_A"
+				ModelFrame="IK_BoneShockRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- TIE RODS REAR -->
+		<!-- LEFT -->
+		<IKBone ModelFrame="IK_BoneRodLinkRearLeft_B" ParentFrame="BoneRack2L">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodRearLeft_cdt"
+				ModelFrame="IK_BoneRodLinkRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- RIGHT -->
+		<IKBone ModelFrame="IK_BoneRodLinkRearRight_B" ParentFrame="BoneRack2R">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRodRearRight_cdt"
+				ModelFrame="IK_BoneRodLinkRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

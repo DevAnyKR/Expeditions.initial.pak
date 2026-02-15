@@ -1,0 +1,12 @@
+<_templates Include="models" />
+<ModelBrand 
+	Instanced="True"
+	IsKeepPhysModelAlways="true"
+>
+	<PhysicsModel>
+		<Body _template="LightWeight" Mass="900" ModelFrame="BoneRoot">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_old_gas_station_09_dlc3_lmk"/>
+</ModelBrand>

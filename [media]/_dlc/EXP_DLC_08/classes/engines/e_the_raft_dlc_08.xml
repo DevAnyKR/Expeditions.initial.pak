@@ -1,0 +1,30 @@
+<_templates Include="trucks"/>
+<EngineVariants>
+	<Engine
+		
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="250"
+		DamagedConsumptionModifier="0.0"
+		EngineResponsiveness="0.011"
+		FuelConsumption="1.0"
+		Name="engine_the_raft_dlc_08_0"
+		Torque="200000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="1.0"
+		BrakesDelay="0.65" 
+		MaxDeltaAngVel="0.01"
+	>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_THE_RAFT_DLC_08_0_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_THE_RAFT_DLC_08_0_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

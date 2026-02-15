@@ -1,0 +1,15 @@
+<ModelBrand>
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; -0.6; 0)"
+			Collisions="Dynamic"
+			ModelFrame="Armature.002"
+			Mass="70"
+			DamageMult="0.0"
+		>
+			<Constraint Cone="140" TwistAxisLocal="(0; 1; 0)" Type="Ragdoll">
+				<PlaneConeMotor Damping="600" Spring="15000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

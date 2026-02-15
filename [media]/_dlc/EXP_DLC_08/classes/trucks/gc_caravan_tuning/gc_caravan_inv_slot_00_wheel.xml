@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="gc_caravan_inv_slot_00_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_inv_slot_00_wheel" AcceptVisualDamage="false">
+		<Body ImpactType="Truck" Collisions="None" Mass="50" ModelFrame="BoneInvSlot00SpareWheel_cdt">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-5 "
+				MaxLimit="0"
+			>
+				<Motor Damping="300" Spring="1600" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<InstallSocket Type="GCCaravanInvSlot00Wheel" />
+		<RequiredAddon Types="gc_caravan_inv_slot_00" />
+	</GameData>
+</TruckAddon>

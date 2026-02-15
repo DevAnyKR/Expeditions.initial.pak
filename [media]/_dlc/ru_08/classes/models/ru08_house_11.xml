@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(11.0; 10.0)" 
+		Texture="occlusion_ru08_house_11.tga"
+	/>
+</ModelBrand>

@@ -1,0 +1,132 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="130"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="tuz_108_warthog_suspension_default"
+	>
+		<Suspension 
+			WheelType="front" 
+			Damping="0.35" 
+			BrokenSuspensionMax="-0.025" 
+			
+			Height="0.175" 
+			Strength="0.017" 
+			SuspensionMin="-0.275" 
+			SuspensionMax="-0.05" 
+			
+		/>
+		<Suspension
+			WheelType="rear"
+			Damping="0.35" 
+			BrokenSuspensionMax="0.025"
+			
+			Height="0.15"
+			Strength="0.019"
+			SuspensionMin="-0.25"
+			SuspensionMax="-0.025" 
+			
+		/>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="180"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="tuz_108_warthog_suspension_high"
+	>
+		<Suspension 
+			WheelType="front" 
+			Damping="0.6" 
+			BrokenSuspensionMax="-0.125"
+			
+			Height="0.35" 
+			Strength="0.012" 
+			SuspensionMin="-0.4" 
+			SuspensionMax="-0.15" 
+			
+		/>
+		<Suspension
+			WheelType="rear"
+			Damping="0.6" 
+			BrokenSuspensionMax="-0.075"
+			
+			Height="0.3"
+			Strength="0.014"
+			SuspensionMin="-0.35"
+			SuspensionMax="-0.1"
+			
+		/>
+		<GameData
+			Price="5000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="160"
+		BrokenWheelDamageMultiplier="0.0"
+		Name="tuz_108_warthog_suspension_crawler"
+	>
+		<Suspension 
+			WheelType="front" 
+			Damping="0.75" 
+			BrokenSuspensionMax="-0.075" 
+			
+			Height="0.29" 
+			Strength="0.0125" 
+			SuspensionMin="-0.35" 
+			SuspensionMax="-0.05"
+			
+		/>
+		<Suspension
+			WheelType="rear"
+			Damping="0.75" 
+			BrokenSuspensionMax="-0.05"
+			
+			Height="0.24"
+			Strength="0.0155"
+			SuspensionMin="-0.3"
+			SuspensionMax="-0.025"
+			 
+		/>
+		<GameData
+			Price="8000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

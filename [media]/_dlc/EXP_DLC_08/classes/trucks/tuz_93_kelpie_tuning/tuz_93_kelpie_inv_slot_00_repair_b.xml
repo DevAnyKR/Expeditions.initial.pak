@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_inv_slot_00_repair_b">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r_supplies"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="tuz_93_kelpie_inv_slot_00" />
+		<InstallSocket Type="TUZ93KelpieInvSlot00SlotB" />
+	</GameData>
+	<RepairHide>
+		<Mesh Frame="tuz_93_kelpie_inv_slot_00_repair_b" HideThreshold="0.0" />
+	</RepairHide>
+</TruckAddon>

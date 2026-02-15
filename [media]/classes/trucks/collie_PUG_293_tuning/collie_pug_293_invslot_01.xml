@@ -1,0 +1,47 @@
+<_templates Include="trucks">
+	<Body>
+		<Gate
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="15"
+			NetSync="pv"
+		>
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="0"
+			>
+				<Motor Damping="1" Spring="0" Type="Spring" />
+			</Constraint>
+		</Gate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_invslot_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneInvslot01_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Gate" ModelFrame="BoneInvslot01GateR_cdt" />
+			<Body _template="Gate" ModelFrame="BoneInvslot01GateL_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsConsumable="false"
+		IsCustomizable="true"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_COLLIE_PUG_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_COLLIE_PUG_01_NAME"
+		/>
+		<RequiredAddon Types="collie_pug_293_arches_default"/>
+		<InstallSocket Type="ColliePUG293InvSlot" />
+	</GameData>
+</TruckAddon>

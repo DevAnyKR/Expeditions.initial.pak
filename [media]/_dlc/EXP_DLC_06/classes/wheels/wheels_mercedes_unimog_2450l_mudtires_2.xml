@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Semiaverage_mt" RadiusOffset="0.085"/>
+			<WheelFriction _template="Mudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="150" Radius="1" Width="0.65">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires_0">
+			<WheelFriction _template="HeavyMudtires" 
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.75"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				
+			/>
+			<GameData
+				Price="15000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires_1"> -->
+			<!-- <WheelFriction _template="Mudtires" SubstanceFriction="3.5" BodyFriction="3.5"/> -->
+			<!-- <GameData -->
+				<!-- Price="1500" -->
+				<!-- UnlockByExploration="false" -->
+				<!-- UnlockByRank="1" -->
+			<!-- > -->
+				<!-- <UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" /> -->
+			<!-- </GameData> -->
+		<!-- </TruckTire> -->
+		<!-- <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires_2"> -->
+			<!-- <WheelFriction _template="Mudtires" SubstanceFriction="3.5" BodyFriction="3.5"/> -->
+			<!-- <GameData -->
+				<!-- Price="1500" -->
+				<!-- UnlockByExploration="false" -->
+				<!-- UnlockByRank="1" -->
+			<!-- > -->
+				<!-- <UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" /> -->
+			<!-- </GameData> -->
+		<!-- </TruckTire> -->
+		<!-- <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires_3"> -->
+			<!-- <WheelFriction _template="Mudtires" SubstanceFriction="3.5" BodyFriction="3.5"/> -->
+			<!-- <GameData -->
+				<!-- Price="1500" -->
+				<!-- UnlockByExploration="false" -->
+				<!-- UnlockByRank="1" -->
+			<!-- > -->
+				<!-- <UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" /> -->
+			<!-- </GameData> -->
+		<!-- </TruckTire> -->
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_single_tayga_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_MUDTIRES_SINGLE_TAYGA_1_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

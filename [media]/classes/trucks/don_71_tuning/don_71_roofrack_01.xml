@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_roofrack">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="HeadLight" AspectRatio="4" Color="g(255; 180; 0) x 0.6" Size="0.07" Pos="(0.32; 1.691; 0.439)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="4" Color="g(255; 180; 0) x 0.6" Size="0.07" Pos="(0.32; 1.645; 0.439)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="4" Color="g(255; 180; 0) x 0.6" Size="0.07" Pos="(0.32; 1.691; -0.439)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="4" Color="g(255; 180; 0) x 0.6" Size="0.07" Pos="(0.32; 1.645; -0.439)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="3000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Don71Roofrack" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Semiaverage_mt" RadiusOffset="0.085"/>
+			<WheelFriction _template="Mudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.65">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_scout_mudtires1_2" Name="mudtires_1">
+			<WheelFriction
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.85"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="18000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_YAR_87_2_NAME" />
+			</GameData>
+		</TruckTire>    
+		<!-- NEW----------------------------------------------------------------------------------------------------------------->
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_scout_mudtires1_3" Name="mudtires_2">
+			<WheelFriction
+				
+				SubstanceFriction="3.5" 
+				TireSnowFrictionModifier="0.8" 
+				BodyFriction="3.5" 
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="21000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_YAR_87_3_NAME" />
+			</GameData>
+		</TruckTire>   
+		<!-- NEW----------------------------------------------------------------------------------------------------------------->
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_mudtires1_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_MUDTIRES_1_1_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_MERCEDES_UNIMOG_2450_0_NAME" />
+			</GameData>
+		</TruckRim>
+		<!-- NEW----------------------------------------------------------------------------------------------------------------->
+		<TruckRim Mesh="wheels/rim_scout_mudtires1_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_MUDTIRES_1_2_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_MERCEDES_UNIMOG_2450_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_mudtires1_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_MUDTIRES_1_3_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_MERCEDES_UNIMOG_2450_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<!-- NEW----------------------------------------------------------------------------------------------------------------->
+	</TruckRims>
+</TruckWheels>

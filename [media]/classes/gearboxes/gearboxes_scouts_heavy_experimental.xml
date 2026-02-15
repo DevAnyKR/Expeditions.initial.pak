@@ -1,0 +1,73 @@
+<_templates Include="trucks"/>
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="225"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.2"
+		Name="g_scout_heavy_experimental"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="25.0"
+	>
+		<ReverseGear AngVel="1.25" FuelModifier="0.5" />
+		<HighGear AngVel="12.0" FuelModifier="1.75" />
+		<Gear AngVel="1.5" FuelModifier="1.85" />
+		<Gear AngVel="2.5" FuelModifier="1.65" />
+		<Gear AngVel="4.0" FuelModifier="1.45" />
+		<Gear AngVel="6.0" FuelModifier="1.3" />
+		<Gear AngVel="8.0" FuelModifier="1.15" />
+		<Gear AngVel="10.0" FuelModifier="1.0" />
+		<Gear AngVel="12.5" FuelModifier="0.85" />
+		<Gear AngVel="15.0" FuelModifier="0.75" />
+		<GameData
+			Price="75000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="true" 
+				IsLowerMinusGearExists="true"
+				IsManualLowGear="true"
+				IsManualReverseGear="true"
+				IsManualHighGear="true"
+				EngineStallAccelLimit= "0.65"
+				
+				ManualHigh1AccelLimit="0.45"
+                FuelModifierManualHigh1="1.7"
+				
+				ManualHigh2AccelLimit="0.6"
+                FuelModifierManualHigh2="1.4"
+				
+				ManualHigh3AccelLimit="0.66"
+                FuelModifierManualHigh3="1.1"
+				
+				ManualHigh4AccelLimit="0.85"
+                FuelModifierManualHigh4="0.9"
+				
+				ManualHighAccelLimit="1.0"
+                FuelModifierManualHigh="0.7"
+				
+				ManualReverse1AccelLimit="0.33"
+				FuelModifierManualReverse1="0.65"
+				
+                ManualReverse2AccelLimit="0.66"
+				FuelModifierManualReverse2="0.55"
+				
+                ManualReverseAccelLimit="1.0"
+				FuelModifierManualReverse="0.45"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_HEAVY_EXPERIMENTAL_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_HEAVY_EXPERIMENTAL_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common_finetune"/>
+	</Gearbox>
+</GearboxVariants>

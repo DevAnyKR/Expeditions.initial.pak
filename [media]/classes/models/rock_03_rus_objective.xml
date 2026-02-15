@@ -1,0 +1,20 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	AcceptZoneBorderDecals="True"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0"></Body>
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="stage_0">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="cdt_stage_0" />
+	</Subset>
+	
+	<Subset Name="stage_1">		
+    </Subset>
+	<Landmark Mesh="landmarks/rock_03_rus_objective_lmk" />
+</ModelBrand>

@@ -1,0 +1,639 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		
+		<FirstAxle
+			ConnectedToHandbrake="false"
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="0"
+			SteeringJointOffset="0.49"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<SecondAxle
+			ConnectedToHandbrake="true"
+			Location="middle"
+			SteeringAngle="23"
+			SteeringCastor="0"
+			SteeringJointOffset="0.49"
+			Torque="default"
+		/>
+		<ThirdAxle
+			ConnectedToHandbrake="true"
+			Location="middle2"
+			Torque="default"
+		/>
+		<FourthAxle
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="175.0"
+		ElectricChargeCapacity="25.0"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_krs_63_pathfinder"
+		EngineIconScale="0.9"
+		EngineStartDelay="1.5"
+		ExhaustStartTime="0.0"
+		FuelCapacity="250"
+		Responsiveness="0.25"
+		SteerSpeed="0.025"
+		BackSteerSpeed="0.0225"
+		TruckImage="pathfinderKrs63"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_krs_63_pathfinder"
+		>
+			<Wheel _template="FirstAxle" Pos="(2.868; 0.917; 0.725)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(2.868; 0.917; 0.725)" />
+			<Wheel _template="SecondAxle" Pos="(0.946; 0.917; 0.725)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(0.946; 0.917; 0.725)" />
+			<Wheel _template="ThirdAxle" Pos="(-0.976; 0.917; 0.725)" />
+			<Wheel _template="ThirdAxle" RightSide="true" Pos="(-0.976; 0.917; 0.725)" />
+			<Wheel _template="FourthAxle" Pos="(-2.897; 0.917; 0.725)" />
+			<Wheel _template="FourthAxle" RightSide="true" Pos="(-2.897; 0.917; 0.725)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="s_truck_krs_63_pathfinder_suspension_default"
+			Type="s_krs_63_pathfinder"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack Frame="BoneRack1" FrameSteerLeft="BoneRackL1" FrameSteerRight="BoneRackR1" RackHalfSizeZ="0.685" />
+		<SteeringRack Frame="BoneRack2" FrameSteerLeft="BoneRackL2" FrameSteerRight="BoneRackR2" RackHalfSizeZ="0.685" />
+		<Steam Origin="(3.742; 1.541; -0.003)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			MinDist="8.0"
+			Origin="(0; 0; 0)"
+		>
+			<EngineTrans	Sound="" />
+			<Handbrake		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_handbrake_off" />
+			<BrakesSqueal	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_brakes_squeal" />
+			<Reverse		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_reverse" />
+			<Gear			Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_gear_shift" />
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_big_modern" />
+			<Honk			Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_horn" />
+			<EngineRev		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_rev" />
+			<EngineAccel	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_acc" />
+			<EngineStart	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_start" />
+			<EngineStop		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_stop" />
+			<EngineIdle		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_idle" />
+			<EngineIdle_2d	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_low" />
+			<EngineLow_2d	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_high" />
+			<EngineHigh_2d	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_heavy" />
+			<EngineHeavy_2d	Sound="trucks/krs_63_pathfinder/krs_63_pathfinder_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="SHK_BoneExhaust" MinAngle="(0.6; 0.6; 0.6)" MaxAngle="(1.5; 1.5; 1.5)" MaxFrequency="0.7" />
+			<Shaker Frame="SHK_BoneGearStick" MinAngle="(0.8; 0.8; 0.8)" MaxAngle="(1.5; 1.5; 1.5)" MaxFrequency="0.35" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft6a" SocketPointB="Shaft6b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft7a" SocketPointB="Shaft7b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2.8" MinX="-4.5" MaxX="4.5" />
+		<LimitedFluid
+			Center="(2.366; 2.364; -0)"
+			SizeX="0.308"
+			SizeY="0.742"
+			SizeZ="0.990"
+			Type="Box"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Inventory MaxLimit="7" />
+		<DeployCost Cost="0" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.333; 1.85; 0)" Size="1.0" />
+		<GearboxSocket Default="g_truck_krs_63_pathfinder_default" Type="gearboxes_trucks_krs_63_pathfinder, gearboxes_trucks_superheavy_experimental" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-1; 0; 0)"
+			IsLight="true"
+			Origin="(2.196; 1.705; -0.495)"
+			Speed="4.0"
+		/>
+		<EngineSocket Default="e_ru_truck_krs_63_pathfinder_engine_0" Type="e_ru_truck_old_krs_63_pathfinder, e_truck_superheavy_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.04; 0.07; 0)"
+			Pos="(3.27; 2.3; 0.55)"
+			SteeringWheelPos="(3.65; 2.615; 0.545)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/krs_63_pathfinder_arrow_01" Org="(3.936; 2.603; 0.675)" OutputAngles="(-132; 180)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/krs_63_pathfinder_arrow_02" Org="(3.926; 2.598; 0.574)" OutputAngles="(-47; 47" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_02" Org="(3.9; 2.558; 0.574)" OutputAngles="(-47; 20" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_02" Org="(3.926; 2.598; 0.518)" OutputAngles="(-47; 10" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_02" Org="(3.9; 2.558; 0.518)" OutputAngles="(-47; 5" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;65)" InputType="speed" Mesh="trucks/arrows/krs_63_pathfinder_arrow_03" Org="(3.936; 2.602; 0.417)" OutputAngles="(-132; 30)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_04" Org="(3.934; 2.603; 0.417)" OutputAngles="(-50; -47" />
+			<Gauge Damping="0.99" Dir="(-1; 0.7; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_05" Org="(3.932; 2.605; 0.417)" OutputAngles="(-70; -69" />
+			<Gauge Damping="0.99" Dir="(-1; -0.55; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_06" Org="(3.631; 3.276; 0.328)" OutputAngles="(-90; 65" />
+			<Gauge Damping="0.99" Dir="(-1; -0.55; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/krs_63_pathfinder_arrow_06" Org="(3.631; 3.276; 0.242)" OutputAngles="(-135; 15" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(3.0, 1.31, -0.3)" Max="(3.99, 2.2, 0.3)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(2.2, 2.0, -0.57)" Max="(2.55, 2.8, 0.57)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(2.3, 1.5, -0.19)" Max="(2.9, 1.8, 0.19)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.8, 1.335, -0.16)" Max="(1.3, 1.89, 0.16)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.575, 1.15, -0.19)" Max="(-0.35, 1.45, 0.19)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(-2.0, 1.15, -0.19)" Max="(-1.775, 1.45, 0.19)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.49" Scale="0.83" Type="wheels_krs_63_pathfinder" />
+		<CompatibleWheels OffsetZ="0.49" Scale="0.85" Type="wheels_krs_63_pathfinder" />
+		<CompatibleWheels OffsetZ="0.49" Scale="0.87" Type="wheels_krs_63_pathfinder" />
+		<Camera Center="(-1.2; 0.5; 0)" Radius="1.8">
+			<Roof
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-1.0; 0.55)"
+				ViewDir="(1; -0.05; 0)"
+				ViewPos="(4.4; 4; 0)"
+			/>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.2)"
+				LimitsVer="(-0.65; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/krs_63_pathfinder_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/krs_63_pathfinder_glass__sh_d.tga"
+				ViewPos="(3.25; 3.05; 0.54)"
+				ZoomViewPosOffset="(0.45; -0.05; -0.05)"
+			>
+				<Rear
+					HorTransitionEnd="-1.5"
+					HorTransitionStart="-0.5"
+					ViewPosOffset="(0.05; 0; 0.65)"
+				/>
+				<Mirror ClipDir="(-0.876; -0.022; -0.22)" ClipOffset="0.15" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.876; -0.022; -0.22)" Size="(0.215; 0.3)" Pos="(3.823; 2.976; 1.227)" />
+				<Mirror ClipDir="(-0.876; -0.03; -0.05)" ClipOffset="0.5" FOVScale="3.5" MeshFrame="mirror_left_fov" ReflectionDir="(-0.876; -0.03; -0.05)" Size="(0.215; 0.15)" Pos="(3.823; 2.729; 1.227)" />
+				<Mirror ClipDir="(-0.876; -0.022; -0.22)" ClipOffset="0.15" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.876; -0.022; 0.22)" Size="(0.215; 0.3)" Pos="(3.823; 2.976; -1.227)" />
+				<Mirror ClipDir="(-0.876; -0.03; -0.05)" ClipOffset="0.5" FOVScale="3.5" MeshFrame="mirror_right_fov" ReflectionDir="(-0.876; -0.03; 0.05)" Size="(0.215; 0.15)" Pos="(3.823; 2.729; -1.227)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+			<Axle Frame="BoneAxle4" />
+		</Axles>
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.15; 4.2; 0.0)"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/krs_63_pathfinder">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.4; -0.15; 0)"
+			ImpactType="Truck"
+			Mass="9000"
+			NetSync="pv"
+			ForceBodyParams="true"
+			PushUpFactor="1"
+		>
+			<Body
+				CenterOfMassOffset="(0.2; 0.3; 0)"
+				ImpactType="Truck"
+				Mass="3000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				ForceBodyParams="true"
+				PushUpFactor="2"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4.5"
+					MaxLimit="4.5"
+				>
+					<Motor Damping="25000" Spring="250000" Type="Spring" />
+				</Constraint>
+				<Body Colissions="None" Mass="2" ModelFrame="BoneKeyFob_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="20"
+					>
+						<Motor Damping=".01" Spring=".15" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="TieRod" Mass="1" Collisions="None" ModelFrame="BoneSteeringShaftA_cdt">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="SteeringShaftA"
+						MinLimit="-180"
+						MaxLimit="180"
+					/>
+				</Body>
+				<Body _template="TieRod" Mass="1" Collisions="None" ModelFrame="BoneSteeringShaftB_cdt">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="SteeringShaftB"
+						MinLimit="-180"
+						MaxLimit="180"
+					/>
+				</Body>
+				<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRod"
+						MinLimit="-15"
+						MaxLimit="15"
+					/>
+				</Body>
+				<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod2_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRod2"
+						MinLimit="-15"
+						MaxLimit="15"
+					/>
+				</Body>
+				<Body Collisions="None" Mass="1.5" ModelFrame="BoneSunshieldLeft_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="23"
+					>
+						<Motor Damping="0.1" Spring="4" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1.5" ModelFrame="BoneSunshieldRight_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="23"
+					>
+						<Motor Damping="0.035" Spring="2" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="3" ModelFrame="BoneRadio_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="15"
+					>
+						<Motor Damping="1" Spring="8" Type="Spring" />
+					</Constraint>
+					<Body Collisions="None" Mass="1" ModelFrame="BoneRadioCable_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 1)"
+							Type="Hinge"
+							MinLimit="-50"
+							MaxLimit="50"
+						>
+							<Motor Damping="0.0035" Spring="0.7" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body Collisions="None" Mass="50" ModelFrame="BoneFuelTank_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-1.5"
+						MaxLimit="2.5"
+					>
+						<Motor Damping="80" Spring="1000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod3_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="TieRod3"
+					MinLimit="-9"
+					MaxLimit="9"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.491; 1.478; 0)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.491; 1.478; 0.492)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.491; 1.478; -0.492)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(220; 220; 255) x 1" Pos="(-3.491; 1.36; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-3.491; 1.36; 0.542)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-3.491; 1.36; -0.542)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-3.491; 1.36; 0.542)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-3.491; 1.36; -0.542)" />
+		</ReverseSignals>
+		<Ignition>
+			<!-- Blinkers -->
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 1)" DirAngle="90" Size="0.25" Pos="(4.224; 1.915; 0.86)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; -1)" DirAngle="90" Size="0.25" Pos="(4.224; 1.915; -0.86)" ParentFrame="BoneCabin_cdt" />
+			<!-- Wings Beacons -->
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" DirAngle="90" Size="0.25" Pos="(2.682; 1.962; 1.212)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" DirAngle="90" Size="0.25" Pos="(2.682; 1.962; -1.212)" ParentFrame="BoneCabin_cdt" />
+			<!-- Stops -->
+			<Light _template="StopSignal" Pos="(-3.491; 1.478; 0)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.491; 1.478; 0.492)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.491; 1.478; -0.492)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/krs_63_pathfinder_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4.338; 1.792; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		LockedUnconditionally="false"
+		Price="271000"
+		UnlockByExploration="false"
+		UnlockByObjective=""
+		UnlockByRank="1"
+		RecoveryPrice="5000"
+	>
+		<WinchSocket Pos="(-3.577; 1.507; 0)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(0.0; 1.5; 0.5)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(0.0; 1.5; -0.5)" ParentFrame="BoneChassis_cdt" />
+
+		<UiDesc
+			UiDesc="UI_VEHICLE_KRS_63_PATHFINDER_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgPathfinderKrs63Exp"
+			UiIcon576x640="shopImgPathfinderKrs63Exp"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="KRSLogo80"
+			UiName="UI_VEHICLE_KRS_63_PATHFINDER_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(15.0; 1.7; -4.8)" InterestPosition="(5.00; 1.65; 1.1)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="roof" Position="(11.0; 7.65; -2.2)" InterestPosition="(6.2; 3.1; 0.0)" MaxXRotation="360" MaxYRotation="0" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_l" Position="(2.5; 2.7; -8.3)" InterestPosition="(7.1; 1.8; -0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />			
+			<CameraPos FOV="32.0" Name="side_r" Position="(3.5; 3.0; 8.3)" InterestPosition="(5.8; 2.3; 0.7)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />			
+			<CameraPos FOV="32.0" Name="addon_1" Position="(-9.5; 6.98; -9.959)" InterestPosition="(4.0; 2.1; -0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="wheels" Position="(3.0; 1.0; -5.5)" InterestPosition="(6.0; 1.0; -0.7)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="supplies_default" Position="(15.0; 1.7; -4.8)" InterestPosition="(5.00; 1.65; 1.1)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_roof" Position="(11.0; 7.65; -2.2)" InterestPosition="(6.2; 3.1; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_side_r" Position="(4.0; 3.0; 5.5)" InterestPosition="(6.3; 2.3; 0.7)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />			
+			<CameraPos FOV="32.0" Name="supplies_side_l" Position="(2.5; 2.7; -8.3)" InterestPosition="(7.1; 1.8; -0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />	
+			
+			<CameraPos FOV="32.0" Name="side_l_sticker" Position="(5.4; 2.704; -3.5)" InterestPosition="(5.3; 2.45; -0.821)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" Position="(5.4; 2.704; 3.5)" InterestPosition="(7.3; 2.45; 0.821)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+		</CustomizationCameras>
+		<!-- Frame Modules -->
+		<AddonSockets>
+			<Socket Names="FrameModuleFlatbed2" Offset="(1.78; 1.98; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameModuleFlatbedSideboard" Offset="(1.78; 1.98; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibratorKRS63" Offset="(1.64; 1.75; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Bumpers -->
+		<AddonSockets DefaultAddon="krs_63_pathfinder_bumper_00">
+			<Socket Names="KRS63Bumper" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="krs_63_pathfinder_bumper_00">
+			<Socket Names="KRS63BumperSlot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="krs_63_pathfinder_bumper_00">
+			<Socket Names="KRS63BumperSlot02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63BumperSpotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="krs_63_pathfinder_diffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Inventory Slots -->
+		<AddonSockets>
+			<Socket Names="KRS63InvSlot" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63InvSlotSlot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63InvSlotSlot02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63InvSlotSlot03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Cage -->
+		<AddonSockets>
+			<Socket Names="KRS63Outerframe" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Roofrack -->
+		<AddonSockets>
+			<Socket Names="KRS63Roofrack" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSlot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSlot02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSlot03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSlot04" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSlot05" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63RoofrackSpotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Stickers -->
+		<AddonSockets>
+			<Socket Names="KRS63StickerDoorL" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63StickerDoorR" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Various -->
+		<AddonSockets>
+			<Socket Names="KRS63Snorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="KRS63Visor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="krs_63_pathfinder_estock_default">
+			<Socket Names="krs_63_estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod2" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod3" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="SteeringShaftA" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="SteeringShaftB" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- TIE RODS -->
+		<IKBone ModelFrame="IK_BoneTieRod1_A" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL1"
+				ModelFrame="IK_BoneTieRod1_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneTieRod2_A" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod2_cdt"
+				ModelFrame="IK_BoneTieRod2_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneTieRod3_A" ParentFrame="BoneTieRod2_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod3_cdt"
+				ModelFrame="IK_BoneTieRod3_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneTieRod4_A" ParentFrame="BoneTieRod3_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL2"
+				ModelFrame="IK_BoneTieRod4_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS -->
+		<!-- Shocks 1st Axle -->
+		<IKBone ModelFrame="IK_BoneShockL1_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockL1_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR1_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockR1_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shocks 2nd Axle -->
+		<IKBone ModelFrame="IK_BoneShockL2_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockL2_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR2_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockR2_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shocks 3rd Axle -->
+		<IKBone ModelFrame="IK_BoneShockL3_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="IK_BoneShockL3_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR3_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="IK_BoneShockR3_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shocks 4th Axle -->
+		<IKBone ModelFrame="IK_BoneShockL4_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="IK_BoneShockL4_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR4_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="IK_BoneShockR4_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- POWER STEERING -->
+		<IKBone ModelFrame="IK_BonePSFront_A" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRack1"
+				ModelFrame="IK_BonePSFront_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BonePSRear_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(0; 1; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRack2"
+				ModelFrame="IK_BonePSRear_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

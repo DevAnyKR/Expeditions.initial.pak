@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.884; 2.6; 0.913)" />
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_snorkel_00" >
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="snorkel"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GS_CARAVAN_SNORKEL_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GS_CARAVAN_SNORKEL_00_NAME"
+		/>
+		<InstallSocket Type="GCCaravanSnorkel" />
+	</GameData>
+</TruckAddon>

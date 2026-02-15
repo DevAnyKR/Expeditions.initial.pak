@@ -1,0 +1,11 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/dugout_broken_lmk"/>
+    </ModelBrand>

@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_steps_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneSteps_cdt" >
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIRO_72_NERF_BARS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIRO_72_NERF_BARS_01_NAME"
+		/>
+		<RequiredSuspension Types="siro_72_suspension_high, siro_72_suspension_crawler" />
+		<InstallSocket Type="Siro72Steps" />
+	</GameData>
+</TruckAddon>

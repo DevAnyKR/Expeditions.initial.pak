@@ -1,0 +1,40 @@
+ <TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_outerframe_00_slot_01_repair">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="10"
+				ModelFrame="BoneOuterframe00Slot01_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					LinearLimitsY="(-0.02; 0.02)"
+					LinearLimitsZ="(-0.02; 0.02)"
+					Type="Fixed"
+				>
+					<Motor Damping="200.0" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="200"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_outerframe_00" />
+		<InstallSocket Type="HaukkaNS420OuterframeSlot01" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="haukka_ns420_outerframe_00_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

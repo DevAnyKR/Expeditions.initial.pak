@@ -1,0 +1,43 @@
+<_templates Include="trucks">
+	<Constraint>
+		<ContainerLimits
+			AxisLocal="(1; 0; 0)"
+			Type="Hinge"
+			MinLimit="0"
+			MaxLimit="1"
+		>
+			<Motor Damping="10" Spring="200" Type="Spring" />
+		</ContainerLimits>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_invslot_01_fuel_b">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Collisions="None" Mass="20" ModelFrame="BoneInvSlot01Slot02Fuel_cdt">
+				<Constraint _template="ContainerLimits" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tatra_force_t815_7_invslot_01" />
+		<InstallSocket Type="TatraForceT8157InvSlot01Slot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="tatra_force_t815_7_invslot_01_fuel_b" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

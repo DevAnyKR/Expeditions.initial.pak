@@ -1,0 +1,11 @@
+<ModelBrand 
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	ClipCamera="false">
+		<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+</ModelBrand>

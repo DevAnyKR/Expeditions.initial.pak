@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_visor_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneVisor01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 0.7" ColorMultAtDay="0.1" Size="0.4" Pos="(1.494; 2.19; -0.158)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 0.7" ColorMultAtDay="0.1" Size="0.4" Pos="(1.494; 2.189; 0)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 0.7" ColorMultAtDay="0.1" Size="0.4" Pos="(1.494; 2.19; 0.157)" />
+
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_01_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Visor" />
+	</GameData>
+</TruckAddon>

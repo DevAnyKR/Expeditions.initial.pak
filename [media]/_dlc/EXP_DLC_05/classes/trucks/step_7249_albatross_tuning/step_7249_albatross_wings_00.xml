@@ -1,0 +1,61 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_wings_00">
+		<Body ImpactType="Truck" Mass="45" ModelFrame="BoneWings00_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 1.0" Pos="(3.243; 1.5; 0.0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.3" Size="0.6" Pos="(2.812; 1.487; 0.736)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.45" AspectRatio="7.0" Size="0.25" Pos="(2.812; 1.487; 0.736)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.3" Size="0.3" Pos="(2.810; 1.487; 0.969)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.3" Size="0.6" Pos="(2.812; 1.487; -0.736)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.45" AspectRatio="7.0" Size="0.25" Pos="(2.812; 1.487; -0.736)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.3" Size="0.3" Pos="(2.810; 1.487; -0.969)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.853; 1.487; -0.736)" />
+			<Model _template="HeadLightRay" Org="(2.853; 1.487; 0.736)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" Size="0.15" Pos="(2.810; 1.519; 0.969)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" Size="0.15" Pos="(2.810; 1.456; 0.969)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="3.0" Size="0.2" Pos="(2.804; 1.571; 0.736)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="3.0" Size="0.2" Pos="(2.804; 1.402; 0.736)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="0.5" Size="0.2" Pos="(2.803; 1.488; 0.656)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="0.5" Size="0.2" Pos="(2.804; 1.488; 0.818)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" Size="0.15" Pos="(2.810; 1.519; -0.969)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" Size="0.15" Pos="(2.810; 1.456; -0.969)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="3.0" Size="0.2" Pos="(2.804; 1.571; -0.736)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="3.0" Size="0.2" Pos="(2.804; 1.402; -0.736)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="0.5" Size="0.2" Pos="(2.803; 1.488; -0.656)" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.3" AspectRatio="0.5" Size="0.2" Pos="(2.804; 1.488; -0.818)" />
+			<Flare _template="BlueStreak" Pos="(2.812; 1.487; 0.736)" />
+			<Flare _template="BlueStreak" Pos="(2.812; 1.487; -0.736)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Color="g(255; 255; 255) x 6.0" Pos="(3.366; 1.136; 0)" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_7249_WINGS_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_7249_WINGS_00_NAME"
+		/>
+		<InstallSocket Type="Step7249AlbatrossWings" />
+	</GameData>
+</TruckAddon>

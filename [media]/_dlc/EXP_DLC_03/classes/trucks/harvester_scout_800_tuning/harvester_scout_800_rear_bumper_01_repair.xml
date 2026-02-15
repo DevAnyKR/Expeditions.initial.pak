@@ -1,0 +1,38 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_rear_bumper_slot_RepairKit">	
+		<Body Collisions="None" Mass="10" ModelFrame="RearBumperSlot_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.001;0.002)"
+				LinearLimitsY="(0;0.0)"
+				LinearLimitsZ="(-0.002;0.001)"
+			>
+				<Motor Type="Spring" Spring="0.2" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="harvester_scout_rear_bumper_slot_RepairKit" HideThreshold="0.0" />
+	</RepairsHide>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_rear_bumper_01" />
+		<InstallSocket Type="HarvesterScout800RearBumperSlot" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

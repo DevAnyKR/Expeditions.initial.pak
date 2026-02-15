@@ -1,0 +1,45 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false" StaticModelWithDynamicParts="true" >
+	<PhysicsModel>
+	<Body  Mass="1200" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="BoneRoot">		
+	<Constraint BreakOffThreshold="2000" Type="Fixed" />				
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone1">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone2">
+			<Constraint BreakOffThreshold="200" Name="MainConstraint" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone3">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone4">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone5">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone6">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone7">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>
+			<Body Mass="170" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone8">
+			<Constraint BreakOffThreshold="500" Type="Fixed" />
+			</Body>			
+	</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/mech_bunker_wall_dlc07_lmk" />
+	<OnBreakEvents ConstraintNames="MainConstraint">
+		  <Sound Name ="actors/actor_interactive_treasures/interactive_treasure_break" RangeMin="25" RangeMax="100" Volume="1"/>
+  		  <SFX Pos="(0.0; 1.7; 0.0)" Dir="(0; ; 0)" Name="monolith_parts"/>
+	</OnBreakEvents>
+	<GameData
+	ModelBreakageQuestConstraints="MainConstraint" 
+	IgnoresHonkExplosionForce="true"
+	>
+        <WinchSocket Pos="(0.0; 0.0; 0.0)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="Bone2">
+			 <SoundOnConnect Name="actors/actor_interactive_treasures/interactive_treasure_connect" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+	</GameData>
+</ModelBrand>

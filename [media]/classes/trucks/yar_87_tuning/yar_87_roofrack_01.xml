@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_roofrack_01">
+		<Body Mass="110" ModelFrame="BoneRoofrack01_cdt">>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="5500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Yar87Roofrack" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,9 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="None"
+		/>
+	</PhysicsModel>
+</ModelBrand>

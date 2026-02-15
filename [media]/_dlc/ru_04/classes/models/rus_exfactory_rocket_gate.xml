@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(33.0; 5.0)" 
+		Texture="occlusion_rus_exfactory_rocket_gate.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_exfactory_rocket_gate_lmk" />
+</ModelBrand>

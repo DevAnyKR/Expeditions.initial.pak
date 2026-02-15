@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_front_bumper_00">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Pos="(2.2; 1.29; -0.607)" />
+			<Flare _template="HeadLight" Pos="(2.2; 1.29; 0.607)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.271; 1.29; -0.607)" />
+			<Flare _template="BlueStreak" Size="0.7" Pos="(2.271; 1.29; 0.607)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="HeadLight" Size=".2" Pos="(2.271; 1.29; -0.607)" />
+			<Flare _template="HeadLight" Size=".2" Pos="(2.271; 1.29; 0.607)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.406; 1.239; 0.367)" />
+		<WinchSocket Pos="(2.406; 1.239; -0.367)" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconFrontBumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,565 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			CamberAnglePhysics="0"
+			CamberAngleRender="1"
+			CamberSuspensionMultiplier="1.8"			
+		/>
+		<FirstAxle
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="32"
+			SteeringCastor="3"
+			CamberAnglePhysics="0"
+			CamberAngleRender="1.5"
+			CamberSuspensionMultiplier="1.8"
+			SteeringJointOffset="0.3"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		template="TruckDefaultVars"
+		SignalRadius="125.0"
+		ElectricChargeCapacity="17"
+		BackSteerSpeed="0.04"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_mercedes_unimog_2450l"
+		EngineIconScale="1.0"
+		EngineStartDelay="1.1"
+		ExhaustStartTime="0.9"
+		FuelCapacity="145"
+		Responsiveness="0.2"
+		SteerSpeed="0.04"
+		TruckImage="UnimogU2450"
+		TruckType="OFFROAD"
+		
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_mercedes_unimog_2450l"
+			DefaultTire="offroad_0"
+			DefaultWheelType="wheels_mercedes_unimog_2450l"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.731; 0.591; 0.71)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.731; 0.591; 0.71)" />
+			<Wheel _template="SecondAxle" Pos="(-1.528; 0.591; 0.71)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.528; 0.591; 0.71)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="mercedes_unimog_2450l_suspension_default"
+			Type="s_mercedes_unimog_2450l"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.675 m"
+		/>
+		<Steam Origin="(2.35; 1.513; -0.119)" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="" />
+			<BrakePull		Sound="trucks/step_310e/step_310e_brake_pull" />
+			<BrakesSqueal	Sound="trucks/step_310e/step_310e_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<Handbrake		Sound="trucks/step_310e/step_310e_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/step_310e/step_310e_handbrake_off" />
+			<Gear			Sound="trucks/step_310e/step_310e_gear_shift" />
+			<Honk			Sound="trucks/step_310e/step_310e_honk" />
+			<EngineRev		Sound="trucks/mercedes_unimog/mercedes_unimog_rev" />
+			<EngineAccel	Sound="trucks/mercedes_unimog/mercedes_unimog_acc" />
+			<EngineStart	Sound="trucks/mercedes_unimog/mercedes_unimog_start" />
+			<EngineStop		Sound="trucks/mercedes_unimog/mercedes_unimog_stop" />
+			<EngineIdle		Sound="trucks/mercedes_unimog/mercedes_unimog_idle" />
+			<EngineIdle_2d	Sound="trucks/mercedes_unimog/mercedes_unimog_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/mercedes_unimog/mercedes_unimog_low" />
+			<EngineLow_2d	Sound="trucks/mercedes_unimog/mercedes_unimog_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/mercedes_unimog/mercedes_unimog_high" />
+			<EngineHigh_2d	Sound="trucks/mercedes_unimog/mercedes_unimog_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks//step_310e_heavy" />
+			<EngineHeavy_2d	Sound="trucks//step_310e_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="SHK_BoneExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="0.7" />
+			<Shaker Frame="SHK_BoneGearboxStick" MinAngle="(0.45; 0.45; 0.45)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="0.45" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2.25"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.2"
+			MaxX="3.5"
+		/>
+		<LimitedFluid Center="(0.070, 0.935, -0.823)" SizeX="0.736" SizeY="0.369" SizeZ="0.654" Type="Box" ParentFrame="BoneCabin_cdt" />
+		<Inventory MaxLimit="5" />
+		<Intake Dir="(1; 0; 0)" Origin="(2.561; 1.531; 0.526)" Size="0.5" />
+		<GearboxSocket Default="g_truck_mercedes_unimog_2450_default" Type="gearboxes_trucks_mercedes_unimog_2450, gearboxes_trucks_light_experimental" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust
+			Dir="(-1; 0.7; 0)"
+			IsLight="true"
+			Origin="(0.466; 3.088; 1.064)"
+			Speed="3.82"
+			ParentFrame="SHK_BoneExhaust"
+		/>
+		<EngineSocket Default="eu_truck_mercedes_unimog_2450_engine_0" Type="e_eu_truck_new_mercedes_unimog_2450, e_truck_light_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.055; 0.1; 0)"
+			Pos="(0.944; 1.794; 0.512)"
+			SteeringWheelPos="(1.364; 2.115; 0.513)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Dir="(-1.0; 0.7; 0.0)" InputRange="(0;85)" InputType="speed" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_04" Org="(1.547; 2.063; 0.376)" OutputAngles="(-135; 90)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.7; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="engineEnabled" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_05" Org="(1.547; 2.063; 0.376)" OutputAngles="(-152; 0)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.7; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="engineEnabled" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_06" Org="(1.547; 2.063; 0.376)" OutputAngles="(-152; 60)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.74; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="rpm" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_03" Org="(1.571; 2.065; 0.515)" OutputAngles="(-123; 120)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.74; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="engineEnabled" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_02" Org="(1.564; 2.053; 0.652)" OutputAngles="(-130; 35)" ParentFrame="BoneCabin_cdt" />
+			
+			<Gauge Dir="(-1.0; 0.74; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="engineEnabled" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_01" Org="(1.577; 2.072; 0.686)" OutputAngles="(-105; -45)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.74; 0.0)" InputRange="(0;1)" Damping="0.99" InputType="engineEnabled" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_01" Org="(1.577; 2.072; 0.619)" OutputAngles="(105; 30)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1.0; 0.74; 0.0)" InputRange="(0;1)" Damping="1.0" InputType="fuel" Mesh="trucks/arrows/mercedes_unimog_2450l_arrow_01" Org="(1.541; 2.021; 0.652)" OutputAngles="(-143; -220)" ParentFrame="BoneCabin_cdt" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Gearbox" Min="(-0.087, 0.641, -0.418)" Max="(1.065, 1.343, 0.361)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Engine" Min="(1.236, 0.975, -0.45)" Max="(2.533, 1.846, 0.45)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.298, 0.741, -1.164)" Max="(0.451, 1.217, -0.486)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<DeployCost Cost="0" />
+		<CompatibleWheels OffsetZ="0.285" Scale="0.53" Type="wheels_mercedes_unimog_2450l" />
+		<CompatibleWheels OffsetZ="0.285" Scale="0.57" Type="wheels_mercedes_unimog_2450l" />
+		<CompatibleWheels OffsetZ="0.285" Scale="0.53" Type="wheels_mercedes_unimog_2450l_2" />
+		<CompatibleWheels OffsetZ="0.285" Scale="0.57" Type="wheels_mercedes_unimog_2450l_2" />
+		<CompatibleWheels OffsetZ="0.375" Scale="0.53" Type="wheels_mercedes_unimog_2450l_mudtires_2" />
+		<CompatibleWheels OffsetZ="0.375" Scale="0.55" Type="wheels_mercedes_unimog_2450l_mudtires_2" />
+		<CompatibleWheels OffsetZ="0.31" Scale="0.53" Type="wheels_mercedes_unimog_2450l_mudtires" />
+		<CompatibleWheels OffsetZ="0.31" Scale="0.57" Type="wheels_mercedes_unimog_2450l_mudtires" />
+		
+		<Camera
+			Center="(-0.9; 0.3; 0)"
+			RadiusMultiplier="0.8"
+			ParentFrame="BoneChassis_cdt"
+		>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.85; 0.6)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/custom_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/custom_glass__sh_d.tga"
+				ViewPos="(0.84; 2.55; 0.52)"
+				ZoomViewPosOffset="(0.6; 0; -0.05)"
+			>
+				<Rear ViewPosOffset="(0.05; 0; 0.7)" />
+				<Mirror ClipDir="(-1; 0.0; -0.45)" ReflectionDir="(-1; 0.0; -0.45)" ClipOffset="0.15" FOVScale="1.5" MeshFrame="mirror_l" Size="(0.3; 0.45)" Pos="(1.438; 2.484; 1.311)" />
+				<Mirror ClipDir="(-1; 0.0; -0.3)" ReflectionDir="(-1; 0.0; -0.3)" ClipOffset="0.15" FOVScale="3.0" MeshFrame="mirror_l_02" Size="(0.25; 0.25)" Pos="(1.476; 2.198; 1.283)" />
+				
+				<Mirror ClipDir="(-1; -0.1; 0.7)" ReflectionDir="(-1; -0.1; 0.7)" ClipOffset="0.15" FOVScale="1.5" MeshFrame="mirror_r" Size="(0.3; 0.45)" Pos="(1.438; 2.484; -1.311)" />
+				<Mirror ClipDir="(-1; -0.15; 0.55)" ReflectionDir="(-1; -0.15; 0.58)" ClipOffset="0.15" FOVScale="3.0" MeshFrame="mirror_r_02" Size="(0.25; 0.25)" Pos="(1.476; 2.198; -1.283)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(2.2; 4.0; 0.000)"
+				LimitsVer="(-1.3; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.5; 3.8; 0.0)"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mercedes_unimog_2450l">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.25; -0.4; 0)"
+			ImpactType="Truck"
+			Mass="3500"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.22; -0.5; 0)"
+				ImpactType="Truck"
+				Mass="2500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-7.0"
+					MaxLimit="7.0"
+				>
+					<Motor Damping="40000" Spring="250000" Type="Spring" />
+				</Constraint>
+				<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="TieRod"
+						MinLimit="-40"
+						MaxLimit="40"
+					/>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="2"
+					ModelFrame="BoneSunshieldLeft_cdt"
+					NetSync="pv"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="10"
+					>
+						<Motor Damping="1.2" Spring="60" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="2"
+					ModelFrame="BoneSunshieldRight_cdt"
+					NetSync="pv"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="15"
+					>
+						<Motor Damping="0.6" Spring="60" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="2"
+					ModelFrame="BoneKeyFob_cdt"
+					NetSync="pv"
+				>
+					<Constraint
+						AxisLocal="(1; 1; 0)"
+						Type="Hinge"
+						MinLimit="-40"
+						MaxLimit="40"
+					>
+						<Motor Damping="0.005" Spring="0.08" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneChassisCables_cdt"
+				NetSync="pv"
+			>
+				<Constraint LinearLimitsX="(-0.02; 0.02)" LinearLimitsY="(-0.04; 0.04)" Type="Fixed">
+					<Motor Damping="25" Spring="1000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.175; 1.212; 0.000)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="(200; 0; 0)" Pos="(-2.175; 1.212; 0.000)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(2.734; 1.061; 0.000)" />
+		</Ignition>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.177; 1.212; 0.0)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(2.734; 1.061; 0.000)" ParentFrame="BoneCabin_cdt" />
+	<Landmark Mesh="landmarks/mercedes_unimog_2450L_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="70000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		RecoveryPrice="4000"
+	>
+		<WinchSocket Pos="(-2.573; 1.019; 0.000)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.124; 0.866; 0.420)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.124; 0.866; -0.420)" ParentFrame="BoneChassis_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_MERCEDES_UNIMOG_2450_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgUnimogExp"
+			UiIcon576x640="shopImgUnimogExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_MERCEDES_UNIMOG_2450L_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.0; 1.5; 0.4)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.5; 1.7; -6)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.85; 2.35; -0.15)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.8; 6.85; -2.827)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.6; 1.8; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.5; 1.8; 7.5)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(7.35; 0.35; 1)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-1.9; 8; -8.3)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.0; 0.8; -0.85)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.8; 0.8; -4.2)" />
+			
+			<CameraPos FOV="32.0" Name="supplies_roof" InterestPosition="(5.85; 2.35; -0.15)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.8; 6.85; -2.827)" />
+			
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(5.1; 1.8; -0.497)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.8; 1.8; -3.1)" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" InterestPosition="(6.9; 1.8; 0.497)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.2; 1.8; 3.253)" />
+			<CameraPos FOV="32.0" Name="sticker_hood" InterestPosition="(6.15; 1.5; -0.15)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.3; 4.5; -2.827)" />
+		</CustomizationCameras>	
+		<!-- Bumper -->
+		<AddonSockets DefaultAddon="mercedes_unimog_2450_front_bumper_00" >
+			<Socket Names="MercedesUnimog2450LBumperFront" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Cage -->
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LOuterframe" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LOuterframeSpotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Roofrack -->
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrack" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrackSlot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrackSlot02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrackSlot03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrackSlot04" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LRoofrackSlot05" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Snorkel -->
+		<AddonSockets DefaultAddon="mercedes_unimog_2450_snorkel_00" >
+			<Socket Names="MercedesUnimog2450LSnorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Wings -->
+		<AddonSockets DefaultAddon="mercedes_unimog_2450_wings_00" >
+			<Socket Names="MercedesUnimog2450LWings" ParentFrame="BoneCabin_cdt" >
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0)" />
+			</Socket>
+		</AddonSockets>
+		<!-- Frame Modules -->
+		<AddonSockets>
+			<Socket Names="FrameModuleFlatbed1" Offset="(-0.039; 1.393; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Stuff -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LStickerDoorL" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LStickerDoorR" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MercedesUnimog2450LStickerHood" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Difflock and Estock -->
+		<AddonSockets DefaultAddon="mercedes_unimog_2450_diff_lock_default">
+			<Socket Names="unimog2450DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="mercedes_unimog_2450_estock_default">
+			<Socket Names="unimog2450estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- TIE ROD -->
+		<IKBone ModelFrame="IK_BoneTieRod_A" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackR"
+				ModelFrame="IK_BoneTieRod_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- ANTI ROLL BAR -->
+		<!-- Front -->
+		<IKBone ModelFrame="IK_BoneARB_FL_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneARB_FL_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARBLink_FL_B" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneARB_FL_A"
+				ModelFrame="IK_BoneARBLink_FL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARB_FR_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneARB_FR_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARBLink_FR_B" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneARB_FR_A"
+				ModelFrame="IK_BoneARBLink_FR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<!-- Rear -->
+		<IKBone ModelFrame="IK_BoneARB_RL_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneARB_RL_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneARB_RR_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_BoneARB_RR_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- AXLE -->
+		<!-- Front -->
+		<IKBone ModelFrame="IK_BoneAxleFront_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneAxleFront_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxleRear_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneAxleRear_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- PANAR -->
+		<!-- Front -->
+		<IKBone ModelFrame="IK_BonePanarFront_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BonePanarFront_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BonePanarRear_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BonePanarRear_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS -->
+		<!-- Front -->
+		<IKBone ModelFrame="IK_BoneShockFL_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockFL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockFR_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockFR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Rear -->
+		<IKBone ModelFrame="IK_BoneShockRL_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockRR_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

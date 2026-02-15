@@ -1,0 +1,149 @@
+<_templates Include="models">
+	<Constraint>
+		<Railing AxisLocal="(1; 0; 0)" Type="Hinge">
+			<Motor Damping="60000" Spring="400000" Type="Spring" />
+		</Railing>
+		<Bridge
+			Cone="4.5"
+			PlaneAxisLocal="(1; 0; 0)"
+			TwistAxisLocal="(0; 0; 1)"
+			Type="Ragdoll"
+			TwistMin="-180"
+			TwistMax="180"
+		>
+			<AllMotor Damping="5000" Spring="280000" Type="Spring" />
+		</Bridge>
+	</Constraint>
+	<Body>
+		<Handle Collisions="Dynamic" Mass="150" NoSoftContacts="true">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="10"
+			>
+				<Motor Damping="15000" Spring="200000" Type="Spring" />
+			</Constraint>
+		</Handle>
+	</Body>
+</_templates>
+<ModelBrand
+	DynamicModel="True"
+	Instanced="true"
+	IsKeepPhysModelAlways="true"
+>
+	<PhysicsModel>
+		<Constraint
+			_template="Bridge"
+			ModelFrameChild="BoneBridge10_cdt"
+			ModelFrameParent="BoneRoot_cdt"
+			PivotOffset="(-9.931; 0; 0)"
+		/>
+		<Body
+			Collisions="None"
+			Mass="100000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint Type="Fixed" />
+			<Body
+				Collisions="None"
+				Mass="80000"
+				ModelFrame="BonePoles_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="Dynamic"
+				Mass="600"
+				ModelFrame="BoneBridge01_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint _template="Bridge" />
+				<Body
+					Collisions="Dynamic"
+					Mass="600"
+					ModelFrame="BoneBridge02_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint _template="Bridge" />
+					<Body _template="Handle" ModelFrame="BoneBridge02HandleL_cdt" />
+					<Body
+						Collisions="Dynamic"
+						Mass="600"
+						ModelFrame="BoneBridge03_cdt"
+						NoSoftContacts="True"
+					>
+						<Constraint _template="Bridge" />
+						<Body _template="Handle" ModelFrame="BoneBridge03HandleL_cdt" />
+						<Body _template="Handle" ModelFrame="BoneBridge03HandleR_cdt" />
+						<Body
+							Collisions="Dynamic"
+							Mass="600"
+							ModelFrame="BoneBridge04_cdt"
+							NoSoftContacts="True"
+						>
+							<Constraint _template="Bridge" />
+							<Body _template="Handle" ModelFrame="BoneBridge04HandleL_cdt" />
+							<Body
+								Collisions="Dynamic"
+								Mass="600"
+								ModelFrame="BoneBridge05_cdt"
+								NoSoftContacts="True"
+							>
+								<Constraint _template="Bridge" />
+								<Body _template="Handle" ModelFrame="BoneBridge05HandleR_cdt" />
+								<Body
+									Collisions="Dynamic"
+									Mass="600"
+									ModelFrame="BoneBridge06_cdt"
+									NoSoftContacts="True"
+								>
+									<Constraint _template="Bridge" />
+									<Body
+										Collisions="Dynamic"
+										Mass="600"
+										ModelFrame="BoneBridge07_cdt"
+										NoSoftContacts="True"
+									>
+										<Constraint _template="Bridge" />
+										<Body _template="Handle" ModelFrame="BoneBridge07HandleL_cdt" />
+										<Body
+											Collisions="Dynamic"
+											Mass="600"
+											ModelFrame="BoneBridge08_cdt"
+											NoSoftContacts="True"
+										>
+											<Constraint _template="Bridge" />
+											<Body _template="Handle" ModelFrame="BoneBridge08HandleL_cdt" />
+											<Body _template="Handle" ModelFrame="BoneBridge08HandleR_cdt" />
+											<Body
+												Collisions="Dynamic"
+												Mass="600"
+												ModelFrame="BoneBridge09_cdt"
+												NoSoftContacts="True"
+											>
+												<Constraint _template="Bridge" />
+												<Body _template="Handle" ModelFrame="BoneBridge09HandleR_cdt" />
+												<Body
+													Collisions="Dynamic"
+													Mass="600"
+													ModelFrame="BoneBridge10_cdt"
+													NoSoftContacts="True"
+												>
+													<Constraint _template="Bridge" />
+													<Body _template="Handle" ModelFrame="BoneBridge10HandleL_cdt" />
+												</Body>
+											</Body>
+										</Body>
+									</Body>
+								</Body>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,36 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallTree"
+	DistSkipPercentage="0.1"
+	PlantingOffsetY="0.02"
+	PlantingMinSpacing="0.45"
+>
+
+	<PhysicsModel>
+		
+		<Body ModelFrame="bone_1" Mass="15" DamageMult="0.1" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="1000"/>
+			
+			<Body ModelFrame="bone_2" Mass="5" DamageMult="0" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="60"/>
+			</Body>
+			
+			<Body ModelFrame="bone_3" Mass="5" DamageMult="0" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="60"/>
+			
+				<Body ModelFrame="bone_4" Mass="5" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="50"/>
+			
+					<Body ModelFrame="bone_5" Mass="5" DamageMult="0" NoSoftContacts="True">
+						<Constraint Type="Fixed" BreakOffThreshold="40"/>
+					</Body>	
+					
+				</Body>
+				
+			</Body>
+			
+		</Body>		
+
+	</PhysicsModel>
+		
+</PlantBrand>

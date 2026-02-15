@@ -1,0 +1,24 @@
+<ModelBrand ClipCamera="true">
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" DamageMult="0.0" /> 
+	</PhysicsModel>
+	
+	<Subset Name="stage_frame_off" IsDefault="true" >	
+		<CdtMesh Name="cdt_frame_off" />
+		<Mesh Name="frame_off" />
+	</Subset>
+	
+	<Subset Name="stage_frame_on">
+		<CdtMesh Name="cdt_frame_on" />
+		<Mesh Name="frame_on" />
+		<AnimSubset Name="emissive inclusion" />
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+	
+	<AnimSubset Name="emissive inclusion">
+		<Mesh Name="frame_on_anim" />
+		<Mesh Name="frame_off_anim" />
+	</AnimSubset>
+	<Landmark Mesh="landmarks/button_frame_objective_dlc08_lmk" />
+</ModelBrand>

@@ -1,0 +1,69 @@
+<_templates>
+	<Constraint>
+		<Fence BreakOffThreshold="50" Type="Fixed" />
+	</Constraint>
+	<Body>
+		<Fence Mass="20" Collisions="Dynamic" NoSoftContacts="true" />
+	</Body>
+</_templates>
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	Instanced="true"
+	Fence="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body _template="Fence" ModelFrame="wood1_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood2_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood3_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood4_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood5_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood6_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood7_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood8_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood9_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood10_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood11_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood12_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood13_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+			<Body _template="Fence" ModelFrame="wood14_cdt">
+				<Constraint _template="Fence" />
+				<Body _template="Fence" ModelFrame="wood15_cdt">
+				<Constraint _template="Fence" />
+				</Body>
+			</Body>
+			<Body _template="Fence" ModelFrame="wood16_cdt">
+				<Constraint _template="Fence" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fence_of_reserve_03_lmk" />
+</ModelBrand>
+

@@ -1,0 +1,21 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/invisible_mesh" />
+	<GameData
+		CameraPreset="default"
+		Category="honk"
+		Price="0"
+		Stripes="200"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<Honk Name="trucks/horns/honk_la_cucaracha" Range="20" Volume="1" />
+		<UiDesc
+			UiDesc="UI_UPGRADE_LOCKED_BY_ADDONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HORN_REPLAYABILITY_CUCARACHA_NAME"
+		/>
+		<InstallSocket Type="honk" />
+	</GameData>
+</TruckAddon>

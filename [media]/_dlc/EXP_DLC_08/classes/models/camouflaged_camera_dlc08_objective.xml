@@ -1,0 +1,24 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1" />
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="build_stage_0">
+	</Subset>
+	
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_stage_1" />
+	</AnimSubset>
+	<Landmark Mesh="landmarks/camouflaged_camera_dlc08_objective_lmk" />
+</ModelBrand>

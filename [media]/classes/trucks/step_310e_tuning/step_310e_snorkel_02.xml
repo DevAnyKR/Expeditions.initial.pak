@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.08"
+		/>
+	</Flare>
+</_templates>
+<_parent File="step_310e_snorkel_01" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(3.245; 1.838; -1.071)" />
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_snorkel_02">
+		<Body ImpactType="Truck" Mass="8" ModelFrame="BoneSnorkel02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_310_E_SNORKEL_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_310_E_SNORKEL_02_NAME"
+		/>
+	</GameData>
+</TruckAddon>

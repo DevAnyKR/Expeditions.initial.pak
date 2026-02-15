@@ -1,0 +1,60 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_front_bumper_01">
+		<Body Mass="39" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="1.0"
+				ModelFrame="BoneFrontBumper01Hook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="50"
+				>
+					<Motor Damping="0.04" Spring="0.06" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(3.275; 0.794; 0.687)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(3.275; 0.794; -0.687)" />
+		</Ignition>
+		<MainHeadLight>			
+			<Flare _template="HeadLight" Size="0.2" Pos="(3.275; 0.794; 0.687)" />
+			<Flare _template="BlueStreak" Pos="(3.275; 0.794; 0.687)" />
+			
+			<Flare _template="HeadLight" Size="0.2" Pos="(3.275; 0.794; -0.687)" />
+			<Flare _template="BlueStreak" Pos="(3.275; 0.794; -0.687)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.437; 0.783; -0.398)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(3.437; 0.783; 0.398)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(3.391; 0.819; -0.007)" ParentFrame="BoneFrontBumper01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_DECIN_S3T_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DECIN_S3T_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="DecinS3TFrontBumper" />
+	</GameData>
+</TruckAddon>

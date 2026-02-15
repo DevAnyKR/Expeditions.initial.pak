@@ -1,0 +1,20 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" DebrisType="FoliageAutumn" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="BranchWithLeaves" ModelFrame="BoneTrunk">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(30.0; 30.0)" />
+	<Landmark Mesh="landmarks/arizona_methuselah_tree_01_lmk" />
+	<GameData>
+		<WinchSocket Pos="(-0.022; 0.4; -0.132)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>
+
+
+
+

@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_cage_front_00_branch_section_00">
+		<Body ImpactType="Truck" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneCageFrontBranchSection_cdt">
+				<Constraint LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" Type="Fixed">
+					<Motor Damping="0.01" Spring="550" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BRANCH_SECTION_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BRANCH_SECTION_NAME"
+		/>
+		<RequiredAddon Types="ford_f450_limited_cage_front_00" />
+		<InstallSocket Type="FordF450LimitedCageFrontBracnSection" />
+	</GameData>
+</TruckAddon>

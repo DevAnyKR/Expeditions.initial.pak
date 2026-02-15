@@ -1,0 +1,58 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false" StaticModelWithDynamicParts="true" >
+	<PhysicsModel>
+		<Body
+			DamageMult="0.0" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="BoneRoot_cdt">
+			
+			<Body DamageMult="5.0" Mass="70" NoSoftContacts="true" Collisions="Dynamic"  ModelFrame="Bone1">
+			<Constraint BreakOffThreshold="100" Type="Fixed" />
+			</Body>
+			
+			<Body DamageMult="5.0" Mass="150" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone2">
+			<Constraint BreakOffThreshold="350" Name="MainConstraint" Type="Fixed" />
+				<Body DamageMult="5.0" Mass="130" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone6">
+				<Constraint BreakOffThreshold="200" Name="SmallRing" Type="Fixed" />
+				
+					<Body DamageMult="5.0" Mass="110" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone5">
+					<Constraint BreakOffThreshold="50" Type="Fixed" />
+					</Body>
+					<Body DamageMult="5.0" Mass="70" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone7">
+					<Constraint BreakOffThreshold="50" Type="Fixed" />
+					</Body>
+					<Body DamageMult="5.0" Mass="150" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone8">
+					<Constraint BreakOffThreshold="50" Type="Fixed" />
+					</Body>
+					<Body DamageMult="0.0" Mass="25" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone10">
+					<Constraint BreakOffThreshold="500" Type="Hinge" AxisLocal="(1; 1; 1)" MinLimit="-70" MaxLimit="70"/>
+					</Body>
+				</Body>	
+			</Body>
+			
+			<Body DamageMult="5.0" Mass="70" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone3">
+			<Constraint BreakOffThreshold="150" Type="Fixed"  />
+			</Body>
+			
+			<Body DamageMult="5.0" Mass="110" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone4">
+			<Constraint BreakOffThreshold="150" Type="Fixed" />
+			</Body>
+			
+			<Body DamageMult="5.0" Mass="110" NoSoftContacts="true" Collisions="Dynamic" ModelFrame="Bone9">
+			<Constraint BreakOffThreshold="100" Type="Fixed" />
+			</Body>
+		
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/mech_bunker_wall_dlc07_lmk" />
+	<OnBreakEvents ConstraintNames="SmallRing">
+		  <Sound Name ="actors/actor_interactive_walls/actor_interactive_wall_drone_break_rnd/actor_interactive_wall_drone_break_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+  		  <SFX Pos="(-0.1; 0.2; 0.0)" Dir="(0; -1; 0)" Name="stone_wall_small"/>
+	</OnBreakEvents>
+	<GameData
+	ModelBreakageQuestConstraints="MainConstraint"
+	IgnoresHonkExplosionForce="true"
+	>
+		<WinchSocket Pos="(0.0; -0.35; 0.0)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="Bone6">
+			 <SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_drone_connect_rnd/actor_interactive_wall_drone_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+	</GameData>
+</ModelBrand>

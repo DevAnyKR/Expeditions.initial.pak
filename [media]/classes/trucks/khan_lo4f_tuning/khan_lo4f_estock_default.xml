@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData 
+		RepairsCapacity="30"
+		WheelRepairsCapacity="1"
+		ElectricChargeCapacity="2.5"
+		/>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="0"
+		IsEmergencyReserveAddon="true"
+		UnlockByExploration="false"
+		UnlockByRank="0"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_EMERGENCY_RESERVE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_EMERGENCY_RESERVE_NAME"
+		/>
+		<InstallSocket Type="KHANLO4Festock" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<ModelBrand
+    DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="build_stage_1">
+	</Subset>
+	
+	<Subset Name="build_stage_0">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+	</Subset>
+	
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1" />
+	</PhysicsModel>
+	
+</ModelBrand>

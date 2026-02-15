@@ -1,0 +1,31 @@
+﻿<_templates Include="trucks"/>
+<EngineVariants>
+	<Engine
+		_template="EngineDefaultVars"		
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="180"
+		DamagedConsumptionModifier="0.0"
+		EngineResponsiveness="0.025"
+		FuelConsumption="1.0"
+		Name="e_scout_heavy_experimental_engine_0"
+		Torque="125000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="1.0"
+		MaxDeltaAngVel="0.0175"
+		BrakesDelay="0.5"
+		EngineTowingTorqueModifier="1.15"
+	>
+		<GameData
+			Price="40000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_SCOUT_HEAVY_EXPERIMENTAL_0_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_SCOUT_HEAVY_EXPERIMENTAL_0_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

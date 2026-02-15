@@ -1,0 +1,117 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="200"
+		Name="tatra_force_suspension_default"
+	>
+		<Suspension 
+		Damping="0.3" 
+		Height="0.18" 
+		Strength="0.04" 
+		WheelType="front" 
+		BrokenSuspensionMax="0.03" 
+		SuspensionMin="-0.26" 
+		SuspensionMax="0.01" 
+		/>
+		
+		<Suspension 
+		Damping="0.3" 
+		Height="0.1075" 
+		Strength="0.0355" 
+		WheelType="rear" 
+		BrokenSuspensionMax="0.03" 
+		SuspensionMin="-0.19" 
+		SuspensionMax="0.01" 
+		/>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+		<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="300"
+		Name="tatra_force_suspension_high"
+	>
+		<Suspension 
+		Damping="0.55" 
+		Height="0.3" 
+		Strength="0.034" 
+		WheelType="front" 
+		BrokenSuspensionMax="0.075"
+		SuspensionMin="-0.3" 
+		SuspensionMax="0.055" />
+		
+		<Suspension 
+		Damping="0.55" 
+		Height="0.225" 
+		Strength="0.0305" 
+		WheelType="rear" 
+		BrokenSuspensionMax="0.075" 
+		SuspensionMin="-0.22" 
+		SuspensionMax="0.055" />
+		<GameData
+			Price="7000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="250"
+		Name="tatra_force_suspension_crawler"
+	>
+		<Suspension 
+		Damping="0.75" 
+		Height="0.275" 
+		Strength="0.0335" 
+		WheelType="front" 
+		BrokenSuspensionMax="0.05"
+		SuspensionMin="-0.32" 
+		SuspensionMax="0.08" />
+		
+		<Suspension 
+		Damping="0.75" 
+		Height="0.2" 
+		Strength="0.029" 
+		WheelType="rear" 
+		BrokenSuspensionMax="0.05" 
+		SuspensionMin="-0.25" 
+		SuspensionMax="0.08" />
+		<GameData
+			Price="5000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

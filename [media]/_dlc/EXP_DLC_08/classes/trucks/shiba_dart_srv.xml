@@ -1,0 +1,723 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			CamberAnglePhysics="-0.25"
+			CamberAngleRender="-0.5"
+			CamberSuspensionMultiplier="0.125"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<FirstAxle
+			CamberAnglePhysics="-0.25"
+			CamberAngleRender="-0.5"
+			CamberSuspensionMultiplier="0.125"
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="35"
+			SteeringCastor="4"
+			SteeringJointOffset="0.22"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		DiffLockType="Installed"
+		ElectricChargeCapacity="10"
+		SignalRadius="60.0"
+		EngineIconMesh="env/engine_shiba_dart_srv"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.0"
+		ExhaustStartTime="0.9"
+		FuelCapacity="80"
+		Responsiveness="0.45"
+		SteerSpeed="0.045"
+		BackSteerSpeed="0.0425"
+		TruckImage="shiba_Dart"
+		TruckType="SCOUT"
+		IsResistantToRollover = "true"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts, winches_scouts_siro_72" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_scout_shiba_dart_srv"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.366; 0.4059; 0.74)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.366; 0.4059; 0.74)" />
+			<Wheel _template="SecondAxle" Pos="(-1.29; 0.398; 0.74)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.29; 0.398; 0.74)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="s_scout_shiba_dart_srv_suspension_default"
+			Type="s_shiba_dart_srv"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.73"
+		/>
+		<Steam Origin="(1.295; 1.051; 0)" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/shiba_dart_srv/shiba_dart_srv_reverse" />
+			<BrakePull		Sound="" />
+			<BrakesSqueal	Sound="trucks/shiba_dart_srv/shiba_dart_srv_brakes_squeal" />
+			<BrakeRelease	Sound="" />
+			<Handbrake		Sound="trucks/shiba_dart_srv/shiba_dart_srv_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/shiba_dart_srv/shiba_dart_srv_handbrake_off" />
+			<Gear			Sound="trucks/common/truck_gear_shift_medium_rnd_set/truck_gear_shift_medium_rnd" />
+			<Honk			Sound="trucks/shiba_dart_srv/shiba_dart_srv_honk" />
+			<EngineRev		Sound="trucks/shiba_dart_srv/shiba_dart_srv_rev" />
+			<EngineAccel	Sound="trucks/shiba_dart_srv/shiba_dart_srv_acc" />
+			<EngineStart	Sound="trucks/shiba_dart_srv/shiba_dart_srv_start" />
+			<EngineStop		Sound="trucks/shiba_dart_srv/shiba_dart_srv_stop" />
+			<EngineIdle		Sound="trucks/shiba_dart_srv/shiba_dart_srv_idle" />
+			<EngineIdle_2d	Sound="trucks/shiba_dart_srv/shiba_dart_srv_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/shiba_dart_srv/shiba_dart_srv_low" />
+			<EngineLow_2d	Sound="trucks/shiba_dart_srv/shiba_dart_srv_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/shiba_dart_srv/shiba_dart_srv_high" />
+			<EngineHigh_2d	Sound="trucks/shiba_dart_srv/shiba_dart_srv_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound="trucks/shiba_dart_srv/shiba_dart_srv_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_small_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="SHK_BoneExhaust" MinAngle="(0.4; 0.4; 0.4)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="0.7" />
+			<Shaker Frame="SHK_BoneGearStick" MinAngle="(0.45; 0.45; 0.45)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="0.45" />
+			<Shaker Frame="SHK_BoneGearStick02" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="0.55" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.8"
+			MaxX="2.65"
+		/>
+		<LimitedFluid
+			Center="(-1.86; 0.762; 0)"
+			SizeX="0.378"
+			SizeY="0.191"
+			SizeZ="0.854"
+			Type="Box"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<Inventory MaxLimit="3" />
+		<DeployCost Cost="0" />
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 4.4; 0.0)"/>
+		<Intake Dir="(1; 0; 0)" Origin="(2.024; 0.953; 0)" Size="0.35" />
+		<GearboxSocket Default="g_scout_shiba_dart_srv_default" Type="gearboxes_scouts_shiba_dart_srv, gearboxes_scouts_light_experimental" />
+		<FuelTank DamageCapacity="60" />
+		<Exhaust
+			Dir="(-0.4; -1; 0.3)"
+			IsLight="true"
+			Origin="(-0.29; 0.55; 0.691)"
+			Speed="3.82"
+			ParentFrame="SHK_BoneExhaust"
+		/>
+		<EngineSocket Default="e_us_scout_shiba_dart_srv_engine_0" Type="e_us_scout_shiba_dart_srv, e_scout_light_experimental" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(0; 0.16; -0.09)"
+			Pos="(0; 0.88; 0.386)"
+			SteeringWheelPos="(0.4; 1.3; 0.364)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-1; 0.35; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/shiba_dart_srv_arrow_01" Org="(0.627; 1.266; 0.537)" OutputAngles="(120; 90)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Damping="0.99" Dir="(-1; 0.35; 0)" InputRange="(0;1.1)" InputType="rpm" Mesh="trucks/arrows/shiba_dart_srv_arrow_02" Org="(0.632; 1.28; 0.435)" OutputAngles="(-122; 90)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Dir="(-1; 0.35; 0)" InputRange="(0;85)" InputType="speed" Mesh="trucks/arrows/shiba_dart_srv_arrow_02" Org="(0.632; 1.28; 0.297)" OutputAngles="(-135; 80)" ParentFrame="BoneCabin_cdt" />
+			<Gauge Damping="0.98" Dir="(-1; 0.35; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/shiba_dart_srv_arrow_01" Org="(0.627; 1.266; 0.195)" OutputAngles="(-115; -65)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.985, 0.804, -0.286)" Max="(1.7, 1.209, 0.286)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.25, 0.704, -0.209)" Max="(0.985, 1.009, 0.209)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-2.07, 0.665, -0.435)" Max="(-1.657, 0.865, 0.435)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.2" Scale="0.43" Type="wheels_scout_shiba_dart_srv" />
+		<CompatibleWheels OffsetZ="0.21" Scale="0.43" Type="wheels_scout_shiba_dart_srv_2" />
+		<CompatibleWheels OffsetZ="0.2" Scale="0.45" Type="wheels_scout_shiba_dart_srv" />
+		<CompatibleWheels OffsetZ="0.21" Scale="0.45" Type="wheels_scout_shiba_dart_srv_2" />	
+		<Camera
+			Center="(-1.4; -0.35; 0)"
+			RadiusMultiplier="0.8"
+			ParentFrame="BoneChassis_cdt"
+		>
+			<Roof
+				LimitsVer="(-1.0; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+				ViewPos="(1.1; 2.6; -0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.5; 2.3)"
+				LimitsVer="(-0.85; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/shiba_dart_srv_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/shiba_dart_srv_glass__sh_d.tga"
+				ViewPos="(-0.12; 1.65; 0.392)"
+				ZoomViewPosOffset="(0.55; -0.05; 0)"
+			>
+				<Rear ViewPosOffset="(0.3; -0.1; 0.55)" />
+				<Mirror ClipDir="(-1; 0.05; -0.1)" ClipOffset="0.2" FOVScale="1.5" MeshFrame="mirror_l" ReflectionDir="(-1; 0.05; -0.1)" Size="(0.3; 0.45)" Pos="(0.444; 1.376; 0.916)" />
+				<Mirror ClipDir="(-1; 0.05; 0.55)" ClipOffset="0.2" FOVScale="1.5" MeshFrame="mirror_r" ReflectionDir="(-1; 0.05; 0.55)" Size="(0.3; 0.45)" Pos="(0.444; 1.376; -0.916)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Rotator
+		EngineTorqueFactor="0.5"
+		Frame="ROT_BoneEngineFan"
+		RotationAxis="(1; 0; 0)"
+		RotationSpeed="20"
+	/>
+	<PhysicsModel AcceptVisualDamage="False" Mesh="trucks/shiba_dart_srv">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.195; -0.5; 0)"
+			ImpactType="Truck"
+			Mass="850"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.125; -0.3; 0)"
+				ImpactType="Truck"
+				Mass="1250"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				ForceBodyParams="true"
+				PushUpFactor="2"
+			>
+				<Constraint	Type="Fixed" />
+				<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRod"
+						MinLimit="-25"
+						MaxLimit="25"
+					/>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneAerial_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-7"
+						MaxLimit="7"
+					>
+						<Motor Damping="0.01" Spring="25" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunShieldLeft_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.14" Spring="22" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunShieldRight_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="20"
+					>
+						<Motor Damping="0.15" Spring="18" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneKeyFob01_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-40"
+						MaxLimit="40"
+					>
+						<Motor Damping="0.03" Spring="0" Type="Spring" />
+					</Constraint>
+					<Body Collisions="None" Mass="2" ModelFrame="BoneKeyFob02_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 1)"
+							Type="Hinge"
+							MinLimit="-40"
+							MaxLimit="40"
+						>
+							<Motor Damping="0.02" Spring="0" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1" Pos="(-2.22; 0.963; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.3" Pos="(-2.22; 0.963; 0.752)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.3" Pos="(-2.22; 0.963; -0.752)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(220; 220; 255) x 1" Pos="(-2.219; 1.09; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-2.219; 1.09; 0.746)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-2.219; 1.09; -0.746)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-2.219; 1.09; 0.746)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-2.219; 1.09; -0.746)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-2.22; 0.963; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(1.963; 0.965; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.22; 0.963; 0.752)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.22; 0.963; -0.752)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" DirAngle="90" Pos="(0.838; 1.116; 0.812)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" DirAngle="90" Pos="(0.838; 1.116; -0.812)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(1.963; 0.965; -0.563)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(1.963; 0.965; 0.563)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.963; 0.965; 0.563)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(1.963; 0.965; -0.563)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(1.963; 0.965; 0.563)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(1.963; 0.965; -0.563)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(1.963; 0.965; 0.563)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(1.963; 0.965; -0.563)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/shiba_dart_srv_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.963; 0.965; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="55000"
+		Recallable="true"
+		UnlockByExploration="false"
+		LockedUnconditionally="false"
+		RecoveryPrice="1750"
+		UnlockByRank="0"
+		UnlockByObjective=""
+	>
+		<WinchSocket Pos="(0.161; 0.619; 0.754)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(0.161; 0.619; -0.754)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-0.835; 0.875; 0.593)" />
+		<WinchSocket Pos="(-0.835; 0.875; -0.593)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_SHIBA_DART_SRV_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgShibaDartExp"
+			UiIcon576x640="shopImgShibaDartExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_SHIBA_DART_SRV_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.8; 1.15; 0.6)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.0, 1.63, -4.0)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.4; 1.5; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.0 5.8; -1.1)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.65; 1; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.5; 1.6; -6.5)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(3.8; 1.1; 0.15)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.5; 2.0; 2.3)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(4.5; 1.1; 0.15)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.2; 6.0; 2.3)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.2; 0.45; -0.4)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(4.9; 0.45; -3.6)" />
+			
+			<CameraPos FOV="32.0" Name="supplies_addon_1" InterestPosition="(4.5; 1.1; 0.15)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-2.2; 6.0; 2.3)" />
+			<CameraPos FOV="32.0" Name="supplies_roof" InterestPosition="(5.4; 1.5; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(10.0 5.8; -1.1)" />
+			
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(4.966; 1.0; -0.392)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.626; 1.0; -2.8)" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" InterestPosition="(7.1; 1.0; 0.392)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.626; 1.0; 2.958)" />
+		</CustomizationCameras>
+		<!-- Bumpers Front -->
+		<AddonSockets DefaultAddon="shiba_dart_srv_bumper_front_00">
+			<Socket Names="ShibaDartSRVFrontBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVFrontBumperSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Bumpers Rear -->
+		<AddonSockets DefaultAddon="shiba_dart_srv_bumper_rear_00">
+			<Socket Names="ShibaDartSRVRearBumper" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Inventory Slots -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVInvSlot" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVInvSlotSlot01" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVInvSlotSlot02" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVInvSlotSlot03" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVInvSlotSlot04" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- SpareWheel Slot -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSrvSpareWheelSlot" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVSpareWheels" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Outerframe -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVOuteframeFront" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVOuteframeRear" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVOuteframeSpotlight01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVOuteframeSpotlight02" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVBranchSection" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Roofrack -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVRoofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVRoofrackSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVRoofrackSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Snorkel -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Steps -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVStep" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Wings -->
+		<AddonSockets DefaultAddon="shiba_dart_srv_wings_00">
+			<Socket Names="ShibaDartSRVWings" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0)" />
+			</Socket>
+		</AddonSockets>
+		<!-- Difflock and Estock -->
+		<AddonSockets DefaultAddon="shiba_dart_srv_diff_lock_default">
+			<Socket Names="shiba_dart_srv_DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="shiba_dart_srv_estock_default">
+			<Socket Names="shiba_dart_srv_estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Stuff -->
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVDoorStickerR" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ShibaDartSRVDoorStickerL" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- FRONT SHOCKS AND COILOVERS	-->
+		<!-- Rear Right -->
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneA-ArmFrontRightBottom_B"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneCoiloverFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneA-ArmFrontRightBottom_B"
+				ModelFrame="IK_BoneCoiloverFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Front Left -->
+		<IKBone ModelFrame="IK_BoneShockFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneA-ArmFrontLeftBottom_B"
+				ModelFrame="IK_BoneShockFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneCoiloverFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneA-ArmFrontLeftBottom_B"
+				ModelFrame="IK_BoneCoiloverFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- STEERING -->
+		<!-- Arms -->
+		<IKBone ModelFrame="IK_BoneSteerArmLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod_cdt"
+				ModelFrame="IK_BoneSteerArmLeft_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSteerArmRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod_cdt"
+				ModelFrame="IK_BoneSteerArmRight_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Beam -->
+		<IKBone ModelFrame="IK_BoneSteerBeam_B" ParentFrame="IK_BoneSteerArmRight_B">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneSteerArmLeft_B"
+				ModelFrame="IK_BoneSteerBeam_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Links -->
+		<IKBone ModelFrame="IK_BoneSteerLink_B" ParentFrame="IK_BoneSteerArmLeft_B">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod_cdt"
+				ModelFrame="IK_BoneSteerLink_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSteerLinkRight_B" ParentFrame="BoneRackRight">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneSteerBeam_B"
+				ModelFrame="IK_BoneSteerLinkRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSteerLinkLeft_B" ParentFrame="BoneRackLeft">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneSteerBeam_A"
+				ModelFrame="IK_BoneSteerLinkLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- A-ARMS -->
+		<!-- Right Front Arms -->
+		<IKBone ModelFrame="IK_BoneA-ArmFrontRightTop_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_BoneA-ArmFrontRightTop_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneA-ArmFrontRightBottom_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_BoneA-ArmFrontRightBottom_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Left Front Arms -->
+		<IKBone ModelFrame="IK_BoneA-ArmFrontLeftTop_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_BoneA-ArmFrontLeftTop_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneA-ArmFrontLeftBottom_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_BoneA-ArmFrontLeftBottom_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- REAR ARMS -->
+		<!-- Left Rear Arms -->
+		<IKBone ModelFrame="IK_BoneAxle2ArmLeft1_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneAxle2ArmLeft1_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxle2ArmLeft2_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneAxle2ArmLeft2_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Right Rear Arms -->
+		<IKBone ModelFrame="IK_BoneAxle2ArmRight1_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneAxle2ArmRight1_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxle2ArmRight2_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneAxle2ArmRight2_A"
+			>
+				<IKJoint AxisLocal="(1; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SWAY BAR -->
+		<!-- Sway Bar Left -->
+		<IKBone ModelFrame="IK_BoneSwayBarLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSwayBarLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSwayBarLinkLeft_B" ParentFrame="IK_BoneSwayBarLeft_B">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSwayBarLinkLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Sway Bar Right -->
+		<IKBone ModelFrame="IK_BoneSwayBarRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSwayBarRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSwayBarLinkRight_B" ParentFrame="IK_BoneSwayBarRight_B">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneSwayBarLinkRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- REAR SHOCKS AND COILOVERS	-->
+		<!-- Rear Right -->
+		<IKBone ModelFrame="IK_BoneShockRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneCoiloverRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneCoiloverRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Rear Left -->
+		<IKBone ModelFrame="IK_BoneShockRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneShockRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneCoiloverRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_BoneCoiloverRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

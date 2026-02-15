@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.670; 1.473; -0.610)" />
+	<PhysicsModel Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_snorkel_00" >
+		<Body ImpactType="Truck" Mass="2.5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_93_KELPIE_SNORKEL_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_93_KELPIE_SNORKEL_00_NAME"
+		/>
+		<InstallSocket Type="TUZ93KelpieSnorkel" />
+	</GameData>
+</TruckAddon>

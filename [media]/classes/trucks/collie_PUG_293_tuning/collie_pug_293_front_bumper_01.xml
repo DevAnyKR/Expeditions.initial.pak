@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	
+	<PhysicsModel Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_front_bumper_01">
+		<Body ImpactType="Truck" Mass="80" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<HeadLight>
+			
+			<Flare _template="HeadLight" AspectRatio="1.5" Color="g(235; 230; 220) x 1.3" Size=".2" Pos="(3.029; 0.985; -0.772)" />
+			<Flare _template="HeadLight" AspectRatio="1.5" Color="g(235; 230; 220) x 1.3" Size=".2" Pos="(3.029; 0.985; 0.772)" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(3.029; 0.985; -0.762)" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(3.029; 0.985; 0.762)" />
+			
+		</HeadLight>
+	</ModelAttachments>
+	
+	<GameData
+        CameraPreset="default"
+        Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_COLLIE_PUG_293_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_COLLIE_PUG_293_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="ColliePUG293FrontBumper" />
+	</GameData>
+</TruckAddon>

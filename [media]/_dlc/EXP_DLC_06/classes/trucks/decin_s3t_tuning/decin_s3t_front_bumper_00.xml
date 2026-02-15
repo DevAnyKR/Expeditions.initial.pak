@@ -1,0 +1,70 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_front_bumper_00">
+		<Body Mass="13" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneAntennaLeft_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="50"
+				>
+					<Motor Damping="0.02" Spring="17" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneAntennaRight_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="50"
+				>
+					<Motor Damping="0.02" Spring="17" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" Dir="(1; 0; 0)" Size="0.08" Pos="(3.168; 1.46; 1.252)" ParentFrame="BoneAntennaLeft_cdt" />
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" Dir="(1; 0; 0)" Size="0.08" Pos="(3.168; 1.46; -1.252)" ParentFrame="BoneAntennaRight_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.296; 1.046; -0.451)" ParentFrame="BoneAddon_cdt" />
+		<WinchSocket Pos="(3.296; 1.046; 0.451)" ParentFrame="BoneAddon_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="DecinS3TFrontBumper" />
+	</GameData>
+</TruckAddon>

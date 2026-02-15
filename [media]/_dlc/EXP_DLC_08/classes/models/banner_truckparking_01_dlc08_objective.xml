@@ -1,0 +1,17 @@
+<_templates Include="models" />
+<ModelBrand 
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="banner_truckparking_01_dlc08"></Body>
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="stage_0">
+	</Subset>
+	
+	<Subset Name="stage_1">
+		<Mesh Name="banner_truckparking_01_dlc08" />
+		<CdtMesh Name="cdt_banner_truckparking_01_dlc08" />
+    </Subset>
+</ModelBrand>

@@ -1,0 +1,89 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_spotlight_a">
+		<Body Mass="4" ModelFrame="BoneSpotLight01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.644; 2.064; -0.280)" />
+			<Model _template="HeadLightRay" Org="(0.644; 2.064; 0)" />
+			<Model _template="HeadLightRay" Org="(0.644; 2.064; 0.280)" />
+			
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.389)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.357)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.324)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.292)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.260)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.227)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.195)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.162)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.130)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.098)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.065)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; -0.033)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.000" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.389)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.357)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.324)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.292)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.260)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.227)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.195)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.162)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.130)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.098)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.065)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.05; 0.033)" />
+			
+			
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.389)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.357)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.324)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.292)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.260)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.227)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.195)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.162)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.130)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.098)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.065)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; -0.033)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.000" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.389)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.357)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.324)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.292)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.26)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.227)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.195)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.162)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.130)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.098)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.065)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.8" Size=".05" Pos="(0.633; 2.078; 0.033)" />
+		
+		<Flare _template="BlueStreak" Color="g(240; 240; 255) x 0.4" Pos="(0.633; 2.037; 0.000)" />
+		</MainHeadLight>
+		
+	</ModelAttachments>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHTS_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_ROOFRACK_SPOTLIGHT_A_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_spotlight_frame" />
+		<InstallSocket Type="CotcoCanyonSpotlightLamp" />
+	</GameData>
+</TruckAddon>

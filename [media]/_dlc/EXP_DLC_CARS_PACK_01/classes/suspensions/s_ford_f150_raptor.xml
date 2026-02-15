@@ -1,0 +1,116 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="100"
+		Name="s_scout_ford_f150_raptor_suspension_default"
+	>
+		<Suspension 
+			Damping="0.35" 
+			Height="0.35" 
+			Strength="0.012" 
+			WheelType="front" 
+			BrokenSuspensionMax="-0.0125" 
+			SuspensionMin="-0.4" 
+			SuspensionMax="-0.15" />
+		
+		<Suspension 
+			Damping="0.35" 
+			Height="0.325" 
+			Strength="0.0145" 
+			WheelType="rear" 
+			BrokenSuspensionMax="-0.025" 
+			SuspensionMin="-0.375" 
+			SuspensionMax="-0.05" />
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="150"
+		Name="s_scout_ford_f150_raptor_suspension_high"
+		TruckReplacement="ford_f150_raptor_susp1"
+	>
+		<Suspension 
+			Damping="0.55" 
+			Height="0.3875" 
+			Strength="0.017" 
+			WheelType="front" 
+			BrokenSuspensionMax="0.025" 
+			SuspensionMin="-0.4" 
+			SuspensionMax="-0.175" />
+		
+		<Suspension		
+			Damping="0.55" 
+			Height="0.36" 
+			Strength="0.0192" 
+			WheelType="rear" 
+			BrokenSuspensionMax="0.0125" 
+			SuspensionMin="-0.375" 
+			SuspensionMax="-0.025" />
+		<GameData
+			Price="5000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="125"
+		Name="s_scout_ford_f150_raptor_suspension_crawler"
+		TruckReplacement="ford_f150_raptor_susp1"
+	>
+		<Suspension 
+			Damping="0.4" 
+			Height="0.4" 
+			Strength="0.01225" 
+			WheelType="front" 
+			BrokenSuspensionMax="-0.025" 
+			SuspensionMin="-0.46" 
+			SuspensionMax="-0.125" />
+		
+		<Suspension		
+			Damping="0.4" 
+			Height="0.4" 
+			Strength="0.0125" 
+			WheelType="rear" 
+			BrokenSuspensionMax="-0.0225" 
+			SuspensionMin="-0.46" 
+			SuspensionMax="0.0125" />
+		<GameData
+			Price="7500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

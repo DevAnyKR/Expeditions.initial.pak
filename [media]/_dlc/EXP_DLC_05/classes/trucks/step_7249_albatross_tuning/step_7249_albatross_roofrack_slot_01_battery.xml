@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_roofrack_01_slot_01_battery">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="step_7249_albatross_roofrack_01" />
+		<InstallSocket Type="Step7249AlbatrossRoofrackSlot01" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="step_7249_albatross_roofrack_01_slot_01_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

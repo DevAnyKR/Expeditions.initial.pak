@@ -1,0 +1,28 @@
+<_parent File="tatra_805_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_bumper_01">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_805_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_805_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="Tatra805Bumper" />
+	</GameData>
+</TruckAddon>

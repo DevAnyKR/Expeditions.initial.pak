@@ -1,0 +1,20 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="Dynamic"
+			Mass="400"
+			ModelFrame="BoneGate_cdt"
+			NoSoftContacts="true"
+		>
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="5"
+			>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

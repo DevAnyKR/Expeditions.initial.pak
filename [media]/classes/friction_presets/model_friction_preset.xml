@@ -1,0 +1,8 @@
+<FrictionPreset>
+	<Preset Name="Stone" Friction="0.8" WheelFrictionPreset="BodyFrictionAsphalt"/>
+	<Preset Name="WetStone" Friction="0.2" WheelFrictionPreset="BodyFrictionAsphalt"/>
+	<Preset Name="Gravel" Friction="0.5" WheelFrictionPreset="BodyFriction"/>
+	<Preset Name="Terrain" Friction="1.2" WheelFrictionPreset="BodyFriction"/>
+	<Preset Name="HighGrip" Friction="3.0" WheelFrictionPreset="BodyFriction"/>
+	<Preset Name="ZigguratStones" Friction="0.98" WheelFrictionPreset="BodyFrictionAsphalt"/>
+</FrictionPreset>

@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_bumper_00">
+		<Body ImpactType="Truck" Mass="30">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(3.871; 0.822; 0.712)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(3.871; 0.822; -0.712)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.871; 0.822; 0.0)" />
+		</Ignition>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Size="0.2" Pos="(3.871; 0.822; 0.712)" />
+			<Flare _template="HeadLight" Size="0.2" Pos="(3.871; 0.822; -0.712)" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(3.871; 0.822; 0.712)" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(3.871; 0.822; -0.712)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.971; 0.891; 0.343)" />
+		<WinchSocket Pos="(3.971; 0.891; -0.343)" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,364 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<RaftWheel
+			ConnectedToHandbrake="true"
+			Location="only"
+			Torque="full"
+		/>
+	</Wheel>
+	
+	<Body>
+		<!--
+		<Tire Collisions="Default" Mass="15">
+			<Constraint
+				Type="Hinge"
+				AxisLocal="(1; 0; 0)"
+				MinLimit="-25"
+				MaxLimit="25"
+			>
+				<Motor Damping="1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Tire>
+		-->
+		<Tire Collisions="None" Mass="15">
+			<Constraint
+				Type="Ragdoll"
+						TwistAxisLocal="(0; 1; 0)"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistMin="-3"
+						TwistMax="3"
+						PlaneMin="-25" 
+						PlaneMax="25" 
+						ConeMin="-25" 
+						ConeMax="0" 
+			>
+				<PlaneMotor Damping="1" Spring="1" Type="Spring" />
+				<TwistMotor Damping="1" Spring="1" Type="Spring" />
+				<ConeMotor Damping="10" Spring="300" Type="Spring" />
+			</Constraint>
+		</Tire>
+		<Rope Collisions="None" Mass="3">
+			<Constraint
+				Type="Hinge"
+				AxisLocal="(0; 0; 1)"
+				MinLimit="-40"
+				MaxLimit="40"
+			>
+				<Motor Damping="1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Rope>
+		<Lifebuoy Collisions="None" Mass="10">
+			<Constraint
+				Type="Ragdoll"
+						TwistAxisLocal="(0; 1; 0)"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistMin="-3"
+						TwistMax="3"
+						PlaneMin="-7" 
+						PlaneMax="15" 
+						Cone="10" 
+			>
+				<AllMotor Damping="1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Lifebuoy>
+	</Body>
+	
+</_templates>
+<Truck Type="QuestTruck">
+	<TruckData
+		_template="TruckDefaultVars"
+		BackSteerSpeed="0.04"
+		DiffLockType="Installed"
+		ElectricChargeCapacity="120"
+		EngineIconMesh=""
+		EngineIconScale="1.0"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0"
+		FuelCapacity="220"
+		Responsiveness="0.1"
+		SteerSpeed="0.04"
+		TruckImage="barge_Img"
+		TruckType="BARGE"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_the_raft_dlc_08"
+			DefaultTire="tire_the_raft_dlc_08"
+			DefaultWheelType="wheels_the_raft_dlc_08_invisible"
+		>
+			<Wheel _template="RaftWheel" Pos="(0.874; 0.5; 0.35)" />
+			<Wheel _template="RaftWheel" RightSide="true" Pos="(0.874; 0.5; 0.35)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="the_raft_dlc_08_default"
+			Type="s_the_raft_dlc_08"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<Sounds
+			DisableReversePitch="true"
+			MinDist="15.0"
+			Origin="(2.5; 1.25; 0)"
+		>
+			<SpecialMoveInWater Sound="trucks/the_raft_dlc_08/raft_move_onwater" />
+			<SpecialMoveInMud Sound="trucks/the_raft_dlc_08/raft_movve_onground" />
+			<BargeIdle Sound="trucks/the_raft_dlc_08/raft_idle" />
+		</Sounds>
+		<OcclusionMap
+			HalfSizeZ="5.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-9"
+			MaxX="9"
+		/>
+		<GearboxSocket Default="g_the_raft_dlc_08_default" Type="gearboxes_the_raft_dlc_08" />
+		<FuelTank DamageCapacity="500" />
+		<EngineSocket Default="engine_the_raft_dlc_08_0" Type="e_the_raft_dlc_08" />
+		<CompatibleWheels Scale="0.1" Type="wheels_the_raft_dlc_08_invisible" />
+		<Camera Center="(-1.4; -0.1; 0)" ParentFrame="BoneRaftFront_cdt" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+		</Axles>
+		<Inventory MaxLimit="6" />
+		
+		<SpawnEffects>
+			<SpawnEffect Pos = "(-0.806; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(-0.147; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(0.517; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(1.176; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			
+			<SpawnEffect Pos = "(2.934; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(3.593; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(4.257; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(4.917; 0.843; -3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			
+			<SpawnEffect Pos = "(-0.806; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(-0.147; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(0.517; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(1.176; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			
+			<SpawnEffect Pos = "(2.934; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(3.593; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(4.257; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(4.917; 0.843; 3.013)" ParentFrame="BoneRaftFront_cdt"/>
+			
+			<SpawnEffect Pos = "(5.957; 0.835; -1.666)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(5.957; 0.835; -1.003)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(5.957; 0.835; -0.343)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(5.957; 0.835; 1.666)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(5.957; 0.835; 1.003)" ParentFrame="BoneRaftFront_cdt"/>
+			<SpawnEffect Pos = "(5.957; 0.835; 0.343)" ParentFrame="BoneRaftFront_cdt"/>
+        </SpawnEffects>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/the_raft_dlc_08">
+		<Body
+			CenterOfMassOffset="(0; -0.2; 0.076)"
+			Friction="0.3"
+			GravityFactor="0.8"
+			ImpactType="Truck"
+			LinearDamping="0.65"
+			Mass="1000"
+			ModelFrame="BoneRaftFront_cdt"
+		>
+			<Body
+				CenterOfMassOffset="(0; -0.5; 0)"
+				Collisions="None"
+				GravityFactor="0.65"
+				Mass="500"
+				ModelFrame="BoneBalanceFront_cdt"
+			>
+				<Constraint Type="Fixed" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; -0.2; 0)"
+				Friction="0.3"
+				GravityFactor="0.8"
+				ImpactType="Truck"
+				LinearDamping="0.65"
+				Mass="750"
+				ModelFrame="BoneRaftBack_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="2500" Spring="220000" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="Default"
+					Mass="200"
+					ModelFrame="BoneArch_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-11"
+						MaxLimit="11"
+					>
+						<Motor Damping="1500" Spring="45000" Type="Spring" />
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="5"
+						ModelFrame="BonePendulumRope_cdt"
+					>
+						<Constraint
+							Type="Ragdoll"
+							TwistAxisLocal="(0; 1; 0)"
+							PlaneAxisLocal="(0; 0; 1)"
+							TwistMin="-7"
+							TwistMax="7"
+							PlaneMin="-25" 
+							PlaneMax="25" 
+							Cone="10" 
+						>
+							<AllMotor Damping="5" Spring="5" Type="Spring" />
+						</Constraint>
+						<Body
+							CenterOfMassOffset="(0; 0; 0)"
+							Collisions="Default"
+							Mass="10"
+							ModelFrame="BoneHook01_cdt"
+						>
+							<Constraint
+								Type="Hinge"
+								AxisLocal="(0; 0; 1)"
+								MinLimit="-2.5"
+								MaxLimit="6.3"
+							>
+								<Motor Damping="2" Spring="2" Type="Spring" />
+							</Constraint>
+							<Body
+								CenterOfMassOffset="(0; 0; 0)"
+								Collisions="None"
+								Mass="5"
+								ModelFrame="BoneHook02_cdt"
+							>
+								<Constraint
+									Type="Hinge"
+									AxisLocal="(0; 0; 1)"
+									MinLimit="-86"
+									MaxLimit="54"
+								>
+									<Motor Damping="2" Spring="2" Type="Spring" />
+								</Constraint>
+								<Body
+									CenterOfMassOffset="(0; -0.1; 0)"
+									Collisions="Default"
+									Mass="200"
+									ModelFrame="BonePendulum_cdt"
+								>
+									<Constraint
+										Type="Ragdoll"
+										TwistAxisLocal="(0; 1; 0)"
+										PlaneAxisLocal="(0; 0; 1)"
+										TwistMin="-25"
+										TwistMax="25"
+										PlaneMin="-45" 
+										PlaneMax="45" 
+										Cone="30" 
+									>
+										<AllMotor Damping="5" Spring="5" Type="Spring" />
+									</Constraint>
+								</Body>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+				
+				<Body _template="Tire" ModelFrame="BoneTireR4_cdt" />
+				<Body _template="Tire" ModelFrame="BoneTireR5_cdt" />
+				<Body _template="Tire" ModelFrame="BoneTireL4_cdt" />
+				<Body _template="Tire" ModelFrame="BoneTireL5_cdt" />
+				
+				<Body _template="Rope" ModelFrame="BoneRopeR2_cdt" />
+				<Body _template="Rope" ModelFrame="BoneRopeL2_cdt" />
+				
+				<Body
+					CenterOfMassOffset="(0; -0.5; 0)"
+					Collisions="None"
+					GravityFactor="0.8"
+					Mass="500"
+					ModelFrame="BoneBalanceBack_cdt"
+				>
+					<Constraint Type="Fixed" />
+				</Body>
+			</Body>
+			<Body _template="Lifebuoy" ModelFrame="BoneLifebuoyR_cdt" />
+			<Body _template="Lifebuoy" ModelFrame="BoneLifebuoyL_cdt" />
+			
+			<Body _template="Tire" ModelFrame="BoneTireR1_cdt" />
+			<Body _template="Tire" ModelFrame="BoneTireR2_cdt" />
+			<Body _template="Tire" ModelFrame="BoneTireR3_cdt" />
+			<Body _template="Tire" ModelFrame="BoneTireL1_cdt" />
+			<Body _template="Tire" ModelFrame="BoneTireL2_cdt" />
+			<Body _template="Tire" ModelFrame="BoneTireL3_cdt" />
+			
+			<Body _template="Rope" ModelFrame="BoneRopeR1_cdt" />
+			<Body _template="Rope" ModelFrame="BoneRopeL1_cdt" />
+			
+			<Body Collisions="None" Mass="3" ModelFrame="BoneAntenna_cdt">
+				<Constraint
+					Type="Ragdoll"
+							TwistAxisLocal="(0; 1; 0)"
+							PlaneAxisLocal="(0; 0; 1)"
+							TwistMin="-3"
+							TwistMax="3"
+							PlaneMin="-8" 
+							PlaneMax="8" 
+							Cone="5" 
+				>
+					<AllMotor Damping="3.5" Spring="1.5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/the_raft_dlc_08_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData
+		Country="RU,CAS,US"
+		LockedUnconditionally="true"
+		Price="10000"
+		UnlockByExploration="false"
+		UnlockByObjective=""
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-6.802; 1.226; 0.000)" />
+		<WinchSocket Pos="(-3.472; 1.511; 2.258)" />
+		<WinchSocket Pos="(-3.472; 1.511; -2.258)" />
+		<WinchSocket Pos="(-4.114; 1.370; 2.756)" />
+		<WinchSocket Pos="(-4.114; 1.370; -2.756)" />
+		<WinchSocket Pos="(0.798; 1.370; 2.755)" />
+		<WinchSocket Pos="(0.798; 1.370; -2.755)" />
+		<WinchSocket Pos="(5.785; 1.511; 2.258)" />
+		<WinchSocket Pos="(5.785; 1.511; -2.258)" />
+		<WinchSocket Pos="(5.542; 1.370; 0.000)" />
+		
+		<WinchSocket Pos="(-0.600; 5.200; 1.150)" />
+		<WinchSocket Pos="(-0.600; 5.200; -1.150)" />
+		<WinchSocket Pos="(2.600; 5.200; 1.150)" />
+		<WinchSocket Pos="(2.600; 5.200; -1.150)" />
+		<AddonSockets DefaultAddon="the_raft_dlc_08_cargo" >
+			<Socket Names="RaftCargo" />
+		</AddonSockets>
+		<UiDesc
+			UiDesc="UI_VEHICLE_THE_RAFT_DLC_08_DESC"
+			UiIcon30x30="barge30"
+			UiIcon40x40="barge40"
+			UiName="UI_VEHICLE_THE_RAFT_DLC_08_NAME"
+		/>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneArchPistonBase" ParentFrame="BoneRaftBack_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArch_cdt"
+				ModelFrame="BoneArchPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

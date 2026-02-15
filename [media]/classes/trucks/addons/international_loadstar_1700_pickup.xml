@@ -1,0 +1,72 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/international_loadstar_1700_pickup" MeshFrame="pickup">
+		<Body ImpactType="Truck" Mass="265" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneDoor_cdt">
+				<Constraint
+					Type="Fixed"
+				/>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneMudGuardLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="25"
+				>
+					<Motor Type="Spring" Spring="0.0" Damping="0.2" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneMudGuardRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="25"
+				>
+					<Motor Type="Spring" Spring="0.0" Damping="0.15" />
+				</Constraint>
+			</Body>
+			
+			<Body Collisions="None" Mass="5" ModelFrame="BoneShovel_cdt">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="0"
+				>
+					<Motor Type="Spring" Spring="1.0" Damping="0.05" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.368; 0.755; 0)" />
+			<Flare _template="StopSignal" Pos="(-2.881; 1.189; -0.833)" />
+			<Flare _template="StopSignal" Pos="(-2.881; 1.189; 0.833)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-2.885; 1.189; -0.833)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-2.885; 1.189; 0.833)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_PICKUP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_PICKUP_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Pickup" />
+	</GameData>
+</TruckAddon>

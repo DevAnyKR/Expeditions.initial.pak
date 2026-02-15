@@ -1,0 +1,54 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_wings_01">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(2.8; 1.01; 0.843)" />
+			<Light _template="IgnitionSignalWhite" Pos="(2.8; 1.01; -0.843)" />
+			<Flare _template="LED" Color="g(255; 245; 235) x 0.4" DirAngle="120" Size="0.15" Pos="(2.75; 1.01; 0.769)" />
+			<Flare _template="LED" Color="g(255; 245; 235) x 0.4" DirAngle="120" Size="0.15" Pos="(2.722; 1.01; 0.917)" />
+			<Flare _template="LED" Color="g(255; 245; 235) x 0.4" DirAngle="120" Size="0.15" Pos="(2.75; 1.01; -0.769)" />
+			<Flare _template="LED" Color="g(255; 245; 235) x 0.4" DirAngle="120" Size="0.15" Pos="(2.722; 1.01; -0.917)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.75; 1.01; 0.769)" />
+			<Model _template="HeadLightRay" Org="(2.75; 1.01; -0.769)" />
+			<Flare _template="HeadLight" AspectRatio="0.9" Color="g(255; 245; 235) x 1.3" Size="0.125" Pos="(2.75; 1.01; 0.769)" />
+			<Flare _template="HeadLight" AspectRatio="0.9" Color="g(255; 245; 235) x 1.3" Size="0.125" Pos="(2.75; 1.01; -0.769)" />
+			<Flare _template="HeadLight" AspectRatio="0.9" Color="g(255; 245; 235) x 1.3" Size="0.125" Pos="(2.75; 1.01; 0.917)" />
+			<Flare _template="HeadLight" AspectRatio="0.9" Color="g(255; 245; 235) x 1.3" Size="0.125" Pos="(2.75; 1.01; -0.917)" />
+			<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(210; 210; 255) x 0.3" Size="0.2" Pos="(2.75; 1.01; 0.917)" />
+			<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(210; 210; 255) x 0.3" Size="0.2" Pos="(2.75; 1.01; -0.917)" />
+			<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(210; 210; 255) x 0.3" Size="0.2" Pos="(2.75; 1.01; 0.769)" />
+			<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(210; 210; 255) x 0.3" Size="0.2" Pos="(2.75; 1.01; -0.769)" />
+			<Flare _template="BlueStreak" Color="g(240; 240; 255) x 0.2" Pos="(2.75; 1.01; 0.83)" />
+			<Flare _template="BlueStreak" Color="g(240; 240; 255) x 0.2" Pos="(2.75; 1.01; -0.83)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.294; 0.961; 0)" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_WINGS_01_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Wings" />
+	</GameData>
+</TruckAddon>

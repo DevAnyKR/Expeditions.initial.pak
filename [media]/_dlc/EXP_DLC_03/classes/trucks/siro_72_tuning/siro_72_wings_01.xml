@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.97" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_wings_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneWings_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIRO_72_FENDERS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIRO_72_FENDERS_01_NAME"
+		/>
+		<RequiredSuspension Types="siro_72_suspension_high, siro_72_suspension_crawler" />
+		<InstallSocket Type="Siro72Wings" />
+	</GameData>
+</TruckAddon>

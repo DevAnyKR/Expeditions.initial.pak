@@ -1,0 +1,11 @@
+<ModelBrand 
+	Instanced="true" 
+	InstancedAsModel="true" 
+	ClipCamera="false"
+	AcceptZoneBorderDecals="false"	
+	>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+</ModelBrand>

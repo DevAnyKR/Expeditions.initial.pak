@@ -1,0 +1,60 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_bumper_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(185; 145; 140) x 1.5" Pos="(5.072; 1.266; 0)" />
+			
+ 			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .5" InnerCone="90" OuterCone="120" Pos="(4.645; 1.266; 0.883)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .5" InnerCone="90" OuterCone="120" Pos="(4.645; 1.266; -0.883)" /> 
+			
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x .6" Size="0.2" Pos="(4.596; 1.266; 1.015)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x .6" Size="0.2" Pos="(4.596; 1.266; -1.015)" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x .6" Size="0.2" Pos="(4.596; 1.266; 0.751)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x .6" Size="0.2" Pos="(4.596; 1.266; -0.751)" />
+		</Ignition> 
+ 		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.773; 1.266; -0.883)" />
+			<Model _template="HeadLightRay" Org="(4.773; 1.266; 0.883)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size=".25" Pos="(4.596; 1.266; 1.015)" /> 
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size=".25" Pos="(4.596; 1.266; -1.015)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size=".25" Pos="(4.596; 1.266; -0.751)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size=".25" Pos="(4.596; 1.266; 0.751)" />
+			
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x .3" Size="0.35" Pos="(4.615; 1.266; -0.883)" />
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x .3" Size="0.35" Pos="(4.615; 1.266; 0.883)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_FORCE_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_FORCE__BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Bumper" />
+	</GameData>
+</TruckAddon>

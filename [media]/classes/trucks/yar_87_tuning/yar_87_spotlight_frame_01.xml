@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_spotlight_frame">
+		<Body Collisions="None" Mass="2">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHT_FRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPOTLIGHT_FRAME_NAME"
+		/>
+		<InstallSocket Type="Yar87SpotlightFrame" />
+	</GameData>
+</TruckAddon>

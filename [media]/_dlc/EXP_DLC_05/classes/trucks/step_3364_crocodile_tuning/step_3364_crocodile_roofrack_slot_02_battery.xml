@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<Body>
+		<ContainerLimits Collisions="None" ImpactType="Truck" Mass="20">
+			<Constraint LinearLimitsX="(-0.02;0.02)" LinearLimitsZ="(-0.003;0.003)" Type="Fixed">
+				<Motor Damping="800" Spring="300" Type="Spring" />
+			</Constraint>
+		</ContainerLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="step_3364_crocodile_roofrack_slot_02_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_roofrack_slot_02_battery">
+		<Body _template="ContainerLimits" ModelFrame="BoneRoofrack01Slot02Repairkit_cdt" />
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof" 
+		Category="top"
+		IsCustomizable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="step_3364_crocodile_roofrack_01" />
+		<InstallSocket Type="Step3364CrocodileRoofRackSlot02" />
+	</GameData>
+</TruckAddon>

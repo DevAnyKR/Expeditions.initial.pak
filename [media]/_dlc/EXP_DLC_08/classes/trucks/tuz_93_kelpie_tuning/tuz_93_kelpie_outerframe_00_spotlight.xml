@@ -1,0 +1,47 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_outerframe_00_spotlight, tuz_93_kelpie_outerframe_00_spotlight_glass" >
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.060; 2.220; 0.465)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.060; 2.220; 0.000)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Size="0.25" Pos="(2.060; 2.220; -0.465)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.060; 2.220; 0.465)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(2.060; 2.220; -0.000)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(2.060; 2.220; -0.465)" ParentFrame="BoneAddon_cdt" />
+
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.060; 2.220; 0.465)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.060; 2.220; 0.0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.15" Pos="(2.060; 2.220; -0.465)" ParentFrame="BoneAddon_cdt" />
+
+			<Flare _template="BlueStreak" Pos="(2.060; 2.220; 0.465)" Size="0.8" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.060; 2.220; 0.0)" Size="0.8" ParentFr4ame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.060; 2.220; -0.465)" Size="0.8" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default_supplies"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="250"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"	
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="tuz_93_kelpie_outerframe_00" />
+		<InstallSocket Type="TUZ93KelpieOuterframeSpotlight" />
+	</GameData>
+</TruckAddon>

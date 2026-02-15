@@ -1,0 +1,62 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_roofrack_00_spotlight">
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.832; 3.573; 0.715)" />
+			<Model _template="HeadLightRay" Org="(3.832; 3.573; -0.715)" />
+			<Flare _template="BlueStreak" Size="0.75" Pos="(3.832; 3.573; 0.715)" />
+			<Flare _template="BlueStreak" Size="0.75" Pos="(3.832; 3.573; -0.715)" />
+			<!-- Left Upper -->
+			<Flare _template="LED" Size="0.07" Pos="(3.852; 3.596; 0.608)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.844; 3.596; 0.651)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.836; 3.596; 0.694)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.828; 3.596; 0.738)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.820; 3.596; 0.781)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.812; 3.596; 0.825)" />
+			<!-- Left Bottom -->
+			<Flare _template="LED" Size="0.07" Pos="(3.852; 3.551; 0.608)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.844; 3.551; 0.651)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.836; 3.551; 0.694)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.828; 3.551; 0.738)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.820; 3.551; 0.781)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.812; 3.551; 0.825)" />
+			<!-- Right Upper -->
+			<Flare _template="LED" Size="0.07" Pos="(3.852; 3.596; -0.608)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.844; 3.596; -0.651)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.836; 3.596; -0.694)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.828; 3.596; -0.738)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.820; 3.596; -0.781)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.812; 3.596; -0.825)" />
+			<!-- Right Bottom -->
+			<Flare _template="LED" Size="0.07" Pos="(3.852; 3.551; -0.608)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.844; 3.551; -0.651)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.836; 3.551; -0.694)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.828; 3.551; -0.738)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.820; 3.551; -0.781)" />
+			<Flare _template="LED" Size="0.07" Pos="(3.812; 3.551; -0.825)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 255; 255) x 1.5" />
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="True"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_roofrack_00" />
+		<InstallSocket Type="KRS63RoofrackSpotlight" />
+	</GameData>
+</TruckAddon>

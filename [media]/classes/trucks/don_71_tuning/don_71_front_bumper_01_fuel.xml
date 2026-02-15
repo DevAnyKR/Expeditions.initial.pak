@@ -1,0 +1,45 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15">
+		<LimitedFluid
+			Center="(1.834; 0.773; -0.018)"
+			SizeX="0.139"
+			SizeY="0.234"
+			SizeZ="0.526"
+			Type="Box"
+			ParentFrame="BoneFrontBumper_01_Slot_cdt"
+		/>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_front_bumper_fuel">
+		<Body Collisions="None" Mass="5" ModelFrame="BoneFrontBumper_01_Slot_cdt">
+			<Constraint
+				LinearLimitsX="(0.0;0.0)"
+				LinearLimitsY="(0;0.03)"
+				LinearLimitsZ="(-0.01;0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="8.0" Spring="30.0" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="don_71_front_bumper_01" />
+		<InstallSocket Type="Don71SlotFuel_1_BF" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="don_71_front_bumper_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

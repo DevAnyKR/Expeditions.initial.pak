@@ -1,0 +1,34 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.98" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_bumper_front_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="45"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.168; 0.754; 0)" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderFrontBumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<ModelBrand ClipCamera="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" DamageMult="0.0" /> 
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="stage_0">
+		<Mesh Name="stage_0" />
+		<Mesh Name="base_stage_0" />
+		<CdtMesh Name="stage_0" />
+	</Subset>
+	
+	<Subset Name="stage_1">
+		<Mesh Name="stage_1" />
+		<Mesh Name="base_stage_1" />
+		<CdtMesh Name="stage_1" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_1" />
+	</Subset>
+	
+    <AnimSubset Name="build_animation_1">
+	    <CdtMesh Name="cdt_frame" />
+		<Mesh Name="animated_mesh1" />
+		<Mesh Name="base" />
+	</AnimSubset>
+
+</ModelBrand>

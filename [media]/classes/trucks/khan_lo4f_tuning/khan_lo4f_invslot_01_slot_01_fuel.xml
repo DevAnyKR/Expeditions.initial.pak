@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<Body>
+		<ContainerLimits Collisions="None" Mass="30">
+			<Constraint LinearLimitsX="(-0.001;0.001)" LinearLimitsY="(-0.025;0.01)" Type="Fixed">
+				<Motor Damping="200" Spring="2000" Type="Spring" />
+			</Constraint>
+		</ContainerLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_lo4f_tuning" MeshFrame="khan_lo4f_invslot_01_slot_01_fuel">
+		<Body _template="ContainerLimits" ModelFrame="BoneInvSlot01Slot01Fuel_cdt" />
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="khan_lo4f_invslot_01" />
+		<InstallSocket Type="KhanLo4FInvSlot01Slot01" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="khan_lo4f_invslot_01_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

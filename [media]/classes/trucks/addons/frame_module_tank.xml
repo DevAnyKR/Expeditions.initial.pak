@@ -1,0 +1,61 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData 
+	FuelCapacity="500"
+	IsCistern="true"
+	>
+		<LimitedFluid
+			Center="(-1.1; 0.78; 0)"
+			LengthX="2.1"
+			RadiusY="0.75"
+			RadiusZ="1.167"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/frame_module_tank">
+		<Body Mass="550">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+
+
+		<Ignition>
+				
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.204; 1.436 -0.957)" Size="0.2" Dir="(-1; 0; 0)" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.204; 1.436 0.957)" Size="0.2" Dir="(-1; 0; 0)" ParentFrame="BoneKung_cdt"/>
+			
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.204; 0.091 -0.957)" Size="0.2" Dir="(-1; 0; 0)"  ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.204; 0.091 0.957)" Size="0.2" Dir="(-1; 0; 0)"  ParentFrame="BoneKung_cdt"/>
+		
+		</Ignition>
+
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Subcategory="module"
+		Priority = "4"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_TANK_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameModule" />
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960, frame_module_flatbed_short_workstar_7500, frame_module_flatbed_sideboard_workstar_7500, frame_module_flatbed_workstar_7500" />
+		<InstallSlot 
+			CargoLength="1"
+			CargoType="Addon"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

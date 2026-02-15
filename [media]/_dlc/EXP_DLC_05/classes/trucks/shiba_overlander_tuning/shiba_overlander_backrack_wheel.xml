@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="shiba_backrack_01_wheel_left" HideThreshold="0.5" />
+		<Mesh Frame="shiba_backrack_01_wheel_right" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_backrack_wheels" AcceptVisualDamage="false">
+		<Body Mass="1" ModelFrame="BoneWheelAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="50" ModelFrame="BoneBackRackWheelRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="8"
+				>
+					<Motor Damping="240" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="50" ModelFrame="BoneBackRackWheelLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="5"
+				>
+					<Motor Damping="180" Spring="400" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_addon_1"
+		Category="rear"
+		IsConsumable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_backrack" />
+		<InstallSocket Type="ShibaOverlanderPickupWheel" />
+	</GameData>
+</TruckAddon>

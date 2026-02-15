@@ -1,0 +1,65 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+			<Multiplier Multiplier="0.95" Type="FuelTank"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_108_warthog_tuning" MeshFrame="tuz_108_warthog_wings_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 186; 112) x 1.5" Pos="(2.571; 1.32; -0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 186; 112) x 1.5" Pos="(2.571; 1.32; 0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.3" Pos="(2.571; 1.32; -0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.3" Pos="(2.571; 1.32; 0.892)" ParentFrame="BoneWingsDefault_cdt" />
+						
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.571; 1.32; -0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Model _template="HeadLightRay" Org="(2.571; 1.32; 0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size="0.4" Pos="(2.501; 1.32; -0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1.3" Size="0.4" Pos="(2.501; 1.32; 0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.501; 1.32; -0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="BlueStreak" Pos="(2.501; 1.32; 0.892)" ParentFrame="BoneWingsDefault_cdt" />
+			<!-- Left -->
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.409; 1.538; 0.94)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.41; 1.541; 0.973)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 1.2" Size="0.06" Pos="(2.385; 1.549; 1.009)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.432; 1.52; 0.947)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.436; 1.52; 0.982)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.421; 1.52; 1.016)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.3" Size="0.15" Pos="(2.436; 1.53; 0.982)" />
+			<!-- Right -->
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.409; 1.538; -0.94)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.41; 1.541; -0.973)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 1.2" Size="0.06" Pos="(2.385; 1.549; -1.009)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.432; 1.52; -0.947)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.436; 1.52; -0.982)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 245; 255) x 0.5" Size="0.050" Pos="(2.421; 1.52; -1.016)" ParentFrame="BoneWingsDefault_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.3" Size="0.15" Pos="(2.436; 1.53; -0.982)" />
+			
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(2.865; 1.326; 0)" ParentFrame="BoneWingsDefault_cdt" />
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="750"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_108_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_108_WINGS_01_NAME"
+		/>
+		<InstallSocket Type="Tuz108WarthogWings" />
+	</GameData>
+</TruckAddon>

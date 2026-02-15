@@ -1,0 +1,50 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			AngularDamping="0.0"
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="None"
+			Mass="500"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint Type="Fixed" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="2000"
+				ModelFrame="BoneRaftPrism_01_cdt"
+				NoSoftContacts="True"
+			>
+				<Constraint
+					LinearLimitsX="(-50; 50)"
+					LinearLimitsZ="(-50; 50)"
+					Type="Fixed"
+				>
+					<Motor Damping="1000" Spring="10" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="Default"
+					Mass="3000"
+					ModelFrame="BoneRaftHinge_01_cdt"
+					NoSoftContacts="True"
+				>
+					<Constraint
+						AxisLocal="(1; 1; 1)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="10"
+					>
+						<Motor Damping="20000" Spring="150000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(4.524; 1.039; 0.021)" ParentFrame="BoneRaftHinge_01_cdt"/>
+		<WinchSocket Pos="(-4.524; 1.039; 0.021)" ParentFrame="BoneRaftHinge_01_cdt"/>
+	</GameData>
+</ModelBrand>

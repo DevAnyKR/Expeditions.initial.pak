@@ -1,0 +1,105 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel
+		AcceptVisualDamage="false"
+		Collisions="None"
+		Mesh="trucks/tuning/khan_317_sentinel_tuning"
+		MeshFrame="khan_317_roofrack_01_spotlight"
+	>
+		<Body Collisions="None" Mass="0.5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.177; 2.276; 0.000)" />
+			<Flare _template="BlueStreak" Pos="(2.177; 2.276; 0.000)" />
+			<!-- Left Top-->
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.014)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; 0.039)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.065)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; 0.091)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.117)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.143)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.169)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.195)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.221)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.246)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.273)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.299)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; 0.325)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.350)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.377)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; 0.402)" />
+			<!-- Left Bottom-->
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.014)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.039)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.065)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.091)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.117)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.143)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.169)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.195)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.221)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.246)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.273)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.299)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.325)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.350)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.377)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; 0.402)" />
+			<!-- Left Top-->
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.014)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; -0.039)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.065)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; -0.091)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.117)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.143)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.169)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.195)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.221)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.246)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.273)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.299)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.290; -0.325)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.350)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.377)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.289; -0.402)" />
+			<!-- Left Bottom-->
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.014)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.039)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.065)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.091)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.117)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.143)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.169)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.195)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.221)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.246)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.273)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.299)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.325)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.350)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.377)" />
+			<Flare _template="LED" Size="0.06" Pos="(2.177; 2.263; -0.402)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="top"
+		IsConsumable="true"
+		Price="150"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="khan_317_sentinel_roofrack_01" />
+		<InstallSocket Type="Khan317RoofrackSpotlight" />
+	</GameData>
+</TruckAddon>

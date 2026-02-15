@@ -1,0 +1,698 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="4"
+			SteeringJointOffset="0.25"
+			Torque="full"
+			ParentFrame="BoneChassis_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<TieRod Mass="1">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-23"
+				MaxLimit="23"
+			>
+				<Motor
+					Damping="1.0"
+					Force="6000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</TieRod>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+			>
+				<Motor Damping="4" Spring="200" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Belt Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.012"
+				MaxLimit="0.008"
+			>
+				<Motor Damping="40" Spring="600" Type="Spring" />
+			</Constraint>
+		</Belt>
+		<Belt2 Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.004"
+				MaxLimit="0.003"
+			>
+				<Motor Damping="40" Spring="600" Type="Spring" />
+			</Constraint>
+		</Belt2>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="75.0"
+		ElectricChargeCapacity="11"
+		BackSteerSpeed="0.025"
+		DiffLockType="Uninstalled"
+		EngineIconMesh="env/engine_cotco_canyon"
+		EngineIconScale="1"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="0"
+		FuelCapacity="80"
+		Responsiveness="0.35"
+		SteerSpeed="0.035"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_4"
+			DefaultWheelType="wheels_cotco_canyon"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.703; 0.29; 0.83)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.703; 0.29; 0.83)" />
+			<Wheel _template="RearWheel" Pos="(-1.166; 0.29; 0.83)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.166; 0.29; 0.83)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="s_cotco_canyon_suspension_crawler"
+			Type="s_cotco_canyon"
+			MaxWheelRadiusWithoutSuspension="0.38"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.709"
+		/>
+		<Steam Origin="(2.257; 0.98; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="trucks/cotco_canyon/cotco_canyon_low" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/cotco_canyon/cotco_canyon_brakes_squeal" />
+			<Gear			Sound="trucks/cotco_canyon/cotco_canyon_gear_shift" />
+			<HandbrakeOff	Sound="trucks/cotco_canyon/cotco_canyon_handbrake_off" />
+			<AWD			Sound="trucks/cotco_canyon/cotco_canyon_awd" />
+			<Honk			Sound="trucks/cotco_canyon/cotco_canyon_honk" />
+			<ChassisStress	Sound="trucks/cotco_canyon/cotco_canyon_chassis" />
+			<Handbrake		Sound="trucks/cotco_canyon/cotco_canyon_handbrake" />
+			<EngineRev		Sound="trucks/cotco_canyon/cotco_canyon_rev" />
+			<EngineAccel	Sound="trucks/cotco_canyon/cotco_canyon_acc" />
+			<EngineStart	Sound="trucks/cotco_canyon/cotco_canyon_start" />
+			<EngineStop		Sound="trucks/cotco_canyon/cotco_canyon_stop" />
+			<EngineIdle		Sound="trucks/cotco_canyon/cotco_canyon_idle" />
+			<EngineIdle_2d	Sound="trucks/cotco_canyon/cotco_canyon_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/cotco_canyon/cotco_canyon_low" />
+			<EngineLow_2d	Sound="trucks/cotco_canyon/cotco_canyon_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/cotco_canyon/cotco_canyon_high" />
+			<EngineHigh_2d	Sound="trucks/cotco_canyon/cotco_canyon_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/cotco_canyon/cotco_canyon_heavy" />
+			<EngineHeavy_2d	Sound="trucks/cotco_canyon/cotco_canyon_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneGearstick" MinAngle="(0.8; 0.8; 0.8)" MaxAngle="(3; 3; 3)" MaxFrequency="0.2" />
+			<Shaker Frame="BoneExhaust" MinAngle="(0.15; 0.15; 0.15)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="4" />
+			<Shaker Frame="BoneTansferCase" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(1; 1; 1)" MaxFrequency="0.2" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.57"
+			MaxX="2.65"
+		/>
+		<LimitedFluid
+			Center="-1.630; 0.623; 0.015"
+			SizeX="0.703"
+			SizeY="0.198"
+			SizeZ="0.678"
+			Type="Box"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<Inventory MaxLimit="4" />
+		<DeployCost Cost = "1"/>
+		<Intake Dir="(1; 0; 0)" Origin="(2.295; 0.988; 0)" Size="0.5" />
+		<GearboxSocket Default="g_scout_cotco_canyon_default" Type="gearboxes_scouts_cotco_canyon, gearboxes_scouts_light_experimental" />
+		<FuelTank DamageCapacity="70" />
+		<Exhaust
+			Dir="(-1; 0; 0)"
+			IsLight="true"
+			Origin="(-2.150; 0.543; 0.399)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="ru_scout_cotco_canyon_engine_0" Type="e_us_scout_modern_cotco, e_scout_light_experimental" />
+		<Driver AnimationSet="Scout" Pos="(0.17; 0.94; 0.436)" SteeringWheelPos="(0.483; 1.362; 0.428)" LegsOffset="(0.0; 0.0; -0.1)"/>
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/cotco_canyon_arrow_01" Org="(0.736; 1.393; 0.34)" OutputAngles="(-130;95)" />
+			<Gauge Damping="0.97" Dir="(-0.93; 0.36; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/cotco_canyon_arrow_01" Org="(0.736; 1.393; 0.513)" OutputAngles="(-130;190)" />
+			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/cotco_canyon_arrow_02" Org="(0.734; 1.384; 0.419)" OutputAngles="(125;85)" Scale="1.0" />
+			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/cotco_canyon_arrow_02" Org="(0.734; 1.384; 0.434)" OutputAngles="(-125;-45)" Scale="1.0" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.17; 0.46; -0.325)" Max="(2.1; 1.15; 0.325)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.15; 0.41; -0.236)" Max="(1.17; 0.697; 0.236)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-2.0; 0.483; -0.35)" Max="(-1.3; 0.723; 0.35)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.45" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.45" Type="wheels_cotco_canyon" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.47" Type="wheels_cotco_canyon" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.47" Type="wheels_scout_yar_871" />
+		<Camera Center="(-1.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/cotco_canyon_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/cotco_canyon_glass__sh_d.tga"
+				ViewPos="(0.0; 1.67; 0.43)"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.6; 0.4)"
+				ViewDir="(1; -0.05; 0)"
+				ZoomViewPosOffset="(0.5; 0.065; 0)"
+			>
+				<Rear
+					HorTransitionEnd="-1"
+					HorTransitionStart="-0.9"
+					ViewPosOffset="(0.52; -0.1; 0.55)"
+				/>
+				<Mirror ClipDir="(-1; 0.15; -0.2)" ClipOffset="0.15" FOVScale="0.90" MeshFrame="mirror_left" ReflectionDir="(-1; 0.14; -0.26)" Size="(0.222; 0.184)" Pos="(0.775; 1.388; 0.939)" />
+				<Mirror ClipDir="(-1; 0.15; 0.8)" ClipOffset="0.15" FOVScale="0.90" MeshFrame="mirror_right" ReflectionDir="(-1; 0.11; 0.58)" Size="(0.222; 0.184)" Pos="(0.775; 1.388; -0.939)" />
+				<Mirror ClipDir="(-1; -0.135; 0.34)" ClipOffset="0.1" FOVScale="0.88" MeshFrame="hp_cab_mirror" ReflectionDir="(-1; -0.1; 0.33)" Size="(0.225; 0.070)" Pos="(0.645; 1.762; 0.001)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(0.25; 3.1; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.8; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleRear" />
+			<Axle Frame="BoneAxleFront" />
+		</Axles>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 4.0; 0.0)"/>
+	</TruckData>
+	<Snorkel Origin="(1.415; 1.202; -0.092)" />
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneFanRotator"
+		RotationSpeed="12"
+	/>
+	<PhysicsModel Mesh="trucks/cotco_canyon_susp1">
+		<NetSync Legacy="false" />
+		<Body 
+		CenterOfMassOffset="(-0.2; -0.15; 0)"
+		ImpactType="Truck" 
+		Mass="1075" 
+		NetSync="pv">
+			<Body
+				CenterOfMassOffset="(0.25; -0.35; 0)"
+				ImpactType="Truck"
+				Mass="880"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					ImpactType="Truck"
+					Mass="5"
+					ModelFrame="BoneSunshieldLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.5" Spring="5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					ImpactType="Truck"
+					Mass="5"
+					ModelFrame="BoneSunshieldRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="20"
+					>
+						<Motor Damping="1.2" Spring="5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="Belt2" ModelFrame="BoneBeltRight2_cdt" />
+				<Body _template="Belt" ModelFrame="BoneBeltRight1_cdt" />
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint Name="TieRodSteer" />
+				</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.38; 0.4; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 2" Size="0.3" Pos="(-2.201; 1.01; 0.766)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 2" Size="0.3" Pos="(-2.201; 1.01; -0.766)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(220; 220; 255) x 1" Pos="(-2.42; 0.4; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-2.186; 0.832; 0.766)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x .8" Size="0.3" Pos="(-2.186; 0.832; -0.766)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-2.186; 0.832; 0.766)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.3" Pos="(-2.186; 0.832; -0.766)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="StopSignal" Pos="(-2.38; 0.4; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(2.184; 0.913; 0.688)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(2.184; 0.913; -0.688)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(2.202; 0.919; 0.688)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(2.202; 0.919; -0.688)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.1" Pos="(2.202; 1.032; 0.704)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.1" Pos="(2.202; 1.032; -0.704)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.85" Size="0.25" Pos="(2.203; 1.084; 0.812)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.85" Size="0.25" Pos="(2.203; 1.084; -0.812)" Dir="(1; 0; -1)" DirAngle="90" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.185; 0.919; 0.758)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.185; 0.919; -0.758)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.184; 0.913; 0.688)" />
+			<Model _template="HeadLightRay" Org="(2.184; 0.913; -0.688)" />
+			<Model _template="HeadLightRay" Org="(2.188; 1.032; 0.704)" />
+			<Model _template="HeadLightRay" Org="(2.188; 1.032; -0.704)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(2.202; 0.919; 0.688)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(2.202; 0.919; -0.688)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.1" Size="0.15" Pos="(2.202; 1.032; 0.704)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.1" Size="0.15" Pos="(2.202; 1.032; -0.704)" />
+			<Flare _template="BlueStreak" Pos="(2.202; 0.919; 0.688)" />
+			<Flare _template="BlueStreak" Pos="(2.202; 0.919; -0.688)" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(2.202; 1.032; 0.704)" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(2.202; 1.032; -0.704)" />
+			
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/cotco_canyon_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(2.5; 0.979; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="18000"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		RecoveryPrice="1400"
+	>
+		<WinchSocket Pos="(2.3; 0.498; 0.407)" />
+		<WinchSocket Pos="(2.3; 0.498; -0.407)" />
+		<WinchSocket Pos="(-2.2; 0.534; -0.526)" />
+		<WinchSocket Pos="(0.167; 0.447; -0.448)" />
+		<WinchSocket Pos="(0.167; 0.447; 0.448)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_COTCO_CANYON_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgJeepWrangler"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="JeepLogo80"
+			UiName="UI_VEHICLE_COTCO_CANYON_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.8; 1.15; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.8, 1.63, -2.75)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.4; 1.5; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12; 1.5; 5.5)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.3; 1.5; -0.1)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.400; 7; -1.4)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.85; 1.1; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.75; 1.75; -7.15)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.1; 0.5; -0.6)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.5; 0.5; -3)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(3.2; 1.2; 0.6)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-1.7; 1.6; 2.3)" />
+			<CameraPos FOV="32.0" Name="supplies_default" InterestPosition="(6.8; 1.15; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(12.8, 1.63, -2.75)" />
+			<CameraPos FOV="32.0" Name="supplies_side_r" InterestPosition="(5.4; 1.5; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(12; 1.5; 5.5)" />
+			<CameraPos FOV="32.0" Name="supplies_roof" InterestPosition="(4.3; 1.5; -0.1)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.400; 7; -1.4)" />
+			<CameraPos FOV="32.0" Name="supplies_side_l" InterestPosition="(5.85; 1.1; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(10.75; 1.75; -7.15)" />
+			<CameraPos FOV="32.0" Name="supplies_wheels" InterestPosition="(6.1; 0.5; -0.6)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.5; 0.5; -3)" />
+			<CameraPos FOV="32.0" Name="supplies_rear" InterestPosition="(3.2; 1.2; 0.6)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-1.7; 1.6; 2.3)" />
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(4.964; 1.035; -0.323)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.969; 1.071; -2.481)" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" InterestPosition="(6.8; 1.035; 0.323)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(4.969; 1.071; 2.481)" />
+			<CameraPos FOV="32.0" Name="capote_sticker" InterestPosition="(6.663; 1.035; -0.504)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(9.231; 3.986; -0.596)" />
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(5.25; 1.035; -0.8)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(6.8; 4.8; -0.1)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(-0.618; 2.06; 0)" />
+		<CraneSocket Pos="(-2.134; 0.57; -0.57)" />
+		<CraneSocket Pos="(-2.134; 0.57; 0.57)" />
+		<CraneSocket Pos="(2.3; 0.498; 0.407)" />
+		<CraneSocket Pos="(2.3; 0.498; -0.407)" />
+		<CraneSocket Pos="(0.167; 0.447; -0.448)" />
+		<CraneSocket Pos="(0.167; 0.447; 0.448)" />
+		<AddonSockets DefaultAddon="cotco_canyon_front_bumper_default">
+			<Socket Names="CotcoCanyonFrontBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="cotco_canyon_rear_bumper_default">
+			<Socket Names="CotcoCanyonRearBumper" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="CotcoCanyonRearBumper01" NamesBlock="CotcoCanyonSpareWheel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRearBumper01Wheel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrack" ParentFrame="BoneCabin_cdt" />
+			<Socket
+				InCockpit="true"
+				Names="ScoutMetalDetector"
+				Offset="(-1.3; 2.055; 0)"
+				ParentFrame="BoneCabin_cdt"
+			>
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0; -0.045; 0)" />
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(1.93; -0.2; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonBeacon" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSpotlightLamp" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonVisor" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonHorn" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonBranchSection" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSpareWheel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSpareWheelSlot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRearBumper01Slot01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="cotco_canyon_step_default">
+			<Socket Names="CotcoCanyonStep" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="cotco_canyon_arches">
+			<Socket Names="CotcoCanyonWings" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonInvSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="cotco_canyon_diff_lock_default">
+			<Socket Names="CotcoCanyonDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot03" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot04" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot05" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonRoofrackSlot06" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonFrontBumper02Slot" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonFrontBumper01Slot" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonInvSlot02Slot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonInvSlot02Slot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="cotco_canyon_estock_default">
+			<Socket Names="cotco_canyon_estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="CotcoCanyonSticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneEngine_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSticker_Roof_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CotcoCanyonSticker_Hood_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- FRONT ARMS -->
+		<!-- Right Bottom Arm -->
+		<IKBone ModelFrame="IK_RF_ArmB_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_RF_ArmB_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Left Bottom Arm -->
+		<IKBone ModelFrame="IK_LF_ArmB_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_LF_ArmB_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Right Top Arm -->
+		<IKBone ModelFrame="IK_RF_ArmT_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_RF_ArmT_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Panar -->
+		<IKBone ModelFrame="IK_RF_Panar_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_RF_Panar_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- TIE ROD IK -->
+		<IKBone ModelFrame="IK_SteerPlank_A" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="IK_SteerPlank_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		
+		
+		<!-- REAR ARMS -->
+		<!-- Right Bottom Arm -->
+		<IKBone ModelFrame="IK_RR_ArmB_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_RR_ArmB_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Left Bottom Arm -->
+		<IKBone ModelFrame="IK_LR_ArmB_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_LR_ArmB_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Right Top Arm -->
+		<IKBone ModelFrame="IK_LR_ArmT_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_LR_ArmT_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Left Top Arm -->
+		<IKBone ModelFrame="IK_RR_ArmT_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_RR_ArmT_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<!-- SHOCKS -->
+		<!-- Shock Front Right -->
+		<IKBone ModelFrame="IK_RF_Shock_Top" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_RF_Shock_Bottom"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shock Front Right -->
+		<IKBone ModelFrame="IK_LF_Shock_Top" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFront"
+				ModelFrame="IK_LF_Shock_Bottom"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shock Rear Right -->
+		<IKBone ModelFrame="IK_RR_Shock_Top" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_RR_Shock_Bottom"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Shock Rear Left -->
+		<IKBone ModelFrame="IK_LR_Shock_Top" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleRear"
+				ModelFrame="IK_LR_Shock_Bottom"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+
+	</AutomaticIK>
+</Truck>

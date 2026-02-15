@@ -1,0 +1,31 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_rear_bumper_01_slot_01_repair">	
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="collie_pug_293_rear_bumper_01_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="collie_pug_293_rear_bumper_01" />
+		<InstallSocket Type="ColliePUG293RearBumper01Slot01" />
+	</GameData>
+</TruckAddon>

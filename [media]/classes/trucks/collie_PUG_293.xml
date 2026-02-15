@@ -1,0 +1,553 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="5"
+			SteeringJointOffset="0.35"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<Tools Collisions="None" Mass="15">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				LinearLimitsX="(-0.01; 0.01)"
+				LinearLimitsY="(-0.01; 0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="2.5" Spring="800" Type="Spring" />
+			</Constraint>
+		</Tools>
+		<TieRod Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-25"
+				MaxLimit="25"
+			>
+				<Motor
+					Damping="1.0"
+					Force="6000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</TieRod>
+		<SunShield Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="5"
+			>
+				<Motor Damping="0.01" Spring="10" Type="Spring" />
+			</Constraint>
+		</SunShield>
+		<SteeringShaft Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-120"
+				MaxLimit="120"
+			>
+				<Motor
+					Damping="1.0"
+					Force="60000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</SteeringShaft>
+		<Pocket ImpactType="Truck" Mass="0.5" NetSync="pv">
+			<Constraint
+				LinearLimitsX="(0; 0)"
+				LinearLimitsY="(0; 0)"
+				LinearLimitsZ="(-0.01; 0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="1" Spring="800" Type="Spring" />
+			</Constraint>
+		</Pocket>
+		<HeadphonesCable Collisions="None" Mass="0.5">
+			<Constraint
+				LinearLimitsX="(0; 0)"
+				LinearLimitsY="(-0.2; 0.2)"
+				LinearLimitsZ="(0; 0)"
+				Type="Fixed"
+			>
+				<Motor Damping="1" Spring="100" Type="Spring" />
+			</Constraint>
+		</HeadphonesCable>
+		<Headphones ImpactType="Truck" Mass="0.5" NetSync="pv">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+			>
+				<!-- <Motor Damping="0.001" Spring="0.5" Type="Spring" /> -->
+			</Constraint>
+		</Headphones>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="115.0"
+		ElectricChargeCapacity="16"
+		BackSteerSpeed="0.025"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_collie_pug"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.6"
+		ExhaustStartTime="0"
+		FuelCapacity="130"
+		Responsiveness="0.24"
+		SteerSpeed="0.025"
+		TruckImage="colliePug294mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_scout_collie_PUG_293"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.849; 0.65; 1.003)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.849; 0.65; 1.003)" />
+			<Wheel _template="RearWheel" Pos="(-1.426; 0.65; 1.003)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.426; 0.65; 1.003)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="collie_PUG_293_suspension_default"
+			Type="s_collie_PUG_293"
+			MaxWheelRadiusWithoutSuspension="1.62"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.692"
+		/>
+		<Steam Origin="(2.098; 1.576; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			MinDist="10.0"
+			Origin="(0; 0; 0)"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<EngineTrans	Sound="" />
+			<Handbrake		Sound="trucks/collie_pug_293/collie_pug_293_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/collie_pug_293/collie_pug_293_handbrake_off" />
+			<Reverse		Sound="trucks/collie_pug_293/collie_pug_293_reverse" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/yar_87/yar_87_brakes_squeal" />
+			<Gear			Sound="trucks/common/truck_gear_shift_heavy_rnd_set/truck_gear_shift_heavy_rnd" />
+			<Honk			Sound="trucks/collie_pug_293/collie_pug_293_honk_v3" />
+			<EngineRev		Sound="trucks/collie_pug_293/collie_pug_293_rev" />
+			<EngineAccel	Sound="trucks/collie_pug_293/collie_pug_293_acc" />
+			<EngineStart	Sound="trucks/collie_pug_293/collie_pug_293_start" />
+			<EngineStop		Sound="trucks/collie_pug_293/collie_pug_293_stop" />
+			<EngineIdle		Sound="trucks/collie_pug_293/collie_pug_293_idle" />
+			<EngineIdle_2d	Sound="trucks/collie_pug_293/collie_pug_293_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/collie_pug_293/collie_pug_293_low_bass" />
+			<EngineLow_2d	Sound="trucks/collie_pug_293/collie_pug_293_2d"			IsSound2D="true" />
+			<EngineHigh		Sound="trucks/collie_pug_293/collie_pug_293_high" />
+			<EngineHigh_2d	Sound="trucks/collie_pug_293/collie_pug_293_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/collie_pug_293/collie_pug_293_heavy" />
+			<EngineHeavy_2d	Sound="trucks/collie_pug_293/collie_pug_293_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3" />
+			<Shaker Frame="BoneGearstick" MaxAngle="(2; 2; 2)" MaxFrequency="0.5" />
+			<Shaker Frame="BoneGearstick2" MaxAngle="(2; 2; 2)" MaxFrequency="0.5" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/shaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/shaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2.4"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.4"
+			MaxX="3.75"
+		/>
+		<DeployCost Cost = "1"/>
+		<Inventory MaxLimit="5"/>
+		<Intake Dir="(1; 0; 0)" Origin="(2.886; 1.542; 0)" Size="1" />
+		<GearboxSocket Default="g_scout_collie_pug_default" Type="gearbox_collie, gearboxes_scouts_heavy_experimental" />
+		<FuelTank DamageCapacity="150" />
+		<Exhaust
+			Dir="(-1; -0.6; 0)"
+			IsLight="true"
+			Origin="(-0.412; 0.647; -0.622)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="ru_special_engine_collie_0" Type="e_ru_special_collie, e_scout_heavy_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.0; 0.02; -0.05)"
+			Pos="(0.547; 1.758; 0.581)"
+			SteeringWheelPos="(0.902; 2.072; 0.574)"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/collie_PUG_293_arrow_01" Org="(1.180; 2.17; 0.67)" OutputAngles="(-105; 120)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;200)" InputType="speed" Mesh="trucks/arrows/collie_PUG_293_arrow_01" Org="(1.180; 2.17; 0.418)" OutputAngles="(-105; 110)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/collie_PUG_293_arrow_02" Org="(1.14; 2.119; 0.62)" OutputAngles="(-39; 11)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/collie_PUG_293_arrow_02" Org="(1.14; 2.119; 0.466)" OutputAngles="(-39; 11)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/collie_PUG_293_arrow_02" Org="(1.14; 2.119; 0.368)" OutputAngles="(-39; 11)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.8; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/collie_PUG_293_arrow_02" Org="(1.14; 2.119; 0.719)" OutputAngles="(-40; 40)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.027; 0.98; -0.5)" Max="(2.7; 1.998; 0.5)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.49; 0.641; -0.3)" Max="(0.819; 0.94; 0.3)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.45, 0.875, -0.8)" Max="(0.35, 1.375, -0.4)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.45, 0.875, 0.4)" Max="(0.35, 1.375, 0.8)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.08" Scale="0.63" Type="wheels_scout_collie_PUG_293" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.65" Type="wheels_scout_collie_PUG_293" />
+		
+		<Camera Center="(-1.6; 0.8; 0)" Radius="1.2">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/yar_87_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/yar_87_glass__sh_d.tga"
+				ViewPos="(0.35; 2.531; 0.581)"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.6; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+				ZoomViewPosOffset="(0.6; 0.07; -0.1)"
+			>
+				<Rear ViewPosOffset="(0.5; 0.0; 0.6)" />
+				<Mirror ClipDir="(-0.94; 0; -0.342)" FOVScale="1.5" LookAtOffset="(0; 0; 0.06)" MeshFrame="mirror_left" ReflectionDir="(-0.94; 0; -0.342)" Size="(0.19; 0.4)" Pos="(1.036; 2.370; 1.161)" />
+				<Mirror ClipDir="(-0.819; 0; 0.574)" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.819; 0; 0.574)" Size="(0.19; 0.4)" Pos="(1.036; 2.370; -1.161)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(0.406; 3.894; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.8; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 4.5; 0.0)"/>
+	</TruckData>
+	<Snorkel Origin="(3.11; 1.521; 0)" />
+	<PhysicsModel Mesh="trucks/collie_PUG_293">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.05; -0.15; 0)"
+			ImpactType="Truck"
+			Mass="1700"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.35; -0.25; 0)"
+				ImpactType="Truck"
+				Mass="3300"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Tools" ModelFrame="BoneShovel_cdt" />
+				<Body _template="Tools" ModelFrame="BoneCrowbar_cdt" />
+				<Body _template="Tools" ModelFrame="BoneAxe_cdt">
+					<Constraint LinearLimitsX="(-0.03; 0.01)">
+						<!-- <Motor Damping="1.5" Spring="100" Type="Spring" /> -->
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="15" ModelFrame="BoneHook_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="10"
+					>
+						<Motor Damping="1.5" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+   				<Body
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneRadio_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="8"
+					>
+						<Motor Damping="0.001" Spring="0.1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneRadioCable_cdt"
+				>
+					<Constraint
+						LinearLimitsX="(0; 0)"
+						LinearLimitsY="(-0.2; 0.2)"
+						LinearLimitsZ="(0; 0)"
+						Type="Fixed"
+					>
+						<Motor Damping="1" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Headphones" ModelFrame="BoneHeadphonesL_cdt">
+					<Body _template="HeadphonesCable" ModelFrame="BoneHeadphonesCableL_cdt" />
+				</Body>
+				<Body _template="Headphones" ModelFrame="BoneHeadphonesR_cdt">
+					<Body _template="HeadphonesCable" ModelFrame="BoneHeadphonesCableR_cdt" />
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint Name="TieRodSteer" />
+				</Body>
+				<Body _template="SteeringShaft" ModelFrame="BoneSteeringShaft_cdt">
+					<Constraint Name="SteeringShaft" />
+				</Body>
+				<Body _template="Pocket" ModelFrame="BonePocketR_cdt" />
+				<Body _template="Pocket" ModelFrame="BonePocketL_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.792; 1.168; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 2" Size="0.3" Pos="(-2.755; 1.27; -0.968)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 2" Size="0.3" Pos="(-2.755; 1.27; 0.968)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.747; 1.116; -0.775)" />
+			<Light _template="ReverseSignal" Pos="(-2.747; 1.116; 0.775)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 1" Pos="(-2.744; 1.116; -0.775)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 1" Pos="(-2.744; 1.116; 0.775)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.747; 1.116; -0.775)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.747; 1.116; 0.775)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.8" Pos="(-2.755; 1.27; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 225) x 0.9" Pos="(3.243; 1.5; -0.664)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 225) x 0.9" Pos="(3.243; 1.5; 0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.6" Size="0.3" Pos="(-2.755; 1.27; -0.968)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.6" Size="0.3" Pos="(-2.755; 1.27; 0.968)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size="0.3" Pos="(3.028; 1.5; -0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size="0.3" Pos="(3.028; 1.5; 0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 140; 0) x 0.5" Size="0.20" Pos="(-2.781; 2.875; -0.575)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 140; 0) x 0.5" Size="0.20" Pos="(-2.781; 2.875; 0.575)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.039; 1.5; -0.664)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(3.039; 1.5; 0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 230; 210) x 1.3" Size="0.3" Pos="(3.028; 1.5; -0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(235; 230; 210) x 1.3" Size="0.3" Pos="(3.028; 1.5; 0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.039; 1.5; -0.664)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.039; 1.5; 0.664)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/collie_PUG_293_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Color="g(255; 212; 154) x 5" Pos="(3.299; 1.500; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="28000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		UnlockByObjective=""
+		RecoveryPrice="3800"
+	>
+		<WinchSocket Pos="(3.102; 0.995; -0.482)" />
+		<WinchSocket Pos="(3.102; 0.995; 0.482)" />
+		<WinchSocket Pos="(-2.754; 1.013; 0)" />
+		<WinchSocket Pos="(0.335; 1.124; 0.993)" />
+		<WinchSocket Pos="(0.335; 1.124; -0.993)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_COLLIE_PUG_293_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458=""
+			UiIcon40x40="scoutVehicleImg"
+			UiIcon576x640="shopImgColliePUGExp"
+			UiIconLogo=""
+			UiName="UI_VEHICLE_COLLIE_PUG_293_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(15.5; 2.0; -5.389)" InterestPosition="(6.0; 1.6; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" /> 
+			<CameraPos FOV="32.0" Name="wheels" Position="(4.3; 0.7; -4.5)" InterestPosition="(5.35; 0.7; -1)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" /> 
+			<CameraPos FOV="32.0" Name="side_r" Position="(13.0; 2.0; 8.0)" InterestPosition="(4.5; 1.846; 0.8)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="roof" Position="(7.449; 7.0; -1.329)" InterestPosition="(4.15; 2.5; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="side_l" Position="(13.0; 1.735; -7.5)" InterestPosition="(5.9; 1.6; -0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="rear" Position="(-5.5; 2.0; 4.5)" InterestPosition="(3.0; 1.5; -0.8)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="supplies_default" Position="(15.5; 2.0; -5.389)" InterestPosition="(6.0; 1.6; 0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" /> 
+			<CameraPos FOV="32.0" Name="supplies_roof" Position="(7.449; 7.0; -1.329)" InterestPosition="(4.15; 2.5; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"/>
+			<CameraPos FOV="32.0" Name="supplies_side_l" Position="(13.0; 1.735; -7.5)" InterestPosition="(5.9; 1.6; -0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"/>
+			<CameraPos FOV="32.0" Name="supplies_rear" Position="(-5.5; 2.0; 4.5)" InterestPosition="(3.0; 1.5; -0.8)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			
+			<CameraPos FOV="32.0" Name="side_l_sticker" Position="(0.075; 2.9; -3.554)" InterestPosition="(1.35; 2.35; -0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="side_r_sticker" Position="(0.384; 2.9; 3.473)" InterestPosition="(3.437; 2.25; -0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="roof_sticker" Position="(3.8; 5.6; -0.5)" InterestPosition="(2.1; 2.0; -0.694)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+			<CameraPos FOV="32.0" Name="capote_sticker" Position="(8.603; 4.344; -0.7)" InterestPosition="(6.8; 2.0; -1.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"/>
+		</CustomizationCameras>
+		<AddonSockets>
+			<Socket Names="ColliePUG293InvSlotWheelR" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293InvSlot" NamesBlock="ColliePUG293Wings02" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="collie_pug_293_front_bumper_default">
+			<Socket Names="ColliePUG293FrontBumper" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="collie_pug_293_rear_bumper_default">
+			<Socket Names="ColliePUG293RearBumper" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="collie_pug_293_arches_default">
+			<Socket Names="ColliePUG293Wings" NamesBlock="ColliePUG293Wings02" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293Outerframe" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRack" Offset="(0; 0; 0)" />
+			<Socket Names="DroneScoutCarrierColliePUG" NamesBlock="ColliePUG293Outerframe" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293Snorkel" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293Step" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293SpotLight" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293FrontBumper02Slot01" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RearBumper01Slot01" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RearBumper01Slot02" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RearBumper02Slot01" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot01" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot02" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot03" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot04" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot05" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ColliePUG293RoofRackSlot06" Offset="(0; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="collie_pug_293_estock_default">
+			<Socket Names="Colliepugestock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		
+		<!-- STICKERS -->
+		<AddonSockets >
+			<Socket Names="ColliePUG293Sticker_Door_L" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="ColliePUG293Sticker_Door_R" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="ColliePUG293Sticker_Hood_01" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="ColliePUG293Sticker_Roof_01" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->
+		
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="SteeringShaft" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodHinge" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="BoneTieRodPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonFRBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonFR1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonFLBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonFL1"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRLBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonL1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRRBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonR1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

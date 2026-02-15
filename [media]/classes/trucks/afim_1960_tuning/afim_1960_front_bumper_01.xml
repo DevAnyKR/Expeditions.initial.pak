@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_front_bumper_01">
+		<Body ImpactType="Truck" Mass="90" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+				<Body Collisions="None" Mass="1" ModelFrame="BoneRopeB_cdt">	
+					<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="12"
+					/>
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneHookB_cdt">	
+					<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+					/>
+					<Motor Damping="10" Spring="1000" Type="Spring" />
+				</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_1960_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_1960_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="Afim1960FrontBumper" />
+	</GameData>
+</TruckAddon>

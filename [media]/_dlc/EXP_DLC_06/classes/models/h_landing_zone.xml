@@ -1,0 +1,7 @@
+<ModelBrand Instanced="true" InstancedAsModel="true" DynamicModel="false"
+	ClipCamera="true">
+	<PhysicsModel>
+		<Body Collisions="None" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/h_landing_zone_lmk" />
+</ModelBrand>

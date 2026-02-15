@@ -1,0 +1,25 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_invslot_02">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneInvSlot02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_310_INV_SLOT_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_310_INV_SLOT_02_NAME"
+		/>
+		<InstallSocket Type="Step310eInvSlot02" />
+	</GameData>
+</TruckAddon>

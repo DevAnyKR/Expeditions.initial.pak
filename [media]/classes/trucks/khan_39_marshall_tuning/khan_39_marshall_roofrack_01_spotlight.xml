@@ -1,0 +1,38 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_roofrack_01_spotlight">
+		<Body Collisions="None" Mass="3" ModelFrame="BoneRoofrack01Spotlight_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.355; 2.496; 0.118)" />
+			<Model _template="HeadLightRay" Org="(0.355; 2.496; -0.118)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 235) x 1.3" Size="0.30" Pos="(0.355; 2.51; 0.13)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 235) x 1.3" Size="0.30" Pos="(0.355; 2.51s; -0.13)" />
+			<Flare _template="BlueStreak" Pos="(0.355; 2.496; 0.0)" />
+			
+		</MainHeadLight>
+				
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SPOTLIGHT_A_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_ROOFRACK_SPOTLIGHT_A_NAME"
+		/>
+		<RequiredAddon Types="khan_39_marshall_roofrack_01" />
+		<InstallSocket Type="KHAN39MarshallRoofrackLight" />
+	</GameData>
+</TruckAddon>

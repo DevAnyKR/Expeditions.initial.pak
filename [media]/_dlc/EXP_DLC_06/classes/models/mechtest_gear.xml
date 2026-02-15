@@ -1,0 +1,17 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Mass="500"
+			ModelFrame="BoneDrum_cdt"
+			NoSoftContacts="True"
+			CenterOfMassOffset="(0; 0; 0)"
+		>
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="UnlimitedHinge"
+			/>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,35 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_rear_bumper_00">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.256; 0.718; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVRearBumper" />
+	</GameData>
+</TruckAddon>

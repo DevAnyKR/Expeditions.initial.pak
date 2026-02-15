@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_outerframe_light_01a">
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneOuterframe01Light01a_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.3" Size="3" Pos="(4.530; 2.748; 0)" ParentFrame="BoneCabin_cdt" />		
+ 			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Size="1" Pos="(4.530; 2.748; 0)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" ExtraColor="g(117; 212; 255)" />
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHT_FRAME_A_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_NAME"
+		/>
+		<RequiredAddon Types="tatra_force_t815_7_outerframe_01" />
+		<InstallSocket Type="TatraForceT8157OuterFrameLight" />
+	</GameData>
+</TruckAddon>

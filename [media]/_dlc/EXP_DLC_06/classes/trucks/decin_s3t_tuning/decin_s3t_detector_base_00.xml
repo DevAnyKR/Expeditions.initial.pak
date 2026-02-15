@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_detector_base_00">
+		<Body Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_DECIN_S3T_DETECTOR_BASE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DECIN_S3T_DETECTOR_BASE_NAME"
+		/>
+		<RequiredAddon Types="decin_s3t_outerframe_00" />
+		<InstallSocket Type="DecinS3TDetectorBase" />
+	</GameData>
+</TruckAddon>

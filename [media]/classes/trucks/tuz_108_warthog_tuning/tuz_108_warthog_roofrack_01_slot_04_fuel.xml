@@ -1,0 +1,38 @@
+<_templates Include="trucks">
+	<Constraint>
+		<SideFixed LinearLimitsX="(-0.015;0.01)" LinearLimitsY="(0;1)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</SideFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15">
+		<LimitedFluid Center="-0.07;2.859;-0.357" SizeX="0.347" SizeY="0.159" SizeZ="0.732" Type="Box" ParentFrame="BoneCabin_cdt" />
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="roofrack_01_canister_big_04" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_108_warthog_tuning" MeshFrame="roofrack_01_canister_big_04">
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneRoofrack01Slot04FuelBig_cdt">
+			<Constraint _template="SideFixed">
+				<SideFixed/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_108_warthog_roofrack_01" />
+		<InstallSocket Type="Tuz108WarthogRoofrack01Slot04" />
+	</GameData>
+</TruckAddon>

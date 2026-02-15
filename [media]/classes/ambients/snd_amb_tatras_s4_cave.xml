@@ -1,0 +1,120 @@
+<AmbientSounds>
+	<Volume Min="1.0" Max="1.0" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_winter_s3/amb_winter_s3_cave_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_cave_water_drops_rnd_set/amb_cave_water_drops_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "1"
+			MaxInterval = "10"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_rocks_fall_cave_rnd_set/amb_rocks_fall_cave_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "10"
+			MaxRadius = "50"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayForest>
+	<DayWind Sound="amb/amb_winter_s3/amb_winter_s3_cave_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_cave_water_drops_rnd_set/amb_cave_water_drops_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "1"
+			MaxInterval = "10"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_rocks_fall_cave_rnd_set/amb_rocks_fall_cave_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "10"
+			MaxRadius = "50"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/amb_winter_s3/amb_winter_s3_cave_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_cave_water_drops_rnd_set/amb_cave_water_drops_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "1"
+			MaxInterval = "10"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_rocks_fall_cave_rnd_set/amb_rocks_fall_cave_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "10"
+			MaxRadius = "50"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/amb_winter_s3/amb_winter_s3_cave_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_cave_water_drops_rnd_set/amb_cave_water_drops_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "1"
+			MaxInterval = "10"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_rocks_fall_cave_rnd_set/amb_rocks_fall_cave_rnd_set"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "10"
+			MaxRadius = "50"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</NightWind>
+</AmbientSounds>

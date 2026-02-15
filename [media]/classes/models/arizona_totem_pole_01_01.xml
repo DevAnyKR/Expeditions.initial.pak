@@ -1,0 +1,52 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="50"
+			AttenStart="20"
+			Color="g(197; 170; 99) x 0.1"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="0.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(1.2; 1.89; 0.16)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="20"
+			Color="g(255; 210; 150) x 0.25"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(0.32; 2.18; -0.046)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="20"
+			Color="g(255; 210; 150) x 0.25"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(-0.46; 0.64; 0.3)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="20"
+			Color="g(255; 210; 150) x 0.25"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(0.17; 0.52; 0.55)"
+		/>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+</ModelBrand>

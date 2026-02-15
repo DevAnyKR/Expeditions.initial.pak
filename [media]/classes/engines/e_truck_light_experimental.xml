@@ -1,0 +1,33 @@
+<_templates Include="trucks"/>
+<EngineVariants>
+	<Engine
+		_template="EngineDefaultVars"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="500"
+		DamagedConsumptionModifier="0.0"
+		EngineResponsiveness="0.03"
+		FuelConsumption="1.0"
+		Name="e_truck_light_experimental_engine_0"
+		Torque="140000"
+		BrakesDelay="0.5"
+		MaxDeltaAngVel="0.02"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="1.0"
+		EngineTowingTorqueModifier="1.1"
+		
+	>
+		<GameData
+			Price="60000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_TRUCK_LIGHT_EXPERIMENTAL_0_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_TRUCK_LIGHT_EXPERIMENTAL_0_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

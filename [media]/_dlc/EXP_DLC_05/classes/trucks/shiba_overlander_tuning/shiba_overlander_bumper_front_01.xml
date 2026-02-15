@@ -1,0 +1,61 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_front_bumper_01">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneFrontBumper01_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper01HookL_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-48"
+					MaxLimit="230"
+				>
+					<Motor Damping="0.02" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper01HookR_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-21"
+					MaxLimit="20"
+				>
+					<Motor Damping="0.05" Spring="0.3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(2.258; 0.820; 0.522)" />
+		<WinchSocket Pos="(2.258; 0.820; -0.522)" />
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_OVERLANDER_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_OVERLANDER_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderFrontBumper" />
+	</GameData>
+</TruckAddon>

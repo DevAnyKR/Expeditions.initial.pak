@@ -1,0 +1,40 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="80"
+		Name="drone_cargo_suspension_default"
+	>
+		<Suspension
+			Damping="0.5"
+			Height="0.25"
+			Strength="0.0075"
+			WheelType="front"
+			BrokenSuspensionMax="-0.025"
+			SuspensionMin="-0.3"
+			SuspensionMax="-0.075"
+		/>
+		<Suspension
+			Damping="0.5"
+			Height="0.25"
+			Strength="0.0075"
+			WheelType="rear"
+			BrokenSuspensionMax="-0.025"
+			SuspensionMin="-0.3"
+			SuspensionMax="-0.075"
+		/>
+		<GameData
+			Price="0"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

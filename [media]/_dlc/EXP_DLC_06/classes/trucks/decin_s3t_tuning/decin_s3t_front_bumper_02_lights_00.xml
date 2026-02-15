@@ -1,0 +1,83 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel
+		AcceptVisualDamage="false"
+		Collisions="None"
+		Mesh="trucks/tuning/decin_s3t_tuning"
+		MeshFrame="decin_s3t_front_bumper_02_lights_00"
+	>
+		<Body Collisions="None" Mass="0.5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="BlueStreak" Size="0.5" Pos="(3.415; 1.367; 0.000)" />
+			<!-- Mid -->
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.000)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.000)" />
+			<!-- Right Upper Row -->
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.017)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.035)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.052)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.070)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.087)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.104)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.121)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.139)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.156)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; 0.174)" /> 
+			<!-- Right Lower Row -->
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.017)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.035)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.052)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.070)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.087)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.104)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.121)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.139)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.156)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; 0.174)" />
+			<!-- Left Upper Row -->
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.017)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.035)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.052)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.070)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.087)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.104)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.121)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.139)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.156)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.375; -0.174)" /> 
+			<!-- Left Lower Row -->
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.017)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.035)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.052)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.070)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.087)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.104)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.121)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.139)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.156)" />
+			<Flare _template="LED" Size="0.05" Color="g(141; 133; 117) x 1.2" Pos="(3.415; 1.359; -0.174)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 255; 255) x 1.5" />
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		Price="150"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="decin_s3t_front_bumper_02" />
+		<InstallSocket Type="DecinS3TFrontBumperLights" />
+	</GameData>
+</TruckAddon>

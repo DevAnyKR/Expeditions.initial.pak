@@ -1,0 +1,6 @@
+<ModelBrand>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fire_lookout_01_lmk" />
+</ModelBrand>

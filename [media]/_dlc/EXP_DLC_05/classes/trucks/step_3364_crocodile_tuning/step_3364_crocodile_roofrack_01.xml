@@ -1,0 +1,48 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_roofrack_01">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneRoofrack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" InnerCone="90" OuterCone="120" Pos="(0.928; 2.43; 0.632)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" InnerCone="90" OuterCone="120" Pos="(0.928; 2.43; -0.632)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.928; 2.43; 0.632)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.928; 2.43; -0.632)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(0.928; 2.43; 0.632)" />
+			<Model _template="HeadLightRay" Org="(0.928; 2.43; -0.632)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.928; 2.43; 0.632)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.928; 2.43; -0.632)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.928; 2.43; 0.632)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.928; 2.43; -0.632)" />
+			<Flare _template="BlueStreak" Pos="(0.928; 2.43; 0.632)" />
+			<Flare _template="BlueStreak" Pos="(0.928; 2.43; -0.632)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileRoofRack" />
+	</GameData>
+</TruckAddon>

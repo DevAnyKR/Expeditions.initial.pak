@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_pickup_00">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_PICKUP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_PICKUP_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconPickup" />
+	</GameData>
+</TruckAddon>

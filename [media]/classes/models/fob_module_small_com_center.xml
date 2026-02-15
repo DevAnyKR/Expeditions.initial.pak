@@ -1,0 +1,70 @@
+<ModelBrand DynamicModel="true"
+	ClipCamera="true"
+	Instanced="true"
+	DynamicModel="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(256; 201; 200) x 0.32"
+			Dir="(0; 1; 0)" 
+			Pos="(-0.441; 2.014; 0.766)"
+			Size="0.2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="500" NoSoftContacts="true" ModelFrame="station_cdt">
+			<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="3000" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="box1_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="box2_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="box3_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="200" NoSoftContacts="true" ModelFrame="box4_cdt">
+			<Constraint BreakOffThreshold="50" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="40" NoSoftContacts="true" ModelFrame="thermos_cdt">
+			<Constraint BreakOffThreshold="5" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cup_cdt">
+			<Constraint BreakOffThreshold="5" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="120" NoSoftContacts="true" ModelFrame="table_cdt">
+			<Constraint BreakOffThreshold="60" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="laptop_cdt">
+			<Constraint BreakOffThreshold="10" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="30" NoSoftContacts="true" ModelFrame="chair_cdt">
+			<Constraint BreakOffThreshold="5" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="200" NoSoftContacts="true" ModelFrame="box5_cdt">
+			<Constraint BreakOffThreshold="50" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="15" NoSoftContacts="true" ModelFrame="wrench1_cdt">
+			<Constraint BreakOffThreshold="5" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="15" NoSoftContacts="true" ModelFrame="wrench2_cdt">
+			<Constraint BreakOffThreshold="5" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_com_center_lmk" />
+</ModelBrand>

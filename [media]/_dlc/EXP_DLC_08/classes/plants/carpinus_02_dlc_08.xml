@@ -1,0 +1,28 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" >
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" DebrisType="FoliageAutumn" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="BranchWithLeaves" Friction="0.1" NoSoftContacts="true" IsCapsuleCDT="false" AngularDamping="0" Mass="250" DebrisType="FoliageAutumn" ModelFrame="BoneBranch1">
+				<Constraint TwistMax="8" Cone="15" Damping="0.001" Spring="10000000" _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" Friction="0.1" NoSoftContacts="true" IsCapsuleCDT="false" AngularDamping="0" Mass="250" DebrisType="FoliageAutumn" ModelFrame="BoneBranch2">
+				<Constraint TwistMax="8" Cone="15" Damping="0.001" Spring="10000000" _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" Friction="0.1" NoSoftContacts="true" IsCapsuleCDT="false" AngularDamping="0" Mass="250" DebrisType="FoliageAutumn" ModelFrame="BoneBranch3">
+				<Constraint TwistMax="8" Cone="15" Damping="0.001" Spring="10000000" _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" Friction="0.1" NoSoftContacts="true" IsCapsuleCDT="false" AngularDamping="0" Mass="250" DebrisType="FoliageAutumn" ModelFrame="BoneBranch4">
+				<Constraint TwistMax="8" Cone="15" Damping="0.001" Spring="10000000" _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" Friction="0.1" NoSoftContacts="true" IsCapsuleCDT="false" AngularDamping="0" Mass="250" DebrisType="FoliageAutumn" ModelFrame="BoneBranch5">
+				<Constraint TwistMax="8" Cone="15" Damping="0.001" Spring="10000000"  _template="BranchWithLeaves" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.45" Size="(10.0; 10.0)" />
+	<Landmark Mesh="landmarks/carpinus_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0.047; 0.589; -0.023)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

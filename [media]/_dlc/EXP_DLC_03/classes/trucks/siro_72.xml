@@ -1,0 +1,598 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="33"
+			SteeringCastor="4"
+			SteeringJointOffset="0.18"
+			CamberAnglePhysics="1.0"
+			CamberAngleRender="1.0"
+			Torque="full"
+			ParentFrame="BoneChassis_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<TieRod Mass="1">
+			<Constraint
+				AxisLocal="(0; -1; 0)"
+				Type="Hinge"
+				MinLimit="-13"
+				MaxLimit="27"
+			>
+				<Motor
+					Damping="1.0"
+					Force="10000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</TieRod>
+		<Sunshield Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="20" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="20" Spring="100" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="18"
+			>
+				<Motor Damping="0.5" Spring="0.22" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="75.0"
+		ElectricChargeCapacity="9"
+		BackSteerSpeed="0.045"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_siro_72"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.9"
+		ExhaustStartTime="0.95"
+		FuelCapacity="95"
+		Responsiveness="0.55"
+		SteerSpeed="0.05"
+		TruckImage="siro72"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts, winches_scouts_siro_72"/>
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_4"
+			DefaultWheelType="wheels_siro_72"
+		>
+			<Wheel _template="FrontWheel" Pos="(0.823; 0.353; 0.825)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(0.823; 0.353; 0.825)" />
+			<Wheel _template="RearWheel" Pos="(-1.552; 0.354; 0.825)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.552; 0.354; 0.825)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="siro_72_suspension_default"
+			Type="s_siro_72"
+			MaxWheelRadiusWithoutSuspension="0.3"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackFL"
+			FrameSteerRight="BoneRackFR"
+			RackHalfSizeZ="0.364"
+		/>
+		<Steam Origin="(0.833; 0.913; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_old" />
+			<Reverse		Sound="trucks/siro_72/siro_72_low" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/int_scout_800/int_scout_800_brakes_squeal" />
+			<Handbrake		Sound="trucks/common/truck_handbrake_switch_alt1" />
+			<HandbrakeOff	Sound="trucks/common/truck_handbrake_switch_off" />
+			<AWD			Sound="trucks/common/truck_awd_rnd_set/truck_awd_rnd" />
+			<Gear			Sound="trucks/common/truck_gear_shift_light_rnd_set/truck_gear_shift_light_rnd" />
+			<HeadLight		Sound="trucks/common/truck_headlight_switch" />
+			<Honk			Sound="trucks/siro_72/siro_72_honk" />
+			<EngineRev		Sound="trucks/siro_72/siro_72_rev" />
+			<EngineAccel	Sound="trucks/siro_72/siro_72_acc" />
+			<EngineStart	Sound="trucks/siro_72/siro_72_start" />
+			<EngineStop		Sound="trucks/siro_72/siro_72_stop" />
+			<EngineIdle		Sound="trucks/siro_72/siro_72_idle" />
+			<EngineIdle_2d	Sound="trucks/siro_72/siro_72_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/siro_72/siro_72_low" />
+			<EngineLow_2d	Sound="trucks/siro_72/siro_72_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/siro_72/siro_72_high" />
+			<EngineHigh_2d	Sound="trucks/siro_72/siro_72_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/siro_72/siro_72_heavy" />
+			<EngineHeavy_2d	Sound="trucks/siro_72/siro_72_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_swing_small_rnd_set/truck_swing_small_rnd" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="4" />
+			<Shaker Frame="BoneGearstick" MinAngle="(1.1; 1.1; 1.1)" MaxAngle="(2.2; 2.2; 2.2)" MaxFrequency="1.5" />
+			<Shaker Frame="BoneTansferCase" MinAngle="(0.6; 0.6; 0.6)" MaxAngle="(1; 1; 1)" MaxFrequency="1.3" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3"
+			MaxX="2"
+		/>
+		<LimitedFluid
+			Center="-1.943;0.598;0.0"
+			SizeX="0.47"
+			SizeY="0.208"
+			SizeZ="0.652"
+			Type="Box"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<Inventory MaxLimit="3" />
+		<Intake Dir="(1; 0; 0)" Origin="(1.42; 0.901; 0)" Size="0.5" />
+		<GearboxSocket Default="g_siro_72_default" Type="gearboxes_scouts_siro_72, gearboxes_scouts_light_experimental" />
+		<FuelTank DamageCapacity="70" />
+		<Exhaust
+			Dir="(0.287; -0.857; 0.428)"
+			IsLight="true"
+			Origin="(-2.291; 0.445; 0.433)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="e_ru_siro_72_engine_0" Type="e_ru_scout_old_siro_72, e_scout_light_experimental" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(-0.02; 0.035; -0.07)"
+			Pos="(-0.449; 0.86; 0.42)"
+			SteeringWheelPos="(-0.144; 1.237; 0.413)"
+		/>
+		<DeployCost Cost="1" />
+		<Dashboard>
+			<Gauge Dir="(-0.976; 0.219; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/siro_72_arrow_01" Org="(0.102; 1.26; 0.309)" OutputAngles="(-121; 145)" />
+			<Gauge Damping="0.99" Dir="(-0.976; 0.219; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/siro_72_arrow_01" Org="(0.102; 1.26; 0.469)" OutputAngles="(-115;90)" />
+			<Gauge Damping="0.99" Dir="(-1; 0.2; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/siro_72_arrow_02" Org="(0.097; 1.242; 0.389)" OutputAngles="(-136;-218)" />
+			<Gauge Damping="0.9" Dir="(-0.976; 0.219; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/siro_72_arrow_02" Org="(0.101; 1.257; 0.239)" OutputAngles="(-135;-85)" />
+			<Gauge Damping="0.99" Dir="(-0.976; 0.219; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/siro_72_arrow_02" Org="(0.101; 1.257; 0.54)" OutputAngles="(135;95)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.506; 0.518; -0.45)" Max="(1.377; 1.123; 0.45)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-2.214; 0.488; -0.336)" Max="(-1.621; 0.768; 0.336)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.093; 0.381; -0.231)" Max="(0.521; 0.746; 0.249)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.43" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.43" Type="wheels_siro_72" />
+		<Camera Center="(-1.6; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.55)"
+				LimitsVer="(-0.7; 0.3)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/siro_72_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/siro_72_glass__sh_d.tga"
+				ViewPos="(-0.65; 1.65; 0.4)"
+				ZoomViewPosOffset="(0.43; 0.035; -0.02)"
+			>
+				<Rear ViewPosOffset="(0.4; -0.15; 0.6)" />
+				<Mirror ClipDir="(-0.911; 0.05; -0.28)" ClipOffset="0.1" FOVScale="1.05" MeshFrame="mirror_left" ReflectionDir="(-0.911; 0.1; -0.28)" Size="(0.2; 0.16)" Pos="(-0.022; 1.399; 0.875)" />
+				<Mirror ClipDir="(-0.911; 0.05; -0.409)" ClipOffset="0.1" FOVScale="1.05" LookAtOffset="(0; 0; 0.03)" MeshFrame="mirror_right" ReflectionDir="(-0.911; 0.05; 0.52)" Size="(0.2; 0.16)" Pos="(-0.022; 1.399; -0.875)" />
+				<Mirror ClipDir="(-0.953; -0.199; 0.227)" ClipOffset="0.1" FOVScale="1.3" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.953; -0.07; 0.315)" Size="(0.28; 0.12)" Pos="(-0.061; 1.706; -0.003)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(-0.2; 3.4; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.9; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleFL" IsIndependent="true" />
+			<Axle Frame="BoneAxleFR" IsIndependent="true" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 4.0; 0.0)"/>
+	</TruckData>
+	<Snorkel Origin="(1.415; 0.914; 0)" />
+	<PhysicsModel Mesh="trucks/siro_72">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.15; -0.1; 0)"
+			ImpactType="Truck"
+			Mass="850"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.25; -0.5; 0)"
+				ImpactType="Truck"
+				Mass="995"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="Mudguard" ModelFrame="BoneMudguardLeftRear_cdt" />
+				<Body _template="Mudguard" ModelFrame="BoneMudguardRightRear_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body Collisions="None" Mass="1" ModelFrame="BoneBelt1_cdt">
+					<Constraint
+						LinearLimitsX="(-0.03; 0.03)"
+						LinearLimitsY="(-0.01; 0.01)"
+						LinearLimitsZ="(-0.01; 0.01)"
+						Type="Fixed"
+					>
+						<Motor Damping="10" Spring="150" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1.5" ModelFrame="BoneKeychain_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-40"
+						MaxLimit="40"
+					>
+						<Motor Damping="0.01" Spring="0.025" Type="Spring" />
+					</Constraint>
+					<Body Collisions="None" Mass="1.0" ModelFrame="BoneKeychain2_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 1)"
+							Type="Hinge"
+							MinLimit="-30"
+							MaxLimit="30"
+						>
+							<Motor Damping="0.005" Spring="0.015" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt" />
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod01_cdt">
+				<Constraint Name="TieRodSteer01" />
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod02_cdt">
+				<Constraint Name="TieRodSteer02" />
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneWipersR_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="0.1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneWipersL_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="0.1" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(220; 0; 0) x 1.5" Pos="(-2.399; 0.4; 0)" />
+			<Flare _template="StopSignal" Color="g(220; 0; 0) x 2" Size="0.2" Pos="(-2.373; 0.935; 0.708)" />
+			<Flare _template="StopSignal" Color="g(220; 0; 0) x 2" Size="0.2" Pos="(-2.373; 0.935; -0.708)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.42; 0.4; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 1" Size="0.2" Pos="(-2.359; 0.854; 0.706)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 1" Size="0.2" Pos="(-2.359; 0.854; -0.706)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.359; 0.854; 0.706)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.359; 0.854; -0.706)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(1.388; 0.955; 0)" />
+			<Light _template="IgnitionSignalRed" Pos="(-2.399; 0.963; 0)" />
+			<!-- Blinker -->
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 186; 112) x 1" Dir="(1; 0; 0)" DirAngle="90" Size="0.20" Pos="(1.4; 0.811; 0.6)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 186; 112) x 1" Dir="(1; 0; 0)" DirAngle="90" Size="0.20" Pos="(1.4; 0.811; -0.6)" />
+			<!-- Headlight -->
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Size="0.4" Pos="(1.39; 0.955; 0.605)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Size="0.4" Pos="(1.39; 0.955; -0.605)" />
+			<!-- Double Blinker -->
+			<Flare _template="IgnitionSignalRed" Color="g(220; 0; 0) x 1" Size="0.4" Pos="(-2.385; 0.981; 0.705)" />
+			<Flare _template="IgnitionSignalRed" Color="g(220; 0; 0) x 1" Size="0.4" Pos="(-2.385; 0.981; -0.705)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.388; 0.955; 0.605)" />
+			<Model _template="HeadLightRay" Org="(1.388; 0.955; -0.605)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.4" Pos="(1.388; 0.955; 0.605)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.4" Pos="(1.388; 0.955; -0.605)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Pos="(1.388; 0.955; 0.605)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.3" Pos="(1.388; 0.955; -0.605)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/siro_72_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.388; 0.955; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="22000"
+		Recallable="true"
+		RecoveryPrice="1400"
+		UnlockByObjective=""
+		UnlockByRank="0"
+	>
+		<WinchSocket Pos="(-0.785; 0.441; 0.785)" />
+		<WinchSocket Pos="(-0.785; 0.441; -0.785)" />
+		<WinchSocket Pos="(1.464; 0.559; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_SIRO_72_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgDon71"
+			UiIcon40x40="scoutVehicleImg"
+			UiIcon576x640="shopImgSiro72Exp"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_SIRO_72_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.2; 1.2; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.5; 1.2; -3.5)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.2; 0.407; -0.6)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5; 0.407; -3.6)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.5; 1.1; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.233; 1.944; 2.571)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.1; 1.25; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.2; 1.25; 7.5)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.8; 1.25; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.8; 1.25; -7.5)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.9; 1.7; 0.15)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.400; 5.8; -3.375)" />
+			<CameraPos FOV="32.0" Name="supplies_rear" InterestPosition="(4.5; 1.1; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-2.233; 1.944; 2.571)" />
+			<CameraPos FOV="32.0" Name="supplies_side_r" InterestPosition="(5.1; 1.25; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(10.2; 1.25; 7.5)" />
+			<CameraPos FOV="32.0" Name="supplies_side_l" InterestPosition="(5.8; 1.25; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(10.8; 1.25; -7.5)" />
+			<CameraPos FOV="32.0" Name="supplies_roof" InterestPosition="(4.9; 1.7; 0.15)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.400; 5.8; -3.375)" />
+			<CameraPos FOV="32.0" Name="side_l_sticker" InterestPosition="(5.237; 0.891; 0.16)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.032; 0.893; -1.94)" />
+			<CameraPos FOV="32.0" Name="side_r_sticker" InterestPosition="(7.502; 0.891; -0.14)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.016; 0.893; 1.993)" />
+			<CameraPos FOV="32.0" Name="capote_sticker" InterestPosition="(6.803; 0.891; -0.77)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.779; 3.886; -0.41)" />
+			<CameraPos FOV="32.0" Name="roof_sticker" InterestPosition="(4.01; 0.891; -0.594)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(6.277; 4.700; -0.284)" />
+		</CustomizationCameras>
+		<AddonSockets>
+			<Socket Names="Siro72BranchSection" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72FrontBumper" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72FrontBumperSlot" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="siro_72_rear_bumper_default">
+			<Socket Names="Siro72RearBumper" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RearBumperSlotA" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RearBumperSlotB" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RearBumperWheel" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72InvSlot" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72InvSlotSlotA" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72InvSlotSlotB" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72InvSlotSlotC" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72InvSlotSlotD" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Outerframe" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Roofrack" />
+			<Socket Names="DroneScoutCarrierSiro72" />
+			<Socket
+				InCockpit="true"
+				Names="ScoutMetalDetector"
+				Offset="(-1.57; 1.99; 0)"
+				ParentFrame="BoneCabin_cdt"
+			>
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0; -0.015; 0)" />
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(1.555; -0.203; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot02" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot03" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot04" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot05" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72RoofrackSlot06" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Snorkel" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="siro_72_steps_default">
+			<Socket Names="Siro72Steps" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Visor" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="siro_72_wings_default">
+			<Socket Names="Siro72Wings" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="siro_72_estock_default">
+			<Socket Names="siro_72estock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- STICKERS -->
+		<AddonSockets>
+			<Socket Names="Siro72Sticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Sticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Sticker_Roof_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Siro72Sticker_Hood_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer01" IsLinkedSteering="true" Name="TieRodSteer01" />
+		<Constraint Id="chassis_steer02" IsLinkedSteering="true" Name="TieRodSteer02" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- FRONT SHOCKS -->
+		<!-- Right Shocks -->
+		<IKBone ModelFrame="BonePistonBase1R" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFR"
+				ModelFrame="BonePiston1R"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Right Shocks -->
+		<IKBone ModelFrame="BonePistonBase1L" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFL"
+				ModelFrame="BonePiston1L"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1L_IK_DOWN_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFL"
+				ModelFrame="BoneAxle1L_IK_DOWN_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1R_IK_DOWN_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFR"
+				ModelFrame="BoneAxle1R_IK_DOWN_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1L_IK_UP_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFL"
+				ModelFrame="BoneAxle1L_IK_UP_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1R_IK_UP_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleFR"
+				ModelFrame="BoneAxle1R_IK_UP_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTieRod01Hinge01" ParentFrame="BoneTieRod01_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackFL"
+				ModelFrame="BoneTieRod01Prismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTieRod02Hinge01" ParentFrame="BoneTieRod02_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackFR"
+				ModelFrame="BoneTieRod02Prismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2L" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePiston2L"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2R" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePiston2R"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

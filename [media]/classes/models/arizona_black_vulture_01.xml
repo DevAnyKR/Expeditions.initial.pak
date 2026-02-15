@@ -1,0 +1,10 @@
+<ModelBrand 
+	CastDayLightmapShadow="false"
+	ClipCamera="false"
+>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	
+</ModelBrand>

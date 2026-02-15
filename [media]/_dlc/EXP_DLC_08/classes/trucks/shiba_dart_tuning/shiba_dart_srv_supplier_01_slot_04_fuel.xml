@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_supplier_01_slot_04_fuel">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="14" ModelFrame="BoneSupplierSlot04_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="0"
+				>
+					<Motor Damping="40" Spring="550" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_addon_1"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="shiba_dart_srv_supplier_01" />
+		<InstallSocket Type="ShibaDartSRVInvSlotSlot04" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="shiba_dart_srv_supplier_01_slot_04_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

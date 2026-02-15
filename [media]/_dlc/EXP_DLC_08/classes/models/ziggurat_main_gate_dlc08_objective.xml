@@ -1,0 +1,43 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"	
+	
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_closed" >
+			<Body Collisions="Dynamic" ModelFrame="stage_half_opened" >
+				<Body Collisions="Dynamic" ModelFrame="stage_opened" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="gate_closed">
+		<Mesh Name="stage_closed" />
+		<CdtMesh Name="cdt_stage_closed" />
+	</Subset>
+	
+	<Subset Name="gate_half_opened">
+		<Mesh Name="stage_half_opened" />
+		<CdtMesh Name="cdt_stage_half_opened" />
+		<AnimTrack Name="anim_stage_opening_01" />
+		<AnimSubset Name="gate_opening_01" />
+	</Subset>
+	
+	<Subset Name="gate_opened">
+		<Mesh Name="stage_opened" />
+		<CdtMesh Name="cdt_stage_opened" />
+		<AnimTrack Name="anim_stage_opening_02" />
+		<AnimSubset Name="gate_opening_02" />
+	</Subset>
+	
+    <AnimSubset Name="gate_opening_01">
+		<CdtMesh Name="cdt_stage_closed" />
+		<Mesh Name="animesh_opening" />
+	</AnimSubset>
+	
+	<AnimSubset Name="gate_opening_02">
+		<CdtMesh Name="cdt_stage_half_opened" />
+		<Mesh Name="animesh_opening" />
+	</AnimSubset>
+	<Landmark Mesh="landmarks/ziggurat_main_gate_dlc08_objective_lmk" />
+</ModelBrand>

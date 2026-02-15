@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+			<Multiplier Multiplier="0.975" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_fuel_shield_00">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneFuelShield_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="30" ModelFrame="BoneAddonExplicit_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_FUEL_SHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_3364_CROCODILE_FUEL_SHIELD_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileFuelShield00" />
+	</GameData>
+</TruckAddon>

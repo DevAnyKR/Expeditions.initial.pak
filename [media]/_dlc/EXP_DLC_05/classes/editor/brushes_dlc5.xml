@@ -1,0 +1,145 @@
+<DistributionBrushes>
+	<Plants>
+
+		<Windthrow_Trees PlantsPerBlock="250">
+			<PlantType
+				Brand="windthrow_dead_tree_01"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.2"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="windthrow_dead_tree_02"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.2"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="windthrow_dead_tree_03"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.2"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>		
+		</Windthrow_Trees>
+		<Windthrow_Trees_Lying PlantsPerBlock="100">
+			<PlantType
+				Brand="windthrow_dead_tree_lying_01"
+				Divergence="0.04"
+				MinSize="0.6"
+				MaxSize="0.9"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="windthrow_dead_tree_lying_02"
+				Divergence="0.04"
+				MinSize="0.6"
+				MaxSize="0.9"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="windthrow_dead_tree_lying_03"
+				Divergence="0.04"
+				MinSize="0.6"
+				MaxSize="0.9"
+				MaxMapScale="0.3"
+				Perpendicularity="1.0"
+			/>		
+		</Windthrow_Trees_Lying>
+		<AzTowerBricks LinkedGrassBrush="DebrisStonesAriz" PlantsPerBlock="700">
+			<PlantType
+				Brand="arizona_brick_1_dlc_05"
+				Divergence="0.08"
+				MinSize="0.5"
+				MaxMapScale="0.5"
+				MaxSize="1.5"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="arizona_brick_2_dlc_05"
+				Divergence="0.08"
+				MinMapScale="0.2"
+				MinSize="0.4"
+				MaxMapScale="0.8"
+				MaxSize="1.6"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="arizona_brick_3_dlc_05"
+				Divergence="0.08"
+				MinMapScale="0.5"
+				MinSize="0.3"
+				MaxSize="1.0"
+				Perpendicularity="1.0"
+			/>		
+			<PlantType
+				Brand="arizona_brick_4_dlc_05"
+				Divergence="0.08"
+				MinMapScale="0.5"
+				MinSize="0.3"
+				MaxSize="1.2"
+				Perpendicularity="1.0"
+			/>	
+		</AzTowerBricks>
+		<AzRuinBricks LinkedGrassBrush="DebrisStonesAriz" PlantsPerBlock="700">
+			<PlantType
+				Brand="rectangle_long_ruins_01_dlc_05"
+				Divergence="0.04"
+				MinSize="0.5"
+				MaxMapScale="0.5"
+				MaxSize="1.2"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="rectangle_long_ruins_02_dlc_05"
+				Divergence="0.08"
+				MinMapScale="0.2"
+				MinSize="0.4"
+				MaxMapScale="0.8"
+				MaxSize="1.1"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="rectangle_long_ruins_03_dlc_05"
+				Divergence="0.06"
+				MinMapScale="0.5"
+				MinSize="0.3"
+				MaxSize="1.0"
+				Perpendicularity="1.0"
+			/>		
+		</AzRuinBricks>
+		
+	</Plants>
+	
+	<Grass>
+	
+		<DebrisSfxArizWhiteSmoke PlantsPerBlock="60">
+		<PlantType Brand="debris_sfx_ariz_white_smoke" />
+		</DebrisSfxArizWhiteSmoke>
+		
+		<GrassWildAriz_us05_mainmenu PlantsPerBlock="3000">
+
+			<PlantType Brand="grass_wild_ariz_a_us05_mainmenu" />
+			<PlantType Brand="grass_wild_ariz_b_us05_mainmenu" />
+			<PlantType Brand="grass_wild_ariz_c_us05_mainmenu" />
+			<PlantType Brand="grass_wild_ariz_d_us05_mainmenu" />
+			
+		</GrassWildAriz_us05_mainmenu>
+		
+		<GrassWildBigAriz_us05_mainmenu PlantsPerBlock="100">
+
+			<PlantType Brand="grass_wild_big_ariz_a_us05_mainmenu" />
+			<PlantType Brand="grass_wild_big_ariz_b_us05_mainmenu" />
+			<PlantType Brand="grass_wild_big_ariz_c_us05_mainmenu" />
+			
+		</GrassWildBigAriz_us05_mainmenu>
+		
+	</Grass>
+</DistributionBrushes>

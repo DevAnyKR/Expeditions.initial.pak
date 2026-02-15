@@ -1,0 +1,9 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_rus_ter_01_lmk"/>
+</ModelBrand>

@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="siro_72_front_bumper_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_front_bumper_01_fuel">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="siro_72_front_bumper_01" />
+		<InstallSocket Type="Siro72FrontBumperSlot" />
+	</GameData>
+</TruckAddon>

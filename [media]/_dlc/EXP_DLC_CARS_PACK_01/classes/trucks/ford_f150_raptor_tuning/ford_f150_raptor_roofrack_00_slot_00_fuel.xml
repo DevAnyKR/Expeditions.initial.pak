@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_roofrack_00_slot_00_fuel">
+		<Body Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="ford_f150_raptor_roofrack_00" />
+		<InstallSocket Type="FordF150RoofrackSlot00" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="ford_f150_roofrack_00_slot_00_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

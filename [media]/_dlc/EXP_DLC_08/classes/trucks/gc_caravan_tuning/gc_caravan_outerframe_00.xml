@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_outerframe_00" >
+		<Body ImpactType="Truck" Mass="150" ModelFrame="BoneOuterframe_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="7500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"	
+	>
+		<WinchSocket Pos="(3.493; 1.151; 0.616)" />
+		<WinchSocket Pos="(3.493; 1.151; -0.616)" />
+		<WinchSocket Pos="(3.394; 1.059; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_GS_CARAVAN_OUTERFRAME_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GS_CARAVAN_OUTERFRAME_00_NAME"
+		/>
+		<InstallSocket Type="GCCaravanOuterframe" />
+	</GameData>
+</TruckAddon>

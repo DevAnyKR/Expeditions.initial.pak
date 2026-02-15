@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_front_bumper_02">
+		<Body ImpactType="Truck" Mass="45" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.697; 0.480; 0.207)" ParentFrame="BoneFrontBumper02_cdt" />
+		<WinchSocket Pos="(1.697; 0.480; -0.207)" ParentFrame="BoneFrontBumper02_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_SIRO_72_FRONT_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIRO_72_FRONT_BUMPER_02_NAME"
+		/>
+		<RequiredSuspension Types="siro_72_suspension_high, siro_72_suspension_crawler" />
+		<InstallSocket Type="Siro72FrontBumper" />
+	</GameData>
+</TruckAddon>

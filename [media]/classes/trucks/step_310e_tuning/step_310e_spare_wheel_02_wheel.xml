@@ -1,0 +1,35 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="step_310e_spare_wheel_02_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_spare_wheel_02_wheel">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneSpareWheel02Wheel_cdt" Collisions="None">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="3"
+			>
+				<Motor Damping="0" Spring="0" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<InstallSocket Type="Step310eSpareWheel02Wheel" />
+		<RequiredAddon Types="step_310e_spare_wheel_02" />
+	</GameData>
+</TruckAddon>

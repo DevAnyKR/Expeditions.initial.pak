@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_arches_01">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneArches01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_COLLIE_PUG_293_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_COLLIE_PUG_293_WINGS_01_NAME"
+		/>
+		<InstallSocket Type="ColliePUG293Wings" />
+	</GameData>
+</TruckAddon>

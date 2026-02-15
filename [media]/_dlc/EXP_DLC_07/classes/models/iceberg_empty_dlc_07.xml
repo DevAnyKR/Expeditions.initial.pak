@@ -1,0 +1,12 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+	SkipAdjustHeightMap="true"
+	PlantRejectingAnchors ="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/iceberg_empty_dlc_07_lmk" />
+</ModelBrand>

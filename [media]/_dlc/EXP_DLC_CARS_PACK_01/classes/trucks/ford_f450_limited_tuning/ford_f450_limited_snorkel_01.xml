@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.201; 1.875; 0.785)" />
+	<Snorkel Origin="(1.201; 1.875; -0.785)" />
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_snorkel_01">
+		<Body ImpactType="Truck" Mass="8">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F450_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F450_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedSnorkel" />
+	</GameData>
+</TruckAddon>

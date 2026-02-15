@@ -1,0 +1,25 @@
+<_parent File="yar_87_invslot_01_repair_a" />
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="inv_slot_01_repair_kit_02" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="inv_slot_01_repair_kit_02">
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneInvSlot01Slot02_cdt" />
+	</PhysicsModel>
+	<GameData 
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="yar_87_invslot_01" />
+		<InstallSocket Type="Yar87InvSlot01Slot02" />
+	</GameData>
+</TruckAddon>

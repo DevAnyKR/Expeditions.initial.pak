@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_roofrack_00_slot_01_battery">
+		<Body Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="ford_f450_limited_roofrack_00"/>
+		<InstallSocket Type="FordF450LimitedRoofrackSlot01" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="ford_f450_roofrack_00_slot_01_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

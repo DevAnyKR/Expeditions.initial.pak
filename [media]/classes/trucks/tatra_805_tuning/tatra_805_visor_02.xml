@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_visor_02" />
+	<ModelAttachments _noinherit="True">
+		<MainHeadLight>
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.040)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.081)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.121)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.162)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.203)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.243)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.283)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.325)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; -0.365)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.040)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.081)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.121)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.162)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.203)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.243)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.283)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.325)" />
+			<Flare _template="LED" Pos="(2.032; 2.044; 0.365)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_02_NAME"
+		/>
+		<InstallSocket Type="Tatra805Visor" />
+	</GameData>
+</TruckAddon>

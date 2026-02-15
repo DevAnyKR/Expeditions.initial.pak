@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="0.95"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizona_montezuma_castle_block_07_lmk" />
+</ModelBrand>

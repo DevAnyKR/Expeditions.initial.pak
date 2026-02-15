@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_roof_addons_base_00">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneRoofAddonBase_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F450_DETECTOR_BASE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F450_DETECTOR_BASE_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedRoofAddonsBase" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ank_xm75_tuning" MeshFrame="ank_xm75_roofrack_00">
+		<Body ImpactType="Truck" Mass="75" ModelFrame="BoneRoofrack00_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="roof"
+		Category="top"
+		Price="7500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<RequiredAddon Types="ank_xm75_outerframe_00" />
+		<InstallSocket Type="ANKXM75Roofrack" />
+	</GameData>
+</TruckAddon>

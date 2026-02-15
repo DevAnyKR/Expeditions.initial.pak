@@ -1,0 +1,20 @@
+<_templates Include="models" />
+
+<ModelBrand Instanced="true" AcceptZoneBorderDecals="true" >
+
+	<PhysicsModel>
+		<Body ModelFrame="Bone_Base" Mass="100" DamageMult="0.1" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="1000"/>
+
+			<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="Bone_sprout_1" Mass="10" DamageMult="0" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="100"/>
+			</Body>
+			<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="Bone_sprout_2" Mass="10" DamageMult="0" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="100"/>
+			</Body>
+	
+		</Body>
+	</PhysicsModel>
+
+
+</ModelBrand>

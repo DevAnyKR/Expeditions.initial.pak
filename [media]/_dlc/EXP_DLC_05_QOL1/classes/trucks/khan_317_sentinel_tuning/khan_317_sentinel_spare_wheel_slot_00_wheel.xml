@@ -1,0 +1,29 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="khan_317_spare_wheel_slot_00_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_spare_wheel_slot_00_wheel">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="bottom"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="khan_317_sentinel_spare_wheel_slot_00" />
+		<InstallSocket Type="Khan317SpareWheelBottom" />
+	</GameData>
+</TruckAddon>

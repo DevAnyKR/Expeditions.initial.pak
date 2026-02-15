@@ -1,0 +1,13 @@
+<WaterType
+	ColorDiffuse="g(57; 52; 45) x 0.25"
+	ColorFoam="g(166; 150; 124) x 0.25"
+	ColorReflected="g(43; 42; 40) x 1.75"
+	ColorRefraction="g(32; 44; 30) x 0.5"
+	ColorScatter="(113; 90; 60) x 0.8"
+	ColorSubstance="g(44; 40; 35) x 2.4"
+	ColorLandmarkBorder="g(42; 39; 37) x 0.4"
+	OpacityBias="0.05"
+	OpacityDepth="0.25"
+	TintBias="0.1"
+	TintDepth="0.5"
+/>

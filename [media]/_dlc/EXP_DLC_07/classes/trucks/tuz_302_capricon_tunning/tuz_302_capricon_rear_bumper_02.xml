@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_rear_bumper_02">
+		<Body Mass="35" ModelFrame="BoneRearBumper02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_REAR_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_REAR_BUMPER_02_NAME"
+		/>
+		<RequiredAddon Types="tuz_302_capricon_arches_02" />
+		<InstallSocket Type="Tuz302CapriconRearBumper" />
+	</GameData>
+</TruckAddon>

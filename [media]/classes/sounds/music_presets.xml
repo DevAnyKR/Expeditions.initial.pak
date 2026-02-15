@@ -1,0 +1,193 @@
+<_templates>
+	<GarageMusic>
+		<Arizona
+			SoundName="music/arizona/garage_arizona_test"
+			FadeInTime="30"
+			FadeOutTime="10"
+			Volume="1"
+		/>
+	</GarageMusic>
+</_templates>
+<MusicPresets>
+
+	<!-- ARIZONA -->
+	<LevelMusic LevelName="level_exp_us_01_01">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_us_01_02">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_us_01_03">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_us_01_04">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_us_tutorial">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_us_tutorial_01">	
+		<Sound Name="music/arizona/arizona_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona/arizona_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona/arizona_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+
+	<!-- SLOVAKIA -->
+	<LevelMusic LevelName="level_exp_ru_01_01">	
+		<Sound Name="music/slovakia/slovakia_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/slovakia/slovakia_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_ru_01_02">	
+		<Sound Name="music/slovakia/slovakia_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/slovakia/slovakia_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_ru_01_03">	
+		<Sound Name="music/slovakia/slovakia_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/slovakia/slovakia_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+	<LevelMusic LevelName="level_exp_ru_01_04">	
+		<Sound Name="music/slovakia/slovakia_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/slovakia/slovakia_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia/slovakia_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+
+	<!-- MAIN MENU -->
+	<LevelMusic LevelName="level_exp_main_menu">	
+		<Sound Name="music/arizona_major/expedition_setup" StartTime="0" EndTime="24" FadeInTime="10" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- ARIZONA MINOR MENU -->
+	<LevelMusic LevelName="level_exp_main_menu_dlc_minor_us_01">	
+		<Sound Name="music/arizona_minor/arizona_minor_main_menu" StartTime="0" EndTime="24" FadeInTime="10" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- ARIZONA MINOR -->
+	
+	<LevelMusic LevelName="level_exp_dlc_minor_us_01">	
+		<Sound Name="music/arizona_minor/arizona_minor_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona_minor/arizona_minor_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona_minor/arizona_minor_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona_minor/arizona_minor_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	
+	<!-- ARIZONA MINOR CAVE -->
+	
+	<LevelMusic LevelName="level_exp_dlc_minor_us_01_cave">	
+		<Sound Name="music/arizona_cave/arizona_minor_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- ARIZONA MAJOR -->
+	
+	<LevelMusic LevelName="level_exp_dlc_us_05">	
+		<Sound Name="music/arizona_minor/arizona_minor_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/arizona_minor/arizona_minor_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona_minor/arizona_minor_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/arizona_minor/arizona_minor_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+		<GarageMusic _template="Arizona" />
+	</LevelMusic>
+	
+	<!-- DLC05 MAIN MENU -->
+	<LevelMusic LevelName="level_exp_main_menu_dlc_major_us_05">	
+		<Sound Name="music/arizona_major/arizona_major_main_menu" StartTime="0" EndTime="24" FadeInTime="10" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- ARIZONA MAJOR CAVE -->
+	
+	<LevelMusic LevelName="level_exp_dlc_us_05_cave">	
+		<Sound Name="music/arizona_major/cave/arizona_major_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- SLOVAKIA S2  -->
+	
+	<LevelMusic LevelName="level_exp_dlc_sk_07_01">	
+		<Sound Name="music/slovakia_minor/slovakia_minor_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/slovakia_minor/slovakia_minor_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia_minor/slovakia_minor_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/slovakia_minor/slovakia_minor_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+	
+	<!-- SLOVAKIA S2 CAVE -->
+	
+	<LevelMusic LevelName="level_exp_dlc_sk_07_01_cave">	
+		<Sound Name="music/slovakia_minor/slovakia_minor_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+	
+	<!-- SLOVAKIA S2 MENU  -->
+		<LevelMusic LevelName="level_exp_main_menu_dlc_major_sk_06">	
+		<Sound Name="music/slovakia_minor/slovakia_snow_menu" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+	
+		<!-- SLOVAKIA S3  -->
+	
+	<LevelMusic LevelName="level_exp_dlc_sk_07_02">	
+		<Sound Name="music/Slovakia_S3/slovakia_s3_night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/Slovakia_S3/slovakia_s3_morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Slovakia_S3/slovakia_s3_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Slovakia_S3/slovakia_s3_evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+	
+		<!-- SLOVAKIA S3 CAVE -->
+	
+	<LevelMusic LevelName="level_exp_dlc_sk_07_02_cave">	
+		<Sound Name="music/Slovakia_S3/slovakia_s3_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+	<!-- DLC07 MAIN MENU -->
+		<LevelMusic LevelName="level_exp_main_menu_dlc_major_sk_07">	
+		<Sound Name="music/slovakia_minor/slovakia_snow_menu" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+		<!-- TATRAS S4 MENU  -->
+		<LevelMusic LevelName="level_exp_main_menu_dlc_major_tr_08">	
+		<Sound Name="music/Tatras_S4_day" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+		<LevelMusic LevelName="level_exp_dlc_tr_08_01">	
+		<Sound Name="music/Tatras_S4_Night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/Tatras_S4_Morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Tatras_S4_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Tatras_S4_Evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+		<LevelMusic LevelName="level_exp_dlc_tr_08_02">	
+		<Sound Name="music/Tatras_S4_Night" StartTime="24" EndTime="6" FadeInTime="30" FadeOutTime="10"  />
+		<Sound Name="music/Tatras_S4_Morning" StartTime="6" EndTime="13" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Tatras_S4_day" StartTime="13" EndTime="20.5" FadeInTime="30" FadeOutTime="10" />
+		<Sound Name="music/Tatras_S4_Evening" StartTime="20.5" EndTime="24" FadeInTime="30" FadeOutTime="10" />
+	</LevelMusic>
+		<LevelMusic LevelName="level_exp_dlc_tr_08_01_cave">	
+		<Sound Name="music/Tatras_S4_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+		<LevelMusic LevelName="level_exp_dlc_tr_08_02_cave">	
+		<Sound Name="music/Tatras_S4_cave" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+		<LevelMusic LevelName="level_exp_dlc_tr_08_01_indoor">	
+		<Sound Name="music/Tatras_S4_Ziggurat" StartTime="0" EndTime="24" FadeInTime="15" FadeOutTime="10"  />
+	</LevelMusic>
+</MusicPresets>

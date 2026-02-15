@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/arizona_sharp_gravel__d_a.tga" 
+	Normal="tiles/arizona_sharp_gravel_relief__d_a.tga"
+	NoGrass="true"
+	GrassBrush="DebrisStonesAriz"
+	Sound="surfaces/surf_gravel_rnd"
+	EndEffectSound="surfaces/hit/hit_gravel_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	WheelTracks="0"
+/>

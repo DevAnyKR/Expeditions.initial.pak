@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+			<Multiplier Multiplier="0.85" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_footrest_02">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneFootrest02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+			CameraPreset="rear"
+			Category="miscellenious"
+			Price="1000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_310_FOOTREST_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_310_FOOTREST_2_NAME"
+		/>
+			
+		 <InstallSocket Type="Step310eFootrest" /> 
+	</GameData> 
+</TruckAddon> 

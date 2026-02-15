@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.97" Type="Gearbox" />
+			<Multiplier Multiplier="0.97" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_rear_bumper_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneRearBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TRAUN_BR0D_REAR_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TRAUN_BR0D_REAR_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="TraunBr0dBumperRear" />
+	</GameData>
+</TruckAddon>

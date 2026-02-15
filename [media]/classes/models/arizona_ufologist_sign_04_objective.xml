@@ -1,0 +1,17 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="ufologist_sign_04"></Body>
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="stage_hidden">
+	</Subset>
+	
+	<Subset Name="stage_visible">
+		<Mesh Name="ufologist_sign_04" />
+		<CdtMesh Name="cdt" />
+    </Subset>	
+
+</ModelBrand>

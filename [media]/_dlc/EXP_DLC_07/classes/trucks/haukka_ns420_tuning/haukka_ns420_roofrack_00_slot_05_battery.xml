@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_roofrack_00_slot_05_battery">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="200"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_roofrack_00" />
+		<InstallSocket Type="HaukkaNS420RoofrackSlot05" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="haukka_ns420_roofrack_00_slot_05_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

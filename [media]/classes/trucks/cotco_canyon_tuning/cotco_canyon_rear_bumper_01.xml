@@ -1,0 +1,33 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_rear_bumper_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneRearBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(-2.316; 0.561; 0.437)" />
+		<WinchSocket Pos="(-2.316; 0.561; -0.437)" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_COTCO_CANYON_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_COTCO_CANYON_01_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_arches_01, cotco_canyon_arches_02" />
+		<InstallSocket Type="CotcoCanyonRearBumper01" />
+	</GameData>
+</TruckAddon>

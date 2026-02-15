@@ -1,0 +1,53 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+			<Multiplier Multiplier="0.7" Type="Gearbox" />
+			<Multiplier Multiplier="0.7" Type="Suspension" />
+			<Multiplier Multiplier="1.0" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ank_xm75_tuning" MeshFrame="ank_xm75_bumper_rear_00">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneBumperRear00_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1" Pos="(-4.85; 1.669; 0.0)" />
+			<Flare _template="StopSignal" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.740; 1.669; 1.160)" />
+			<Flare _template="StopSignal" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.740; 1.669; -1.160)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="StopSignal" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.740; 1.669; 1.160)" />
+			<Flare _template="StopSignal" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.740; 1.669; -1.160)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.754; 1.667; 1.289)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" DirAngle="90" Pos="(-4.754; 1.667; -1.289)" />
+		</Ignition>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.755; 1.667; 1.507)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 0.8" Size="0.3" Pos="(-4.755; 1.667; 1.407)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.755; 1.667; 1.407)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 0.8" Size="0.3" Pos="(-4.755; 1.667; -1.407)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.755; 1.667; -1.407)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="rear"
+		Category="rear"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-4.806; 1.468; 0.0)" />
+		<UiDesc
+			UiDesc="UI_TUNING_ANK_XM75_REAR_BUMPER_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ANK_XM75_REAR_BUMPER_00_NAME"
+		/>
+		<InstallSocket Type="ANKXM75BumperRear" />
+	</GameData>
+</TruckAddon>

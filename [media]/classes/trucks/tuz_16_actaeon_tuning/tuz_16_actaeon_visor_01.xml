@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_visor_01">
+			<Body ImpactType="Truck" Mass="5" ModelFrame="BoneVisor_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_02_NAME"
+		/>
+		<InstallSocket Type="Tuz16Visor" />
+	</GameData>
+</TruckAddon>

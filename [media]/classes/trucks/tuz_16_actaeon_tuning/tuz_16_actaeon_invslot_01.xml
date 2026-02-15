@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_inv_slot">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneInvSlot_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="rear"
+		Category="rear"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_16_INV_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_16_INV_SLOT_01_NAME"
+		/>
+		<InstallSocket Type="Tuz16InvSlot" />
+	</GameData>
+</TruckAddon>

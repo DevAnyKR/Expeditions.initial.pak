@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_backrack_00_slot_00_repair">
+		<Body Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="15" ModelFrame="BoneBackrack00Slot00_cdt" Collisions="None">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="6"
+				>
+					<Motor Damping="25" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="ford_f150_raptor_backrack_00" />
+		<InstallSocket Type="FordF150BackrackSlot00" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="ford_f150_backrack_00_slot_00_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

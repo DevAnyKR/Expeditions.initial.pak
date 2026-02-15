@@ -1,0 +1,8 @@
+<_templates Include="models"/>
+<ModelBrand>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(10; 10)" Texture="occlusion_crossing.tga" />
+	<Landmark Mesh="landmarks/crossing_lmk"/>
+</ModelBrand>

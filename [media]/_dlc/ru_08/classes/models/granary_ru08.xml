@@ -1,0 +1,14 @@
+<ModelBrand
+	InstancedAsModel="true"
+	Instanced="true"
+	DynamicModel="false"
+	ClipCamera="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<!-- <Landmark Mesh="landmarks/tatra_admin_lmk" /> -->
+
+</ModelBrand>

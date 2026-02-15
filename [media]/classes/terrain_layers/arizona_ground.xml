@@ -1,0 +1,12 @@
+<MaterialType 
+        MinViscosity="4.0"
+	Texture="tiles/arizona_ground__d_a.tga" 
+	Normal="tiles/arizona_ground_relief__d_a.tga"
+	GrassBrush="ChrysothamnusAriz,DeadShrubsAriz,GrassWildBigAriz,JuncusBufoniusAriz"
+	IsThickGrass="false"
+	NoGrass="false"
+	GenerateDust="true"
+	AllowHiddenExtrudes="0.5"
+	Sound="surfaces/surf_sand_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+/>

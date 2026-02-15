@@ -1,0 +1,89 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData HasMetalDetector="true" />
+	
+	<!-- Bone Rotator -->
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="BoneAerialRotator"
+		RotationSpeed="0.8"
+		IsMetalDetectorRotator="true"
+	/>
+	
+	<ModelAttachments>
+		<Ignition>
+			<!-- EXTERIOR -->
+			<!-- Red Flare  -->
+			<Flare AspectRatio="1.5" Color="(255; 0; 50) x 0.3" ShowType="mdFoundResupplyItem" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.05; 0.64; 0.0)" ParentFrame="BoneAerial_cdt" />
+			<!-- Green Flare  -->
+			<Flare AspectRatio="1.5" Color="(0; 255; 50) x 0.3" ShowType="mdFoundUpgrade" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.263; 0.64; 0.105)" ParentFrame="BoneAerial_cdt" />
+			<!-- Blue Flare  -->
+			<Flare AspectRatio="1.5" Color="(0; 50; 255) x 1" ShowType="mdFoundItem" ColorMultAtDay="2.0" Dir="(0; 1; 0)" DirAngle="270" Reflections="true" Size="0.35" Pos="(0.263; 0.64; -0.105)" ParentFrame="BoneAerial_cdt" />
+			<!-- White Flare Aerial -->
+			<!-- Rear -->
+			<Flare AspectRatio="7" Color="(200; 200; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="3.0" Dir="(-1; 0; 0)" DirAngle="360" Reflections="true" Size="0.25" Pos="(-0.05; 0.455; 0)" ParentFrame="BoneAerial_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="3.5" ShowType="mdFoundUnknownItem" Color="g(220; 220; 255) x 0.05" ColorMultAtDay="3.0" Dir="(-1; 0; 0)" DirAngle="360" Size="0.5" Pos="(-0.05; 0.455; 0)" />
+			<!-- Front -->
+			<Flare AspectRatio="7" Color="(200; 200; 255) x 0.1" ShowType="mdFoundUnknownItem" ColorMultAtDay="3.0" Dir="(1; 0; 0)" DirAngle="360" Reflections="true" Size="0.25" Pos="(0.435; 0.455; 0)" ParentFrame="BoneAerial_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="3.5" ShowType="mdFoundUnknownItem" Color="g(220; 220; 255) x 0.05" ColorMultAtDay="3.0" Dir="(1; 0; 0)" DirAngle="360" Size="0.5" Pos="(0.435; 0.455; 0)" />
+			
+			<!-- White Flare Vent -->
+			<Flare AspectRatio="4.5" Color="(255; 255; 255) x 0.25" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(-1; 0; 0)" DirAngle="120" Reflections="true" Size="0.3" Pos="(-0.05; 0.2; 0.41)" ParentFrame="BoneAddon_cdt" />
+			<Flare AspectRatio="4.5" Color="(255; 255; 255) x 0.25" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.5" Dir="(-1; 0; 0)" DirAngle="120" Reflections="true" Size="0.3" Pos="(-0.05; 0.2; -0.41)" ParentFrame="BoneAddon_cdt" />
+			
+			<!-- INTERIOR -->
+			<!-- Red Flare  -->
+			<Flare AspectRatio="1" Color="(255; 0; 50) x 0.7" ShowType="mdFoundResupplyItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.055" Pos="(-0.09; -0.01; 0.068)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- Green Flare  -->
+			<Flare AspectRatio="1" Color="(0; 255; 50) x 0.4" ShowType="mdFoundUpgrade" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.05" Pos="(-0.09; -0.01; -0.01)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- Blue Flare  -->
+			<Flare AspectRatio="1" Color="(0; 50; 255) x 1.1" ShowType="mdFoundItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.055" Pos="(-0.09; -0.01; 0.028)" ParentFrame="BoneInteriorIndicator_cdt" />
+			<!-- White Flare Aerial -->
+			<Flare AspectRatio="1" Color="(255; 255; 255) x 0.4" ShowType="mdFoundUnknownItem" ColorMultAtDay="2.0" Dir="(-1; -1; 0)" DirAngle="120" Reflections="true" Size="0.08" Pos="(-0.09; -0.01; -0.05)" ParentFrame="BoneInteriorIndicator_cdt" />
+		</Ignition>
+	</ModelAttachments>
+
+	<LightsSettings>
+		<MetalDetector
+			UnknownItemMesh="mesh_detector_white_emissive"
+			InventoryItemMesh="mesh_detector_blue_emissive"
+			UpgradeItemMesh="mesh_detector_green_emissive"
+			ResupplyMesh="mesh_detector_red_emissive"
+		/>
+	</LightsSettings>
+
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/addons/addon_detector">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Mass="40"
+		>
+			<Constraint Type="Rigid" />
+			<!--Interior indicator and mount-->
+			<Body Collisions="None" Mass="5" ModelFrame="BoneInteriorMount_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="0.3" ModelFrame="BoneInteriorIndicator_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="0"
+		SoundByGroups="false"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_DETECTOR_DESC"
+			UiIcon30x30="trailerImg30"
+			UiIcon40x40="trailerImg"
+			UiName="UI_ADDON_DETECTOR_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_roof" />
+		<InstallSocket Type="ScoutMetalDetectorShibaOverlander" />
+		<AddonType Name="Watchtower" />
+	</GameData>
+</TruckAddon>

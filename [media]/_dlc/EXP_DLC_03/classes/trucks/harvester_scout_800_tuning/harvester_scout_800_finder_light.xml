@@ -1,0 +1,28 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_finder_light" />
+	
+	<ModelAttachments _noinherit="true">
+ 		<MainHeadLight>
+			<Model _template="HeadLightRay" Dir="(1; 0.0; 0.2)" Org="(0.7; 1.392; 0.784)" />
+	
+			<Flare _template="HeadLight" Size="0.25" Pos="(0.7; 1.392; 0.784)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FINDER_LIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FINDER_LIGHT_NAME"
+		/>
+		<InstallSocket Type="HarvesterScout800FinderLight" />
+	</GameData>
+</TruckAddon>

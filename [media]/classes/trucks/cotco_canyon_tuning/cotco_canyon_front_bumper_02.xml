@@ -1,0 +1,63 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_front_bumper_02">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringLeft_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.25" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper02StringRight_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.2" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.366; 0.654; 0.712)" />
+			<Model _template="HeadLightRay" Org="(2.366; 0.654; -0.712)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(2.366; 0.654; -0.712)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(2.366; 0.654; 0.712)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.18" Pos="(2.366; 0.654; -0.712)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.18" Pos="(2.366; 0.654; 0.712)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(2.456; 0.481; 0.414)" />
+		<WinchSocket Pos="(2.456; 0.481; -0.414)" />
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_COTCO_CANYON_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_COTCO_CANYON_02_NAME"
+		/>
+		<InstallSocket Type="CotcoCanyonFrontBumper" />
+	</GameData>
+</TruckAddon>

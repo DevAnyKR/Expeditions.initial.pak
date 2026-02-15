@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust03_Shaker"
+				MinAngle="(0.2; 0.2; 0.2)"
+				MaxAngle="(0.6; 0.6; 0.6)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_exhaust_03">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneExhaust03_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+		<GameData
+			CameraPreset="side_r"
+			Category="exhaust"
+			Price="500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+
+		<UiDesc
+			UiDesc="UI_TUNING_STEP310_E_EXHAUST_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP310_E_EXHAUST_03_NAME"
+		/>
+			
+		 <InstallSocket Type="Step310eExhaust" /> 
+	</GameData> 
+	
+	<Exhaust Dir="(-0.8; 1; 0)"  IsLight="true" Origin="(1.955; 2.986; -0.986)" Speed="3.82" />
+
+</TruckAddon> 

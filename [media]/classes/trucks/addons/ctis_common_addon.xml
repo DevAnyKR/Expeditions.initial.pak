@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/invisible_mesh" />
+	<GameData
+		CameraPreset="default"
+		Category="tires_inflation_system"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_COMMON_CTIS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_COMMON_CTIS_NAME"
+		/>
+		<InstallSocket Type="CtisSocket" />
+	</GameData>
+	<TruckData HasCentralTiresInflationSystem="true"/>
+</TruckAddon>

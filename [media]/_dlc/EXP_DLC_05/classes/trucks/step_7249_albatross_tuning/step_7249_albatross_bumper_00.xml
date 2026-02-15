@@ -1,0 +1,86 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="50"
+			>
+				<Motor Damping="0.05" Spring="0.5" Type="Spring" />
+			</Constraint>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.98" Type="Engine" />
+			<Multiplier Multiplier="0.98" Type="Gearbox" />
+			<Multiplier Multiplier="0.98" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_bumper_00">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneBumper00_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneBumper00HitchLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneBumper00HitchRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.975; 1.116; 0.966)" />
+			<Model _template="HeadLightRay" Org="(2.975; 1.116; -0.966)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.147; 1.092)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.147; 1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.126; 1.069)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; 1.091)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; 1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; 1.134)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; 1.069)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; 1.090)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; 1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; 1.134)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.083; 1.091)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.083; 1.112)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.147; -1.092)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.147; -1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.126; -1.069)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; -1.091)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; -1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.125; -1.134)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; -1.069)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; -1.090)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; -1.113)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.104; -1.134)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.083; -1.091)" />
+			<Flare _template="LED" Size="0.035" Color="g(255; 255; 255) x 0.7" Pos="(2.911; 1.083; -1.112)" />
+			<Flare _template="BlueStreak" Pos="(2.911; 1.114; 1.101)" Size="0.75" />
+			<Flare _template="BlueStreak" Pos="(2.911; 1.114; -1.101)" Size="0.75"  />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.45" Size="0.25" Pos="(2.926; 1.115; 0.966)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.45" Size="0.25" Pos="(2.926; 1.115; -0.966)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(2.874; 1.171; 1.342)" Dir="(0; 0; 1)" DirAngle="110" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(2.874; 1.171; -1.342)" Dir="(0; 0; -1)" DirAngle="110" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.973; 0.99; 0)" />
+		<WinchSocket Pos="(3.118; 0.957; 0.527)" />
+		<WinchSocket Pos="(3.118; 0.957; -0.527)" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Step7249AlbatrossBumper" />
+	</GameData>
+</TruckAddon>

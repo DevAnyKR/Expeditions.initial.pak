@@ -1,0 +1,47 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_front_bumper_01">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="2.551; 0.815; 0.236)" />
+			<Model _template="HeadLightRay" Org="(2.551; 0.815; -0.236)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" AspectRatio="5.0" Dir="(1; 0; 0)" DirAngle="90" Size=".25" Pos="(2.551; 0.815; 0.235)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" AspectRatio="5.0" Dir="(1; 0; 0)" DirAngle="90" Size=".25" Pos="(2.551; 0.815; -0.235)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" Dir="(1; 0; 0)" DirAngle="90" Size=".4" Pos="(2.551; 0.815; 0.235)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" Dir="(1; 0; 0)" DirAngle="90" Size=".4" Pos="(2.551; 0.815; -0.235)" />
+
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 238; 200) x 2.0" AttenEnd="120"/>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(2.388; 0.533; 0.426)" />
+		<WinchSocket Pos="(2.388; 0.533; -0.426)" />
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_COTCO_CANYON_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_COTCO_CANYON_01_NAME"
+		/>
+		<InstallSocket Type="CotcoCanyonFrontBumper" />
+	</GameData>
+</TruckAddon>

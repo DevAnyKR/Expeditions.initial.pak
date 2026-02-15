@@ -1,0 +1,10 @@
+<_templates Include="models" />
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	AcceptAnchorSetup="true"
+	Instanced="True"
+>
+	<PhysicsModel>
+        <Body Collisions="Dynamic" FrictionPreset="Stone"/>
+    </PhysicsModel>
+</ModelBrand>

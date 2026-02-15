@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_spot_light_frame">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneSpotLightFrame_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHT_FRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPOTLIGHT_FRAME_NAME"
+		/>
+		<InstallSocket Type="Step310eSpotlightFrame" />
+	</GameData>
+</TruckAddon>

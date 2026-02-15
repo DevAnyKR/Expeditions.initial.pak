@@ -1,0 +1,40 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_roofrack_01_slot_03_battery">	
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrackSlot03Repair_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.022;0.015)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.015;0.023)"
+			>
+				<Motor Type="Spring" Damping="300" Spring="300" />
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="khan_39_marshall_roofrack_01_slot_03_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="khan_39_marshall_roofrack_01" />
+		<InstallSocket Type="Khan39RoofrackSlot3" />
+	</GameData>
+</TruckAddon>

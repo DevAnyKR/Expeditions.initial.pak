@@ -1,0 +1,16 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_decin_s3t" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_decin_s3t" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_decin_s3t" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_decin_s3t" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_traun_br0d" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_traun_br0d" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_rear_1x1_traun_br0d" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_mercedes_unimog_2450l" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_mercedes_unimog_2450l" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_1x1_mercedes_unimog_2450l" />
+</TruckSet>

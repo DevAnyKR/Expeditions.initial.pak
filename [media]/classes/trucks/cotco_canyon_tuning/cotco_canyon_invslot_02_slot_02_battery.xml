@@ -1,0 +1,41 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_invslot_02_slot_02_battery">	
+		<Body Collisions="None" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneInvSlot02Slot02_cdt">
+				<Constraint
+					Type="Hinge"
+					AxisLocal="(1; 0; 0)"
+					MinLimit="-2"
+					MaxLimit="0"
+				>
+					<Motor Type="Spring" Damping="12" Spring="15" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="cotco_canyon_invslot_02_slot_02_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_invslot_02" />
+		<InstallSocket Type="CotcoCanyonInvSlot02Slot02" />
+	</GameData>
+</TruckAddon>

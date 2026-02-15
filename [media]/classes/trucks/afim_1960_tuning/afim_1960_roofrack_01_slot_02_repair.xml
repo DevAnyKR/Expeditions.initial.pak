@@ -1,0 +1,14 @@
+<_parent File="afim_1960_roofrack_01_slot_01_repair" />
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="afim_1960_roofrack_01_slot_02_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_roofrack_01_slot_02_repair">
+		<Body Collisions="None" ModelFrame="BoneRoofrack01_cdt" >
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Afim1960Roofrack01Slot02" />
+	</GameData>
+</TruckAddon>

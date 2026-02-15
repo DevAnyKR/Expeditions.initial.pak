@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="siro_72_roofrack_01_slot_06_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel  AcceptVisualDamage="false" Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_roofrack_01_slot_06_battery">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		IsConsumable="true"
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="siro_72_roofrack_01" />
+		<InstallSocket Type="Siro72RoofrackSlot06" />
+	</GameData>
+</TruckAddon>

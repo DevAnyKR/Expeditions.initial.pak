@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_roofrack_01_slot_02_fuel">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="shiba_dart_srv_roofrack_01" />
+		<InstallSocket Type="ShibaDartSRVRoofrackSlot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="shiba_dart_srv_roofrack_01_slot_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

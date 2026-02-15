@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Constraint>
+		<BumperFixed 
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-0.2"
+				MaxLimit="0.3"
+			>
+				<Motor Damping="0" Spring="0.1" Type="Spring" />
+
+		</BumperFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="FuelTank" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_rear_bumper_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneRearBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="4"
+				ModelFrame="BoneRearBumper01Shovel_cdt"
+			>
+			<Constraint _template="BumperFixed">
+				<BumperFixed/>
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="Rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_YAR_87_REAR_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_YAR_87_REAR_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="Yar87RearBumper" />
+	</GameData>
+</TruckAddon>

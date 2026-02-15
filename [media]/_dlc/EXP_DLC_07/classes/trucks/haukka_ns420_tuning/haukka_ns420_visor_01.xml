@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_visor_01">
+		<Body ImpactType="Truck" Mass="4">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Size="0.1" Pos="(3.725; 2.454; 0.697)" Dir="(1; 0; 0)" DirAngle="90" AspectRatio="2.5" />
+			<Flare _template="IgnitionSignalOrange" Size="0.1" Pos="(3.725; 2.454; -0.697)" Dir="(1; 0; 0)" DirAngle="90" AspectRatio="2.5" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_EXTENDED_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420Visor" />
+	</GameData>
+</TruckAddon>

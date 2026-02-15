@@ -1,0 +1,13 @@
+<MaterialType 
+	Texture="tiles/old_cracked_mud__d_a.tga" 
+	Normal="tiles/old_cracked_mud_relief__d_a.tga"
+	GenerateDust="true"
+	GrassBrush="DebrisStonesSparse"
+	NoGrass="true"
+	AllowHiddenExtrudes="0.25"
+	WheelTracks="0"
+	Sound="surfaces/surf_ground_rnd"
+	SkidSound="surfaces/skidding/skidding_ground_loop"
+	MinViscosity="4.0"
+	
+/>

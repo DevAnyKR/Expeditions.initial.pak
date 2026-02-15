@@ -1,0 +1,32 @@
+<_templates Include="models" />
+
+<ModelBrand Instanced="true" AcceptZoneBorderDecals="true" >
+
+	<PhysicsModel>
+		
+		<Body ModelFrame="bone_1" Mass="100" DamageMult="0.1" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="1000000"/>
+			
+			<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_2" Mass="100" DamageMult="0.1" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="300"/>
+			
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_3" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="120"/>
+				</Body>
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_4" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="120"/>
+				</Body>
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_5" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="120"/>					
+				</Body>
+				
+			</Body>	
+			
+		</Body>		
+
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizone_cactus_3_lmk"/>	
+		
+</ModelBrand>

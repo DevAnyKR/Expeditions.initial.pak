@@ -1,0 +1,13 @@
+<ModelBrand 
+	NightLightingShadowsAllowCap="true" 
+	DynamicModel="true" 
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="rock_rus_ter_01_objective" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_rus_ter_01_objective_lmk"/>
+</ModelBrand>

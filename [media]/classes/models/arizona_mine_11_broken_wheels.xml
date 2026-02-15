@@ -1,0 +1,41 @@
+<_templates Include="models" />
+<ModelBrand 
+	NightLightingShadowsAllowCap="True" 
+	Instanced="true"
+	Fence="True"
+>
+	<PhysicsModel>
+		<Constraint		
+			Type="Hinge"
+			AxisLocal="(0; 0; 1)"
+			ModelFrameChild="BonePart2"
+			ModelFrameParent="BonePart1"	    
+		/>
+		<Constraint		
+			Type="Hinge"
+			AxisLocal="(0; 0; 1)"
+			ModelFrameChild="BonePart3"
+			ModelFrameParent="BonePart1"		    
+		/>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body Collisions="Dynamic" Mass="400" CenterOfMassOffset="(0; -0.08; 0)" NoSoftContacts="False" ModelFrame="BonePart1">
+				<Constraint
+ 					BreakOffThreshold="100"
+                              Type="Fixed"
+				/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="250" AngularDamping="0.20" NoSoftContacts="False" ModelFrame="BonePart2">
+				<Constraint
+					BreakOffThreshold="100"
+                              Type="Fixed"
+				/>
+			</Body>
+                  <Body Collisions="Dynamic" Mass="150" AngularDamping="0.35" NoSoftContacts="False" ModelFrame="BonePart3">
+				<Constraint
+					BreakOffThreshold="100"
+                              Type="Fixed"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

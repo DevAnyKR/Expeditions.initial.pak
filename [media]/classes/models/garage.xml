@@ -1,0 +1,12 @@
+<_templates Include="models" />
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<StaticLights>
+		<StaticLight _template="Red" Dir="(0.569; -0.823; 0)" Pos="(-5.299; 7.058; -8.595)" />
+	</StaticLights>
+	<PhysicsModel>
+		<Flare _template="Red" Dir="(0.569; -0.823; 0)" Pos="(-5.299; 7.558; -8.595)" />
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(55.0; 55.0)" Texture="occlusion_garage.tga" />
+	<Landmark Mesh="landmarks/garage_lmk" />
+</ModelBrand>

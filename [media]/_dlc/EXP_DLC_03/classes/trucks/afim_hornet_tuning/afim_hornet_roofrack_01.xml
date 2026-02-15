@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/afim_hornet_tuning" MeshFrame="afim_hornet_roofrack_01">
+		<Body Mass="35" ModelFrame="BoneRoofrack01_cdt">>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="AfimHornetRoofrack" />
+	</GameData>
+</TruckAddon>

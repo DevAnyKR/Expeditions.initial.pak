@@ -1,0 +1,16 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+>
+
+	<PhysicsModel>
+        <Body
+			Collisions="Dynamic"
+            CenterOfMassOffset="(0; -0; 0)"
+            Mass="10"
+            NoSoftContacts="True"
+        >
+			<Constraint BreakOffThreshold="100" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,70 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_ank_mk38" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_ank_mk38" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_ank_mk38" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_ank_mk38" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_00_1x1_international_loadstar_1700" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_00_1x1_international_loadstar_1700" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_international_loadstar_1700" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_international_loadstar_1700" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_khan_39_marshall" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_khan_39_marshall" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_khan_39_marshall" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_khan_39_marshall" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_1x1_tuz_108_warthog" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_1x1_tuz_108_warthog" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_tuz_108_warthog" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_tuz_108_warthog" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_00_1x1_khan_lo4f" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_00_1x1_khan_lo4f" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_khan_lo4f" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_tuz_16_actaeon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_tuz_16_actaeon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_tuz_16_actaeon" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_yar_87" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_yar_87" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_yar_87" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_yar_87" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_step_310e" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_step_310e" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_don_71" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_don_71" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_don_71" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_don_71" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_krs_58_bandit" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_krs_58_bandit" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_krs_58_bandit" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_tatra_805" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_tatra_805" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_tatra_force_t815_7" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_tatra_force_t815_7" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_tatra_force_t815_7" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_cotco_canyon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_cotco_canyon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_cotco_canyon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_cotco_canyon" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_collie_PUG_293" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_collie_PUG_293" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_collie_PUG_293" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_collie_PUG_293" />
+	<!--<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/>-->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_afim_1960" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_afim_1960" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_cabin_01_1x1_afim_1960" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_afim_1960" />
+</TruckSet>

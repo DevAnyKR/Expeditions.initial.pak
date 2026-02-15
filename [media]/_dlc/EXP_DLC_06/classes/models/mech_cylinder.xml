@@ -1,0 +1,19 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Mass="300"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+			<Constraint
+
+				AxisLocal="(0; 1; 0)"
+				Type="UnlimitedHinge"
+			>
+				<Motor Damping="100" Spring="5" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_spotlight_01" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.91; 2.237; 0.741)" />
+			<Model _template="HeadLightRay" Org="(1.91; 2.237; -0.741)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 1.5" Size=".3" Pos="(1.91; 2.237; 0.741)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 1.5" Size=".3" Pos="(1.91; 2.237; -0.741)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.1" Pos="(1.91; 2.237; 0.741)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.1" Pos="(1.91; 2.237; -0.741)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPOTLIGHT_FRAME_A_NAME"
+		/>
+		<InstallSocket Type="Tatra805Spotlight" />
+	</GameData>
+</TruckAddon>

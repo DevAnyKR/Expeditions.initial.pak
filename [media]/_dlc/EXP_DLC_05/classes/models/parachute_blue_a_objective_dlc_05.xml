@@ -1,0 +1,28 @@
+<ModelBrand ClipCamera="true">
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" DamageMult="0.0" /> 
+	</PhysicsModel>
+	
+	<Subset Name="stage_hidden" IsDefault="true" >	
+		<CdtMesh Name="frame" />
+		<CdtMesh Name="cdt_rock" />
+		<Mesh Name="rock" />
+	</Subset>
+	
+	<Subset Name="stage_visible">
+		<CdtMesh Name="frame" />
+		<CdtMesh Name="cdt_rock" />
+		<CdtMesh Name="cdt_parachute" />
+		<Mesh Name="rock" />
+		<Mesh Name="parachute" />
+		<AnimSubset Name="build_animation_1" />
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+	
+	<AnimSubset Name="build_animation_1">
+		<CdtMesh Name="cdt_frame" />
+		<Mesh Name="rock_anim" />
+		<Mesh Name="parachute_anim" />
+	</AnimSubset>
+</ModelBrand>

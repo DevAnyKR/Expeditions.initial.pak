@@ -1,0 +1,49 @@
+<ModelBrand 
+	DynamicModel="true"
+	ClipCamera="true"
+	Instanced="true"
+	DynamicModel="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="mesh_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="lift_cdt">
+			<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="6000" Spring="3200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="toolbox_cdt">
+			<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="6000" Spring="3200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="250" NoSoftContacts="true" ModelFrame="barrel_cdt">
+			<Constraint BreakOffThreshold="120" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="150" NoSoftContacts="true" ModelFrame="cane1_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="150" NoSoftContacts="true" ModelFrame="cane2_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="150" NoSoftContacts="true" ModelFrame="cane3_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_fuel_station_lmk" />
+</ModelBrand>

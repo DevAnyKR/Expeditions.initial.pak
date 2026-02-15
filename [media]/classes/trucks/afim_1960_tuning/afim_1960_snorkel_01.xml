@@ -1,0 +1,25 @@
+<TruckAddon>
+	<Snorkel Origin="(1.045; 2.822; -0.985)" />
+	<PhysicsModel Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_snorkel_01">
+		<Body Mass="15">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_1960_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_1960_SNORKEL_01_NAME"
+		/>
+		<RequiredSuspension Types="afim_1960_suspension_high, afim_1960_suspension_crawler" />
+		<InstallSocket Type="Afim1960SnorkelAddon" />
+	</GameData>
+</TruckAddon>

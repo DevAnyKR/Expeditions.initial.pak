@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(29.0; 23.0)" 
+		Texture="occlusion_rus_drilling_rig_03.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_drilling_rig_03_lmk" />
+</ModelBrand>

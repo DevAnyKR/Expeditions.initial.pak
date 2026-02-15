@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="bottom"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_317_WHEELS_SLOT_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_317_WHEELS_SLOT_00_NAME"
+		/>
+		<InstallSocket Type="Khan317SpareWheelSlotBottom" />
+	</GameData>
+</TruckAddon>

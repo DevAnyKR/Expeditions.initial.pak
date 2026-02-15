@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/mercedes_unimog_2450L_tuning" MeshFrame="mercedes_unimog_2450l_outerframe_01_spotlight_01">
+		<Body ImpactType="Truck" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(1.807; 2.971; 0.677)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(1.807; 2.971; -0.677)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.807; 2.971; 0.677)" /> 
+			<Model _template="HeadLightRay" Org="(1.807; 2.971; -0.677)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(1.807; 2.971; 0.677)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(1.807; 2.971; -0.677)" />
+			<Flare _template="BlueStreak" Pos="(1.807; 2.971; 0.677)" />
+			<Flare _template="BlueStreak" Pos="(1.807; 2.971; -0.677)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="mercedes_unimog_2450_outerframe_00" />
+		<InstallSocket Type="MercedesUnimog2450LOuterframeSpotlight" />
+	</GameData>
+</TruckAddon>

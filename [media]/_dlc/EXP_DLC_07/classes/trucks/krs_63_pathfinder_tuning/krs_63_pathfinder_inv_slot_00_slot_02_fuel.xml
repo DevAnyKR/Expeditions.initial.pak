@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_inv_slot_00_slot_02_fuel">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneInvSlot01Slot02_cdt">
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="2"
+				>
+					<Motor Type="Spring" Spring="400" Damping="30" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_inv_slot_00" />
+		<InstallSocket Type="KRS63InvSlotSlot02" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="krs_63_inv_slot_00_slot_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

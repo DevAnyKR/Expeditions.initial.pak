@@ -1,0 +1,16 @@
+<_parent File="afim_1960_roofrack_01_slot_01_fuel" />
+<TruckAddon>
+	<TruckData FuelCapacity="15">	
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="afim_1960_roofrack_01_slot_03_fuel" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_roofrack_01_slot_03_fuel">
+		<Body Collisions="None" ModelFrame="BoneRoofrack01_cdt" >
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Afim1960Roofrack01Slot03" />
+	</GameData>
+</TruckAddon>

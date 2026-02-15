@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/drone_cargo_resources" MeshFrame="drone_repairs_b">
+		<Body
+			Collisions="Default"
+			ImpactType="Truck"
+			Mass="5"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="false"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="ResSlotB" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="drone_repairs_b" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

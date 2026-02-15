@@ -1,0 +1,31 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_58_bandit_tuning" MeshFrame="krs_58_bandit_roofrack_01">
+		<Body ImpactType="Truck" Mass="120" ModelFrame="BoneRoofrack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="8000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="krs58banditRoofRack" />
+	</GameData>
+</TruckAddon>

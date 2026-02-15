@@ -1,0 +1,296 @@
+<DistributionBrushes>
+	<Plants>
+		<tatras_tree_aspen_birch PlantsPerBlock="25">
+			<PlantType
+				Brand="aspen_01_dlc8"
+				Divergence="0.04"
+				MinSize="0.9"
+				MaxSize="1.3"
+			/>
+			<PlantType
+				Brand="aspen_02_dlc8"
+				Divergence="0.04"
+				MinSize="0.9"
+				MaxSize="1.3"
+			/>
+			<PlantType
+				Brand="birch_dry_01_dlc8"
+				Divergence="0.04"
+				MinSize="0.9"
+				MaxSize="1.3"
+			/>
+		</tatras_tree_aspen_birch>
+		<tatras_beech PlantsPerBlock="23">
+			<PlantType
+				Brand="beech_01_dlc08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.1"
+				MaxMapScale="0.3"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="beech_02_dlc08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.1"
+				MaxMapScale="0.3"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="beech_03_dlc08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.1"
+				MaxMapScale="0.3"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="beech_04_dlc08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.1"
+				MaxMapScale="0.3"
+				Perpendicularity="0.1"
+			/>
+		</tatras_beech>
+		<tatras_carpinus PlantsPerBlock="25">
+			<PlantType
+				Brand="carpinus_01_dlc_08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.2"
+				MaxMapScale="0.4"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="carpinus_02_dlc_08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.2"
+				MaxMapScale="0.4"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="carpinus_03_dlc_08"
+				Divergence="0.06"
+				MinSize="0.69"
+				MaxSize="1.2"
+				MaxMapScale="0.4"
+				Perpendicularity="0.1"
+			/>
+		</tatras_carpinus>
+		<tatras_rocks PlantsPerBlock="300">
+			<PlantType
+				Brand="tr_small_stone_1_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.2"
+				Perpendicularity="0.0"
+			/>
+			<PlantType
+				Brand="tr_small_stone_2_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.2"
+				Perpendicularity="0.0"
+			/>
+			<PlantType
+				Brand="tr_small_stone_3_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.2"
+				Perpendicularity="0.0"
+			/>
+		</tatras_rocks>
+		<tatras_gravel PlantsPerBlock="2000">
+			<PlantType
+				Brand="tr_gravel_1_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.5"
+				Perpendicularity="0.0"
+			/>
+			<PlantType
+				Brand="tr_gravel_2_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.5"
+				Perpendicularity="0.0"
+			/>
+			<PlantType
+				Brand="tr_gravel_3_dlc8"
+				Divergence="3.14"
+				MinSize="0.3"
+				MaxSize="1.5"
+				Perpendicularity="0.0"
+			/>
+		</tatras_gravel>
+		<SileneAcaulisFlowers PlantsPerBlock="500">
+			<PlantType
+				Brand="silene_acaulis_dlc8"
+				Divergence="0.00"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="1.0"
+			/>
+		</SileneAcaulisFlowers>
+		<SpruceBushesSmall PlantsPerBlock="128">
+			<PlantType
+				Brand="spruce_bush_01_dlc_08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+		</SpruceBushesSmall>
+		<SpruceBushesBig PlantsPerBlock="128">
+			<PlantType
+				Brand="spruce_bush_02_dlc_08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+		</SpruceBushesBig>
+		<SpruceBushesMixed PlantsPerBlock="128">
+			<PlantType
+				Brand="spruce_bush_02_dlc_08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="spruce_bush_01_dlc_08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+		</SpruceBushesMixed >
+		<BushesRosehip PlantsPerBlock="128">
+			<PlantType
+				Brand="bush_rosehip_01_dlc08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="bush_rosehip_02_dlc08"
+				Divergence="0.1"
+				MinSize="0.4"	
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>
+		</BushesRosehip>
+		<MushroomsFluGolden PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_golden_01_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluGolden>
+		<MushroomsFluGolden02 PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_golden_02_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluGolden02>
+		<MushroomsFluGolden03 PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_golden_03_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluGolden03>
+		<MushroomsFluViolet PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_violet_01_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluViolet>
+		<MushroomsFluViolet02 PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_violet_02_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluViolet02>
+		<MushroomsFluViolet03 PlantsPerBlock="2048">
+		<PlantType
+				Brand="mushrooms_flu_violet_03_dlc08"
+				Divergence="0.1"
+				MinSize="1.0"
+				MaxSize="2.5"
+				Perpendicularity="0.5"
+			/>
+		</MushroomsFluViolet03>
+		<FirefliesGrass PlantsPerBlock="800">
+			<PlantType
+				Brand="fireflies_grass_dlc_08"
+				Divergence="0.02"
+				MinSize="0.9"
+				MaxSize="1.3"
+			/>
+		</FirefliesGrass>
+		<FirefliesGrassNoLight PlantsPerBlock="800">
+			<PlantType
+				Brand="fireflies_grass_nolight_dlc_08"
+				Divergence="0.02"
+				MinSize="0.9"
+				MaxSize="1.3"
+			/>
+		</FirefliesGrassNoLight>
+	</Plants>
+	<Grass>
+		<FallenAutumnLeaves PlantsPerBlock="300">
+			<PlantType
+				Brand="fallen_autumn_leaves"
+			/>
+		</FallenAutumnLeaves>
+		<SileneAcaulisSfx PlantsPerBlock="3500">
+			<PlantType
+				Brand="silene_acaulis_grass_sfx_dlc8"
+			/>
+		</SileneAcaulisSfx>
+		<SileneAcaulisGrass1 PlantsPerBlock="1200">
+			<PlantType
+				Brand="grass_short_nograss_dlc8"
+			/>
+		</SileneAcaulisGrass1>
+		<SileneAcaulisGrass2 PlantsPerBlock="300">
+			<PlantType
+				Brand="grass_tall_nograss_dlc8"
+			/>
+		</SileneAcaulisGrass2>
+		<SileneAcaulisGrass3 PlantsPerBlock="400">
+			<PlantType
+				Brand="grass_weed_a_nograss_dlc8"
+			/>
+		</SileneAcaulisGrass3>
+		<SileneAcaulisGrass4 PlantsPerBlock="400">
+			<PlantType
+				Brand="grass_weed_b_nograss_dlc8"
+			/>
+		</SileneAcaulisGrass4>
+		<SileneAcaulisGrass5 PlantsPerBlock="1200">
+			<PlantType
+				Brand="grass_short_a_nograss_dlc8"
+			/>
+		</SileneAcaulisGrass5>
+	</Grass>
+</DistributionBrushes>

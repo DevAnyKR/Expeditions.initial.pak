@@ -1,0 +1,50 @@
+<TruckAddon>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_backrack_00_sparewheel_l, ford_f150_backrack_00_sparewheel_r">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="20" ModelFrame="BoneBackrack00SpareWheelR_cdt" Collisions="None">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="8"
+				>
+					<Motor Damping="240" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="20" ModelFrame="BoneBackrack00SpareWheelL_cdt" Collisions="None">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="5"
+				>
+					<Motor Damping="180" Spring="400" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="ford_f150_raptor_backrack_00" />
+		<InstallSocket Type="FordF150BackrackSpareWheel" />
+	</GameData>
+	<WheelRepairsHide>
+		<Mesh Frame="ford_f150_backrack_00_sparewheel_l" HideThreshold="0.5" />
+		<Mesh Frame="ford_f150_backrack_00_sparewheel_r" HideThreshold="0.0" />
+	</WheelRepairsHide>
+</TruckAddon>

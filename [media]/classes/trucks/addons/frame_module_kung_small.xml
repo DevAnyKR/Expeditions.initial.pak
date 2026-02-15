@@ -1,0 +1,134 @@
+<_templates Include="trucks" >
+	<Body>
+		<Clips Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+			</Constraint>
+		</Clips>
+		
+		<Clips1 Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="5"
+			>
+			</Constraint>
+		</Clips1>
+		
+		<Stairs Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="2"
+			>
+				<Motor Type="Spring" Spring="0" Damping="15" />
+			</Constraint>
+		</Stairs>
+		
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		RepairsCapacity="500"
+		WheelRepairsCapacity="2"
+		IsKung="true"
+	/>
+	<PhysicsModel Mesh="trucks/addons/frame_module_kung_small">
+		<Body Mass="515">
+			<Constraint Type="Rigid" />
+
+
+			<Body Collisions="None" Mass="1" ModelFrame="BoneBottom_cdt">
+			<Constraint
+				AxisLocal="(1; 1; 0)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+							>
+				<Motor Damping="30.0" Spring="40.0" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body Collisions="None" Mass="20" ModelFrame="BoneBoxBig_cdt">
+			<Constraint
+				LinearLimitsX="(-0.0062;0.0074)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.001;0.001)"
+				Type="Fixed"
+			/>
+			</Body>
+			
+			<Body _template="Stairs" ModelFrame="BoneStairs_cdt"/>
+			
+			<Body _template="Clips" ModelFrame="BoneClips_cdt" />
+			<Body _template="Clips" ModelFrame="BoneClips1_cdt" />
+			
+			<Body _template="Clips1" ModelFrame="BoneClips2_cdt" />
+			<Body _template="Clips1" ModelFrame="BoneClips3_cdt" >
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="10">
+				</Constraint>
+			
+			</Body>
+			
+			
+		</Body>
+		
+	</PhysicsModel>
+	
+		<ModelAttachments>
+
+
+		<Ignition>
+		<!-- rear -->
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 1.575; 0.755)" Dir="(-1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 1.575; -0.755)" Dir="(-1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+		
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 0.136; 0.989)" Dir="(-1; 0; 0)" Size="0.3" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(-2.371; 0.136; -0.989)" Dir="(-1; 0; 0)" Size="0.3" ParentFrame="BoneKung_cdt"/>
+						
+		<!-- front -->
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 1.575; 0.755)" Dir="(1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 1.575; -0.755)" Dir="(1; 0; 0)" AspectRatio="3.0" Size="0.2" ParentFrame="BoneKung_cdt"/>
+		
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 0.136; 0.989)" Dir="(1; 0; 0)" Size="0.3" ParentFrame="BoneKung_cdt"/>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0)x0.4" Pos="(0; 0.136; -0.989)" Dir="(1; 0; 0)" Size="0.3" ParentFrame="BoneKung_cdt"/>
+			
+		</Ignition>
+
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Subcategory="module"
+		Priority = "2"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_KUNG_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_KUNG_SMALL_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameModule" />
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960, frame_module_flatbed_short_workstar_7500, frame_module_flatbed_sideboard_workstar_7500, frame_module_flatbed_workstar_7500" />
+		<InstallSlot 
+			CargoLength="1"
+			CargoType="Addon"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>	
+</TruckAddon>

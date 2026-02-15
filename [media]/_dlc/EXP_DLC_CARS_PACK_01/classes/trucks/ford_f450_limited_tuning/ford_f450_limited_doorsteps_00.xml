@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_doorsteps_00">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="750"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F450_NERF_BARS_01_DESC"
+			UiIcon30x30=""
+			UiIcon60x60=""
+			UiName="UI_TUNING_FORD_F450_NERF_BARS_01_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedDoorSteps" />
+	</GameData>
+</TruckAddon>

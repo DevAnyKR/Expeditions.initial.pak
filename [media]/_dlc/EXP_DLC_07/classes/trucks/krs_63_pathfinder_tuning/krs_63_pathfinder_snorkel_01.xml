@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.617; 3.473; -0.637)" />
+	<Snorkel Origin="(2.617; 3.473; 0.028)" />
+	<Snorkel Origin="(2.617; 3.473; 0.637)" />
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_snorkel_01">
+		<Body ImpactType="Truck" Mass="15">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="5000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_63_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KRS_63_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="KRS63Snorkel" />
+	</GameData>
+</TruckAddon>

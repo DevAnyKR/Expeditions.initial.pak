@@ -1,0 +1,70 @@
+<_templates Include="trucks" >
+<Body>
+		<Mudguard Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-12"
+				MaxLimit="7"
+			>
+				<Motor Damping=".1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+		<Multiplier Multiplier="0.93" Type="Gearbox" />
+			<Multiplier Multiplier="0.93" Type="FuelTank" />
+			<Multiplier Multiplier="0.93" Type="Suspension" />
+		</Damage>
+		
+		<LimitedFluid
+			Center="(-0.947; 0.696; -0.851)"
+			SizeX="1.042"
+			SizeY="0.567"
+			SizeZ="0.517"
+			Type="Box"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_wings_default">
+		<Body Collisions="None" Mass="50" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+				<Body Collisions="None" Mass="50" ModelFrame="BoneFront_cdt">
+					<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				</Body>
+				<Body _template="Mudguard" ModelFrame="BoneMudguardW1L1_cdt">
+					<Constraint MinLimit="-30" MaxLimit="10" />
+				</Body>
+				<Body _template="Mudguard" ModelFrame="BoneMudguardW1R1_cdt">
+					<Constraint MinLimit="-30" MaxLimit="10" />
+				</Body>
+				<Body _template="Mudguard" ModelFrame="BoneMudguardW1L2_cdt">
+					<Constraint MinLimit="-30" MaxLimit="10" />
+				</Body>
+				<Body _template="Mudguard" ModelFrame="BoneMudguardW1R2_cdt">
+					<Constraint MinLimit="-4" MaxLimit="10" />
+				</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="750"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_1960_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_1960_WINGS_01_NAME"
+		/>
+
+		<InstallSocket Type="Afim1960_Wings" />
+		<RequiredSuspension Types="afim_1960_suspension_default" />
+	</GameData>
+</TruckAddon>

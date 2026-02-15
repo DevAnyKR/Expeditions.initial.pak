@@ -1,0 +1,22 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1">
+			<Body Collisions="None" ModelFrame="cdt_stage_1" />
+        </Body>
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="build_stage_0">
+	</Subset>
+
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1"/>
+		<CdtMesh Name="cdt_stage_1"/>
+		<AnimSubset Name="loop_animation" />
+          <AnimTrackSubset Name="idle_loop" />
+    </Subset>
+
+	<Landmark Mesh="landmarks/flagpole_01_us11_lmk"/>
+</ModelBrand>

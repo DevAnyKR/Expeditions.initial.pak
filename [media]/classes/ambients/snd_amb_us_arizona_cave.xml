@@ -1,0 +1,205 @@
+<AmbientSounds>
+	<Volume Min="1.0" Max="1.0" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_loop ">
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_bats_rnd_set/amb_us_arizona_cave_bats_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "45"
+			MaxInterval = "65"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_drips_rnd_set/amb_us_arizona_cave_drips_rnd__01"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "7"
+			MaxInterval = "25"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_metal_rattles_rnd_set/amb_us_arizona_cave_metal_rattles_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer_v2/amb_us_arizona_summer_v2_day_windgust_rnd_set/amb_us_arizona_summer_v2_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+	</DayForest>
+	<DayWind Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_loop">
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_bats_rnd_set/amb_us_arizona_cave_bats_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "45"
+			MaxInterval = "65"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_drips_rnd_set/amb_us_arizona_cave_drips_rnd__01"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "7"
+			MaxInterval = "25"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_metal_rattles_rnd_set/amb_us_arizona_cave_metal_rattles_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer_v2/amb_us_arizona_summer_v2_day_windgust_rnd_set/amb_us_arizona_summer_v2_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_loop">
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_bats_rnd_set/amb_us_arizona_cave_bats_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "45"
+			MaxInterval = "65"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_drips_rnd_set/amb_us_arizona_cave_drips_rnd__01"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "7"
+			MaxInterval = "25"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_metal_rattles_rnd_set/amb_us_arizona_cave_metal_rattles_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer_v2/amb_us_arizona_summer_v2_day_windgust_rnd_set/amb_us_arizona_summer_v2_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_loop">
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_bats_rnd_set/amb_us_arizona_cave_bats_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "45"
+			MaxInterval = "65"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_drips_rnd_set/amb_us_arizona_cave_drips_rnd__01"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "7"
+			MaxInterval = "25"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_cave_metal_rattles_rnd_set/amb_us_arizona_cave_metal_rattles_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_cave/amb_us_arizona_water_impacts_rnd_set/amb_us_arizona_water_impacts_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer_v2/amb_us_arizona_summer_v2_day_windgust_rnd_set/amb_us_arizona_summer_v2_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</NightWind>
+</AmbientSounds>

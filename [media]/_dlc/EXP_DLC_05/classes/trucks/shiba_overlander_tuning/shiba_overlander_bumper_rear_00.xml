@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_bumper_rear_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="30"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.259; 0.818; 0.482)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.259; 0.818; -0.482)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.30; 0.8; -0)" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderRearBumper" />
+	</GameData>
+</TruckAddon>

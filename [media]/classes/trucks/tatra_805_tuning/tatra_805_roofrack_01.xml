@@ -1,0 +1,31 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_roofrack_01">
+		<Body ImpactType="Truck" Mass="55" ModelFrame="BoneRoofrack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="3000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Tatra805Roofrack" />
+	</GameData>
+</TruckAddon>

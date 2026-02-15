@@ -1,0 +1,26 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_roofrack_01">
+		<Body Mass="90" ModelFrame="BoneRoofRack01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="CotcoCanyonRoofrack" />
+	</GameData>
+</TruckAddon>

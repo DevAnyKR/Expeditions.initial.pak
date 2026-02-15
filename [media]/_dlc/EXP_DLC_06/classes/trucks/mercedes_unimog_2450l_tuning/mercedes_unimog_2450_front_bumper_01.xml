@@ -1,0 +1,65 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/mercedes_unimog_2450L_tuning" MeshFrame="mercedes_unimog_2450l_bumper_01">
+		<Body ImpactType="Truck" Mass="46" ModelFrame="BoneBumpeFront01_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collision="None" Mass="4" ModelFrame="BoneBumpeFront01Step_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="40"
+				>
+					<Motor Damping="0.1" Spring="0.5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.676; 1.061; 0.769)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.676; 1.061; -0.769)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.758; 1.547; 0.775)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.758; 1.547; -0.775)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.676; 1.061; 0.769)" />
+			<Model _template="HeadLightRay" Org="(2.676; 1.061; -0.769)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.676; 1.061; 0.769)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.676; 1.061; -0.769)" />
+			<Flare _template="BlueStreak" Pos="(2.676; 1.061; 0.769)" />
+			<Flare _template="BlueStreak" Pos="(2.676; 1.061; -0.769)" />
+			
+			<Model _template="HeadLightRay" Org="(2.758; 1.547; 0.775)" /> 
+			<Model _template="HeadLightRay" Org="(2.758; 1.547; -0.775)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.758; 1.547; 0.775)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.758; 1.547; -0.775)" />
+			<Flare _template="BlueStreak" Pos="(2.758; 1.547; 0.775)" />
+			<Flare _template="BlueStreak" Pos="(2.758; 1.547; -0.775)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.951; 1.049; -0.346)" ParentFrame="BoneBumpeFront01_cdt" />
+		<WinchSocket Pos="(2.951; 1.049; 0.346)" ParentFrame="BoneBumpeFront01_cdt" />
+		<WinchSocket Pos="(2.909; 1.073; 0.001)" ParentFrame="BoneBumpeFront01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_UNIMOG_U2450_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_UNIMOG_U2450_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="MercedesUnimog2450LBumperFront" />
+	</GameData>
+</TruckAddon>

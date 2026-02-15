@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(2.715; 2.353; 1.270)" />
+	<PhysicsModel Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_snorkel_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneSnorkel01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_FORCE_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_FORCE_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Snorkel" />
+	</GameData>
+</TruckAddon>

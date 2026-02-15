@@ -1,0 +1,84 @@
+<DayTimeState
+	ColorLUT="lut/day_az_01__vol_uncmp.tga"
+	FogColor="g(255; 161; 102) x 1.39"
+	FogScatterColor="g(224; 92; 18) x 0.55"
+	HorizonColor="g(199; 194; 177) x 0.39"
+	HorizonHeight="0.175"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="2.25"
+	SkySharpness="2"
+	SSAOColor="g(255; 255; 255; 205) x 0.001"
+	SkyBloomColor="g(229; 233; 244; 80) x 0.2"
+	SkyColor="g(196; 129; 81) x 2.5"
+	SunColor="g(255; 202; 153) x 0.69"
+	SunDir="(1; -0.3; 0)"
+	
+	WaterCubeMapIntensity="0.09"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 255; 255; 10) x 0.9"
+	
+	EnvMap="env/day_ariz_sandstorm_01_exp__d_ggxrefl.tga"
+	CubeMapScale="2.0"
+	
+	HdrAdaptationMinLum="1.2"
+	HdrAdaptationMaxLum="800"
+	TonemapWhitePoint="15"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="0.75"
+	HdrExposureScaleX="0.75"
+	
+	TonemapA="0.45"
+	TonemapB="0.025"
+	TonemapC="0.6"
+	TonemapD="0.5"
+	TonemapE="0.2"
+	TonemapF="0.05"
+	
+    BloomEnabled="true"
+	BloomPoint="0.14"
+	BloomIntensity="0.39"
+	BloomGamma="0.7"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="1.2"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="60.0"
+	ShadowMapResolution="2048"
+>
+	<Sky>
+		<Lightshaft
+			Tint="g(224; 153; 123)"
+			Intensity="0.0"
+			BlurRadius="10"
+			FalloffRadius="0.1"
+			FalloffInnerRadius="0.02"
+			IntensityClamp="1.0"
+			IntensityDayNightTransitionOffset="0.5"
+			IntensityDayNightTransitionLength="0.03"
+		/>
+		<Flare
+			AspectRatio="0.9"
+			Color="g(255; 245; 180) x 0.0"
+			Size="5.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.0169" StartDist="5" ScatterAngle="50" Alpha="0.95" Height="82" UpperScale="0.005" LowerScale="0.039"/>
+	<SecondaryFog Density="0.0105" Height="250" UpperScale="1" LowerScale="0.005"/>
+	<DistantFog StartDistance="390" EndDistance="2500" Height="390" DensityMultiplier="0.39"/>
+	<VolumeFog Density="0.15" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(255; 195; 139) x 1.39" MidY="g(255; 206; 161) x 1.39" PosY="g(232; 225; 220) x 1.5" />
+	<WeatherParticles Type="sandstorm" MinIntensity="2.5" MaxIntensity="3.9" IntensityChangeInterval="30" />
+	<ShadowBlend BlendFactor="0.45">
+	    <ShadowBlendCurve>
+            <Point Part="0.5" Percent="0.9"/>
+        </ShadowBlendCurve>
+    </ShadowBlend>
+</DayTimeState>

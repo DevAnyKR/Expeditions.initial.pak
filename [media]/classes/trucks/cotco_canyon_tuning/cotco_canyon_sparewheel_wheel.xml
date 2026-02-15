@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData WheelRepairsCapacity="2" />
+	<WheelRepairsHide>
+		<Mesh Frame="cotco_canyon_sparewheel_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<PhysicsModel Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_sparewheel_wheel">
+		<Body Mass="25" ModelFrame="BoneSpareWheelDefault_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+        IsConsumable="true"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_WHEEL_NAME"
+		/>
+        <RequiredAddon Types="cotco_canyon_sparewheel" />
+		<InstallSocket Type="CotcoCanyonSpareWheelSlot01" />
+	</GameData>
+</TruckAddon>

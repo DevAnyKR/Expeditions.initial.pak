@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_outerframe_01">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneOuterframe_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_NAME"
+		/>
+		<InstallSocket Type="Siro72Outerframe" />
+	</GameData>
+</TruckAddon>

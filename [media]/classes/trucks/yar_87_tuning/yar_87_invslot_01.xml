@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_inv_slot_01">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="2000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_YAR_87_INV_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_YAR_87_INV_SLOT_01_NAME"
+		/>
+		<InstallSocket Type="Yar87InvSlot01" />
+	</GameData>
+</TruckAddon>

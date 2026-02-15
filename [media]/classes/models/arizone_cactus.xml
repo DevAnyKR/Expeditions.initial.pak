@@ -1,0 +1,50 @@
+<_templates Include="models" />
+
+<ModelBrand Instanced="true" AcceptZoneBorderDecals="true" >
+
+	<PhysicsModel>
+		
+		<Body ModelFrame="bone_02_1" Mass="100" DamageMult="0.1" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="1000000"/>
+			
+			<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_2" Mass="100" DamageMult="0.1" NoSoftContacts="True">
+				<Constraint Type="Fixed" BreakOffThreshold="1150"/>
+			
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_3" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="150"/>
+				</Body>
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_4" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="150"/>
+				</Body>
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_5" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="150"/>					
+				</Body>
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_6" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="150"/>
+				
+					<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_7" Mass="20" DamageMult="0" NoSoftContacts="True">
+						<Constraint Type="Fixed" BreakOffThreshold="60"/>
+					</Body>
+					
+				</Body>	
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_8" Mass="20" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="150"/>
+				
+					<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone_02_9" Mass="20" DamageMult="0" NoSoftContacts="True">
+						<Constraint Type="Fixed" BreakOffThreshold="60"/>
+					</Body>	
+					
+				</Body>		
+				
+			</Body>	
+			
+		</Body>
+		
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/arizone_cactus_lmk"/>	
+		
+</ModelBrand>

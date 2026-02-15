@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<Body>
+		<ContainerLimits Collisions="None" Mass="50">
+			<Constraint LinearLimitsX="(-0.001;0.001)" LinearLimitsY="(-0.025;0.01)" Type="Fixed">
+				<Motor Damping="400" Spring="2500" Type="Spring" />
+			</Constraint>
+		</ContainerLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="khan_lo4f_invslot_01_slot_01_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_lo4f_tuning" MeshFrame="khan_lo4f_invslot_01_slot_01_battery">
+		<Body _template="ContainerLimits" ModelFrame="BoneInvSlot01Slot01Repair_cdt" />
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="khan_lo4f_invslot_01" />
+		<InstallSocket Type="KhanLo4FInvSlot01Slot01" />
+	</GameData>
+</TruckAddon>

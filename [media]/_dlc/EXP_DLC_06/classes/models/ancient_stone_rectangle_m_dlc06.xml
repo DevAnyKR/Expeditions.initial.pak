@@ -1,0 +1,9 @@
+<ModelBrand 
+	Instanced="true" 
+	 
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="ZigguratStones"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ancient_stone_rectangle_m_dlc06_lmk" />
+</ModelBrand>

@@ -1,0 +1,34 @@
+<ModelBrand>
+	
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+        <Body Collisions="Dynamic" ModelFrame="stage_1" />
+        </Body>
+	</PhysicsModel>
+		
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="cdt_stage_0" />
+	</Subset>
+	
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+		<AnimSubset Name="build_animation_1" />		
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+
+	 <AnimSubset Name="build_animation_1">
+		<CdtMesh Name="cdt_stage_0" />
+		<Mesh Name="animated_mesh" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">
+		<AnimEvent Key="1">
+			<Sound Name="actors/actor_mechtest_objtest_gate_objective" Range="200" Volume="1"/>
+		</AnimEvent>
+	</TrackEvents>
+	
+	
+	<Landmark Mesh="landmarks/mechtest_objtest_gate_objective_lmk" />
+</ModelBrand>

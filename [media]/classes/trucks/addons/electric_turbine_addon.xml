@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/invisible_mesh" />
+	<GameData
+		Category="electric_turbine"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_ELECTRIC_TURBINE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_ELECTRIC_TURBINE_NAME"
+		/>
+		<InstallSocket Type="ElectricTurbineSocket" />
+	</GameData>
+	<TruckData HasElectricTurbine="true"/>
+</TruckAddon>

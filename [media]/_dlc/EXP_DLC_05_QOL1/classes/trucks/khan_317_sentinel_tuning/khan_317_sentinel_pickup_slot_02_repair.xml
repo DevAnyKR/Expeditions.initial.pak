@@ -1,0 +1,34 @@
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="khan_317_pickup_slot_02_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<TruckData RepairsCapacity="50" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_pickup_slot_02_repair">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="4" ModelFrame="BonePickupSlot02_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="0" MaxLimit="10" Type="Hinge">
+					<Motor Damping="100" Spring="1100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear_supplies"
+		Category="rear"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="khan_317_sentinel_spare_wheel_slot_01" />
+		<InstallSocket Type="Khan317PickupSlot02" />
+	</GameData>
+</TruckAddon>

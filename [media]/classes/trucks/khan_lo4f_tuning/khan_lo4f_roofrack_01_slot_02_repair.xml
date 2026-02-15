@@ -1,0 +1,17 @@
+<_parent File="khan_lo4f_roofrack_01_slot_01_repair" />
+<TruckAddon>
+	<PhysicsModel MeshFrame="khan_lo4f_roofrack_01_slot_02_repair">
+		<Body ModelFrame="BoneRoofrack01Slot02Repair_cdt" />
+		<Body ModelFrame="BoneRoofrack01Slot02Repair_cdt">
+			<Constraint>
+				<Motor Damping="250" Spring="2100" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="KhanLo4FRoofrack01Slot02" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="khan_lo4f_roofrack_01_slot_02_repair" />
+	</RepairsHide>
+</TruckAddon>

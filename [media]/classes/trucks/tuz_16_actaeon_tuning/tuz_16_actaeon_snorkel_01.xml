@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.789; 2.479; -1.039)" />
+	<PhysicsModel Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_snorkel_01">
+			<Body ImpactType="Truck" Mass="10" ModelFrame="BoneSnorkel_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_16_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_16_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="Tuz16Snorkel" />
+	</GameData>
+</TruckAddon>

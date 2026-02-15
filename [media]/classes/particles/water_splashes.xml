@@ -1,0 +1,26 @@
+<CombineParticles AirResistance="3.0" Gravity="(0; -6; 0)">
+	<Texture
+		Diffuse="sfx/substance/water_splash__d_a.tga"
+		NormalMap="sfx/substance/water_splash__n_d.tga"
+		Distort="sfx/substance/distort2__n_d.tga"
+		DistortMult="3.5"
+		DistortScale="0.1"
+		DistortSpeed="1.6"
+		NumFramesX="2"
+		NumFramesY="2"
+		RandomFrameOffset="4"
+	/>
+	<Size Function="(1.0; 2.2; 3.4)" Median="0.5" />
+	<Scale Random="0.5" Value="0.8" />
+	<RotationSpeed Random="3" Value="15" />
+	<Rotation Random="90" />
+	<LifeTime Value="2.0" />
+	<Color Value="g(255; 255; 255; 200) x 0.35">
+		<Key Alpha="150" At="0.0" />
+		<Key Alpha="120" At="0.4" />
+		<Key Alpha="100" At="0.8" />
+		<Key Alpha="20" At="1.00" />
+	</Color>
+	<AlphaClip Function="(0; 0.5; 1)" Median="0.8" />
+	<Specular Enable="true" Power="20" Intensity="20" />
+</CombineParticles>

@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="siro_72_inv_slot_01_repair_d" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel  AcceptVisualDamage="false" Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_inv_slot_01_repair_d">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		IsConsumable="true"
+		CameraPreset="supplies_side_r"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="siro_72_inv_slot_01" />
+		<InstallSocket Type="Siro72InvSlotSlotD" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,86 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false" StaticModelWithDynamicParts="true" >
+	<PhysicsModel>
+	<Body    ModelFrame="BoneRoot_cdt">		
+					
+			<Body DamageMult="2.0" Mass="1200" NoSoftContacts="true"   ModelFrame="Bone7">
+			<Constraint BreakOffThreshold="2700" Name="RightConstraint" Type="Fixed" />
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone5">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone6">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone11">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone8">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone9">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone10">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone17">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="700" NoSoftContacts="true"   ModelFrame="Bone18">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body> 
+				<Body DamageMult="4.0" Mass="1200" NoSoftContacts="true"   ModelFrame="Bone12">
+				<Constraint BreakOffThreshold="700" Name="CenterConstraint" Type="Fixed" />
+							<Body DamageMult="2.0" Mass="1000" NoSoftContacts="true"   ModelFrame="Bone19">
+							<Constraint BreakOffThreshold="400" Type="Fixed" />
+							</Body>
+				</Body>  
+			</Body>
+			
+			<Body DamageMult="2.0" Mass="900" NoSoftContacts="true"   ModelFrame="Bone1">
+				<Constraint BreakOffThreshold="1800" Name="LeftConstraint" Type="Fixed" />
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone14">
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone15">
+				<Constraint BreakOffThreshold="300" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone16">
+				<Constraint BreakOffThreshold="300" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"    ModelFrame="Bone13">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone2">
+				<Constraint BreakOffThreshold="300" Type="Fixed" />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone3">
+				<Constraint BreakOffThreshold="300" Type="Fixed"  />
+				</Body>
+				<Body DamageMult="2.0" Mass="500" NoSoftContacts="true"   ModelFrame="Bone4">
+				<Constraint BreakOffThreshold="600" Type="Fixed" />
+				</Body>
+			</Body> 
+	</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/mech_bunker_wall_dlc07_lmk" />
+	<OnBreakEvents ConstraintNames="CenterConstraint, RightConstraint, LeftConstraint">
+		  <Sound Name ="actors/actor_interactive_walls/actor_interactive_wall_bunker_break_rnd/actor_interactive_wall_bunker_break_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+  		  <SFX Pos="(-0.1; 2.5; 0.0)" Dir="(0; ; 0)" Name="stone_wall"/>
+	</OnBreakEvents>
+	<GameData
+	ModelBreakageQuestConstraints="CenterConstraint"
+	ModelBreakageWinchPointsConstraints="CenterConstraint, RightConstraint, LeftConstraint"
+	IgnoresHonkExplosionForce="true"
+	>
+        <WinchSocket Constraint="CenterConstraint" Pos="(0.133; 0.07; 0.5)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="Bone12">
+			 <SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_bunker_connect_rnd/actor_interactive_wall_bunker_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		 <WinchSocket Constraint="LeftConstraint" Pos="(0.133; -0.5; 1.3)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="Bone1">
+			 <SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_bunker_connect_rnd/actor_interactive_wall_bunker_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+		<WinchSocket Constraint="RightConstraint" Pos="(0.133; 0.9; 1.2)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="Bone7">
+			 <SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_bunker_connect_rnd/actor_interactive_wall_bunker_connect_rnd" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+	</GameData>
+</ModelBrand>

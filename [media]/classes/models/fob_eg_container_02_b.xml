@@ -1,0 +1,31 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="ArmatureContainer_02_b">
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BonePhysicContainer_02_b_left"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-20" MaxLimit="215" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0.5; 0)"
+				Collisions="Dynamic"
+				ModelFrame="BonePhysicContainer_02_b_right"
+				Mass="250"
+				DamageMult="0.0"
+			>
+				<Constraint Cone="0" AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-20" MaxLimit="215" >
+					<Motor Damping="15" Spring="80" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_eg_container_02_b_lmk" />
+</ModelBrand>

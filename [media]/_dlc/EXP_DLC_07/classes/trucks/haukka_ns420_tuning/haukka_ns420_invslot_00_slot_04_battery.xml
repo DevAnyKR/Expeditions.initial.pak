@@ -1,0 +1,41 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_invslot_00_slot_04_battery">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="10"
+				ModelFrame="BoneInvSlot00Slot04_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-3.0"
+					MaxLimit="3.0"
+				>
+					<Motor Damping="5.0" Spring="250" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="200"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_invslot_00" />
+		<InstallSocket Type="HaukkaNS420InvSlotSlot04" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="haukka_ns420_invslot_00_slot_04_battery" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

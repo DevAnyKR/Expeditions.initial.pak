@@ -1,0 +1,41 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_invslot_02_left_fuel">	
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneInvSlot02LeftFuel_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.022;0.015)"
+				LinearLimitsY="(0;0.02)"
+				LinearLimitsZ="(-0.015;0.023)"
+			>
+				<Motor Type="Spring" Damping="300" Spring="300" />
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+
+ 	<FuelHide>
+		<Mesh Frame="khan_39_marshall_invslot_02_left_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="khan_39_marshall_invslot_01" />
+		<InstallSocket Type="Khan39invSlot01B" />
+	</GameData>
+</TruckAddon>

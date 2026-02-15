@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_front_bumper_01, ford_f450_front_bumper_01_glass">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.479; 0.669; 0.468)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.479; 0.669; -0.468)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.479; 0.669; 0.468)" />
+		<WinchSocket Pos="(3.479; 0.669; -0.468)" />
+		<WinchSocket Pos="(3.429; 0.642; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F450_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F450_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedFrontBumper" />
+	</GameData>
+</TruckAddon>

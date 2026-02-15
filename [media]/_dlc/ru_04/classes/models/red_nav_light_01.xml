@@ -1,0 +1,23 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="7"
+			Color="g(200; 55; 55) x 0.3"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="0"
+			Pos="(0; 1.9; 0)"
+			Shadows="false"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+</ModelBrand>

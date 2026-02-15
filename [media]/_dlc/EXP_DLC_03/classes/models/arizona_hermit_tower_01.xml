@@ -1,0 +1,68 @@
+<ModelBrand 
+ ClipCamera="false"
+>
+	
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+             <Body Collisions="Dynamic" ModelFrame="stage_1" />
+        </Body>
+	</PhysicsModel>
+	
+	
+	
+	
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="stage_0" />
+		<Mesh Name="bunner02" />
+		<AnimTrackSubset Name="idle_loop" />
+		<CdtMesh Name="stage_0" />
+	</Subset>
+	
+	
+	
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1" />
+		<Mesh Name="bunner02" />
+		<AnimTrackSubset Name="idle_loop" />
+		<CdtMesh Name="stage_1" />
+		
+		<AnimSubset Name="build_animation_0" />
+		
+        <AnimTrack Name="anim_stage_1"/>
+          
+    </Subset>
+
+	 <AnimSubset Name="build_animation_0">
+		<CdtMesh Name="stage_1" />
+		<Mesh Name="animated_stage" />
+		<Mesh Name="bunner02" />
+	</AnimSubset>
+
+	<TrackEvents TrackName="anim_stage_1">	
+		
+		<AnimEvent Key="67">
+			<Sound Name="actors/actor_construction/actor_construction_hermit_tower_01" Range="200" Volume="1"/>
+		</AnimEvent>
+		
+        <AnimEvent Key="78">
+        <SFX Pos="(-1; 10.459; -0.158)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+        </AnimEvent>
+
+
+        <AnimEvent Key="98">
+        <SFX Pos="(-1.094; 10.843; -2.234)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+        </AnimEvent>
+
+        <AnimEvent Key="113">
+        <SFX Pos="(0.509; 12.166; -0.52)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+        </AnimEvent>
+
+        <AnimEvent Key="131">
+        <SFX Pos="(-1.088; 15.923; -1.724)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+        </AnimEvent>	
+		
+	</TrackEvents>
+
+	
+	<Landmark Mesh="landmarks/arizona_hermit_tower_01_lmk" />
+</ModelBrand>

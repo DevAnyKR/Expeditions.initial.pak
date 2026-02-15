@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_93_kelpie_tuning" MeshFrame="tuz_93_kelpie_inv_slot_00_battery_a">
+		<Body Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r_supplies"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="tuz_93_kelpie_inv_slot_00" />
+		<InstallSocket Type="TUZ93KelpieInvSlot00SlotA"/>
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="tuz_93_kelpie_inv_slot_00_battery_a" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

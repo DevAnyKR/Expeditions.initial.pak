@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="afim_1960_inv_slot_01_battery_a" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_inv_slot_01_battery_a">
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="rear"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="afim_1960_invslot_01" />
+		<InstallSocket Type="Afim1960InvSlot01Slot01" />
+	</GameData>
+</TruckAddon>

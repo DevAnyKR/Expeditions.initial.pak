@@ -1,0 +1,28 @@
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_rear_bumper_2">
+		<Body  Mass="25" ModelFrame="BoneRearBumper02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_KHAN_39_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_KHAN_39_02_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallRearBumper" />
+	</GameData>
+</TruckAddon>

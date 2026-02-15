@@ -1,0 +1,18 @@
+<WeatherParticles
+	ColorMult="g(255; 172; 39; 160) x 1.39"
+	DrawDistance="32"
+	FallSpeed="0.2"
+	LifeTime="30"
+	TurbulenceIntensity="0.01"
+	TurbulenceMagnitude="0.2"
+	Wind="(0.39; 0.1; 0.39)"
+>
+	<Flying
+		AvgSize="0.005"
+		Diffuse="sfx/sand_6x__d_a.tga"
+		NumFramesX="6"
+		RotationSpeed="2"
+		IsAlignToVelocty="true"
+	/>
+	<Collided AgeIncreaseWater="2" />
+</WeatherParticles>

@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_inv_slot_00_repair_a">
+		<Body Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear_supplies"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="gc_caravan_inv_slot_00" />
+		<InstallSocket Type="GCCaravanInvSlot00SlotA" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="gc_caravan_inv_slot_00_repair_a" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

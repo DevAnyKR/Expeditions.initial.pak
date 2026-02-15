@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="0.95"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/folding_bridge_short_wide_lmk" />			
+</ModelBrand>

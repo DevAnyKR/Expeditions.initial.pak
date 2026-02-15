@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ford_f150_raptor_tuning" MeshFrame="ford_f150_backrack_00">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F150_BACKRACK_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F150_BACKRACK_01_NAME"
+		/>
+		<InstallSocket Type="FordF150Backrack" />
+	</GameData>
+</TruckAddon>

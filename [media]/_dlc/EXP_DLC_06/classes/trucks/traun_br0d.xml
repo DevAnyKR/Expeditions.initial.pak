@@ -1,0 +1,740 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			CamberAnglePhysics="0"
+			CamberAngleRender="5"
+			CamberSuspensionMultiplier="0.30"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FirstAxle
+			CamberAnglePhysics="0"
+			CamberAngleRender="5"
+			CamberSuspensionMultiplier="1.2"
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="2"
+			SteeringJointOffset="0.2"
+			Torque="full"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		SignalRadius="100.0"
+		ElectricChargeCapacity="9"
+		BackSteerSpeed="0.0335"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_traun_br0d"
+		EngineIconScale="1.0"
+		EngineStartDelay="1.2"
+		ExhaustStartTime="0.3"
+		FuelCapacity="125"
+		Responsiveness="0.33"
+		SteerSpeed="0.036"
+		TruckImage="traunBR0D"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1m"
+			DefaultWheelType="wheels_traun_br0d"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.274; 0.492; 0.85)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.274; 0.492; 0.85)" />
+			<Wheel _template="SecondAxle" Pos="(-0.649; 0.492; 0.85)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-0.649; 0.492; 0.85)" />
+			<Wheel _template="SecondAxle" Pos="(-1.775; 0.492; 0.85)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.775; 0.492; 0.85)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="traun_br0d_suspension_default"
+			Type="s_traun_br0d"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.636"
+		/>
+		<Steam Origin="(1.103; 0.886; -0.022)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<Handbrake		Sound="trucks/traun_br0d/traun_br0d_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/traun_br0d/traun_br0d_handbrake_off" />
+			<Honk			Sound="trucks/traun_br0d/traun_br0d_honk" />
+			<Reverse		Sound="trucks/traun_br0d/traun_br0d_reverse" />
+			<EngineRev		Sound="trucks/traun_br0d/traun_br0d_rev_alt" />
+			<EngineAccel	Sound="trucks/traun_br0d/traun_br0d_acc" />
+			<EngineStart	Sound="trucks/traun_br0d/traun_br0d_start" />
+			<EngineStop		Sound="trucks/traun_br0d/traun_br0d_stop" />
+			<EngineIdle		Sound="trucks/traun_br0d/traun_br0d_idle" />
+			<EngineIdle_2d	Sound="trucks/traun_br0d/traun_br0d_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/traun_br0d/traun_br0d_low" />
+			<EngineLow_2d	Sound="trucks/traun_br0d/traun_br0d_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/traun_br0d/traun_br0d_high" />
+			<EngineHigh_2d	Sound="trucks/traun_br0d/traun_br0d_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneShackerExhaust" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(1.8; 1.8; 1.8)" MaxFrequency="6" />
+			<Shaker Frame="BoneShakerGearstick" MinAngle="(0.25; 0.25; 0.25)" MaxAngle="(1.2; 1.2; 1.2)" MaxFrequency="1.0" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.57"
+			MaxX="2.65"
+		/>
+		<LimitedFluid
+			Center="(0.297; 0.864; -0.677)"
+			SizeX="0.718"
+			SizeY="0.335"
+			SizeZ="0.335"
+			Type="Box"
+		/>
+		<Inventory MaxLimit="5" />
+		<Intake Dir="(1; 0; 0)" Origin="(2.471; 1.162; 0)" Size="0.85" />
+		<GearboxSocket Default="g_scout_traun_br0d_default" Type="gearboxes_scouts_traun_br0d, gearboxes_scouts_heavy_experimental" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust
+			Dir="(-0.4; -0.1; 1)"
+			IsLight="true"
+			Origin="(-0.056; 0.569; 0.887)"
+			Speed="2.5"
+		/>
+		<EngineSocket Default="e_eu_scout_traun_br0d_engine_0" Type="e_eu_scout_traun_br0d, e_scout_heavy_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.1; 0; 0)"
+			Pos="(1.28; 1.32; 0.48)"
+			SteeringWheelPos="(1.68; 1.66; 0.48)"
+		/>
+		<DeployCost Cost="0" />
+		<Dashboard>
+			<Gauge Dir="(-1; 1; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/traun_br0d_arrow_01" Org="(1.8; 1.591; 0.568)" OutputAngles="(-40; 40)" />
+			<Gauge Dir="(-1; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/traun_br0d_arrow_01" Org="(1.8; 1.591; 0.477)" OutputAngles="(-40; 5)" />
+			<Gauge Dir="(-1; 1; 0)" InputRange="(0;85)" InputType="speed" Mesh="trucks/arrows/traun_br0d_arrow_02" Org="(1.796; 1.594; 0.384)" OutputAngles="(-120; 100)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.255; 0.75; -0.25)" Max="(1.45; 1.3; 0.25)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.35; 0.44; -0.35)" Max="(1.45; 0.75; 0.16)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(-0.95; 0.44; -0.16)" Max="(-0.25; 0.75; 0.16)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(-2.1; 0.44; -0.16)" Max="(-1.45; 0.75; 0.16)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Fuel" Min="(0.704; 0.685; -0.85)" Max="(-0.106; 1.1; -0.5)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.45" Type="wheels_traun_br0d" />
+		<CompatibleWheels Scale="0.45" Type="wheels_traun_br0d_medium_double_front" />
+		<CompatibleWheels Scale="0.45" Type="wheels_traun_br0d_medium_mudtires_tayga" />
+		<CompatibleWheels Scale="0.47" Type="wheels_traun_br0d" />
+		<CompatibleWheels Scale="0.47" Type="wheels_traun_br0d_medium_double_front" />
+		<CompatibleWheels Scale="0.47" Type="wheels_traun_br0d_medium_mudtires_tayga" />	
+		<Camera Center="(-1.4; 0.2; 0)" ParentFrame="BoneChassis_cdt">
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.2)"
+				LimitsVer="(-0.63; 0.3)"
+				ViewDir="(1; -0.05; 0)"
+				WindshieldDiffuseTexture="trucks/traun_br_0d_glass__d.tga"
+				WindshieldShadingTexture="trucks/traun_br_0d_glass__sh_d.tga"
+				ViewPos="(1.2; 2; 0.48)"
+				ZoomViewPosOffset="(0.4; 0.05; 0)"
+			>
+				<Rear ViewPosOffset="(0; -0.15; 0.5)" />
+				<Mirror ClipDir="(-1; 0.1; -0.3)" CurveAngle="10" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-1; 0.1; -0.24)" Size="(0.3; 0.25)" Pos="(1.79; 1.819; 0.938)" />
+				<Mirror ClipDir="(-1; 0.1; 0.3)" CurveAngle="10" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-1; 0.05; 0.6)" Size="(0.3; 0.25)" Pos="(1.79; 1.819; -0.938)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(2.6; 3.5; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-1.0; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle2L" IsIndependent="true" />
+			<Axle Frame="BoneAxle3L" IsIndependent="true" />
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2R" IsIndependent="true" />
+			<Axle Frame="BoneAxle3R" IsIndependent="true" />
+		</Axles>
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.0; 3.8; 0.0)"/>
+	</TruckData>
+	<Snorkel Origin="(0.903; 1.964; 0.83)" />
+	<Snorkel Origin="(0.903; 1.964; -0.83)" />
+	<PhysicsModel Mesh="trucks/traun_br0d">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.5; -0.35; 0)"
+			ImpactType="Truck"
+			Mass="2000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+			ForceBodyParams="true"
+				PushUpFactor="1"
+		>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneArches_cdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsZ="(-0.085; 0.085)"
+				>
+					<Motor Type="Spring" Spring="800" Damping="100" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0.4; -0.6; 0)"
+				ImpactType="Truck"
+				Mass="1000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				ForceBodyParams="true"
+				PushUpFactor="2"
+			>
+				<Constraint Type="Fixed" />
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneWiperLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-4"
+						MaxLimit="3"
+					>
+						<Motor Damping="0.5" Spring="15" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneWiperRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-3"
+						MaxLimit="2"
+					>
+						<Motor Damping="0.3" Spring="15" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneSunshieldLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="0"
+					>
+						<Motor Damping="0.05" Spring="1.2" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneSunshieldRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="0"
+					>
+						<Motor Damping="0.05" Spring="1.2" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneCabWires_cdt"
+				>
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="20"
+					>
+						<Motor Damping="0.02" Spring="1.1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="0.5"
+					ModelFrame="BoneKeyFob_cdt"
+				>
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="21"
+					>
+						<Motor Damping="0.005" Spring="0.1" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod1_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="TieRod1"
+					MinLimit="-25"
+					MaxLimit="25"
+				/>
+			</Body>
+			<Body _template="TieRod" Collisions="None" ModelFrame="BoneTieRod2_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="TieRod2"
+					MinLimit="-25"
+					MaxLimit="25"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.474; 0.928; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.4" Pos="(-2.474; 0.928; 0.708)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.4" Pos="(-2.474; 0.928; -0.708)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="(200; 0; 0)" Pos="(-2.474; 0.928; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(2.444; 1.083; 0.0)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.474; 0.928; 0.708)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.474; 0.928; -0.708)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(1; 0; 1)" DirAngle="110" Pos="(2.42; 1.165; 0.761)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(1; 0; -1)" DirAngle="110" Pos="(2.42; 1.165; -0.761)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(1; 0; 1)" DirAngle="110" Pos="(2.42; 1.072; 0.768)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(1; 0; -1)" DirAngle="110" Pos="(2.42; 1.072; -0.768)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(0; 0; 1)" DirAngle="110" Pos="(0.985; 1.165; 0.894)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Dir="(0; 0; -1)" DirAngle="110"  Pos="(0.985; 1.165; -0.894)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.444; 1.083; 0.6)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Dir="(1; 0; 0)" Size="0.25" Pos="(2.444; 1.083; -0.6)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.444; 1.083; 0.6)" />
+			<Model _template="HeadLightRay" Org="(2.444; 1.083; -0.6)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.444; 1.083; 0.6)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 195) x 1.5" Size="0.3" Pos="(2.444; 1.083; -0.6)" />
+			<Flare _template="BlueStreak" Pos="(2.444; 1.083; 0.6)" />
+			<Flare _template="BlueStreak" Pos="(2.444; 1.083; -0.6)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/traun_br0d_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(2.444; 1.083; 0.6)" ParentFrame="BoneChassis_cdt" />
+	<GameData
+		Country="RU,CAS,US"
+		LockedUnconditionally="false"
+		Price="55000"
+		UnlockByExploration="false"
+		UnlockByObjective=""
+		UnlockByRank="1"
+		RecoveryPrice="2400"
+	>
+		<WinchSocket Pos="(-2.532; 0.613; 0)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(0.95; 1.073; 0.6)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(0.95; 1.073; -0.6)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-1.214; 1.056; 0.6)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-1.214; 1.056; -0.6)" ParentFrame="BoneChassis_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_TRAUN_BR0D_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgTraunBrExp"
+			UiIcon576x640="shopImgTraunBrExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_TRAUN_BR0D_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.6; 1.228; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14; 1.383; -4)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4; 1.231; -0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.5; 1.937; 3)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5; 1.85; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.85; 6.8; -3.184)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.55; 0.5; -0.7)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(4.4; 0.5; -3.2)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.6; 1.324; 0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.8; 1.324; 7)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.7; 1.324; 0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12; 1.324; -7)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(3.063; 1.745; 0.521)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.043; 6.65; -4.973)" />
+			<CameraPos FOV="32.0" Name="sticker_1" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.703; 1.5; -1.908)" InterestPosition="(6; 1.243; -0.58)" />
+			<CameraPos FOV="32.0" Name="sticker_2" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(5.703; 1.368; 2.446)" InterestPosition="(7.7; 1.315; 0.788)" />
+			<CameraPos FOV="32.0" Name="sticker_3" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(0.938; 1.368; 0.526)" InterestPosition="(2.746; 1.315; 0.5)" />
+			
+			<CameraPos FOV="32.0" Name="default_supplies" InterestPosition="(5.6; 1.228; 0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="2" Position="(14; 1.383; -4)" />
+			<CameraPos FOV="32.0" Name="side_r_supplies" InterestPosition="(4.6; 1.324; 0.2)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(11.8; 1.324; 7)" />
+			<CameraPos FOV="32.0" Name="side_l_supplies" InterestPosition="(5.7; 1.324; 0.2)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(12; 1.324; -7)" />
+			<CameraPos FOV="32.0" Name="roof_supplies" InterestPosition="(5; 1.85; 0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(9.85; 6.8; -3.184)" />
+			<CameraPos FOV="32.0" Name="rear_supplies" InterestPosition="(4; 1.231; -0.3)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(-4.5; 1.937; 3)" />
+		</CustomizationCameras>
+		
+		<AddonSockets DefaultAddon="traun_br0d_cargo" RequiredAddonIfNoConflicts="traun_br0d_cargo">
+			<Socket Names="TraunBr0dCargo" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="ScoutMetalDetectorTraunBr0d"
+				Offset="(1.4; 2.39; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.005; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0.45; -0.319; 0.0)" />
+			</Socket>
+		</AddonSockets>
+
+		<AddonSockets DefaultAddon="traun_br0d_front_bumper_00" >
+			<Socket Names="TraunBr0dBumperFront" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="TraunBr0dBumperFrontSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets DefaultAddon="traun_br0d_rear_bumper_00" >
+			<Socket Names="TraunBr0dBumperRear" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="TraunBr0dSpareWheelSlot" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="TraunBr0dSpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="TraunBr0dOuterframe" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="DroneScoutCarrierTraunBr0d" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets DefaultAddon="traun_br0d_snorkel_00" >
+			<Socket Names="TraunBr0dSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets DefaultAddon="traun_br0d_wings_00" >
+			<Socket Names="TraunBr0dWings" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot03" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot04" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot05" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot06" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot07" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot08" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot09" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot10" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot11" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dRoofRackSlot12" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dOuterframeSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dOuterframeSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dOuterframeSlot03" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dOuterframeSlot04" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dStickerDoorL" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="TraunBr0dStickerDoorR" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+		<AddonSockets>
+			<Socket Names="TraunBr0dStickerRear" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets DefaultAddon="traun_br0d_diff_lock_default">
+			<Socket Names="traun_br0d_diffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets DefaultAddon="traun_br0d_estock_default">
+			<Socket Names="Traunbr0destock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+
+		<!-- Horn -->
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- --------------------------------------------------------------------------------- -->
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod1" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRod2" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- FRONT AXLE -->
+		<IKBone ModelFrame="IK_BoneAxleL1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.25)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="IK_BoneAxleL1_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxleR1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.25)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="IK_BoneAxleR1_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- FRONT SHOCKS -->
+		<IKBone ModelFrame="IK_BoneShockL1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.1)"
+				AttachToFrame="IK_BoneAxleL1_A"
+				ModelFrame="IK_BoneShockL1_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.1)"
+				AttachToFrame="IK_BoneAxleR1_A"
+				ModelFrame="IK_BoneShockR1_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- FRONT SPRINGS -->
+		<IKBone ModelFrame="IK_BoneSpringL1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneAxleL1_A"
+				ModelFrame="IK_BoneSpringL1_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneSpringR1_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.1)"
+				AttachToFrame="IK_BoneAxleR1_A"
+				ModelFrame="IK_BoneSpringR1_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- MID AXLE -->
+		<IKBone ModelFrame="IK_BoneAxleL2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.25)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="IK_BoneAxleL2_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxleR2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.25)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="IK_BoneAxleR2_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- MID SHOCKS -->
+		<IKBone ModelFrame="IK_BoneShockL2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.1)"
+				AttachToFrame="IK_BoneAxleL2_A"
+				ModelFrame="IK_BoneShockL2_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.1)"
+				AttachToFrame="IK_BoneAxleR2_A"
+				ModelFrame="IK_BoneShockR2_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- REAR AXLE -->
+		<IKBone ModelFrame="IK_BoneAxleL3_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.25)"
+				AttachToFrame="BoneAxle3L"
+				ModelFrame="IK_BoneAxleL3_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneAxleR3_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.25)"
+				AttachToFrame="BoneAxle3R"
+				ModelFrame="IK_BoneAxleR3_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- REAR SHOCKS -->
+		<IKBone ModelFrame="IK_BoneShockL3_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; -0.1)"
+				AttachToFrame="IK_BoneAxleL3_A"
+				ModelFrame="IK_BoneShockL3_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockR3_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0.1)"
+				AttachToFrame="IK_BoneAxleR3_A"
+				ModelFrame="IK_BoneShockR3_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- RACKS -->
+		<IKBone ModelFrame="IK_RackLeft_A" ParentFrame="BoneTieRod2_cdt">
+			<IKJoint AxisLocal="(0; -1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="IK_RackLeft_B"
+			>
+				<IKJoint AxisLocal="(0; -1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_RackRight_A" ParentFrame="BoneTieRod2_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackR"
+				ModelFrame="IK_RackRight_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- ROD BAR -->
+		<IKBone ModelFrame="IK_RodBar_A" ParentFrame="BoneTieRod2_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod1_cdt"
+				ModelFrame="IK_RodBar_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- ROD BAR -->
+		<IKBone ModelFrame="IK_RodStab_A" ParentFrame="BoneTieRod2_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_RodStab_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

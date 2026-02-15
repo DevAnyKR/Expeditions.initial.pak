@@ -1,0 +1,9 @@
+<_templates Include="models" />
+<ModelBrand Instanced="True">
+	<PhysicsModel>
+		<Body _template="LightWeight" Mass="250" ModelFrame="BoneRoot">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/broken_wooden_boat_05_lmk" />
+</ModelBrand>

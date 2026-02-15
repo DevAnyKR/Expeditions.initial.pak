@@ -1,0 +1,24 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+>
+	<StaticLights>
+		<StaticLight
+			Dir="(0; -0.707; -0.707)"
+			Pos="(0; 0; 0)" 
+			AttenEnd="16"
+			Color="g(220; 229; 255) x 0.75"
+		/>
+	</StaticLights>
+	
+	<PhysicsModel>
+		<Body
+			Collisions="None"
+			DamageMult="0.0"
+		/>
+	</PhysicsModel>
+	
+</ModelBrand>

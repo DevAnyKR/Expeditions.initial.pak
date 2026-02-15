@@ -1,0 +1,50 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	Instanced="true"
+	DynamicModel="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="mesh_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone01_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone02_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone03_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone04_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone05_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone06_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone07_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone08_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone09_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone10_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="20" NoSoftContacts="true" ModelFrame="cone11_cdt">
+			<Constraint BreakOffThreshold="20" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_ext_parking_lmk" />
+</ModelBrand>

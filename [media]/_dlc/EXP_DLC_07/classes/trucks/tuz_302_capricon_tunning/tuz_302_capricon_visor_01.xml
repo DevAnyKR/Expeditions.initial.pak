@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_visor_01">
+		<Body ImpactType="Truck" Mass="3" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Pos="(1.255; 2.666; 0.275)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Pos="(1.255; 2.666; 0.118)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Pos="(1.255; 2.666; -0.275)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.12" Pos="(1.255; 2.666; -0.118)" Dir="(1; 0; 0)" DirAngle="90" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_EXTENDED_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconVisor" />
+	</GameData>
+</TruckAddon>

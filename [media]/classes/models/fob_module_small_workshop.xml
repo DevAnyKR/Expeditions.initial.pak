@@ -1,0 +1,31 @@
+<ModelBrand DynamicModel="true"
+	ClipCamera="true"
+	Instanced="true"
+	DynamicModel="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="mesh_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="50" NoSoftContacts="true" ModelFrame="box1_cdt">
+			<Constraint BreakOffThreshold="10" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="50" NoSoftContacts="true" ModelFrame="box2_cdt">
+			<Constraint BreakOffThreshold="10" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="400" NoSoftContacts="true" ModelFrame="box3_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="400" NoSoftContacts="true" ModelFrame="box4_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="400" NoSoftContacts="true" ModelFrame="box5_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_workshop_lmk" />
+</ModelBrand>

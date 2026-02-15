@@ -1,0 +1,25 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_roof_01">
+		<Body Mass="15" ModelFrame="BoneRoof_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOF_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOF_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderRoof" />
+	</GameData>
+</TruckAddon>

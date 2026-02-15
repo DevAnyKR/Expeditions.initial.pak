@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_outerframe_01">
+		<Body ImpactType="Truck" Mass="175" ModelFrame="BoneOuterframe01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsCustomizable="true"
+		AddonUnlockByObjective="false"
+		Price="4000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157OuterFrame" />
+	</GameData>
+</TruckAddon>

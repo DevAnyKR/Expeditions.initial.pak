@@ -1,0 +1,13 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+	PlantRejectingAnchors="true"
+	SkipAdjustHeightMap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/washington_vertrock_02_lmk" />
+</ModelBrand>

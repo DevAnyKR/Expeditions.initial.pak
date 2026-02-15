@@ -1,0 +1,151 @@
+<_templates Include="models" />
+<ModelBrand
+	DynamicModel="True"
+	Instanced="true"
+	IsKeepPhysModelAlways="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+
+	<PhysicsModel>
+	
+	<!-- Root -->
+	
+		<Body
+			Collisions="None"
+			Mass="1000000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="False"
+		>
+		<Constraint BreakOffThreshold="100000000" Type="Fixed" />
+
+		<!-- РЎРєРѕСЂР»СѓРїР° -->			
+
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="5"
+				ModelFrame="Bone_03_cdt"
+				NoSoftContacts="True"
+			>
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+			
+				<Body
+					Collisions="Dynamic"
+					Mass="5"
+					ModelFrame="Bone_04_cdt"
+					NoSoftContacts="True"
+				>
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+				
+					<Body
+						Collisions="Dynamic"
+						Mass="5"
+						ModelFrame="Bone_05_cdt"
+						NoSoftContacts="True"
+					>
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+					</Body>
+				
+				</Body>
+			
+			</Body>
+			
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="5"
+				ModelFrame="Bone_07_cdt"
+				NoSoftContacts="True"
+			>
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+			
+				<Body
+					Collisions="Dynamic"
+					Mass="5"
+					ModelFrame="Bone_11_cdt"
+					NoSoftContacts="True"
+				>
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+				</Body>
+			
+			</Body>			
+
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="5"
+				ModelFrame="Bone_09_cdt"
+				NoSoftContacts="True"
+			>
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+			
+				<Body
+					Collisions="Dynamic"
+					Mass="5"
+					ModelFrame="Bone_08_cdt"
+					NoSoftContacts="True"
+				>
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+					
+					<Body
+						Collisions="Dynamic"
+						Mass="5"
+						ModelFrame="Bone_06_cdt"
+						NoSoftContacts="True"
+					>
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+					</Body>
+				
+				</Body>
+			
+			</Body>
+
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="5"
+				ModelFrame="Bone_10_cdt"
+				NoSoftContacts="True"
+			>
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+					
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="5"
+				ModelFrame="Bone_12_cdt"
+				NoSoftContacts="True"
+			>
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+			
+				<Body
+					Collisions="Dynamic"
+					Mass="5"
+					ModelFrame="Bone_02_cdt"
+					NoSoftContacts="True"
+				>
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+				
+					<Body
+						Collisions="Dynamic"
+						Mass="5"
+						ModelFrame="Bone_01_cdt"
+						NoSoftContacts="True"
+					>
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+					</Body>
+				
+				</Body>
+						
+			</Body>
+	
+		</Body>
+	</PhysicsModel>
+	
+	<GameData>
+		<WinchSocket Pos="(0.113; 0.317; 0.112)" ParentFrame="Bone_07_cdt" />
+	</GameData>
+	
+</ModelBrand>

@@ -1,0 +1,25 @@
+<ModelBrand>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="cube" />
+		
+	</PhysicsModel>
+
+	<Subset Name="stage_0">
+		<Mesh Name="cube" />
+		<CdtMesh Name="cube" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+
+	<Subset IsDefault="true" Name="stage_1">
+	</Subset>
+	 <AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh" />
+	</AnimSubset>
+
+
+
+	<!-- <OnSubsetActivateEvent> </OnSubsetActivateEvent> -->
+
+</ModelBrand>

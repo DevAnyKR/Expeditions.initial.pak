@@ -1,0 +1,94 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_front_bumper_02">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneFrontBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.1"
+				ModelFrame="BoneFrontBumper02BranchSection_cdt"
+			>
+				<Constraint LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" Type="Fixed">
+					<Motor Damping="0.02" Spring="60" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper02HookR_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-48"
+					MaxLimit="230"
+				>
+					<Motor Damping="0.02" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper02HookL_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-21"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.05" Spring="0.3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.58; 0.815; 0.236)" />
+			<Model _template="HeadLightRay" Org="(2.58; 0.815; -0.236)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.846; 0.838; 0.787)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.846; 0.838; -0.787)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.879; 0.816; 0.683)" />
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.879; 0.816; -0.683)" />
+			
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.846; 0.838; 0.787)" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.846; 0.838; -0.787)" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.879; 0.816; 0.683)" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" DirAngle="90" Pos="(3.879; 0.816; -0.683)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.846; 0.838; 0.787)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.846; 0.838; -0.787)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.879; 0.816; 0.683)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="90" Size="0.25" Pos="(3.879; 0.816; -0.683)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.114; 0.541; 0.298)" />
+		<WinchSocket Pos="(4.114; 0.541; -0.298)" />
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_KHAN_317_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_KHAN_317_02_NAME"
+		/>
+		<RequiredSuspension Types="khan_317_sentinel_suspension_high, khan_317_sentinel_suspension_crawler" />
+		<InstallSocket Type="Khan317FrontBumper" />
+	</GameData>
+</TruckAddon>

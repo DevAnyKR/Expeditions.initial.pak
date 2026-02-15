@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(6.0; 17.0)" 
+		Texture="occlusion_us_crusher_line_01.tga"
+	/>
+</ModelBrand>

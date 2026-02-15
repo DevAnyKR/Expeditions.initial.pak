@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_bumper_02_spotlight_a">
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; -0.15)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; -0.3)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; -0.45)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; 0.15)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; 0.3)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 0.5" Size="0.2" Pos="(3.3; 1.69; 0.45)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.3; 1.69; 0.0)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default_supplies"
+		Category="fender_front"
+		IsConsumable="true"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="gc_caravan_front_bumper_02" />
+		<InstallSocket Type="GCCaravanBumperSpotlight" />
+	</GameData>
+</TruckAddon>

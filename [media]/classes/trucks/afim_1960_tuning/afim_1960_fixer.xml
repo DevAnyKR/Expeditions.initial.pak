@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="addon_1"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_AFIM_1960_FIXER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_AFIM_1960_FIXER_NAME"
+		/>
+		<InstallSocket Type="Afim1960Fixer" />
+		<RequiredSuspension Types="afim_1960_suspension_high, afim_1960_suspension_crawler" />
+	</GameData>
+</TruckAddon>

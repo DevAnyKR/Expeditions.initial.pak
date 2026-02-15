@@ -1,0 +1,93 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch  Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="15"
+			/>
+		</Hitch>
+		<Hitch_One  Collisions="None" Mass="0.3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="10"
+			/>
+		</Hitch_One>
+	</Body>
+</_templates>
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_front_bumper_02">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneFrontBumper_02_cdt">
+			<Constraint Type="Rigid" />		
+			<Body _template="Hitch" ModelFrame="BoneHook_cdt">	
+				<Body _template="Hitch_One" ModelFrame="BHook_cdt"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+		<!-- donw row -->
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; 0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; 0.107)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; 0.077)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; 0.045)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; 0.014)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; -0.017)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; -0.048)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; -0.079)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; -0.109)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.867; -0.141)" ParentFrame="BoneCabin_cdt" />
+		<!-- up row -->
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; 0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; 0.107)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; 0.077)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; 0.045)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; 0.014)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; -0.017)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; -0.048)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; -0.079)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; -0.109)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 1.0" Size="0.04" Pos="(2.044; 0.899; -0.141)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_DON_71_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_DON_71_02_NAME"
+		/>
+		<InstallSocket Type="Don71FrontBumper" />
+		<RequiredSuspension Types="don_71_suspension_default, don_71_suspension_crawler, don_71_suspension_high, don_71_se_suspension_default, don_71_se_suspension_high, don_71_se_suspension_crawler" />
+	</GameData>
+</TruckAddon>
+
+
+
+
+
+
+
+
+	
+	 
+	 

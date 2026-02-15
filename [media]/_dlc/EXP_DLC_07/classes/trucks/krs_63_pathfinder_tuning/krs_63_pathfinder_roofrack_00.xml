@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_roofrack_00">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="4000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KRS_63_ROOFRACK_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KRS_63_ROOFRACK_00_NAME"
+		/>
+		<InstallSocket Type="KRS63Roofrack" />
+	</GameData>
+</TruckAddon>

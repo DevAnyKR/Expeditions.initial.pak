@@ -1,0 +1,29 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="don_71_rear_bumper_01_spare_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_lo4f_tuning" MeshFrame="khanlo4f_wheel_addon">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint	Type="Rigid">
+				<Motor Damping="0.5" Spring="0.8" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsConsumable="false"
+		IsCustomizable="false"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="KhanLo4FSpareWheelAddon" />
+	</GameData>
+</TruckAddon>

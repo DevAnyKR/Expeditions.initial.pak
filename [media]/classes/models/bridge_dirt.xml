@@ -1,0 +1,53 @@
+<_templates>
+	<Constraint>
+		<Bridge
+			PlaneAxisLocal="(1.0; 0; 0)"
+			TwistAxisLocal="(0; 1.0; 0)"
+			Type="Ragdoll"
+		>
+			<PlaneConeMotor Damping="100000" Spring="1000000" Type="Spring" />
+		</Bridge>
+	</Constraint>
+	<Body>
+		<Bridge
+			AngularDamping="2.0"
+			IsStaticSoil="true"
+			Mass="3000"
+			NoSoftContacts="true"
+			
+		/>
+	</Body>
+</_templates>
+<ModelBrand AcceptZoneBorderDecals="true">
+	<PhysicsModel>
+		<Constraint
+			_template="Bridge"
+			ModelFrameChild="Bone5_cdt"
+			ModelFrameParent="Bone3_cdt"
+			PivotOffset="(2.6; 0; 0)"
+		/>
+		<Body _template="Bridge" Mass="0" ModelFrame="Bone0_cdt">
+			<Body _template="Bridge" ModelFrame="Bone1_cdt">
+				<Constraint _template="Bridge" />
+				<Body _template="Bridge" ModelFrame="Bone2_cdt">
+					<Constraint _template="Bridge" />
+					<Body
+						IsStaticSoil="true"
+						Mass="0"
+						ModelFrame="Bone3_cdt"
+						NoSoftContacts="true"
+					>
+						<Constraint _template="Bridge" />
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="Bridge" ModelFrame="Bone4_cdt">
+				<Constraint _template="Bridge" />
+				<Body _template="Bridge" ModelFrame="Bone5_cdt">
+					<Constraint _template="Bridge" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Size="(12.0; 12.0)" Texture="occlusion_bridge_dirt.tga" />
+</ModelBrand>

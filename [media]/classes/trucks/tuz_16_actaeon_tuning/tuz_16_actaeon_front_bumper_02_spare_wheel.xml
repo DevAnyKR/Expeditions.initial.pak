@@ -1,0 +1,43 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="tuz_16_front_bumper_02_spare_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1">	
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_front_bumper_02_spare_wheel">
+		<Body Collisions="None" Mass="50" ModelFrame="BoneFronBumper_02_SpareWheel_cdt">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				>
+					<Motor Damping="1.5" Spring="0.8" Type="Spring" />
+				</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_16_actaeon_front_bumper_02" />
+		<InstallSocket Type="Tuz16FrontBumper02_SpareWheel" />
+	</GameData>
+</TruckAddon>

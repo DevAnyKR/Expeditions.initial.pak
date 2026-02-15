@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_roofrack_spotlight">
+		<Body Mass="4" ModelFrame="BoneRoofrackSpotight_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.525; 1.77; -0.148)" />
+			<Model _template="HeadLightRay" Org="(0.525; 1.77; 0.148)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(0.525; 1.77; -0.148)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(0.525; 1.77; 0.148)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.18" Pos="(0.525; 1.77; -0.148)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.18" Pos="(0.525; 1.77; 0.148)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SPOTLIGHT_A_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_roofrack_01" />
+		<InstallSocket Type="HarvesterScout800RoofrackSpotlight" />
+	</GameData>
+</TruckAddon>

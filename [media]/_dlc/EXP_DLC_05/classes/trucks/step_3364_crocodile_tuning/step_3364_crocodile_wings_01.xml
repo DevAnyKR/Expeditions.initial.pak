@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.97" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_wings_01">
+		<Body Mass="40" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 1.5" Size=".5" Pos="(2.621; 1.104; 0.717)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 1.5" Size=".5" Pos="(2.621; 1.104; -0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.6" Size="0.3" Pos="(2.611; 1.104; 0.717)" ParentFrame="BoneWings01_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.6" Size="0.3" Pos="(2.611; 1.104; -0.717)" ParentFrame="BoneWings01_cdt" />
+						
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.611; 1.104; 0.717)" ParentFrame="BoneWings01_cdt" />
+			<Model _template="HeadLightRay" Org="(2.611; 1.104; -0.717)" ParentFrame="BoneWings01_cdt" />
+						
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 235) x 1.3" Size="0.25" Pos="(2.611; 1.104; 0.717)" ParentFrame="BoneWings01_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 235) x 1.3" Size="0.25" Pos="(2.611; 1.104; -0.717)" ParentFrame="BoneWings01_cdt" />
+			
+			<Flare _template="BlueStreak" AspectRatio="2.0" Color="g(210; 210; 255) x 0.2" Pos="(2.611; 1.104; 0.717)" ParentFrame="BoneWings01_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="2.0" Color="g(210; 210; 255) x 0.2" Pos="(2.611; 1.104; -0.717)" ParentFrame="BoneWings01_cdt" />
+		
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.2; 0.8; 0)" Color="g(230; 230; 235) x 6.5" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_FENDERS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_3364_CROCODILE_FENDERS_01_NAME"
+		/>
+		<RequiredSuspension Types="step_3364_crocodile_suspension_high, step_3364_crocodile_suspension_crawler"  />
+		<InstallSocket Type="Step3364CrocodileWings" />
+	</GameData>
+</TruckAddon>

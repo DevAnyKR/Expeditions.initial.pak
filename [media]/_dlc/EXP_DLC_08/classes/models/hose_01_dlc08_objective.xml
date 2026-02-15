@@ -1,0 +1,16 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+  <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="hose_01_dlc08"></Body>
+	</PhysicsModel>
+
+	<Subset IsDefault="true" Name="stage_0">
+	</Subset>
+	
+	<Subset Name="stage_1">
+		<Mesh Name="hose_01_dlc08" />
+		<CdtMesh Name="cdt_hose_01_dlc08" />
+    </Subset>
+</ModelBrand>

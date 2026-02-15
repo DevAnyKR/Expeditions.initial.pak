@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/ford_f450_limited_tuning" MeshFrame="ford_f450_rear_bumper_01, ford_f450_rear_bumper_01_glass">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.297; 0.622; 0.752)" Dir="(-0.8; 0; 1)" DirAngle="90" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.297; 0.622; -0.752)" Dir="(-0.8; 0; 1)" DirAngle="90" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Category="rear"
+		CameraPreset="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_F450_REAR_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_F450_REAR_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="FordF450LimitedRearBumper" />
+	</GameData>
+</TruckAddon>

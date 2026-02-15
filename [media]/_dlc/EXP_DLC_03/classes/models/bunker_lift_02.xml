@@ -1,0 +1,8 @@
+<ModelBrand
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/bunker_lift_02_lmk" />
+	
+</ModelBrand>

@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_inv_slot_02">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneInvSlot02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="2000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LOADSTAR_1700_INV_SLOT_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LOADSTAR_1700_INV_SLOT_02_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700InvSlot02" />
+	</GameData>
+</TruckAddon>

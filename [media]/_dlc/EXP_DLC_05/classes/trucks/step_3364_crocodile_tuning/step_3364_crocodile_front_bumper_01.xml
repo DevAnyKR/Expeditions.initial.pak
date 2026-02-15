@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_front_bumper_01">
+		<Body ImpactType="Truck" Mass="65" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.828; 0.701; 0.648)" />
+			<Model _template="HeadLightRay" Org="(2.828; 0.701; -0.648)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 245; 235) x 1.3" Size="0.2" Pos="(2.828; 0.701; 0.648)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 235) x 1.3" Size="0.2" Pos="(2.828; 0.701; -0.648)" />
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x 0.1" Size="0.4" Pos="(2.828; 0.701; 0.648)" />
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x 0.1" Size="0.4" Pos="(2.828; 0.701; -0.648)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.2" Size="0.2" Pos="(2.828; 0.701; 0.648)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.2" Size="0.2" Pos="(2.828; 0.701; -0.648)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.2; 0.8; 0)" Color="g(230; 230; 235) x 5.5" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.95; 0.79; -0.3)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(2.95; 0.79; 0.3)" ParentFrame="BoneFrontBumper01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_3364_CROCODILE_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileFrontBumper" />
+	</GameData>
+</TruckAddon>

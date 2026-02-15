@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_branch_section_01">
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="0.5" ModelFrame="BoneBranchSection_cdt" Collisions="None">
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Type="Spring" Spring="250" Daming="25" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BRANCH_SECTION_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BRANCH_SECTION_NAME"
+		/>
+		<InstallSocket Type="Siro72BranchSection" />
+	</GameData>
+</TruckAddon>

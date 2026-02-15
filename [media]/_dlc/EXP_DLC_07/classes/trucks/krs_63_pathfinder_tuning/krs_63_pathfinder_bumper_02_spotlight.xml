@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_bumper_02_spotlight">
+		<Body ImpactType="Truck" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="BlueStreak" Size="0.75" Pos="(4.696; 1.927; 0.000)" />
+			<!-- Mid -->
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; 0.000)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; 0.000)" />
+			<!-- Left -->
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; 0.044)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; 0.089)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; 0.134)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; 0.178)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; 0.044)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; 0.089)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; 0.134)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; 0.178)" />
+			<!-- Right -->
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; -0.044)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; -0.089)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; -0.134)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.948; -0.178)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; -0.044)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; -0.089)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; -0.134)" />
+			<Flare _template="LED" Size="0.07" Pos="(4.696; 1.907; -0.178)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 255; 255) x 1.5" />
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="True"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_0_NAME"
+		/>
+		<RequiredAddon Types="krs_63_pathfinder_bumper_02" />
+		<InstallSocket Type="KRS63BumperSpotlight" />
+	</GameData>
+</TruckAddon>

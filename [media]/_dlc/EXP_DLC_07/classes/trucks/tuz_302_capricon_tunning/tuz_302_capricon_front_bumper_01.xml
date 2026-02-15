@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_front_bumper_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneFrontBumper01Hook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Type="Hinge"
+					MinLimit="-20"
+					MaxLimit="180"
+				>
+					<Motor Damping="0.25" Spring="1" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.52; 1.204; -0.022)" />
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_FRONT_BUMPER_01_NAME"
+		/>
+		<RequiredAddon Types="tuz_302_capricon_arches_01" />
+		<InstallSocket Type="Tuz302CapriconFrontBumper" />
+	</GameData>
+</TruckAddon>

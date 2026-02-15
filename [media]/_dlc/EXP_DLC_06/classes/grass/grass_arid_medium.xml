@@ -1,0 +1,8 @@
+<GrassBrand
+	IgnoreNoGrass="true"
+	ApplyScaleMask="true"
+	PlantingGroup="Grass"
+	PlantingMinSpacing="0.01"
+	FadeDistances="15, 30, 70"
+	FadeInterval="15"
+/>

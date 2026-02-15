@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust01ShakerL"
+				MinAngle="(0.2; 0.2; 0.2)"
+				MaxAngle="(0.6; 0.6; 0.6)"
+				MaxFrequency="4"
+			/>
+			<Shaker
+				Frame="BoneExhaust01ShakerR"
+				MinAngle="(0.2; 0.2; 0.2)"
+				MaxAngle="(0.6; 0.6; 0.6)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_exhaust_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneExhaust01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+		<GameData
+			CameraPreset="rear"
+			Category="exhaust"
+			Price="500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_7249_EXHAUST_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_7249_EXHAUST_01_NAME"
+		/>
+			
+		 <InstallSocket Type="Step7249AlbatrossExhaust01" /> 
+	</GameData> 
+	<Exhaust Dir="(-0.586; 0.733; -0.345)"  IsLight="true" Origin="(-0.139; 3.186; -1.173)" Speed="3.82" />
+	<Exhaust Dir="(-0.688; 0.635; 0.351)"  IsLight="true" Origin="(-0.139; 3.186; 1.173)" Speed="3.82" />
+	
+
+</TruckAddon> 

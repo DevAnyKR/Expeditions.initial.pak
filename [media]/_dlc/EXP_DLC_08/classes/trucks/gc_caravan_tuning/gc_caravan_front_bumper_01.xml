@@ -1,0 +1,66 @@
+<_templates Include="trucks" >
+	<Body>
+		<Collar Collisions="None" Mass="4">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="140"
+			>
+				<Motor Damping="0.1" Spring="0.4" Type="Spring" />
+			</Constraint>
+		</Collar>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_bumper_01" >
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Collar" ModelFrame="BoneFrontBumper01HookR_cdt" />
+			<Body _template="Collar" ModelFrame="BoneFrontBumper01HookL_cdt" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.222; 1.089; 0.889)" ParentFrame="BoneAddon_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.222; 1.089; -0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.25" Pos="(3.222; 1.089; 0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.25" Pos="(3.222; 1.089; -0.889)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.222; 1.089; 0.889)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(3.222; 1.089; -0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 1.3" Size="0.3" Pos="(3.222; 1.089; 0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 210) x 1.3" Size="0.3" Pos="(3.222; 1.089; -0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.222; 1.089; 0.889)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.222; 1.089; -0.889)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(0; 0; 255)" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"	
+	>
+		<WinchSocket Pos="(3.346; 0.953; 0.628)" />
+		<WinchSocket Pos="(3.346; 0.953; -0.628)" />
+		<UiDesc
+			UiDesc="UI_TUNING_GS_CARAVAN_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GS_CARAVAN_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="GCCaravanBumper" />
+	</GameData>
+</TruckAddon>

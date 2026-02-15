@@ -1,0 +1,42 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_wings_00">
+		<Body ModelFrame="BoneAddon_cdt" ImpactType="Truck" Mass="2">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="13" ModelFrame="BoneMudGuardTop_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" LinearLimitsY="(-0.03; 0.05)" Type="Fixed">
+					<Motor Damping="10" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMudGuard_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				>
+					<Motor Damping="1.0" Spring="30" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="0"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FENDERS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420Wings" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false" 
+	Instanced="true"
+	Fence="False"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body Mass="1000000" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.001">
+				<Constraint Type="Fixed" />
+				<Body Mass="10000000" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.002">
+				 <Constraint Type="Fixed"  />
+			    </Body>
+			    <Body Mass="800" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.003">
+				   <Constraint BreakOffThreshold="4500" Type="Fixed"  />
+			      </Body>
+				  <Body Mass="800" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.004">
+				      <Constraint BreakOffThreshold="3500" Type="Fixed"  />
+					   <Body Mass="800" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.005">
+				        <Constraint BreakOffThreshold="2500" Type="Fixed"  />
+			           </Body>
+			      </Body>
+				  <Body Mass="800" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.006">
+				    <Constraint BreakOffThreshold="1000" Type="Fixed"  />
+					<Body Mass="800" Collisions="Dynamic" NoSoftContacts="true" Friction="0.9" ModelFrame="Bone.007">
+				     <Constraint BreakOffThreshold="3000" Type="Fixed"  />
+			        </Body>
+			      </Body>
+			</Body>	
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0.047; 0.589; -0.023)" ParentFrame="BoneRoot" />
+	</GameData>
+</ModelBrand>

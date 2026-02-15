@@ -1,0 +1,8 @@
+<ModelBrand 
+	AcceptZoneBorderDecals="true"
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ancient_stone_wall_m_window_broken_dlc06_lmk" />
+</ModelBrand>

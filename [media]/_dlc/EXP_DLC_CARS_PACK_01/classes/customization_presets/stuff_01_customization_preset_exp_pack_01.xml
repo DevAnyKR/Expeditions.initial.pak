@@ -1,0 +1,13 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<!-- Ford F150 Raptor -->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_01_l_1x1_ford_f150_raptor" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_02_l_1x1_ford_f150_raptor" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_01_r_1x1_ford_f150_raptor" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_02_r_1x1_ford_f150_raptor" />
+	<!-- Ford F4450 Limited -->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_01_l_1x1_ford_f450_limited" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_02_l_1x1_ford_f450_limited" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_01_r_1x1_ford_f450_limited" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_02_r_1x1_ford_f450_limited" />
+</TruckSet>

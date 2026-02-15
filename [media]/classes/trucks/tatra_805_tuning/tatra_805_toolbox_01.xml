@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="100" />
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_toolbox_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneToolBox_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Rigid" />
+		</Body>
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneToolBox02_cdt">
+			<Constraint ExplicitParentFrame="1" Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_805_TOOLBOX_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_805_TOOLBOX_01_NAME"
+		/>
+		<InstallSocket Type="Tatra805ToolBox" />
+	</GameData>
+</TruckAddon>

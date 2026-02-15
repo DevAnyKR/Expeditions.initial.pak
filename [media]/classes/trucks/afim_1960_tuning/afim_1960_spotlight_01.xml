@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_spotlight_01">
+		<Body Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>		
+			<Flare _template="MarkerBeacon" Dir="(0.5; 1; 0)" DirAngle="90" Color="g(255; 156; 112) x 1.5" Size="0.15" Pos="(2.348; 2.67; -0.701)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Dir="(0.5; 1; 0)" DirAngle="90" Color="g(255; 156; 112) x 1.5" Size="0.15" Pos="(2.44; 2.681; -0.161)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Dir="(0.5; 1; 0)" DirAngle="90" Color="g(255; 156; 112) x 1.5" Size="0.15" Pos="(2.348; 2.67; 0.701)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Dir="(0.5; 1; 0)" DirAngle="90" Color="g(255; 156; 112) x 1.5" Size="0.15" Pos="(2.44; 2.681; 0.161)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Dir="(0.5; 1; 0)" DirAngle="90" Color="g(255; 156; 112) x 1.5" Size="0.15" Pos="(2.44; 2.681; 0)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_1960_OUTERFRAME_SPOTLIGHT_NAME"
+		/>
+		<InstallSocket Type="Afim1960SpotlightFrame" />
+	</GameData>
+</TruckAddon>
+

@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/krs_58_bandit_tuning" MeshFrame="roofrack_canister_big_12">
+		<Body
+			ImpactType="Truck"
+			Mass="20"
+			ModelFrame="BoneRoofrack01Slot12FuelBig_cdt"
+			Collisions="None"
+		>
+			<Constraint _template="TrunkFixed">
+				<TrunkFixed/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="krs_58_bandit_roofrack_01" />
+		<InstallSocket Type="RoofrackInvSlot12" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="roofrack_canister_big_12" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

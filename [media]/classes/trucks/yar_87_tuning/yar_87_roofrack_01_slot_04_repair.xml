@@ -1,0 +1,12 @@
+<_parent File="yar_87_roofrack_01_slot_01_repair" />
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="roofrack_repair_kit_04" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="roofrack_repair_kit_04">
+		<Body Collisions="None" ModelFrame="BoneRoofrack01Slot04_cdt" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Yar87Roofrack01Slot04" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,76 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.97" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_front_bumper_01">
+		<Body  Mass="15" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper01StringLeft_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.25" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper01StringRight_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" >
+					<Motor Damping="0.2" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper01Hook_cdt"
+			>
+				<Constraint AxisLocal="(1; 0; 0)" Type="Hinge" MinLimit="-25" MaxLimit="25" >
+					<Motor Damping="0.1" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneFrontBumper01Hinge_cdt"
+			>
+				<Constraint AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="0" MaxLimit="70" >
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+						
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 245; 235) x 1.3" Size=".1" Pos="(2.235; 1.139; -0.134)" />
+			<Flare _template="HeadLight" AspectRatio="2.0" Color="g(255; 245; 235) x 1.3" Size=".1" Pos="(2.235; 1.139; 0.134)" />
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.235; 1.139; -0.134)" />
+			<Flare _template="BlueStreak" Color="g(225; 220; 215) x 0.2" Size="0.25" Pos="(2.235; 1.139; 0.134)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FRONT_BUMPER_KHAN_39_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRONT_BUMPER_KHAN_39_01_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallFrontBumper" />
+	</GameData>
+</TruckAddon>

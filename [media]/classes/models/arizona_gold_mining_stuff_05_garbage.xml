@@ -1,0 +1,62 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false" 
+	Instanced="true"
+	Fence="False"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot.005">
+			<Body _template="Fence" ModelFrame="Bone.054">
+				<Constraint _template="Fence" />
+					<Body _template="Fence" ModelFrame="Bone.034">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.037">
+						<Constraint _template="Fence" />
+							<Body _template="Fence" ModelFrame="Bone.076">
+								<Constraint _template="Fence" />
+							</Body>
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.053">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.035">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.071">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.060">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.038">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.074">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.056">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.055">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.073">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.075">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.077">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.078">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.079">
+						<Constraint _template="Fence" />
+					</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

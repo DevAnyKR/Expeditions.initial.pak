@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(1.521; 1.887; -0.795)" />
+	<PhysicsModel Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_snorkel_02">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneShnorkel02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_SNORKEL_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_SNORKEL_02_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Snorkel" />
+	</GameData>
+</TruckAddon>

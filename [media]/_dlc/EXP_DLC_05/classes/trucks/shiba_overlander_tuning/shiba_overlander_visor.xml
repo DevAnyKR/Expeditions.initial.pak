@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_visor_01">
+		<Body Mass="3" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+
+	<GameData
+		CameraPreset="side_l"
+		Category="fender_front"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="siro_72_rear_bumper_01_fuel_b" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel  AcceptVisualDamage="false" Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_rear_bumper_01_fuel_b">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneRearBumper01SlotB_cdt" Collisions="None" >
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="1"
+			>
+				<Motor Type="Spring" Spring="0" Damping="15" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		IsConsumable="true"
+		CameraPreset="rear"
+		Category="rear"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="siro_72_rear_bumper_01" />
+		<InstallSocket Type="Siro72RearBumperSlotB" />
+	</GameData>
+</TruckAddon>

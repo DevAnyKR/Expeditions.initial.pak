@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="cotco_canyon_roofrack_slot_03_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_roofrack_slot_03_battery">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneRoofRack01Slot03_cdt">
+				<Constraint
+					LinearLimitsX="(-0.005;0.005)"
+					LinearLimitsY="(0;0)"
+					LinearLimitsZ="(-0.005;0.005)"
+					Type="Fixed"
+				>
+					<Motor Damping="10" Spring="15" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_roofrack_01" />
+		<InstallSocket Type="CotcoCanyonRoofrackSlot03" />
+	</GameData>
+</TruckAddon>

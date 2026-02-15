@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_sparewheel_01">
+				<Body ImpactType="Truck" Mass="15" ModelFrame="BoneSpareWheel_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="Tatra805SpareWheel" />
+	</GameData>
+</TruckAddon>

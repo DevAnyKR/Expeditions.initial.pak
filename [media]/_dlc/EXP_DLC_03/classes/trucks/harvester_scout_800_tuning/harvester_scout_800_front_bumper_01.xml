@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_front_bumper_01">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="harvester_scout_front_bumper_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HARVESTER_SCOUT_800_FRONT_BUMPER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HARVESTER_SCOUT_800_FRONT_BUMPER_1_NAME"
+		/>
+		<InstallSocket Type="HarvesterScout800FrontBumper" />
+	</GameData>
+</TruckAddon>

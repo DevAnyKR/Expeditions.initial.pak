@@ -1,0 +1,550 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FirstAxle
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="31"
+			SteeringCastor="4"
+			SteeringJointOffset="0.3"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<Sunshield Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.15" Spring="4.5" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<Mudguard Collisions="None" Mass="1">
+			<Constraint Type="Hinge">
+				<Motor Damping="0.035" Spring="0.1" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+		<Collar Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-116"
+				MaxLimit="5"
+			>
+				<Motor Damping="1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Collar>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		ElectricChargeCapacity="21"
+		SignalRadius="140.0"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_gc_caravan"
+		EngineIconScale="1.0"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="0"
+		FuelCapacity="220"
+		Responsiveness="0.15"
+		SteerSpeed="0.04"
+		BackSteerSpeed="0.0375"
+		TruckImage="gc_Caravan"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_gc_caravan"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_medium_gc_caravan"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.86; 0.878; 1.05)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.86; 0.878; 1.05)" />
+			<Wheel _template="SecondAxle" Pos="(-1.739; 0.878; 1.05)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-1.739; 0.878; 1.05)" />
+		</Wheels>
+		
+		 <CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.05" Scale="0.62" Type="wheels_medium_gc_caravan" />
+		 <CompatibleWheels OffsetZ="0.1" RearOffsetZ="0.1" Scale="0.62" Type="wheels_heavy_single_gc_caravan" />
+		
+		<SuspensionSocket
+			Default="s_truck_gc_caravan_suspension_default"
+			Type="s_gc_caravan"
+			MaxWheelRadiusWithoutSuspension="1.5"
+		/>
+		<SteeringWheel Frame="BoneSteeringWheel" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.723"
+		/>
+		<Steam Origin="(2.070; 1.317; 0.010)" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/gc_caravan/gc_caravan_reverse" />
+			<BrakePull		Sound="trucks/gc_caravan/gc_caravan_brake_pull" />
+			<BrakesSqueal	Sound="trucks/gc_caravan/gc_caravan_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<Handbrake		Sound="trucks/gc_caravan/gc_caravan_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/gc_caravan/gc_caravan_handbrake_off" />
+			<Gear			Sound="trucks/common/truck_gear_shift_heavy_rnd_set/truck_gear_shift_heavy_rnd" />
+			<Honk			Sound="trucks/gc_caravan/gc_caravan_honk" />
+			<EngineRev		Sound="trucks/gc_caravan/gc_caravan_rev" />
+			<EngineAccel	Sound="trucks/gc_caravan/gc_caravan_acc" />
+			<EngineStart	Sound="trucks/gc_caravan/gc_caravan_start" />
+			<EngineStop		Sound="trucks/gc_caravan/gc_caravan_stop" />
+			<EngineIdle		Sound="trucks/gc_caravan/gc_caravan_idle" />
+			<EngineIdle_2d	Sound="trucks/gc_caravan/gc_caravan_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/gc_caravan/gc_caravan_low" />
+			<EngineLow_2d	Sound="trucks/gc_caravan/gc_caravan_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/gc_caravan/gc_caravan_high" />
+			<EngineHigh_2d	Sound="trucks/gc_caravan/gc_caravan_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/gc_caravan/gc_caravan_heavy" />
+			<EngineHeavy_2d	Sound="trucks/gc_caravan/gc_caravan_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/gc_caravan/gc_caravan_stress" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="SHK_Exhaust"
+				MinAngle="(0.5; 0.5; 0.5)"
+				MaxAngle="(0.8; 0.8; 0.8)"
+				MaxFrequency="1.0"
+			/>
+		</Shakers>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2.2"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.5"
+			MaxX="3.5"
+		/> 
+		<LimitedFluid Center="(0.471; 0.901; -0.875)" SizeX="1.093" SizeY="0.447" SizeZ="0.595" Type="Box" ParentFrame="BoneCabin_cdt"/>
+		<Intake Dir="(1; 0; 0)" Origin="(3.100; 1.411; 0.000)" Size="0.8" />
+		<Inventory MaxLimit="6" />
+		<GearboxSocket Default="g_truck_gc_caravan_default" Type="gearboxes_trucks_gc_caravan, gearboxes_trucks_light_experimental, gearboxes_trucks_heavy_experimental" />
+		<FuelTank DamageCapacity="130" />
+		<DeployCost Cost="0" />
+		<Exhaust
+			Dir="(0.016; -0.368; 0.93)"
+			IsLight="true"
+			Origin="(-0.662; 0.873; 1.373)"
+			Speed="3.0"
+		/>
+		<EngineSocket Default="e_us_truck_gc_caravan_engine_0" Type="e_us_truck_gc_caravan, e_truck_heavy_experimental" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.05; 0.05; -0.03)"
+			Pos="(2.14; 1.749; 0.646)"
+			SteeringWheelPos="(2.573; 2.067; 0.639)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.865; 2.001; 0.785)" OutputAngles="(-40; 20)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.828; 1.940; 0.785)" OutputAngles="(-40; 30)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.792; 1.879; 0.785)" OutputAngles="(-40; 40)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.865; 2.001; 0.493)" OutputAngles="(-40; 25)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.828; 1.940; 0.493)" OutputAngles="(-40; 20)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gc_caravan_arrow_01" Org="(2.792; 1.879; 0.493)" OutputAngles="(-40; 12)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;1)" InputType="rpm" Damping="0.99" Mesh="trucks/arrows/gc_caravan_arrow_03" Org="(2.810; 2.103; 0.233)" OutputAngles="(-130; 130)" />
+			<Gauge Dir="(-1; 0.6; 0)" InputRange="(0;80)" InputType="speed" Mesh="trucks/arrows/gc_caravan_arrow_02" Org="(2.824; 1.933; 0.639)" OutputAngles="(-117; 30)" />
+		</Dashboard>
+		
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.6; 0.95; -0.3)" Max="(2.5; 1.65; 0.3)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(0.175; 0.875; -0.343)" Max="(1.55; 1.325; 0.343)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.08; 0.64; -1.225)" Max="(1.02; 1.144; -0.564)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<Camera
+			Center="(-1.4; 0.5; 0)"
+			RadiusMultiplier="0.8"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 1.5)"
+				LimitsVer="(-0.6; 0.5)"
+				WindshieldDiffuseTexture="trucks/gc_caravan_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/gc_caravan_glass__sh_d.tga"
+				ViewPos="(2.18; 2.45; 0.634)"
+				ZoomViewPosOffset="(0.5; 0; 0)"
+			>
+				<Rear ViewPosOffset="(0.1; 0; 0.7)" />
+				<Mirror ClipDir="(-1.0; 0; -0.2)" FOVScale="2" MeshFrame="mirror_l" ReflectionDir="(-0.906; 0; -0.35)" Size="(0.2; 0.3)" Pos="(2.632; 2.418; 1.353)" ParentFrame="BoneCabin_cdt" />
+				<Mirror ClipDir="(-0.975; 0; 0.221)" FOVScale="2" MeshFrame="mirror_r" ReflectionDir="(-0.829; 0; 0.559)" Size="(0.2; 0.3)" Pos="(2.632; 2.418; -1.353)" ParentFrame="BoneCabin_cdt" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(2.266; 3.932; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-1.0; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(2.957; 1.364; 0)" />
+	<PhysicsModel Mesh="trucks/gc_caravan">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.1; -0.4; 0)"
+			ImpactType="Truck"
+			Mass="4400"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.2; -0.5; 0)"
+				ImpactType="Truck"
+				Mass="2100"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				ForceBodyParams="true"
+				PushUpFactor="1.0"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-8.5"
+					MaxLimit="8.5"
+				>
+					<Motor Damping="80000" Spring="100000" Type="Spring" />
+				</Constraint>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRodSteer"
+						MinLimit="-30"
+						MaxLimit="30"
+					/>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt">
+					<Constraint>
+						<Motor Damping="0.4" Spring="5.5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body Collisions="None" Mass="1" ModelFrame="BoneRadioCable_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="45"
+					>
+						<Motor Damping="0.02" Spring="1.0" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneSpareWheelSlotArch_cdt">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-2"
+						MaxLimit="3.5"
+					>
+						<Motor Damping="10" Spring="300" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneFuelWires_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 1)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="8"
+					>
+						<Motor Damping="0.15" Spring="20" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="10" ModelFrame="BoneInvSlot00ArchParent_cdt" >
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-7"
+						MaxLimit="1.0"
+					>
+						<Motor Damping="350" Spring="2200" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudGuardLeft_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" MinLimit="-30" MaxLimit="70" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudGuardRight_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" MinLimit="-30" MaxLimit="70" />
+			</Body>
+			<Body _template="Collar" ModelFrame="BoneCollarLeft_cdt" />
+			<Body _template="Collar" ModelFrame="BoneCollarRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 1" Pos="(-2.858; 1.04; 0.666)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 1.5" Size="0.3" Pos="(-2.858; 1.04; 0.666)" />
+		</StopSignals>
+		<!--
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.964; 1.006; 0.604)" />
+			<Light _template="ReverseSignal" Pos="(-2.964; 1.006; -0.604)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 0.8" Size="0.3" Pos="(-2.964; 1.006; 0.604)" />
+			<Flare _template="ReverseSignal" Color="g(255; 255; 255) x 0.8" Size="0.3" Pos="(-2.964; 1.006; -0.604)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.964; 1.006; 0.604)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.964; 1.006; -0.604)" />
+		</ReverseSignals>
+		-->
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-2.858; 1.04; 0.666)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.858; 1.04; 0.666)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.87; 2.798; -0.466)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.87; 2.798; 0.466)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="90" Size="0.2" Pos="(2.869; 2.798; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" DirAngle="90" Size="0.2" Pos="(2.873; 1.621; 1.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" DirAngle="90" Size="0.2" Pos="(2.873; 1.621; -1.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 1)" DirAngle="90" Size="0.2" Pos="(-2.89; 1.101; 1.036)" ParentFrame="BoneChassis_cdt" />	
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; -1)" DirAngle="90" Size="0.2" Pos="(-2.89; 1.101; -1.036)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.169; 1.107; 0.000)" ParentFrame="BoneCabin_cdt" />
+	<Landmark Mesh="landmarks/gc_caravan_t2_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="85000"
+		Recallable="true"
+		UnlockByExploration="false"
+		LockedUnconditionally="false"
+		RecoveryPrice="4000"
+		UnlockByRank="0"
+		UnlockByObjective=""
+	>
+		<WinchSocket Pos="(-2.953; 0.789; 0.001)" />
+		<WinchSocket Pos="(-0.442; 0.920; 0.442)" />
+		<WinchSocket Pos="(-0.442; 0.920; -0.442)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_GS_CARAVAN_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgGcCaravanExp"
+			UiIcon576x640="shopImgGcCaravanExp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_GS_CARAVAN_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(15.5; 1.7; -4.5)" InterestPosition="(6.3; 1.7; 0.4)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="roof" Position="(9.0; 6.676; -3.2)" InterestPosition="(6.35; 2.5; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="rear" Position="(2.35; 4.15; 5.3)" InterestPosition="(5.2; 1.9; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_l" Position="(13.0; 1.7; -6.2)" InterestPosition="(6.0; 1.7; -0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />			
+			<CameraPos FOV="32.0" Name="side_r" Position="(13.0; 1.7; 7.5)" InterestPosition="(4.5; 1.7; 0.2)"  MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="addon_1" Position="(-2.5; 7.5; -9.7)" InterestPosition="(7.8; 0.1; 1.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="wheels" Position="(3.7; 0.7; -4.2)" InterestPosition="(5.8; 0.7; -0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="roof_supplies" Position="(9.0; 6.676; -3.2)" InterestPosition="(6.35; 2.5; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="rear_supplies" Position="(2.35; 4.15; 5.3)" InterestPosition="(5.2; 1.9; 0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			
+			<CameraPos FOV="32.0" Name="side_l_sticker" Position="(5.8; 1.85; -2.647)" InterestPosition="(6.35; 1.85; -0.044)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"/>
+			<CameraPos FOV="32.0" Name="side_r_sticker" Position="(5.8; 1.85; 2.647)" InterestPosition="(8.3; 1.85; 0.044)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0"/>
+		</CustomizationCameras>
+		
+		<AddonSockets>
+			<Socket Names="FrameModuleFlatbed1" Offset="(-0.24; 1.33; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameModuleSideboard1" Offset="(-0.24; 1.33; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- Difflock and Estock -->
+		<AddonSockets DefaultAddon="gc_caravan_diff_lock_default">
+			<Socket Names="gc_caravanDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gc_caravan_estock_default">
+			<Socket Names="gc_caravanestock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gc_caravan_spare_wheel_slot_00">
+			<Socket Names="GCCaravanSpareWheelSlot00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanSpareWheel00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gc_caravan_snorkel_00">
+			<Socket Names="GCCaravanSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gc_caravan_front_bumper_00">
+			<Socket Names="GCCaravanBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanBumperSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" >
+				<ExtraParent Offset="(0; 0; 0)" Frame="BoneInvSlot00ArchParent_cdt"/>
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00SlotA" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00SlotB" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00SlotC" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00SlotD" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00SlotE" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanInvSlot00Wheel" Offset="(0; 0; 0)" ParentFrame="BoneInvSlot00ArchParent_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gc_caravan_wings_00">
+			<Socket Names="GCCaravanWings" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanOuterframe" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanOuterframeSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotA" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotB" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotC" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotD" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotE" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanRoofrackSlotF" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanVisor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket Names="GCCaravanDoorStickerL" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GCCaravanDoorStickerR" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- TIE ROD -->
+		<IKBone ModelFrame="IK_BoneTieRod_A" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="IK_BoneTieRod_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS FRONT -->
+		<IKBone ModelFrame="IK_ShockFL_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_ShockFL_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ShockFR_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_ShockFR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SHOCKS REAR -->
+		<IKBone ModelFrame="IK_ShockRL_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_ShockRL_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ShockRR_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="IK_ShockRR_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- SWAY BAR -->
+		<IKBone ModelFrame="IK_SwayBarLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_SwayBarLeft_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_SwayBarRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_SwayBarRight_A"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- WHEEL SLOT SHOCK -->
+		<IKBone ModelFrame="IK_WheelSlotShock_B" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneSpareWheelSlotArch_cdt"
+				ModelFrame="IK_WheelSlotShock_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

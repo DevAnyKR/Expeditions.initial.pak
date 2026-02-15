@@ -1,0 +1,162 @@
+<_templates Include="models" />
+<ModelBrand
+	DynamicModel="True"
+	Instanced="true"
+	IsKeepPhysModelAlways="true"
+	StaticModelWithDynamicParts="true"
+>
+
+	<PhysicsModel>
+	
+	<!-- Root -->
+	
+		<Body
+			Collisions="None"
+			Mass="1000000"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="False"
+		>
+		<Constraint BreakOffThreshold="1000000" Type="Fixed" />
+
+		<!-- РњР°Р»РµРЅСЊРєРёРµ РєР°РјРЅРё -->
+		
+			<Body
+				Collisions="Dynamic"
+				Mass="1500"
+				ModelFrame="rock_1_01_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Name="Rock1" Type="Fixed" />
+			</Body>
+
+			<Body
+				Collisions="Dynamic"
+				Mass="1500"
+				ModelFrame="rock_1_02_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />
+			</Body>
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="1500"
+				ModelFrame="rock_1_03_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />	
+			</Body>
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="1500"
+				ModelFrame="rock_1_04_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />	
+			</Body>
+			
+			<Body
+				Collisions="Dynamic"
+				Mass="1500"
+				ModelFrame="rock_1_05_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />	
+			</Body>
+
+		<!-- РЎСЂРµРґРЅРёРµ РєР°РјРЅРё -->
+
+			<Body
+				Collisions="Dynamic"
+				Mass="3800"
+				ModelFrame="rock_2_01_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Name="Rock2" Type="Fixed" />
+			</Body>
+
+			<Body
+				Collisions="Dynamic"
+				Mass="3800"
+				ModelFrame="rock_2_02_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />
+			</Body>
+
+			<Body
+				Collisions="Dynamic"
+				Mass="3800"
+				ModelFrame="rock_2_03_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />	
+			</Body>
+
+			<Body
+				Collisions="Dynamic"
+				Mass="3800"
+				ModelFrame="rock_2_04_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Type="Fixed" />	
+			</Body>
+
+		<!-- Р‘РѕР»СЊС€РёРµ РєР°РјРЅРё -->
+	
+			<Body
+				Collisions="Dynamic"
+				Mass="6500"
+				ModelFrame="rock_3_01_cdt"
+				NoSoftContacts="True"
+				ComplexMudAction="true"
+			>
+			<Constraint BreakOffThreshold="1" Name="Rock3" Type="Fixed" />	
+			</Body>
+	
+		</Body>
+	</PhysicsModel>
+	
+	<GameData ModelBreakageQuestConstraints="Rock1, Rock2, Rock3">
+		<WinchSocket Pos="(-1.505; 0.250; 2.450)" ParentFrame="rock_1_01_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(-1.724; 0.250; 0.132)" ParentFrame="rock_1_02_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(-3.083; 0.250; -0.816)" ParentFrame="rock_1_03_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(-2.531; 0.250; -2.578)" ParentFrame="rock_1_04_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(0.552; 0.250; -2.244)" ParentFrame="rock_1_05_cdt" />
+		
+		<WinchSocket Pos="(-2.623; 0.440; 1.345)" ParentFrame="rock_2_01_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(-1.220; 0.440; -1.610)" ParentFrame="rock_2_02_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(2.647; 0.440; -2.867)" ParentFrame="rock_2_03_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(2.703; 0.440; 2.298)" ParentFrame="rock_2_04_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+		<WinchSocket Pos="(1.131; 1.130; 0.289)" ParentFrame="rock_3_01_cdt" >
+			<SoundOnConnect Name="actors/actor_interactive_walls/actor_interactive_wall_stalagmite_connect_rnd/actor_interactive_wall_stalagmite_connect_rnd" RangeMin="25" RangeMax="100" Volume="0.8"/>
+		</WinchSocket>
+	</GameData>
+	
+</ModelBrand>

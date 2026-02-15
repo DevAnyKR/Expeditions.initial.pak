@@ -1,0 +1,30 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="collie_pug_293_invslot_01_wheel_a" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_invslot_01_wheel_a">
+		<Body Collisions="None" Mass="35" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="collie_pug_293_invslot_01"/>
+		<InstallSocket Type="ColliePUG293InvSlotWheelR" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,82 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Allterrain _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_ot" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</Allterrain>
+		<Offroad _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_ot" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</Offroad>
+		<Mudtires _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_mt" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="150" Radius="1" Width="0.851">
+	<TruckTires>
+	<TruckTire _template="Allterrain" IsBuoyant="true" PushUpFactor="7" RowingFactor="10" Mesh="wheels/tire_scout_mudtires1_2" Name="allterrain_1">
+			<WheelFriction
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SUPERHEAVY_ALLTERRAIN_1_NAME" />
+			</GameData>
+		</TruckTire>  
+		<TruckTire _template="Offroad" IsBuoyant="true" PushUpFactor="7" RowingFactor="10.5" Mesh="wheels/tire_krs_63_pathfinder" Name="offroad_1">
+			<WheelFriction
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SUPERHEAVY_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckTire>
+		  
+		<TruckTire _template="Mudtires" IsBuoyant="true" PushUpFactor="7" RowingFactor="11" Mesh="wheels/tire_scout_mudtires1_3" Name="mudtires_1">
+			<WheelFriction
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.85"
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+			/>
+			<GameData
+				Price="20000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckTire> 
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_krs_63_pathfinder" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_SUPERHEAVY_MUDTIRES_KRS_63_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

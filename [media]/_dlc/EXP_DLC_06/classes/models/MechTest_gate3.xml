@@ -1,0 +1,18 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true" IsComplexPhysModel="true">
+	<PhysicsModel>
+       	<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="Dynamic"
+			Mass="300"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="True"
+		>
+		</Body>
+    </PhysicsModel>
+		<GameData>
+			<WinchSocket Pos="(3.5; 0; 0)" ParentFrame="BoneRoot_cdt" />
+			<WinchSocket Pos="(-3.5; 0; 0)" ParentFrame="BoneRoot_cdt" />
+			<WinchSocket Pos="(0; 0; 0)" ParentFrame="BoneRoot_cdt" />
+		</GameData>
+</ModelBrand>

@@ -1,0 +1,43 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15">
+		<LimitedFluid
+			Center="(-0.465; 1.765; -0.224)"
+			SizeX="0.582"
+			SizeY="0.129"
+			SizeZ="0.25"
+			Type="Box"
+			ParentFrame="BoneRoofrackSlot01_cdt"
+		/>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_roofrack_01_slot_01_fuel">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrackSlot01_cdt">
+			<Constraint
+				LinearLimitsX="(-0.003;0.001)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.004;0.006)"
+				Type="Fixed"
+			/>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="don_71_roofrack_01" />
+		<InstallSocket Type="Don71SlotFuel_1_RR" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="don_71_roofrack_01_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

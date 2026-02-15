@@ -1,0 +1,87 @@
+<_templates Include="trucks">
+	<Body>
+		<BrakeTube Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				MinLimit="-20"
+				MaxLimit="20"
+				Type="Hinge"
+			>
+				<Motor Damping="0.3" Spring="10" Type="Spring" />
+			</Constraint>
+		</BrakeTube>
+	</Body>
+</_templates>
+
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		HasWheelDrone="true" 
+		WheelDroneType="drone_cargo"
+	/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/addons/drones_carrier_ford_f450_limited">
+		<Body Mass="100" ModelFrame="BoneAddon_cdt" >
+			<Constraint Type="Rigid" />	
+			<Body _template="BrakeTube" ModelFrame="BoneBrakeTubeFR_cdt" />
+			<Body _template="BrakeTube" ModelFrame="BoneBrakeTubeFL_cdt" />
+			<Body _template="BrakeTube" ModelFrame="BoneBrakeTubeRR_cdt" />
+			<Body _template="BrakeTube" ModelFrame="BoneBrakeTubeRL_cdt" />
+			
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="15"
+				ModelFrame="BoneWheels_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					LinearLimitsX="(-0.05: 0.05)"
+					LinearLimitsZ="(-0.05: 0.05)"
+					Type="Fixed"
+				>
+					<Motor Damping="380" Spring="8000" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body
+				CenterOfMassOffset="(0; -0.1; 0)"
+				ImpactType="Truck"
+				Mass="5"
+				ModelFrame="BoneAntenna_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="12"
+				>
+					<Motor Type="Spring" Spring="40" Damping="0.1" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<MeshStates>
+		<State Name="default" MeshFrame="drone_carrier_cargo, drone_cargo, drone_carrier_legs, drone_wheels_cargo" />
+		<State Name="ability_active" MeshFrame="drone_carrier_cargo, drone_carrier_legs" />
+		<State Name="drone_out" MeshFrame="drone_carrier_cargo drone_carrier_legs" />
+	</MeshStates>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="3500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SCOUT_DRONE_CARRIER_CARGO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SCOUT_DRONE_CARRIER_CARGO_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FordF450LimitedDroneCarrier" />
+		<AddonType Name="WheelDrones" />
+	</GameData>	
+</TruckAddon>

@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+			<Multiplier Multiplier="0.97" Type="FuelTank"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_wing_01">
+		<Body  Mass="15" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x .7" DirAngle="120" Size="0.3" Pos="(1.955; 1.191; -0.75)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x .7" DirAngle="120" Size="0.3" Pos="(1.955; 1.191; 0.75)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="750"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_WINGS_01_NAME"
+		/>
+		<RequiredAddon Types="khan_39_marshall_rear_bumper_01, khan_39_marshall_rear_bumper_02" />
+		<InstallSocket Type="KHAN39MarshallWings" />
+	</GameData>
+</TruckAddon>

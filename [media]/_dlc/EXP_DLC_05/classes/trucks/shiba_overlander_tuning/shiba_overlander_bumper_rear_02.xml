@@ -1,0 +1,62 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_rear_bumper_02">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneRearBumper02_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneRearBumper02HookL_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-48"
+					MaxLimit="230"
+				>
+					<Motor Damping="0.02" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneRearBumper02HookR_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Hinge"
+					MinLimit="-48"
+					MaxLimit="230"
+				>
+					<Motor Damping="0.05" Spring="0.3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(-2.428; 0.768; 0.565)" />
+		<WinchSocket Pos="(-2.428; 0.768; -0.565)" />
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_OVERLANDER_REAR_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_OVERLANDER_REAR_BUMPER_02_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderRearBumper" />
+	</GameData>
+</TruckAddon>

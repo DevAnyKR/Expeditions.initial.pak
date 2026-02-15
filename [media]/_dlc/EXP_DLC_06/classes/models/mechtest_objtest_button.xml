@@ -1,0 +1,22 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			Collisions="Dynamic"
+			Mass="300"
+			ModelFrame="BoneButton_cdt"
+			NoSoftContacts="true"
+		>
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Prismatic"
+				MinLimit="-0.18"
+				MaxLimit="0"
+			>
+				<Motor Damping="15000" Spring="35000" Type="Spring" />
+			</Constraint>	
+		</Body>
+	</PhysicsModel>
+		<Landmark Mesh="landmarks/mechtest_objtest_button_lmk" />
+</ModelBrand>

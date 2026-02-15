@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ank_xm75_tuning" MeshFrame="ank_xm75_inv_slot_00_slot_03_fuel">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_r"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="ank_xm75_inv_slot_00" />
+		<InstallSocket Type="ANKXM75InvSlotSlot03" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="ank_xm75_inv_slot_00_slot_03_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,54 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData 
+	HasWheelDrone="true" 
+	WheelDroneType="drone_scout" 
+	ElectricChargeCapacity="30"
+	/>
+	<Rotator
+		EngineTorqueFactor="0.0"
+		Frame="BoneAerial_cdt"
+		RotationSpeed="0.25"
+	/>
+	<Rotator
+		EngineTorqueFactor="0.0"
+		Frame="BoneFan_cdt"
+		RotationSpeed="5.0"
+	/>
+	<PhysicsModel Mesh="trucks/addons/frame_module_scout_drone">
+		<Body Mass="550" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />			
+		</Body>
+	</PhysicsModel>
+	
+	<MeshStates>
+		<State Name="default" MeshFrame="state_00" />
+		<State Name="ability_active" MeshFrame="state_01_ext, state_01_int, state_01_drone_scout_rig, state_01_drone_scout, state_01_drone_cargo_wheels" />
+		<State Name="drone_out" MeshFrame="state_00" />
+	</MeshStates>
+	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Subcategory="module"
+		Priority = "2"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_DRONE_CARRIER_SCOUT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_DRONE_CARRIER_SCOUT_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameModule" />
+		<RequiredAddon Types="frame_module_flatbed, frame_module_flatbed_1_sideboard, frame_module_flatbed_2_sideboard, frame_module_flatbed_3, frame_module_flatbed_short, frame_module_flatbed_sideboard, frame_module_flatbed_afim_1960, frame_module_flatbed_short_workstar_7500, frame_module_flatbed_sideboard_workstar_7500, frame_module_flatbed_workstar_7500" />
+		<InstallSlot 
+			CargoLength="1"
+			CargoType="Addon"
+			Offset="(0; 0; 0)"
+		/>
+		<AddonType Name="WheelDrones" />
+	</GameData>	
+</TruckAddon>

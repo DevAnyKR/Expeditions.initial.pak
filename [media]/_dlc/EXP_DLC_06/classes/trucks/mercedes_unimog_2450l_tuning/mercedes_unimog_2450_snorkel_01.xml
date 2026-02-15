@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.693; 2.855; -0.949)" />
+	<PhysicsModel Mesh="trucks/tuning/mercedes_unimog_2450L_tuning" MeshFrame="mercedes_unimog_2450l_snorkel_01">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="6"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="5000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_UNIMOG_U2450_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_UNIMOG_U2450_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="MercedesUnimog2450LSnorkel" />
+	</GameData>
+</TruckAddon>

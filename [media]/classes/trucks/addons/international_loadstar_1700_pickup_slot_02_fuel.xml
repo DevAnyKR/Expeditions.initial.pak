@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="45" />
+	<FuelHide>
+		<Mesh Frame="loadstar_pickup_slot_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false"  Mesh="trucks/addons/international_loadstar_1700_pickup" MeshFrame="loadstar_pickup_slot_02_fuel">
+		<Body Collisions="None" Mass="30" ModelFrame="BoneSlot02_cdt">
+			<Constraint
+				LinearLimitsX="(-0.035;0.025"
+				LinearLimitsY="(0;0.045)"
+				LinearLimitsZ="(-0.03;0.025)"
+				Type="Fixed"
+			>
+				<Motor Damping="300" Spring="2000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsCustomizable="false"
+		IsConsumable="true"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PICKUP_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PICKUP_FUEL_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_pickup" />
+		<InstallSocket Type="InternationalLoadstar1700PickupSlot02" />
+	</GameData>
+</TruckAddon>

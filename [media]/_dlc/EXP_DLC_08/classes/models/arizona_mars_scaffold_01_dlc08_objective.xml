@@ -1,0 +1,15 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh"></Body>
+	</PhysicsModel>
+	<Subset IsDefault="true" Name="build_stage_0">
+	</Subset>
+	<Subset Name="build_complete">
+		<Mesh Name="mesh" />
+		<CdtMesh Name="cdt_mesh" />
+    </Subset>
+	<Landmark Mesh="landmarks/arizona_mars_scaffold_01_dlc08_objective_lmk" />
+</ModelBrand>

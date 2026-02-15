@@ -1,0 +1,54 @@
+<_templates Include="models" />
+<ModelBrand Instanced="false">
+	<PhysicsModel>
+		<Body	Mass="100"
+			NoSoftContacts="true" ModelFrame="BoneRoot_cdt">
+			<Constraint BreakOffThreshold="220"
+			Name="MainConstraint"
+			Type="Fixed"
+			>
+			<PlaneConeMotor Damping="8000" Spring="2000" Type="Spring" />
+			</Constraint>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem1">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem2">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem3">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem4">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem5">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem6">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem7">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem8">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+			<Body Mass="2" NoSoftContacts="true" ModelFrame="gem9">
+			<Constraint BreakOffThreshold="10" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<OnBreakEvents ConstraintNames="MainConstraint">
+		  <Sound Name ="actors/actor_interactive_treasures/interactive_treasure_break" RangeMin="25" RangeMax="100" Volume="1"/>
+  		  <SFX Pos="(0.0; 0.0; 0.0)" Dir="(0; 1; 0)" Name="malachite_parts"/>
+	</OnBreakEvents>
+	<GameData
+	ModelBreakageQuestConstraints="MainConstraint"
+	IgnoresHonkExplosionForce="true"
+	UseTruckBreakOffMult = "true"
+	>
+        <WinchSocket Pos="(0.0; 0.0; 0.0)" Color="(1.0; 0.0; 0.0; 1.0)" ParentFrame="BoneRoot_cdt">
+			 <SoundOnConnect Name="actors/actor_interactive_treasures/interactive_treasure_connect" RangeMin="25" RangeMax="100" Volume="1"/>
+		</WinchSocket>
+	</GameData>
+</ModelBrand>

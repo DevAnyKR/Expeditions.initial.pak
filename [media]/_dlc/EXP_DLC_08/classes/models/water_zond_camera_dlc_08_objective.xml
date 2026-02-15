@@ -1,0 +1,32 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"	
+	
+>
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1" />
+	</PhysicsModel>
+	
+	<Subset Name="build_stage_0" IsDefault="true">
+	</Subset>
+	
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+	
+    <AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">
+		
+	    <AnimEvent Key="46">
+	       <SFX Name="zond_water_splash" Dir="(0; 0; 0)" Pos="(0.0; 0.0; 0.0)" />
+	    </AnimEvent>
+	
+	</TrackEvents>
+	
+</ModelBrand>

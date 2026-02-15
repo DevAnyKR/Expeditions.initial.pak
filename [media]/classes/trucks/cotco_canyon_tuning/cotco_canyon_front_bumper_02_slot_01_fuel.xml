@@ -1,0 +1,41 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_front_bumper_02_slot_01_fuel">	
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneFrontBumper02Slot01_cdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX="(-0.0022;0.0015)"
+					LinearLimitsY="(0;0.02)"
+					LinearLimitsZ="(-0.0015;0.0023)"
+				>
+					<Motor Type="Spring" Damping="300" Spring="300" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+ 	<FuelHide>
+		<Mesh Frame="cotco_canyon_front_bumper_02_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_front_bumper_02" />
+		<InstallSocket Type="CotcoCanyonFrontBumper02Slot" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_arches_default">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneArchesDefault_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.6" Dir="(0; 0; -1)" DirAngle="110" Size="0.2" Pos="(-1.445; 1.624; -1.284)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.6" Dir="(0; 0; 1)" DirAngle="110" Size="0.2" Pos="(-1.445; 1.624; 1.284)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.6" Dir="(0; 0; -1)" DirAngle="110" Size="0.2" Pos="(1.838; 1.634; -1.292)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.6" Dir="(0; 0; 1)" DirAngle="110" Size="0.2" Pos="(1.838; 1.634; 1.292)" />
+		</Ignition>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_WINGS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_WINGS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="ColliePUG293Wings" />
+	</GameData>
+</TruckAddon>

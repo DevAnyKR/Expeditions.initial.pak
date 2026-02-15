@@ -1,0 +1,72 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.85" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_bumper_02">
+		<Body ImpactType="Truck" Mass="75">
+			<Constraint Type="Rigid" />
+			
+			<Body
+				Mass="5"
+				ModelFrame="BoneBumper02Hook_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-50.0"
+					MaxLimit="35.0"
+				>
+					<Motor Damping="0.2" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.018; 0.837; 0.800)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.018; 0.837; -0.800)" />
+			
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(3.999; 0.710; 0.800)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(3.999; 0.710; -0.800)" />
+			
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(4.023; 0.901; 0.800)" Dir="(1; 1; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(4.023; 0.901; -0.800)" Dir="(1; 1; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(4.036; 0.773; 0.800)" Dir="(1; 0; 0)" AspectRatio="0.8" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(4.036; 0.773; -0.800)" Dir="(1; 0; 0)" AspectRatio="0.8" DirAngle="90" />
+			
+			<Light _template="IgnitionSignalWhite" Pos="(4.018; 0.837; 0.0)" />
+		</Ignition>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Size="0.2" Pos="(4.018; 0.837; 0.800)" />
+			<Flare _template="HeadLight" Size="0.2" Pos="(4.018; 0.837; -0.800)" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(4.018; 0.837; 0.800)" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(4.018; 0.837; -0.800)" />
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.999; 0.710; 0.800)" />
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.999; 0.710; -0.800)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.999; 0.710; 0.800)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.999; 0.710; -0.800)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1500"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<WinchSocket Pos="(4.231; 0.683; 0.482)" />
+		<WinchSocket Pos="(4.231; 0.683; -0.482)" />
+		<UiDesc
+			UiDesc="UI_TUNING_HAUKKA_NS420_FRONT_BUMPER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HAUKKA_NS420_FRONT_BUMPER_02_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420Bumper" />
+	</GameData>
+</TruckAddon>

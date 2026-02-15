@@ -1,0 +1,44 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+			<Multiplier Multiplier="0.87" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_outerframe_01">
+		<Body ImpactType="Truck" Mass="75" ModelFrame="BoneOuterframe_cdt">
+			<Constraint Type="Rigid" />
+			 <Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="1"
+				ModelFrame="BoneBrunchSection_cdt"
+			>
+				<Constraint LinearLimitsY="(-0.02; 0.02)" LinearLimitsZ="(-0.02; 0.02)" Type="Fixed">
+					<Motor Damping="0.02" Spring="60" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(2.168; 0.754; 0.000)" />
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_NAME"
+		/>
+		<RequiredAddon Types="shiba_overlander_bumper_rear_02" />
+		<RequiredAddon Types="shiba_overlander_bumper_front_02" />
+		<InstallSocket Type="ShibaOverlanderOuteframe" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="50"
+		WheelRepairsCapacity="1"
+		ElectricChargeCapacity="5.0"
+	/>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsEmergencyReserveAddon="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_EMERGENCY_RESERVE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_EMERGENCY_RESERVE_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420estock" />
+	</GameData>
+</TruckAddon>

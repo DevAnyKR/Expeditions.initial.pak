@@ -1,0 +1,38 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	NeedPreload="true"
+	AnimationStartFrameOffset="0.7"
+
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Sounds>
+		<Initial
+            SoundName=""
+            MinDist="5"
+            MaxDist="55"
+            ParentFrame="Bone"
+        />
+        <Looping
+            SoundName="actors/actor_signal_amplifier_dlc06_loop"
+            MinDist="5"
+            MaxDist="55"
+            ParentFrame="Bone"
+        />
+		<Ending
+			SoundName=""
+			MinDist="5"
+			MaxDist="55"
+			Offset="(0; 0; 1)"
+			ParentFrame="Bone"
+			isEnding = "true"
+		/>
+	</Sounds>
+	<GameData SignalRadius="100.0">
+		<WinchSocket Pos="(0.0; 0.1; 0.0)" Color="(1.0f; 1.0f; 0.0f; 1.0f)" />
+	</GameData>
+</ModelBrand>

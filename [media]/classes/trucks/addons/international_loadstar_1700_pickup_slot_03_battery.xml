@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="15" />
+	<BatteryHide>
+		<Mesh Frame="loadstar_pickup_slot_03_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false"  Mesh="trucks/addons/international_loadstar_1700_pickup" MeshFrame="loadstar_pickup_slot_03_battery">
+		<Body Collisions="None" Mass="30" ModelFrame="BoneSlot03_cdt">
+			<Constraint
+				LinearLimitsX="(-0.02;0.05)"
+				LinearLimitsY="(0;0.045)"
+				LinearLimitsZ="(-0.04;0.0)"
+				Type="Fixed"
+			>
+				<Motor Damping="300" Spring="3000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsCustomizable="false"
+		IsConsumable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_pickup" />
+		<InstallSocket Type="InternationalLoadstar1700PickupSlot03" />
+	</GameData>
+</TruckAddon>

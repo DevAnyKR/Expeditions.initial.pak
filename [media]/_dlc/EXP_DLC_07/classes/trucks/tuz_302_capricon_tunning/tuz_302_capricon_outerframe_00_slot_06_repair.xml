@@ -1,0 +1,36 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<RepairsHide>
+		<Mesh Frame="tuz_302_capricon_outerframe_00_slot_06_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_outerframe_00_slot_06_repair">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneOuterframeSuppliesRight_cdt">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-8"
+				MaxLimit="0"
+			>
+				<Motor Damping="100" Spring="2000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_side_r"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="tuz_302_capricon_outerframe_00" />
+		<InstallSocket Type="Tuz302CapriconOuterframeSlot06" />
+	</GameData>
+</TruckAddon>

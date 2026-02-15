@@ -1,0 +1,210 @@
+<_templates Include="trucks" >
+<TruckTire>
+	<ScoutAllterrain _template="RLight">
+		<WheelTracks _template="Default" />
+		<WheelSoftness _template="Average" />
+		<WheelFriction _template="ScoutAllterrain" />
+		<TiresInflationSystemSettings _template="Allterrain" />
+	</ScoutAllterrain>
+	<ScoutOffroad _template="RLight">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="ScoutStiff" />
+		<WheelFriction _template="ScoutOffroad" />
+		<TiresInflationSystemSettings _template="Offroad" />
+	</ScoutOffroad>
+	<ScoutMudtires _template="RLight">
+		<WheelTracks _template="Offroad" />
+		<WheelSoftness _template="ScoutStiff2" />
+		<WheelFriction _template="ScoutMudtires" />
+		<TiresInflationSystemSettings _template="Mudtires" />
+	</ScoutMudtires>
+</TruckTire>
+</_templates>
+<TruckWheels 
+	DamageCapacity="50"
+	Radius="1" 
+	Width="0.66"
+	WidthRear="0.67"
+ >
+	<TruckTires>
+		<!-- allterrain -->
+		<TruckTire _template="ScoutAllterrain" DamageCapacity="50" Mesh="wheels/tire_ford_f150_raptor" Name="allterrain_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier ="1.0"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" DamageCapacity="50" Width="0.67" WidthRear="0.68" Mesh="wheels/tire_ford_f150_raptor_scout_offroad_2" Name="allterrain_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" DamageCapacity="50" Width="0.68" WidthRear="0.69" Mesh="wheels/tire_ford_f150_raptor_shiba_overlander" Name="allterrain_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_3_NAME" />
+			</GameData>
+		</TruckTire>
+		
+		<!-- offroad -->
+		<TruckTire _template="ScoutOffroad" DamageCapacity="75" Width="0.67" WidthRear="0.68" Mesh="wheels/tire_ford_f150_raptor_scout_offroad_6" Name="offroad_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="5000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutOffroad" DamageCapacity="75" Width="0.68" WidthRear="0.69" Mesh="wheels/tire_ford_f150_raptor_scout_offroad_5" Name="offroad_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>		
+		
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_OFFROAD_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutOffroad" DamageCapacity="75" Width="0.69" WidthRear="0.7" Mesh="wheels/tire_ford_f150_raptor_scout_offroad_1" Name="offroad_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_OFFROAD_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<!-- mudtires -->
+		<TruckTire _template="ScoutMudtires" DamageCapacity="60" Width="0.68" WidthRear="0.69" Mesh="wheels/tire_ford_f150_raptor_heavy_offroad_single_2" Name="mudtires_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.8"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckTire>  
+		<TruckTire _template="ScoutMudtires" DamageCapacity="60" Width="0.69" WidthRear="0.7" Mesh="wheels/tire_ford_f150_raptor_heavy_offroad_single_3" Name="mudtires_2">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.9"
+			/>
+			<GameData
+				Price="12500"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutMudtires" DamageCapacity="60" Width="0.7" WidthRear="0.71" Mesh="wheels/tire_ford_f150_raptor_ank_mk38_1" Name="mudtires_3">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="15000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_3_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_FORD_F150_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor_shiba_overlander" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor_scout_offroad_2" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor_scout_offroad_3" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor_scout_offroad_4" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_4_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_ford_f150_raptor_scout_mudtire1_3" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_0_DESC" UiName="UI_RIM_SCOUT_OFFROAD_5_NAME" />
+			</GameData>
+		</TruckRim>		
+	</TruckRims>
+	
+</TruckWheels>
+

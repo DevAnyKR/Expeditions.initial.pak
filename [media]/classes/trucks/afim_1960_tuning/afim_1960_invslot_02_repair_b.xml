@@ -1,0 +1,27 @@
+<_parent File="afim_1960_invslot_02_repair_a"/>
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="afim_1960_inv_slot_02_repair_b" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_inv_slot_02_repair_b">
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneInvSlot02_cdt" >
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData 
+		CameraPreset="addon_1"
+		Category="rear"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="afim_1960_invslot_02" />
+		<InstallSocket Type="Afim1960InvSlot02Slot02" />
+	</GameData>
+</TruckAddon>

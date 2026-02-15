@@ -1,0 +1,43 @@
+<_templates Include="trucks">
+	<Constraint>
+		<ContainerLimits
+			AxisLocal="(1; 0; 0)"
+			Type="Hinge"
+			MinLimit="-5"
+			MaxLimit="5"
+		>
+			<Motor Damping="10" Spring="200" Type="Spring" />
+		</ContainerLimits>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="30" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_outerframe_01_invslot_01_slot_01_fuels">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneOuterframe01InvSlot01_cdt">
+			<Constraint Type="Fixed" />
+			<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneOuterframe01InvSlot01Slot01Fuels_cdt">
+				<Constraint _template="ContainerLimits" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r_inv_slot"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_FUEL_NAME"
+		/>
+		<RequiredAddon Types="step_3364_crocodile_outerframe_01_invslot_01" />
+		<InstallSocket Type="Step3364CrocodileOuterframeInvSlot01Slot01" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="step_3364_crocodile_outerframe_01_invslot_01_slot_01_fuels" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,10 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="ZigguratStones"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ziggurat_stone_floor_corner_01_dlc08_lmk" />
+</ModelBrand>

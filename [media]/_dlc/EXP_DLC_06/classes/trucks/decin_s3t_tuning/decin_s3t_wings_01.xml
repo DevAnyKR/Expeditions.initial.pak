@@ -1,0 +1,55 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.94" Type="Engine" />
+			<Multiplier Multiplier="0.92" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_wings_01">
+		<Body Mass="30" ModelFrame="BoneWings01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(3.197; 1.097; 0.819)" />
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(3.197; 1.097; -0.819)" />
+			
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.187; 1.094; 0.713)" />
+			<Flare _template="BlueStreak" Pos="(3.187; 1.094; 0.713)" />
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.159; 1.084; 0.855)" />
+			<Flare _template="BlueStreak" Pos="(3.159; 1.084; 0.855)" />
+			
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.187; 1.094; -0.713)" />
+			<Flare _template="BlueStreak" Pos="(3.187; 1.094; -0.713)" />
+			<Flare _template="HeadLight" Size="0.15" Pos="(3.159; 1.084; -0.855)" />
+			<Flare _template="BlueStreak" Pos="(3.159; 1.084; -0.855)" />
+		</MainHeadLight>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.219; 1.132; 0.751)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.219; 1.132; -0.751)" />
+			
+			<Flare _template="IgnitionSignalWhite" Pos="(3.187; 1.094; 0.713)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.159; 1.084; 0.855)" />
+			
+			<Flare _template="IgnitionSignalWhite" Pos="(3.187; 1.094; -0.713)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.159; 1.084; -0.855)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_DECIN_S3T_FENDERS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DECIN_S3T_FENDERS_01_NAME"
+		/>
+		<InstallSocket Type="DecinS3TWings" />
+	</GameData>
+</TruckAddon>

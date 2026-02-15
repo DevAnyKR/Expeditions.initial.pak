@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(17.0; 90.0)" 
+		Texture="occlusion_rus_bridge_road_03a_broken.tga"
+	/>
+</ModelBrand>

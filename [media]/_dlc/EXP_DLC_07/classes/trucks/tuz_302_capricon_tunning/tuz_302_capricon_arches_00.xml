@@ -1,0 +1,34 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_front_arches_00">
+		<Body Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FENDERS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconArches" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.005; -0.647; -0.762)"
+		IsLight="true"
+		Origin="(-0.69; 0.862; -0.73)"
+		Speed="3.0"
+	/>
+</TruckAddon>

@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_finder_light_01">
+		<Body ImpactType="Truck" Mass="2" ModelFrame="BoneFinderLight01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments _noinherit="true"> 
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.39; 2.062; 0.765)" /> 
+			<Flare _template="HeadLight" Color="g(255; 240; 230) x 1.3" Size="0.3" Pos="(3.39; 2.062; 0.765)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(225; 220; 215) x 0.2" Size="0.2" Pos="(3.39; 2.062; 0.765)" />
+		</MainHeadLight>
+	</ModelAttachments>
+
+	<MainHeadLight _template="Multiply2"/>	
+	<GameData
+			CameraPreset="default"
+			Category="fender_front"
+			Price="300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+
+		<UiDesc
+			UiDesc="UI_TUNING_FINDER_LIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FINDER_LIGHT_NAME"
+		/>
+			
+		 <InstallSocket Type="Step310eFinderLight" /> 
+	</GameData> 
+
+</TruckAddon> 

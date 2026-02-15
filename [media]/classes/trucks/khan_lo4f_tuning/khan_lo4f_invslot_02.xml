@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/khan_lo4f_tuning" MeshFrame="khan_lo4f_invslot_02">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_LO4F_INV_SLOT_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_LO4F_INV_SLOT_02_NAME"
+		/>
+		<InstallSocket Type="KhanLo4FInvSlot02" />
+	</GameData>
+</TruckAddon>

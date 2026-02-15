@@ -1,0 +1,209 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="150"
+		Name="s_truck_krs_63_pathfinder_suspension_default"
+	>
+		<Suspension 
+			WheelType="front" 
+			
+			Height="0.25" 
+			Strength="0.02" 
+			
+			SuspensionMin="-0.275"
+			SuspensionMax="0.125"
+			
+			Damping="0.3"
+			BrokenSuspensionMax="0.2" 
+		/>
+		<Suspension 
+			WheelType="middle" 
+			
+			Height="0.25" 
+			Strength="0.02" 
+			
+			SuspensionMin="-0.275"
+			SuspensionMax="0.125"
+			
+			Damping="0.3"
+			BrokenSuspensionMax="0.2" 
+		/>
+		<Suspension 
+			WheelType="middle2" 
+			
+			Height="0.2" 
+			Strength="0.021" 
+			
+			SuspensionMin="-0.225"
+			SuspensionMax="0.125"	
+
+			Damping="0.3"
+			BrokenSuspensionMax="0.2" 			
+		/>
+		<Suspension 
+			WheelType="rear" 
+			
+			Height="0.2" 
+			Strength="0.021" 
+			
+			SuspensionMin="-0.225"
+			SuspensionMax="0.125"		
+
+			Damping="0.3"
+			BrokenSuspensionMax="0.2" 			
+		/>
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="250"
+		Name="s_truck_krs_63_pathfinder_suspension_high"
+	>
+		<Suspension 
+			WheelType="front" 
+			
+			Height="0.3325" 
+			Strength="0.024" 
+			
+			SuspensionMin="-0.35"
+			SuspensionMax="0.025"	
+			
+			Damping="0.5" 
+			BrokenSuspensionMax="0.1" 
+		/>
+		<Suspension 
+			WheelType="middle" 
+			
+			Height="0.3325" 
+			Strength="0.024" 
+			 
+			SuspensionMin="-0.35"
+			SuspensionMax="0.025"	
+			
+			Damping="0.5" 
+			BrokenSuspensionMax="0.1"
+		/>
+		<Suspension 
+			WheelType="middle2" 
+			
+			Height="0.2825" 
+			Strength="0.02425" 
+			
+			SuspensionMin="-0.3"
+			SuspensionMax="0.025"		
+			
+			Damping="0.5" 
+			BrokenSuspensionMax="0.1" 			
+		/>
+		<Suspension 
+			WheelType="rear"
+			
+			Height="0.2825" 
+			Strength="0.02425" 
+			
+			SuspensionMin="-0.3"
+			SuspensionMax="0.025"	
+
+			Damping="0.5"
+			BrokenSuspensionMax="0.1"			
+		/>
+		<GameData
+			Price="7500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="Crawler"
+		BrokenWheelDamageMultiplier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="200"
+		Name="s_truck_krs_63_pathfinder_suspension_crawler"
+	>
+		<Suspension 
+			WheelType="front"
+			
+			Height="0.3" 
+			Strength="0.0225" 
+			
+			SuspensionMin="-0.37"
+			SuspensionMax="0.2"
+			
+			Damping="0.75"
+			BrokenSuspensionMax="0.125" 
+		/>
+			<Suspension 
+			WheelType="middle"
+			
+			Height="0.3" 
+			Strength="0.0225"  
+			
+			SuspensionMin="-0.37"
+			SuspensionMax="0.2"
+			
+			Damping="0.75" 
+			BrokenSuspensionMax="0.125" 
+		/>
+		
+		<Suspension 
+			WheelType="middle2"
+			
+			Height="0.2525" 
+			Strength="0.02275" 
+			
+			SuspensionMin="-0.32"
+			SuspensionMax="0.2"	
+			
+			Damping="0.75"
+			BrokenSuspensionMax="0.125" 			
+		/>
+		<Suspension 
+			WheelType="rear" 
+			
+			Height="0.2525" 
+			Strength="0.02275" 
+			
+			SuspensionMin="-0.32"
+			SuspensionMax="0.2"
+			
+			Damping="0.75"
+			BrokenSuspensionMax="0.125" 			
+		/>
+		<GameData
+			Price="5000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_CRAWLER_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_CRAWLER_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

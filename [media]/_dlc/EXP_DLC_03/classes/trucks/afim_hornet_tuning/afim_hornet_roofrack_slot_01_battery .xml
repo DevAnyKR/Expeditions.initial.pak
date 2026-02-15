@@ -1,0 +1,31 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="afim_hornet_roofrack_01_slot_01_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false"  Mesh="trucks/tuning/afim_hornet_tuning" MeshFrame="afim_hornet_roofrack_01_slot_01_battery">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneRoofrackRes_cdt">
+			<Constraint Type="Fixed" LinearLimitsX="(-0.02; 0.02)" LinearLimitsZ="(-0.01; 0.01)">
+				<Motor Type="Spring" Damping="50" Spring="700" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		IsConsumable="true"  
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="afim_hornet_roofrack_01"/>
+		<InstallSocket Type="AfimHornetRoofrackSlot01" />
+	</GameData>
+</TruckAddon>

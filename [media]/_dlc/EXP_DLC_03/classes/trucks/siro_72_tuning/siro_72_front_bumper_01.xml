@@ -1,0 +1,72 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.92" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.97" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_front_bumper_01">
+		<Body ImpactType="Truck" Mass="35" ModelFrame="BoneFrontBumper01_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper01Hook_cdt"
+			>
+				<Constraint Type="Hinge" MinLimit="-120" MaxLimit="12.4" AxisLocal="(0; 0; 1)" >
+					<Motor Type="Spring" Spring="0" Damping="0.005" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneFrontBumper01Hook02_cdt"
+			>
+				<Constraint Type="Hinge" MinLimit="-25" MaxLimit="12.4" AxisLocal="(0; 0; 1)" >
+					<Motor Type="Spring" Spring="0" Damping="0.005" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(1.545; 0.578; 0.556)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(1.545; 0.578; 0.674)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(1.545; 0.578; -0.556)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(1.545; 0.578; -0.674)" />
+		</Ignition>
+		<HeadLight>
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(1.545; 0.578; 0.674)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(1.545; 0.578; -0.674)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(1.545; 0.578; 0.556)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(1.545; 0.578; -0.556)" />
+			<Flare _template="BlueStreak" Pos="(1.545; 0.578; 0.674)" />
+			<Flare _template="BlueStreak" Pos="(1.545; 0.578; -0.674)" />
+			<Flare _template="BlueStreak" Pos="(1.545; 0.578; 0.556)" />
+			<Flare _template="BlueStreak" Pos="(1.545; 0.578; -0.556)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.647; 0.346; 0.355)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(1.647; 0.346; -0.355)" ParentFrame="BoneFrontBumper01_cdt" />
+		<WinchSocket Pos="(1.663; 0.573; 0.191)" ParentFrame="BoneFrontBumper01_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_SIRO_72_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIRO_72_FRONT_BUMPER_01_NAME"
+		/>
+		<RequiredSuspension Types="siro_72_suspension_high, siro_72_suspension_crawler" />
+		<InstallSocket Type="Siro72FrontBumper" />
+	</GameData>
+</TruckAddon>

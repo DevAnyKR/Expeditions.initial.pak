@@ -1,0 +1,42 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_roofrack_01_slot_03_fuel">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddons_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrack01Slot03Fuel_сdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.015;0.01)"
+				LinearLimitsY="(-0.008;0.008)"
+				LinearLimitsZ="(-0.003;0.0065)"
+			>
+			
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="international_loadstar_1700_roofrack_01_slot_03_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"  
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_roofrack_01" />
+		<InstallSocket Type="InternationalLoadstar1700RoofrackSlot03" />
+	</GameData>
+</TruckAddon>

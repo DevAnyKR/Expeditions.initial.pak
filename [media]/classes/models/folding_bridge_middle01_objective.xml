@@ -1,0 +1,51 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			ModelFrame="stage_1"
+			Friction="1.8"
+		/>
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="build_stage_0">
+	</Subset>
+	
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+	
+    <AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh" />
+		<CdtMesh Name="cdt_stage_1" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">
+		
+		 <AnimEvent Key="40">
+			<SFX Pos="(0.0; 1.701; -1.021)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="42">
+			<SFX Pos="(0.0; 1.472; 1.022)" Dir="(0; 1; 0)" Name="bridge_sparks_02"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="60">
+			<SFX Pos="(5.519; -2.123; 0.019)" Dir="(0; 1; 0)" Name="rus_radio_smoke"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="61">
+			<SFX Pos="(-5.197; -1.963; 0.019)" Dir="(0; 1; 0)" Name="rus_radio_smoke"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="3">
+			<Sound Name="actors/actor_construction/actor_construct_bridge_objective" Range="200" Volume="1"/>
+		</AnimEvent>
+	
+	</TrackEvents>
+	<Landmark Mesh="landmarks/folding_bridge_middle01_objective_lmk" />	
+</ModelBrand>

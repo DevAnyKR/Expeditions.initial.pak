@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/dark_minimap__d_a.tga" 
+	Normal="tiles/dark_minimap_relief__d_a.tga"
+	NoGrass="true"
+	GenerateDust="true"
+	AllowHiddenExtrudes="0.3"
+	Sound="surfaces/surf_sand_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	MinViscosity="4.0"
+/>

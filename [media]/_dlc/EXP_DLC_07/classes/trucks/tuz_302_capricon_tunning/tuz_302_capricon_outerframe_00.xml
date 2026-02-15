@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+			<Multiplier Multiplier="0.9" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_outerframe_00">
+		<Body ImpactType="Truck" Mass="145" ModelFrame="BoneOuterframe_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneOuterframeCable_cdt"
+			>
+				<Constraint
+					LinearLimitsY="(-0.1; 0.1)"
+					LinearLimitsZ="(-0.1; 0.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="45" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="10000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_302_OUTERFRAME_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_302_OUTERFRAME_00_NAME"
+		/>
+		<InstallSocket Type="Tuz302CapriconOuterframe" />
+	</GameData>
+</TruckAddon>

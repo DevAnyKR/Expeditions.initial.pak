@@ -1,0 +1,44 @@
+<_templates>
+	<Constraint>
+		<Bridge
+			AxisLocal="(0; 1; 0)"
+			Type="Hinge"
+			MinLimit="-1"
+			MaxLimit="96"
+		/>
+	</Constraint>
+	<Body>
+		<Bridge
+			AngularDamping="0.1"
+			Collisions="Dynamic"
+			Mass="1000"
+			NoSoftContacts="true"
+		/>
+	</Body>
+</_templates>
+<ModelBrand
+	DynamicModel="True"
+	IsKeepPhysModelAlways="true"
+	IsComplexPhysModel="true"
+	IsNeedSavePhysState="true"
+>
+	<PhysicsModel>
+		<Constraint
+			_template="Bridge"
+			ModelFrameChild="BoneBridge01_cdt"
+			ModelFrameParent="BoneRoot_cdt"
+			PivotOffset="(0; 0; 0)"
+		/>
+		<Body _template="Bridge" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body _template="Bridge" ModelFrame="BoneBridge01_cdt">
+				<Constraint _template="Bridge" IsSoundedConstraint="true">
+					<Sounds MechanismSoundStartMovie="game/wooden_bridge_in"
+						MechanismSoundStopMovie="game/wooden_bridge_out"
+						MechanismSoundIsMoving=""/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/hinged_bridge_dlc_08_lmk" />
+	<GameData ModelBreakageQuestConstraints="HingedBridge" />
+</ModelBrand>

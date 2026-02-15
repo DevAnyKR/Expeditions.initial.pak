@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="br0d_roofrack_00_slot_02_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel  AcceptVisualDamage="false" Mesh="trucks/tuning/traun_br0d_tuning" MeshFrame="br0d_roofrack_00_slot_02_battery">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		IsConsumable="true"
+		CameraPreset="roof_supplies"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="traun_br0d_roofrack_00" />
+		<InstallSocket Type="TraunBr0dRoofRackSlot02" />
+	</GameData>
+</TruckAddon>
+ 

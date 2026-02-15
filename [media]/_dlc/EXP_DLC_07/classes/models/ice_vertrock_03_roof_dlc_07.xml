@@ -1,0 +1,9 @@
+<ModelBrand
+	AcceptZoneBorderDecals="false"
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+</ModelBrand>

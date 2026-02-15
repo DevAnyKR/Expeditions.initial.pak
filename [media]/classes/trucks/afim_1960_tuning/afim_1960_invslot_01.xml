@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/afim_1960_tuning" MeshFrame="afim_1960_inv_slot_01">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneDown_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneHookInv_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="10"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="rear"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_1960_INV_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_1960_INV_SLOT_01_NAME"
+		/>
+		<InstallSocket Type="Afim1960InvSlot" />
+	</GameData>
+</TruckAddon>

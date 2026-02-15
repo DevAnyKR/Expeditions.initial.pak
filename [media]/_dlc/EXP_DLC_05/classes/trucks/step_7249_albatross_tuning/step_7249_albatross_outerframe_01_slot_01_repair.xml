@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	<RepairsHide>
+		<Mesh Frame="step_7249_albatross_outerframe_01_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_outerframe_01_slot_01_repair">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="step_7249_albatross_outerframe_01" />
+		<InstallSocket Type="Step7249AlbatrossOuterframeSlot01" />
+	</GameData>
+</TruckAddon>

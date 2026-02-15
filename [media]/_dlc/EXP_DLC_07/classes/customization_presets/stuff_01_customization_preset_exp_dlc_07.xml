@@ -1,0 +1,14 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<!-- KRS 63 Pathfinder -->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_krs_63_pathfinder" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_krs_63_pathfinder" />
+	<!-- TUZ 302 Capricon -->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_front_1x1_tuz_302_capricon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_front_1x1_tuz_302_capricon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_rear_1x1_tuz_302_capricon" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_rear_1x1_tuz_302_capricon" />
+	<!-- Haukka NS 420 -->
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_haukka_ns420" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_haukka_ns420" />
+</TruckSet>

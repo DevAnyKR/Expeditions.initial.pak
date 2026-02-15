@@ -1,0 +1,24 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/shiba_overlander_tuning" MeshFrame="shiba_backrack_01">
+		<Body Mass="20" ModelFrame="BoneAddon_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_BACKRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_BACKRACK_NAME"
+		/>
+		<InstallSocket Type="ShibaOverlanderPickup" />
+	</GameData>
+</TruckAddon>

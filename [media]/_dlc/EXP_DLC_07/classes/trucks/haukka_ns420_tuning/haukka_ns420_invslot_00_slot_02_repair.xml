@@ -1,0 +1,41 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_invslot_00_slot_02_repair">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="10"
+				ModelFrame="BoneInvSlot00Slot02_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-3.0"
+					MaxLimit="3.0"
+				>
+					<Motor Damping="12.0" Spring="220" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear_supplies"
+		Category="miscellenious"
+		IsConsumable="True"
+		Price="200"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="haukka_ns420_invslot_00" />
+		<InstallSocket Type="HaukkaNS420InvSlotSlot02" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="haukka_ns420_invslot_00_slot_02_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

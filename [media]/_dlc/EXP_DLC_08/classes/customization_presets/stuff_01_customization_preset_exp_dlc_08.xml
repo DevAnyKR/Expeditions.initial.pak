@@ -1,0 +1,12 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_gc_caravan" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_gc_caravan" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_shiba_dart_srv" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_shiba_dart_srv" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_l_1x1_ank_xm75" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_r_1x1_ank_xm75" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_00_1x1_tuz_93_kelpie" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_01_1x1_tuz_93_kelpie" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_side_01_1x1_tuz_93_kelpie" />
+</TruckSet>

@@ -1,0 +1,80 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_wings_00">
+		<Body Mass="20" ModelFrame="BoneWings00_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneMudGuardLeft_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="25"
+				>
+					<Motor Damping="0.03" Spring="0.0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneMudGuardRight_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="25"
+				>
+					<Motor Damping="0.05" Spring="0.0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.219; 1.132; 0.751)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.219; 1.132; -0.751)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Pos="(3.219; 1.132; 0.751)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" DirAngle="120" Pos="(3.219; 1.132; -0.751)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="110" Pos="(3.168; 1.081; 0.981)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" DirAngle="110" Pos="(3.168; 1.081; -0.981)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.219; 1.132; 0.751)" />
+			<Model _template="HeadLightRay" Org="(3.219; 1.132; -0.751)" />
+			<Flare _template="HeadLight" Pos="(3.219; 1.132; 0.751)" />
+			<Flare _template="HeadLight" Pos="(3.219; 1.132; -0.751)" />
+			<Flare _template="BlueStreak" Pos="(3.219; 1.132; 0.751)" />
+			<Flare _template="BlueStreak" Pos="(3.219; 1.132; -0.751)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FENDERS_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="DecinS3TWings" />
+	</GameData>
+</TruckAddon>

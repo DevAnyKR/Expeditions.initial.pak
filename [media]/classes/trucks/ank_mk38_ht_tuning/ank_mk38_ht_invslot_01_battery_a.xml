@@ -1,0 +1,36 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ank_mk38_ht_tuning" MeshFrame="ank_mk38_ht_inv_slot_01_battery_left">	
+		<Body Collisions="None" Mass="20" ModelFrame="BoneInvSlot01LeftRepair_cdt">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1.0"
+				MaxLimit="1.0"
+			>
+				<Motor Type="Spring" Damping="0" Spring="2" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="ank_mk38_ht_inv_slot_01_battery_left" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="ank_mk38_ht_invslot_01" />
+		<InstallSocket Type="AnkMk38InventorySlot01Left" />
+	</GameData>
+</TruckAddon>

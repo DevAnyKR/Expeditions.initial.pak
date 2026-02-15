@@ -1,0 +1,31 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_roofrack_slot_04_battery">	
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed"/>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="collie_pug_293_roofrack_slot_04_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+        CameraPreset="supplies_roof"
+        Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="collie_pug_293_roofrack_01" />
+		<InstallSocket Type="ColliePUG293RoofRackSlot04" />
+	</GameData>
+</TruckAddon>

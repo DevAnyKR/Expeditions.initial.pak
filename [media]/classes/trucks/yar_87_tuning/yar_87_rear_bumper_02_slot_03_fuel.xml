@@ -1,0 +1,31 @@
+<_parent File="yar_87_rear_bumper_02_slot_01_fuel" />
+<_templates Include="trucks">
+	<Constraint>
+		<BumperFixed1
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-2.3"
+				MaxLimit="1.5"
+		>
+		<Motor Damping="0" Spring="0.5" Type="Spring" />
+		</BumperFixed1>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="15">	
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="rear_bumper_02_canister_big_03" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="rear_bumper_02_canister_big_03">
+		<Body _inheritRemove="true" />
+		<Body Collisions="None" ImpactType="Truck" Mass="10" ModelFrame="BoneRearBumper02Slot03_cdt">
+			<Constraint _template="BumperFixed1">
+				<BumperFixed1/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData CameraPreset="supplies_Rear" >
+		<InstallSocket Type="Yar87RearBumper02Slot03" />
+	</GameData>
+</TruckAddon>

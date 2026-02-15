@@ -1,0 +1,85 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1">
+             <Body Collisions="Dynamic" ModelFrame="BoneBase_cdt" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="build_stage_0" IsDefault="true">
+	</Subset>
+	<Subset Name="build_complete">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="BoneBase_cdt" />
+		<AnimSubset Name="build_animation_0" />
+          <AnimTrack Name="anim_stage"/>
+          <AnimTrackSubset Name="anim_loop" />
+		
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<CdtMesh Name="cdt1" />
+		<Mesh Name="animated_mesh_01" />
+	</AnimSubset>
+	<TrackEvents TrackName="anim_stage">
+		<AnimEvent Key="10">
+			<Sound Name="actors/actor_construction/actor_construct_portable_meteorological_station" Range="200" Volume="1"/>
+		</AnimEvent>
+            <AnimEvent Key="18">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 0.0; 0.0)" Name="pipe_smoke_01" />
+		</AnimEvent>
+		<AnimEvent Key="25">
+             <!-- <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 0.7; 0.0)" Name="oil_derrek_sparks_01" /> -->
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 0.7; 0.0)" Name="pipe_smoke_01" />
+		</AnimEvent>
+            <AnimEvent Key="43">
+	       <!-- <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 2.1; 0.0)" Name="bridge_sparks_02" />-->
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 1.4; 0.0)" Name="rus_controlbunker_02_1_part_powerline" />
+		</AnimEvent>
+            <AnimEvent Key="54">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 3.2; 0.0)" Name="rus_controlbunker_02_1_part_powerline" />
+		</AnimEvent>
+            <AnimEvent Key="68">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 2.5; 0.5)" Name="pier_smoke_02" />
+             <!-- <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 2.5; 0.3)" Name="bridge_sparks_02" /> -->
+		</AnimEvent>
+		<AnimEvent Key="75">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 3.6; 0.0)" Name="pier_smoke_02" />
+		</AnimEvent>
+            <AnimEvent Key="95">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 5.2; 0.0)" Name="pier_smoke_02" />
+		</AnimEvent>
+       <!-- <AnimEvent Key="122">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 4.8; 0.0)" Name="bridge_sparks_02" />
+		</AnimEvent> -->
+            <AnimEvent Key="140">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 2.2; 0.0)" Name="pier_smoke_02" />
+		</AnimEvent>
+       <!-- <AnimEvent Key="140">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 1.8; 1.1)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(-1.0; 1.8; -0.5)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(1.0; 1.8; -0.5)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 3.0; 0.6)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(-0.5; 3.0; -0.3)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.5; 3.0; -0.3)" Name="bridge_sparks_02" />
+		</AnimEvent>
+            <AnimEvent Key="145">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 0.6; 2.6)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(-2.3; 0.6; -1.3)" Name="bridge_sparks_02" />
+                  <SFX Dir="(0.0; 0.5; 0.0)" Pos="(2.3; 0.6; -1.3)" Name="bridge_sparks_02" />
+		</AnimEvent> -->
+            <AnimEvent Key="155">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.08; 5.2; -1.0)" Name="bridge_sparks_02" />
+		</AnimEvent>
+            <AnimEvent Key="167">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.08; 5.2; 1.0)" Name="bridge_sparks_02" />
+		</AnimEvent>
+            <AnimEvent Key="178">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(-1.7; 3.6; 0.08)" Name="bridge_sparks_02" />
+		</AnimEvent>
+            <AnimEvent Key="183">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(1.7; 3.6; 0.08)" Name="bridge_sparks_02" />
+		</AnimEvent>
+            <AnimEvent Key="206">
+			<SFX Dir="(0.0; 0.5; 0.0)" Pos="(0.0; 5.3; 0.0)" Name="bridge_sparks_02" />
+		</AnimEvent>
+	</TrackEvents>
+      <Landmark Mesh="landmarks/portable_meteorological_station_lmk"/>
+</ModelBrand>

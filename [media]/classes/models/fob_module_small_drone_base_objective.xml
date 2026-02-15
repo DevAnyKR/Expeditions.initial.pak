@@ -1,0 +1,40 @@
+<ModelBrand ClipCamera="true" NeedPreload="true">
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" DamageMult="0.0" /> 
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="stage_0"></Subset>
+	
+	<Subset Name="stage_1">
+		<CdtMesh Name="frame" />
+		<CdtMesh Name="base" />
+		<CdtMesh Name="helipad" />
+		<Mesh Name="base" />
+		<Mesh Name="helipad" />
+		<AnimSubset Name="build_animation_1" />
+        <AnimTrack Name="anim_stage_1"/>
+    </Subset>
+	
+	<AnimSubset Name="build_animation_1">
+		<CdtMesh Name="cdt_frame" />
+		<Mesh Name="base_anim" />
+		<Mesh Name="helipad_anim" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">		
+
+		<AnimEvent Key="5">
+			<Sound Name="actors/actor_construction/build_fob_common" Range="200" Volume="1"/>
+		</AnimEvent>
+	
+		<AnimEvent Key="12">
+			<SFX Pos="(0.0; 0.0; 0.0)" Dir="(0; 1; 0)" Name="fob_modules_smoke_02"/>
+
+        </AnimEvent>
+	<AnimEvent Key="14">
+			<SFX Pos="(0.0; 0.0; 0.0)" Dir="(0; 1; 0)" Name="fob_modules_smoke_01"/>
+
+        </AnimEvent>
+	</TrackEvents>
+</ModelBrand>

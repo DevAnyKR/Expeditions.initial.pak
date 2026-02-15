@@ -1,0 +1,37 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_roofrack_slot_canister_03">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrackSlot_03_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.003;0.002)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.004;0.002)"
+			>
+
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="tuz_16_roofrack_slot_canister_03" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_16_actaeon_roofrack_01" />
+		<InstallSocket Type="Tuz16RoofRackSlot03" />
+	</GameData>
+</TruckAddon>

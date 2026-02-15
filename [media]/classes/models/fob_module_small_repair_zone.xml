@@ -1,0 +1,54 @@
+<ModelBrand DynamicModel="true"
+	ClipCamera="true"
+	Instanced="true"
+	StaticModelWithDynamicParts="true"
+	NeedPreload="true"
+>
+	<PhysicsModel>
+	<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(223; 208; 200) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(-2.808; 1.303; -3.498)"
+			Size="0.15"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="mesh_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="500" NoSoftContacts="true" ModelFrame="wheels_cdt">
+			<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="3000" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="toolbox_cdt">
+			<Constraint BreakOffThreshold="0" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="lift_cdt">
+			<Constraint BreakOffThreshold="50" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="wheel1_cdt">
+			<Constraint BreakOffThreshold="50" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="wheel2_cdt">
+			<Constraint BreakOffThreshold="50" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="500" NoSoftContacts="true" ModelFrame="barrel1_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="500" NoSoftContacts="true" ModelFrame="barrel2_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_repair_zone_lmk" />
+</ModelBrand>

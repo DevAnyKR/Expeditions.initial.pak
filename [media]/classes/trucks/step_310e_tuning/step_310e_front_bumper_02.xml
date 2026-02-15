@@ -1,0 +1,70 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="20"
+			>
+				<Motor Type="Spring" Spring="20" Damping="1.0"/>
+			</Constraint>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+			<Multiplier Multiplier="0.95" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_bumper_02">
+		<Body ModelFrame="BoneBumper02_cdt" ImpactType="Truck" Mass="70">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneBumper02HitchFrontLeft_cdt" />	
+			<Body _template="Hitch" ModelFrame="BoneBumper02HitchFrontRight_cdt">
+					<Body _template="Hitch" ModelFrame="BoneBumper02Hook_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; -0.3)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; -0.262)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; -0.227)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; -0.191)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; -0.3)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; -0.262)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; -0.227)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; -0.191)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; 0.3)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; 0.262)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; 0.227)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.38; 0.191)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; 0.3)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; 0.262)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; 0.227)" />
+		<Flare _template="LED" Color="g(235; 230; 220) x 1.1" Size=".05" Pos="(4.943; 1.419; 0.191)" />
+		<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(220; 220; 255) x 0.2" Size="0.5" Pos="(4.943; 1.4; -0.243)" />
+		<Flare _template="BlueStreak" AspectRatio="2.5" Color="g(220; 220; 255) x 0.2" Size="0.5" Pos="(4.943; 1.4; 0.243)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_310_FRONT_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_310_FRONT_BUMPER_2_NAME"
+		/>
+		<InstallSocket Type="Step310eFrontBumper" />
+	</GameData>
+</TruckAddon>

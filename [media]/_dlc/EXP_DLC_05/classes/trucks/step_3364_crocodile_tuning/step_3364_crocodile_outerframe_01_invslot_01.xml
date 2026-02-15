@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_3364_crocodile_tuning" MeshFrame="step_3364_crocodile_outerframe_01_invslot_01">
+		<Body ImpactType="Truck" Mass="2" ModelFrame="BoneOuterframe01InvSlot01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_STEP_3364_CROCODILE_OUTERFRAME_INVSLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_STEP_3364_CROCODILE_OUTERFRAME_INVSLOT_01_NAME"
+		/>
+		<RequiredSuspension Types="step_3364_crocodile_suspension_high, step_3364_crocodile_suspension_crawler"  />
+		<RequiredAddon Types="step_3364_crocodile_outerframe_01"  />
+		<RequiredAddon Types="step_3364_crocodile_wings_01, step_3364_crocodile_wings_02"  />
+		<InstallSocket Type="Step3364CrocodileOuterframeInvSlot01" />
+	</GameData>
+</TruckAddon>

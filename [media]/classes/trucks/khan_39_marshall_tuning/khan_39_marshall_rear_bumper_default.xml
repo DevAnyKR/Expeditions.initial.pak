@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	
+	<PhysicsModel Mesh="trucks/tuning/khan_39_marshall_tuning" MeshFrame="khan_39_marshall_rear_bumper_default">
+		<Body  Mass="20" ModelFrame="BoneRearBumperDefault_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardLeftRear_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="15" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardRightRear_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="15" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallRearBumper" />
+	</GameData>
+</TruckAddon>

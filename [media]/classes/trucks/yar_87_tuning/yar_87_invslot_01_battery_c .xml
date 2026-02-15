@@ -1,0 +1,37 @@
+<_parent File="yar_87_invslot_01_battery_a " />
+<_templates Include="trucks">
+	<Constraint>
+		<SideFixed1 LinearLimitsX="(-0.01;0.01)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</SideFixed1>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<BatteryHide>
+		<Mesh Frame="inv_slot_01_battery_03" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="inv_slot_01_battery_03">
+		<Body _inheritRemove="true" />
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneInvSlot01Slot03_cdt">
+			<Constraint _template="SideFixed1">
+				<SideFixed1/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData 
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="yar_87_invslot_01" />
+		<InstallSocket Type="Yar87InvSlot01Slot03" />
+	</GameData>
+</TruckAddon>

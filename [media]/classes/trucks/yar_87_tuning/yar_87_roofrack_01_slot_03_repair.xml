@@ -1,0 +1,24 @@
+<_parent File="yar_87_roofrack_01_slot_01_repair" />
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed1 LinearLimitsX="(-0.01;0.012)" LinearLimitsY="(0;0.01)" LinearLimitsZ="(-0.003;0.003)" Type="Fixed">
+			<Motor Damping="200" Spring="700" Type="Spring" />
+		</TrunkFixed1>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<RepairsHide>
+		<Mesh Frame="roofrack_repair_kit_03" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="roofrack_repair_kit_03">
+		<Body _inheritRemove="true" />
+		<Body Collisions="None" ImpactType="Truck" Mass="20" ModelFrame="BoneRoofrack01Slot03_cdt">
+			<Constraint _template="TrunkFixed1">
+				<TrunkFixed1/>
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Yar87Roofrack01Slot03" />
+	</GameData>
+</TruckAddon>

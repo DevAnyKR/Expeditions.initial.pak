@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="0.2">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.0" Type="Engine" />
+			<Multiplier Multiplier="0.0" Type="Gearbox" />
+			<Multiplier Multiplier="0.0" Type="FuelTank" />
+			<Multiplier Multiplier="0.0" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_front_bumper_02">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneFrontBumper_02_cdt">
+			<Constraint Type="Rigid" />
+				<Body _template="Hitch" ModelFrame="BoneHook_02_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TUZ_16_FRONT_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TUZ_16_FRONT_BUMPER_2_NAME"
+		/>
+		<InstallSocket Type="tuz_16_actaeonBumper" />
+	</GameData>
+</TruckAddon>

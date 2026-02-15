@@ -1,0 +1,112 @@
+<AmbientSounds>
+	<Volume Min="1.0" Max="1.0" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_winter_s3/amb_winter_s3_amb_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_chirp/amb_winter_s3_bird_chirp_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_woodpecker/amb_winter_s3_bird_woodpecker_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_fox_cry/amb_winter_s3_fox_cry_rnd"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_random/amb_winter_s3_bird_random_rnd"
+			MinRadius = "10"
+			MaxRadius = "3"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+	</DayForest>
+	<DayWind Sound="amb/amb_winter_s3/amb_winter_s3_amb_main_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_chirp/amb_winter_s3_bird_chirp_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "5"
+			MaxInterval = "15"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_woodpecker/amb_winter_s3_bird_woodpecker_rnd                                                                                                                                                                                                         "
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_fox_cry/amb_winter_s3_fox_cry_rnd"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_bird_random/amb_winter_s3_bird_random_rnd"
+			MinRadius = "10"
+			MaxRadius = "3"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+	</DayWind>
+	<NightForest Sound="amb/amb_winter_s3/amb_winter_s3_main_night_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_fox_cry/amb_winter_s3_fox_cry_rnd"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		
+	</NightForest>
+	<NightWind Sound="amb/amb_winter_s3/amb_winter_s3_main_night_loop">
+		<RandomSet
+			Sound="amb/amb_winter_s3/amb_winter_s3_fox_cry/amb_winter_s3_fox_cry_rnd"
+			MinRadius = "5"
+			MaxRadius = "15"
+			MinInterval = "5"
+			MaxInterval = "20"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_winter_s3/amb_winter_river_flow_close_loop"
+		Sound3D="amb/amb_winter_s3/amb_winter_river_flow_far_loop"
+		MaxDist="170"
+		Dist2D="0"
+		Dist3D="40"
+	/>
+</AmbientSounds>

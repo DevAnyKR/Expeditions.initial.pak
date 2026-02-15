@@ -1,0 +1,66 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(207; 180; 145) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(-0.2; 2.02; -0.2)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(207; 180; 145) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(0.3; 1.18; -0.28)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(207; 180; 145) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(0.39; 1.7; 0.32)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(207; 180; 145) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(0.23; 0.8; 0.36)"
+		/>
+		<Flare
+			AttenEnd="50"
+			AttenStart="5"
+			Color="g(207; 180; 145) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Size="2.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+			Pos="(-0.34; 2.16; 0.13)"
+		/>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,56 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/decin_s3t_tuning" MeshFrame="decin_s3t_wheel_slot_00">
+		<Body Mass="19" ModelFrame="BoneWheelSlot00_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="3"
+				ModelFrame="BoneWheelsSlotHatchLeft_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-2.0"
+					MaxLimit="0.5"
+				>
+					<Motor Damping="0.01" Spring="0.0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="3"
+				ModelFrame="BoneWheelsSlotHatchRight_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.5"
+					MaxLimit="2.0"
+				>
+					<Motor Damping="0.01" Spring="0.0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="2000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_DOUBLE_WHEELS_SLOT_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_DOUBLE_WHEELS_SLOT_00_NAME"
+		/>
+		<InstallSocket Type="DecinS3TWheelSlot" />
+	</GameData>
+</TruckAddon>

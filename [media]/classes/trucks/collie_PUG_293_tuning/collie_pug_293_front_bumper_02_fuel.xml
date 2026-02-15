@@ -1,0 +1,31 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_front_bumper_02_fuel">	
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+ 	<FuelHide>
+		<Mesh Frame="collie_pug_293_front_bumper_02_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="collie_pug_293_front_bumper_02" />
+		<InstallSocket Type="ColliePUG293FrontBumper02Slot01" />
+	</GameData>
+</TruckAddon>

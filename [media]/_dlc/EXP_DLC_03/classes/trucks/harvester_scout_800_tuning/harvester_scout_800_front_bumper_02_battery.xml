@@ -1,0 +1,39 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_front_bumper_slot_battery">	
+		<Body Collisions="None" Mass="10" ModelFrame="FrontBumperSlot_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(0.001;0.002)"
+				LinearLimitsY="(0;0.0)"
+				LinearLimitsZ="(-0.003;0.002)"
+			>
+				<Motor Type="Spring" Damping="300" Spring="300" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="harvester_scout_front_bumper_slot_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_front_bumper_02" />
+		<InstallSocket Type="HarvesterScout800FrontBumperSlot" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

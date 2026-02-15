@@ -1,0 +1,51 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/haukka_ns420_tuning" MeshFrame="haukka_ns420_invslot_00">
+		<Body Collisions="None" ImpactType="Truck" Mass="28">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneInvSlot00BracketLeft_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneInvSlot00BracketRight_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		AddonUnlockByObjective="false"
+		Price="4000"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HAUKKA_NS420_INV_SLOT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HAUKKA_NS420_INV_SLOT_NAME"
+		/>
+		<InstallSocket Type="HaukkaNS420InvSlot" />
+		<RequiredAddon Types="haukka_ns420_snorkel_01, haukka_ns420_snorkel_02, haukka_ns420_snorkel_03" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="IK_ShockLeft_B" ParentFrame="BoneInvSlot00_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneInvSlot00BracketLeft_cdt"
+				ModelFrame="IK_ShockLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ShockRight_B" ParentFrame="BoneInvSlot00_cdt">
+			<IKJoint AxisLocal="(-1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneInvSlot00BracketRight_cdt"
+				ModelFrame="IK_ShockRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

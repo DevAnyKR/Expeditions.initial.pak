@@ -1,0 +1,134 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		RepairsCapacity="50"
+	/>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="ROT_BoneAerial"
+		RotationSpeed="1.0"
+		Name="Lightbar"
+	/>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="ROT_BoneBeacon"
+		RotationSpeed="2.5"
+		Name="Lightbar"
+	/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/drone_scout_rig" >
+		<Body
+			Collisions="Default"
+			ImpactType="Truck"
+			Mass="40"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.064; 0.512; 0.117)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.061; 0.512; 0.15)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.054; 0.512; 0.182)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.039; 0.512; 0.212)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.064; 0.512; -0.117)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.061; 0.512; -0.15)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.054; 0.512; -0.182)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.039; 0.512; -0.212)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.064; 0.512; 0.117)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.061; 0.512; 0.15)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.054; 0.512; 0.182)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.039; 0.512; 0.212)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.064; 0.512; -0.117)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.061; 0.512; -0.15)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.054; 0.512; -0.182)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-1.039; 0.512; -0.212)" />
+		</Ignition>
+		<Lightbar>
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; 0)" DirAngle="90" Size="0.065" Pos="(-0.940; 0.774; 0.015)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; 0)" DirAngle="90" Size="0.065" Pos="(-0.940; 0.774; -0.015)" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 1; 1)" DirAngle="90" Size="0.065" Pos="(-0.210; 0.828; 0.256)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 1; 1)" DirAngle="90" Size="0.065" Pos="(-0.189; 0.828; 0.278)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 1; -1)" DirAngle="90" Size="0.065" Pos="(-0.210; 0.828; -0.256)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 1; -1)" DirAngle="90" Size="0.065" Pos="(-0.189; 0.828; -0.278)" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(0; 0; 1)" DirAngle="90" Size="0.065" Pos="(0.064; 0.629; 0.472)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(0; 0; 1)" DirAngle="90" Size="0.065" Pos="(0.093; 0.629; 0.472)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(0; 0; -1)" DirAngle="90" Size="0.065" Pos="(0.064; 0.629; -0.472)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(0; 0; -1)" DirAngle="90" Size="0.065" Pos="(0.093; 0.629; -0.472)" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 1; 0)" DirAngle="90" Size="0.065" Pos="(0.435; 0.828; 0.022)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 1; 0)" DirAngle="90" Size="0.065" Pos="(0.435; 0.828; -0.022)" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 0; 1)" DirAngle="90" Size="0.065" Pos="(0.746; 0.610; 0.183)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 0; 1)" DirAngle="90" Size="0.065" Pos="(0.757; 0.610; 0.155)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 1; -1)" DirAngle="90" Size="0.065" Pos="(0.746; 0.610; -0.183)" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(1; 1; -1)" DirAngle="90" Size="0.065" Pos="(0.757; 0.610; -0.155)" />
+		
+			<Model Color="g(255; 0; 80)" Org="(-0.494; 0.974; 0.000)" Dir="(1; 0.1; 0)" Mesh="env/light_ray_cone_drone_scout" Scale="(0.25; 0.25; 0.25)" ParentFrame="ROT_BoneBeacon" />
+			<Light AttenEnd="18.0" Color="g(0; 80; 255) x 4.5" Dir="(1; 0; 0)" InnerCone="90" OuterCone="160" Pos="(-0.494; 0.974; 0.000)" ParentFrame="ROT_BoneBeacon" />
+			<Flare Color="g(0; 150; 180) x 0.3" Dir="(1; 0.2; 0)" DirAngle="180" Size="0.45" Pos="(-0.494; 0.974; 0.000)" ParentFrame="ROT_BoneBeacon" />
+			<Flare Color="g(0; 120; 150) x 0.6" Dir="(1; 0.2; 0)" DirAngle="70" Size="0.2" Pos="(-0.494; 0.974; 0.000)" ParentFrame="ROT_BoneBeacon" />
+			<Flare Color="g(0; 180; 255) x 0.2" Dir="(1; 0.2; 0)" DirAngle="90" Size="1.15" Pos="(-0.494; 0.974; 0.000)" ParentFrame="ROT_BoneBeacon" />
+			
+			<Flare Color="g(0; 180; 255) x 1.0" AspectRatio="2.0" Size="0.1" Dir="(0; 0; 1)" Pos="(0.292; 0.31; 0.4)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 1.0" AspectRatio="2.0" Size="0.1" Dir="(0; 0; -1)" Pos="(0.292; 0.31; -0.4)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 1.0" AspectRatio="2.0" Size="0.1" Dir="(0; 0; 1)" Pos="(-0.292; 0.31; 0.4)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 1.0" AspectRatio="2.0" Size="0.1" Dir="(0; 0; -1)" Pos="(-0.292; 0.31; -0.4)" DirAngle="90" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; 1)" Size=".05" Pos="(-1.015; 0.503; 0.256)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; 1)" Size=".05" Pos="(-1.012; 0.476; 0.254)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; -1)" Size=".05" Pos="(-1.015; 0.503; -0.256)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 0.85" Dir="(-1; 0; -1)" Size=".05" Pos="(-1.012; 0.476; -0.254)" DirAngle="90" />
+			
+			<Flare Color="g(0; 180; 255) x 0.85" Size="0.1" Dir="(1; 0; 1)" Pos="(0.944; 0.296; 0.226)" DirAngle="90" />
+			<Flare Color="g(0; 180; 255) x 0.85" Size="0.1" Dir="(1; 0; -1)" Pos="(0.944; 0.296; -0.226)" DirAngle="90" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.999; 0.296; 0.072)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.993; 0.296; 0.107)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.983; 0.296; 0.14)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.972; 0.296; 0.172)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.999; 0.296; -0.072)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.993; 0.296; -0.107)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.983; 0.296; -0.14)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 0.8" Size=".05" Pos="(0.972; 0.296; -0.172)" />
+			
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.999; 0.296; 0.072)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.993; 0.296; 0.107)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.983; 0.296; 0.14)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.972; 0.296; 0.172)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.999; 0.296; -0.072)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.993; 0.296; -0.107)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.983; 0.296; -0.14)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 20; 20) x 0.4" Size=".05" Pos="(-0.972; 0.296; -0.172)" />
+			
+			<Light _template="IgnitionSignalWhite" Color="g(200; 200; 220) x 1.5" Pos="(0.988; 0.296; 0)" />
+			<Light _template="StopSignal" Color="g(255; 1; 1) x 1" Pos="(-0.988; 0.296; 0)" />
+		</Lightbar>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="false"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_MODULE_FRAME_SIDEBOARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_MODULE_FRAME_SIDEBOARD_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="DroneScoutRig" />
+	</GameData>
+	<ActionGroups>
+		<Group Id="Lightbar">
+			<Rotator Name="Lightbar" />
+			<Attachment Name="Lightbar" />
+		</Group>
+	</ActionGroups>
+</TruckAddon>

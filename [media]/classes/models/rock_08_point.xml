@@ -1,0 +1,20 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<GameData 
+		WinchPointsDemandGeologist="true">
+		<WinchSocket Pos="(5; 0; 0)" />
+		<WinchSocket Pos="(0; 5; 0)" />
+		<WinchSocket Pos="(0; 0; 5)" />
+		<WinchSocket Pos="(-5; 0; 0)" />
+		<WinchSocket Pos="(0; -5; 0)" />
+		<WinchSocket Pos="(0; 0; -5)" />
+	</GameData>
+	<Landmark Mesh="landmarks/rock_08_lmk" />
+</ModelBrand>

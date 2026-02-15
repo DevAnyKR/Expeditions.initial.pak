@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="45" />
+	<FuelHide>
+		<Mesh Frame="tuz_302_capricon_pickup_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false"  Mesh="trucks/tuning/tuz_302_capricon_tuning" MeshFrame="tuz_302_capricon_pickup_slot_01_fuel">
+		<Body Collisions="None" Mass="25" ModelFrame="BonePickupSlot_cdt">
+			<Constraint
+				LinearLimitsX="(-0.02;0.05)"
+				LinearLimitsY="(0;0.045)"
+				LinearLimitsZ="(-0.04;0.0)"
+				Type="Fixed"
+			>
+				<Motor Damping="500" Spring="5000" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsCustomizable="false"
+		IsConsumable="true"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="tuz_302_capricon_pickup_00" />
+		<InstallSocket Type="Tuz302CapriconPickupSlot01" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,42 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_inv_slot_01_left_fuel">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddons_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneInvSlot01LeftFuel_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.001;0.003)"
+				LinearLimitsY="(-0.008;0.003)"
+				LinearLimitsZ="(-0.003;0.0)"
+			>
+			
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="international_loadstar_1700_inv_slot_01_left_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	
+	<GameData
+		CameraPreset="supplies_side_l"
+		Category="miscellenious"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"  
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_invslot_01" />
+		<InstallSocket Type="InternationalLoadstar1700InvSlot01Left" />
+	</GameData>
+</TruckAddon>

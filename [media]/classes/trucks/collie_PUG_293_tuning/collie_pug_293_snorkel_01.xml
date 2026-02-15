@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(1.076; 2.886; -0.720)" />
+	<PhysicsModel Mesh="trucks/tuning/collie_PUG_293_tuning" MeshFrame="collie_pug_293_snorkel_01">
+		<Body Collisions="None" ImpactType="Truck" Mass="7" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="3500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_COLLIE_PUG_293_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_COLLIE_PUG_293_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="ColliePUG293Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,217 @@
+<AmbientSounds>
+	<Volume Min="0.8" Max="0.8" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_main_loop">
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_black_kite/amb_us_arizona_summer_day_bird_black_kite_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_canyon_songbird/amb_us_arizona_summer_day_bird_canyon_songbird_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_canyon_songbird_2/amb_us_arizona_summer_day_bird_canyon_songbird_2_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_cryptic_1/amb_us_arizona_summer_day_bird_cryptic_1_rnd"
+			MinRadius = "15"
+			MaxRadius = "40"
+			MinInterval = "35"
+			MaxInterval = "65"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_falcon/amb_us_arizona_summer_day_bird_falcon_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_falcon/amb_us_arizona_summer_day_bird_falcon_song_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "35"
+			MaxInterval = "55"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_hawk/amb_us_arizona_summer_day_bird_hawk_rnd"
+			MinRadius = "10"
+			MaxRadius = "55"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_different_birds/amb_us_arizona_summer_day_different_birds_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_windgust_rnd_set/amb_us_arizona_summer_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_insect/amb_us_arizona_summer_day_insect_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_deer/amb_us_arizona_summer_day_deer_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "55"
+			MaxInterval = "105"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>		
+	</DayForest>
+	<DayWind Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_main_loop">
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_black_kite/amb_us_arizona_summer_day_bird_black_kite_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_canyon_songbird/amb_us_arizona_summer_day_bird_canyon_songbird_rnd"
+			MinRadius = "5"
+			MaxRadius = "30"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "1.0"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_canyon_songbird_2/amb_us_arizona_summer_day_bird_canyon_songbird_2_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "10"
+			MaxInterval = "30"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_cryptic_1/amb_us_arizona_summer_day_bird_cryptic_1_rnd"
+			MinRadius = "15"
+			MaxRadius = "40"
+			MinInterval = "35"
+			MaxInterval = "65"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_falcon/amb_us_arizona_summer_day_bird_falcon_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_falcon/amb_us_arizona_summer_day_bird_falcon_song_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "35"
+			MaxInterval = "55"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_bird_hawk/amb_us_arizona_summer_day_bird_hawk_rnd"
+			MinRadius = "10"
+			MaxRadius = "55"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.6"
+			MaxVolume = "0.8"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_different_birds/amb_us_arizona_summer_day_different_birds_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_windgust_rnd_set/amb_us_arizona_summer_day_windgust_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_insect/amb_us_arizona_summer_day_insect_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_day_deer/amb_us_arizona_summer_day_deer_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "55"
+			MaxInterval = "105"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>	
+	</DayWind>
+	<NightForest Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_night_wind_loop">
+	</NightForest>
+	<NightWind Sound="amb/amb_us_arizona_summer/amb_us_arizona_summer_night_wind_loop">
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="150"
+		Dist2D="0"
+		Dist3D="45"
+	/>
+</AmbientSounds>

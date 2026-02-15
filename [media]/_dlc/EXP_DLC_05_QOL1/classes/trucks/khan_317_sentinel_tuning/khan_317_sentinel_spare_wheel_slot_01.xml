@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_spare_wheel_slot_01">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint	Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="7500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_317_WHEELS_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_317_WHEELS_SLOT_01_NAME"
+		/>
+		<InstallSocket Type="Khan317SpareWheelSlot" />
+	</GameData>
+</TruckAddon>

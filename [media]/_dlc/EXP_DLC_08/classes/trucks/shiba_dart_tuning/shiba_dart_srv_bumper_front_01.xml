@@ -1,0 +1,31 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+			<Multiplier Multiplier="0.8" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_front_bumper_01">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneBumperFront01_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<WinchSocket Pos="(2.245; 0.748; 0.389)" />
+		<WinchSocket Pos="(2.245; 0.748; -0.389)" />
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_FRONT_BUMPER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_FRONT_BUMPER_01_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVFrontBumper" />
+	</GameData>
+</TruckAddon>

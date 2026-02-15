@@ -1,0 +1,8 @@
+<ModelBrand 
+ ClipCamera="false"
+	>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,25 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+		<Flare
+			_template="Red"
+			AttenEnd="300"
+			AttenStart="0"
+			ColorMultAtDay="0"
+			Color="g(255; 158; 64) x 0.08"
+			Dir="(0; -1; 0)"
+			Pos="(0; 2; 0)"
+			Size="8"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/rock_monolith_center_01_lmk" />
+
+</ModelBrand>

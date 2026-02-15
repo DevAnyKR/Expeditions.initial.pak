@@ -1,0 +1,79 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Allterrain _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_ot	" />
+			<WheelFriction _template="Allterrain" />
+			<TiresInflationSystemSettings _template="Allterrain" />
+		</Allterrain>
+		<Offroad _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_ot" />
+			<WheelFriction _template="Offroad" />
+			<TiresInflationSystemSettings _template="Offroad" />
+		</Offroad>
+		<Mudtires _template="ExtraHeavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="SuperHeavy_mt" />
+			<WheelFriction _template="HeavyMudtires" />
+			<TiresInflationSystemSettings _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1.0" Width="1.72">
+	<TruckTires>
+	<TruckTire _template="Allterrain" DamageCapacity="125" IsBuoyant="true" RowingFactor="12.5" PushUpFactor="7.5" Mesh="wheels/tire_ank_xm75_2_allterrain" Name="allterrain_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.0"
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SUPERHEAVY_ALLTERRAIN_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" DamageCapacity="175" IsBuoyant="true" RowingFactor="14" PushUpFactor="7.5" Mesh="wheels/tire_ank_xm75_2_offroad" Name="offroad_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="1.15"
+			/>
+			<GameData
+				Price="10000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SUPERHEAVY_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Mudtires" DamageCapacity="150" IsBuoyant="true" RowingFactor="15" PushUpFactor="7.5" Mesh="wheels/tire_ank_xm75_2_mudtires" Name="mudtires_1">
+			<WheelFriction
+				BodyFriction="3.5"
+				BodyFrictionAsphalt="3.5"
+				SubstanceFriction="3.5"
+				TireSnowFrictionModifier="0.975"
+			/>
+			<GameData
+				Price="20000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_ank_xm75" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_ANK_MK38_1_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

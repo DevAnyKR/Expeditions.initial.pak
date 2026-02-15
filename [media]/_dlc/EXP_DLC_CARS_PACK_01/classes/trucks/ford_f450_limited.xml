@@ -1,0 +1,685 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			CamberAnglePhysics="-0.5"
+			CamberAngleRender="-0.5"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FirstAxle
+			CamberAnglePhysics="-1.0"
+			CamberAngleRender="-1.0"			
+			CamberSuspensionMultiplier="0.3"
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="33"
+			SteeringCastor="3"
+			SteeringJointOffset="0.14"
+			Torque="full"
+		/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		DiffLockType="Switchable"
+		ElectricChargeCapacity="15.0"
+		SignalRadius="115.0"
+		EngineIconMesh="env/engine_ford_f450_limited"
+		EngineIconScale="1.0"
+		EngineStartDelay="0.0"
+		ExhaustStartTime="0.9"
+		FuelCapacity="180"
+		Responsiveness="0.4"
+		SteerSpeed="0.045"
+		BackSteerSpeed="0.04"
+		TruckImage="truck_F450"
+		TruckType="SCOUT"
+		template="TruckDefaultVars"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1www"
+			DefaultTire="tire_ford_f450_limited"
+			DefaultWheelType="wheels_ford_f450_limited"
+		>
+			<Wheel _template="FirstAxle" Pos="(2.413; 0.403; 0.94)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(2.413; 0.403; 0.94)" />
+			<Wheel _template="SecondAxle" Pos="(-2.057; 0.403; 0.99)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(-2.057; 0.403; 0.99)" />
+		</Wheels>
+			<CompatibleWheels OffsetZ="0.0" Scale="0.47" Type="wheels_ford_f450_limited" />
+			<CompatibleWheels OffsetZ="0.0" Scale="0.49" Type="wheels_ford_f450_limited" />
+		<SuspensionSocket
+			Default="s_scout_ford_f450_limited_suspension_default"
+			Type="s_ford_f450_limited"
+			MaxWheelRadiusWithoutSuspension="1.0"
+		/>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.814"
+		/>
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(0; 0; 0)"
+			MinDist="12.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/ford_f450_limited/ford_f450_limited_reverse" />
+			<BrakePull		Sound="trucks/ford_f450_limited/ford_f450_limited_brake_pull" />
+			<BrakesSqueal	Sound="trucks/ford_f450_limited/ford_f450_limited_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/ford_f450_limited/ford_f450_limited_brake_release" />
+			<Handbrake		Sound="trucks/ford_f450_limited/ford_f450_limited_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/ford_f450_limited/ford_f450_limited_handbrake_off" />
+			<Gear			Sound="trucks/ford_f450_limited/ford_f450_limited_gear_shift" />
+			<Honk			Sound="trucks/ford_f450_limited/ford_f450_limited_honk" />
+			<EngineRev		Sound="trucks/ford_f450_limited/ford_f450_limited_rev" />
+			<EngineAccel	Sound="trucks/ford_f450_limited/ford_f450_limited_acc" />
+			<EngineStart	Sound="trucks/ford_f150_raptor/ford_f150_raptor_start" />
+			<EngineStop		Sound="trucks/ford_f450_limited/ford_f450_limited_stop" />
+			<EngineIdle		Sound="trucks/ford_f450_limited/ford_f450_limited_idle" />
+			<EngineIdle_2d	Sound="trucks/ford_f450_limited/ford_f450_limited_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ford_f450_limited/ford_f450_limited_low" />
+			<EngineLow_2d	Sound="trucks/ford_f450_limited/ford_f450_limited_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ford_f450_limited/ford_f450_limited_high" />
+			<EngineHigh_2d	Sound="trucks/ford_f450_limited/ford_f450_limited_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/ford_f450_limited/ford_f450_limited_heavy" />
+			<EngineHeavy_2d	Sound="trucks/ford_f450_limited/ford_f450_limited_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="SHK_BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4" />
+		</Shakers>
+		<OcclusionMap
+			HalfSizeZ="2.1"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-4.3"
+			MaxX="4.3"
+		/>
+		<LimitedFluid Center="(-0.351, 0.512, 0.305)" SizeX="1.758" SizeY="0.292" SizeZ="0.336" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<Intake Dir="(1; 0; 0)" Origin="(3.339; 1.003; 0.000)" Size="1" />
+		<Inventory MaxLimit="5" />
+		<DeployCost Cost="0" />
+		<GearboxSocket Default="g_scout_ford_f450_limited_default" Type="gearboxes_scouts_ford_f450_limited, gearboxes_scouts_light_experimental, gearboxes_scouts_heavy_experimental" />
+		<EngineSocket Default="e_us_scout_ford_f450_limited_engine_0" Type="e_us_scout_modern_ford_f450_limited, e_scout_light_experimental, e_scout_heavy_experimental" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust
+			Dir="(-0.2; 0.0; -1.0)"
+			IsLight="true"
+			Origin="(-2.758; 0.411; -0.899)"
+			Speed="3.5"
+			ParentFrame="SHK_BoneExhaust"
+		/>
+		<Exhaust
+			Dir="(-0.2; 0.0; -1.0)"
+			IsLight="true"
+			Origin="(-2.905; 0.411; -0.896)"
+			Speed="3.5"
+			ParentFrame="SHK_BoneExhaust"
+		/>
+		<Steam Origin="(2.314; 0.849; 0.000)" />
+		
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.9; 0.66; -0.45)" Max="(2.75; 1.28; 0.45)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="GearBox" Min="(0.8; 0.526; -0.317)" Max="(1.9; 0.950; 0.317)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.276; 0.428; 0.112)" Max="(0.561; 0.724; 0.531)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<Driver AnimationSet="Scout" Pos="(0.866; 1.027; 0.451)" LegsOffset="(0.1; 0.028; -0.05)" SteeringWheelPos="(1.212; 1.462; 0.437)" />
+		<SteeringWheel Frame="BoneSteeringWheel" ParentFrame="BoneCabin_cdt" />
+		<Camera Center="(-1.0; -0.1; 0)" ParentFrame="BoneCabin_cdt" RadiusMultiplier="0.8" >
+			<Roof
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.8; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+				ViewPos="(1.5; 3.2; 0)"
+			/>
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.6; 0.7)"
+				WindshieldDiffuseTexture="trucks/custom_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/custom_glass__sh_d.tga"
+				ViewPos="(0.7; 1.75; 0.47)"
+				ZoomViewPosOffset="(0.42; 0.03; -0.035)"
+			>
+				<Rear ViewPosOffset="(-0.1; 0.0; 0.7)" />
+				<Mirror ClipDir="(-1; 0.1; -0.38)" ClipOffset="0.15" FOVScale="1.0" MeshFrame="mirror_l" ReflectionDir="(-1; 0.1; -0.38)" Size="(0.25; 0.35)" Pos="(1.390; 1.490; 1.159)" />
+				<Mirror ClipDir="(-1; 0.04; 0.62)" ClipOffset="0.15" FOVScale="1.0" MeshFrame="mirror_r" ReflectionDir="(-1; 0.04; 0.62)" Size="(0.25; 0.35)" Pos="(1.390; 1.490; -1.159)" />
+				<Mirror ClipDir="(-1; -0.07; 0.35)" ClipOffset="0.1" FOVScale="0.8" MeshFrame="hp_cab_mirror" ReflectionDir="(-1; -0.03; 0.3)" Size="(0.23; 0.09)" Pos="(1.393; 1.760; 0.000)" />
+			</Cockpit>
+		</Camera>
+		<Binocular ViewPosOffset="(0; 3.5; 0)" ParentFrame="BoneChassis_cdt" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Binocular ParentFrame="BoneChassis_cdt" ViewPosOffset="(0.0; 3.5; 0.0)"/>
+	</TruckData>
+	<Rotator
+		EngineTorqueFactor="0.5"
+		Frame="ROT_BoneFan"
+		RotationAxis="(1; 0; 0)"
+		RotationSpeed="20"
+	/>
+	<PhysicsModel Mesh="trucks/ford_f450_limited">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.35; -0.325; 0)"
+			ImpactType="Truck"
+			Mass="2000"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.015; -0.4; 0)"
+				ImpactType="Truck"
+				Mass="1500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint	Type="Fixed" />
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunshieldLeft_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Type="Hinge"
+						MinLimit="-16"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.8" Spring="32" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneSunshieldRight_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-16"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.5" Spring="30" Type="Spring" />
+					</Constraint>
+				</Body>
+				
+				<Body Collisions="None" Mass="2" ModelFrame="BoneAerial_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 1)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="15"
+					>
+						<Motor Damping="0.3" Spring="65" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="TieRodSteer"
+					MinLimit="-50"
+					MaxLimit="30"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Size="0.3" Pos="(-3.186; 1.223; 0.875)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" AspectRatio="0.85" Size="0.3" Pos="(-3.190; 0.88; 0.892)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-3.186; 1.223; -0.875)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" AspectRatio="0.85" Size="0.3" Pos="(-3.190; 0.88; -0.892)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" AspectRatio="1.5" Size="0.2" Pos="(-0.546; 1.960; 0.000)" Dir="(-0.8; 0; 1)" DirAngle="90" />
+			<Light _template="StopSignal" Pos="(-3.190; 0.88; 0.0)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" AspectRatio="0.65" Size="0.35" Pos="(-3.221; 1.071; 0.813)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" AspectRatio="0.65" Size="0.35" Pos="(-3.221; 1.071; -0.813)" Dir="(-1; 0; 0)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="1.2" Pos="(-3.221; 1.071; 0.813)" Dir="(-1; 0; 0)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="1.2" Pos="(-3.221; 1.071; -0.813)" Dir="(-1; 0; 0)" />
+			<Light _template="ReverseSignal" Pos="(-3.221; 1.071; 0.0)" />
+			<Flare _template="ReverseSignal" AspectRatio="1.5" Size="0.1" Pos="(-0.551; 1.959; 0.125)" Dir="(-1; 0; 0)" />
+			<Flare _template="ReverseSignal" AspectRatio="1.5" Size="0.1" Pos="(-0.551; 1.959; -0.125)" Dir="(-1; 0; 0)" />
+		</ReverseSignals>
+		<Ignition>
+			<!-- Front Beacons -->
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.166; 1.004; 0.682)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.151; 1.003; 0.717)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.135; 1.003; 0.752)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.117; 1.003; 0.789)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.098; 1.003; 0.826)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.076; 1.002; 0.863)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.166; 1.004; -0.682)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.151; 1.003; -0.717)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.135; 1.003; -0.752)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.117; 1.003; -0.789)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.098; 1.003; -0.826)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Size="0.08" Pos="(3.076; 1.002; -0.863)" Dir="(1; 0; 0)" DirAngle="90" />
+			<!-- Front Side Beacons -->
+			<Flare _template="StopSignal" AspectRatio="0.5" Size="0.2" Pos="(3.028; 0.997; 0.920)" Dir="(0; 0; 1)" DirAngle="120" />
+			<Flare _template="StopSignal" AspectRatio="0.5" Size="0.2" Pos="(3.028; 0.997; -0.920)" Dir="(0; 0; -1)" DirAngle="120" />
+			<!-- Rear Beacons -->
+			<Flare _template="StopSignal" Size="0.05" Pos="(-3.157; 0.722; 0.155)" Dir="(-1; 0; 0)" DirAngle="90" />
+			<Flare _template="StopSignal" Size="0.05" Pos="(-3.157; 0.722; -0.155)" Dir="(-1; 0; 0)" DirAngle="90" />
+			<Flare _template="StopSignal" Size="0.05" Pos="(-3.157; 0.722; 0.0)" Dir="(-1; 0; 0)" DirAngle="90" />
+			<!-- Roof Beacons -->
+			<Flare _template="LED" Size="0.08" Pos="(1.030; 1.991; 0.555)" Dir="(1; 1; 0)" DirAngle="200" />
+			<Flare _template="LED" Size="0.08" Pos="(1.121; 1.999; 0.191)" Dir="(1; 1; 0)" DirAngle="200" />
+			<Flare _template="LED" Size="0.08" Pos="(1.030; 1.991; -0.555)" Dir="(1; 1; 0)" DirAngle="200" />
+			<Flare _template="LED" Size="0.08" Pos="(1.121; 1.999; -0.191)" Dir="(1; 1; 0)" DirAngle="200" />
+			<Flare _template="LED" Size="0.08" Pos="(1.135; 1.999; 0.000)" Dir="(1; 1; 0)" DirAngle="200" />
+			<!-- Headlight LED -->
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.190; 1.218; 0.651)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.165; 1.219; 0.714)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.140; 1.220; 0.772)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.103; 1.219; 0.844)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="0.8" Size="0.15" Pos="(3.079; 1.183; 0.888)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.074; 1.147; 0.895)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.074; 1.114; 0.897)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.073; 1.081; 0.898)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.071; 1.042; 0.900)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.072; 1.003; 0.900)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.072; 0.956; 0.898)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.073; 0.920; 0.896)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.075; 0.882; 0.893)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.080; 0.834; 0.883)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.088; 0.789; 0.870)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.122; 0.785; 0.811)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.169; 0.784; 0.724)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.201; 0.786; 0.651)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.190; 1.218; -0.651)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.165; 1.219; -0.714)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.140; 1.220; -0.772)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.103; 1.219; -0.844)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="0.8" Size="0.15" Pos="(3.079; 1.183; -0.888)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.074; 1.147; -0.895)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.074; 1.114; -0.897)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.073; 1.081; -0.898)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.071; 1.042; -0.900)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.072; 1.003; -0.900)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.072; 0.956; -0.898)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.073; 0.920; -0.896)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.075; 0.882; -0.893)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 0.7" AspectRatio="0.8" Size="0.15" Pos="(3.080; 0.834; -0.883)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.088; 0.789; -0.870)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.122; 0.785; -0.811)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.169; 0.784; -0.724)" Dir="(1; 0; 0)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.085" Pos="(3.201; 0.786; -0.651)" Dir="(1; 0; 0)" DirAngle="90" />
+			<!-- Mirrors LED -->
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.472; 1.478; 1.258)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.472; 1.450; 1.258)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.440; 1.479; 1.307)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.440; 1.450; 1.307)" Dir="(1; 0; 1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.392; 1.479; 1.300)" Dir="(-1; 0; 1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.392; 1.450; 1.300)" Dir="(-1; 0; 1)" DirAngle="90" />
+			
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.472; 1.478; -1.258)" Dir="(1; 0; -1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.472; 1.450; -1.258)" Dir="(1; 0; -1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.440; 1.479; -1.307)" Dir="(1; 0; -1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.440; 1.450; -1.307)" Dir="(1; 0; -1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.392; 1.479; -1.300)" Dir="(-1; 0; -1)" DirAngle="90" />
+			<Flare _template="LED" Color="g(141; 133; 117) x 1.0" AspectRatio="2.5" Size="0.07" Pos="(1.392; 1.450; -1.300)" Dir="(-1; 0; -1)" DirAngle="90" />
+			<!-- Headlight -->
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.086; 1.111; 0.724)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.087; 1.110; 0.784)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.086; 0.897; 0.762)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.086; 1.111; -0.724)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.087; 1.110; -0.784)" />
+			<Flare _template="HeadLight" Size="0.1" Pos="(3.086; 0.897; -0.762)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.086; 0.897; 0.0)" />
+			<!-- Stop Signals -->
+			<Flare _template="StopSignal" Size="0.3" Pos="(-3.186; 1.223; 0.875)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" AspectRatio="0.85" Size="0.3" Pos="(-3.190; 0.88; 0.892)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-3.186; 1.223; -0.875)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Flare _template="StopSignal" AspectRatio="0.85" Size="0.3" Pos="(-3.190; 0.88; -0.892)" Dir="(-0.8; 0; 1)" DirAngle="270" />
+			<Light _template="StopSignal" Pos="(-3.190; 0.88; 0.0)" />
+			<Flare _template="StopSignal" AspectRatio="1.5" Size="0.2" Pos="(-0.546; 1.960; 0.000)" Dir="(-0.8; 0; 1)" DirAngle="90" />
+		</Ignition>
+		<HeadLight>
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.087; 1.110; 0.759)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.086; 0.898; 0.759)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.087; 1.110; -0.759)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.086; 0.898; -0.759)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.087; 1.110; 0.759)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.086; 0.898; 0.759)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.087; 1.110; -0.759)" />
+			<Flare _template="BlueStreak" Size="0.45" Pos="(3.086; 0.898; -0.759)" />
+			<Model _template="HeadLightRay" Org="(3.087; 1.004; 0.759)" />
+			<Model _template="HeadLightRay" Org="(3.087; 1.004; -0.759)" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(3.087; 1.004; 0.000)" />
+	<Landmark Mesh="landmarks/ford_f450_limited_lmk" MinScale="1.0" MaxScale="3.8" />
+	<GameData
+		Country="RU,CAS,US"
+		LockedUnconditionally="false"
+		Price="60000"
+		RecoveryPrice="2500"
+		UnlockByExploration="false"
+		UnlockByRank="0"
+	>
+		<WinchSocket Pos="(-3.437; 0.488; 0.000)" />
+		<WinchSocket Pos="(0.036; 0.545; 0.85)" />
+		<WinchSocket Pos="(0.036; 0.545; -0.85)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_FORD_F450_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgF450Exp"
+			UiIcon576x640="shopImgF450Exp"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="DONLogo80"
+			UiName="UI_VEHICLE_FORD_F450_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" Position="(13.5; 1.7; -5.9)" InterestPosition="(5.3; 1.2; 0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_l" Position="(12.0; 1.7; -7.8)" InterestPosition="(5.5; 1.2; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="side_r" Position="(11.15; 2.2; 9.0)" InterestPosition="(4.25; 1.35; 0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="roof" Position="(7.5; 6.0; -2.8)" InterestPosition="(4.5; 1.65; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="wheels" Position="(5.1; 0.55; -3.9)" InterestPosition="(6.1; 0.5; -0.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="rear" Position="(-4.3; 4.6; 3.0)" InterestPosition="(2.4; 0.75; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			
+			<CameraPos FOV="32.0" Name="supplies_default" Position="(13.5; 1.7; -5.9)" InterestPosition="(5.3; 1.2; 0.5)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_roof" Position="(7.5; 6.0; -2.8)" InterestPosition="(4.5; 1.65; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			<CameraPos FOV="32.0" Name="supplies_rear" Position="(-4.3; 4.6; 3.0)" InterestPosition="(2.4; 0.75; 0.0)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" />
+			
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; -3.0)" InterestPosition="(4.7; 1.05; -0.471)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Name="side_l_sticker"/>
+			<CameraPos FOV="32.0" Position="(3.3; 1.2; -3.0)" InterestPosition="(3.3; 1.05; -0.471)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Name="side_l_02_sticker"/>
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; 3.0)" InterestPosition="(6.6; 1.05; 0.471)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Name="side_r_sticker"/>
+			<CameraPos FOV="32.0" Position="(3.3; 1.0; 3.0)" InterestPosition="(5.7; 1.0; 0.471)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Name="side_r_02_sticker"/>
+		</CustomizationCameras>	
+		<!-- BUMPERS -->
+		<AddonSockets DefaultAddon="ford_f450_limited_front_bumper_00">
+			<Socket Names="FordF450LimitedFrontBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_f450_limited_rear_bumper_00">
+			<Socket Names="FordF450LimitedRearBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- ROOF -->
+		<AddonSockets >
+			<Socket
+				InCockpit="true"
+				Names="ScoutMetalDetectorFordF450Limited"
+				Offset="(0.28; 2.16; 0)"
+				ParentFrame="BoneCabin_cdt"
+			>
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0.0; -0.03; 0)" />
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(1.165; -0.345; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedDroneCarrier" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="FordF450LimitedRoofAddonsBase" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="FordF450LimitedRoofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedRoofrackSlot00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedRoofrackSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedRoofrackSlot02" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedRoofrackSlot03" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- CAGES -->
+		<AddonSockets >
+			<Socket Names="FordF450LimitedCageFront" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="FordF450LimitedCageFrontBracnSection" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="FordF450LimitedCageFrontSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="FordF450LimitedCageRear" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- SNORKEL -->
+		<AddonSockets>
+			<Socket Names="FordF450LimitedSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- WINGS -->
+		<AddonSockets DefaultAddon="ford_f450_limited_wings_00">
+			<Socket Names="FordF450LimitedWings" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- DOORSTEPS -->
+		<AddonSockets >
+			<Socket Names="FordF450LimitedDoorSteps" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- DIFFLOCK -->
+		<AddonSockets DefaultAddon="ford_f450_limited_diff_lock_default">
+			<Socket Names="FordF450LimitedDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- ESTOCK -->
+		<AddonSockets DefaultAddon="ford_f450_limited_estock_default">
+			<Socket Names="FordF450Limitedestock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- PICKUP -->
+		<AddonSockets DefaultAddon="ford_f450_limited_sideboard" RequiredAddonIfNoConflicts="ford_f450_limited_sideboard">
+			<Socket Names="FordF450LimitedSideboard" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets RequiredAddonIfNoConflicts="ford_f450_limited_pickup_00">
+			<Socket Names="FordF450LimitedPickup" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedPickupSlot00" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedPickupSlot01" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- STUFF -->
+		<AddonSockets>
+			<Socket Names="FordF450LimitedStickerDoor01L" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedStickerDoor02L" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedStickerDoor01R" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF450LimitedStickerDoor02R" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+	<!-- TIE ROD -->
+		<IKBone ModelFrame="IK_BoneTieRod_B" ParentFrame="BoneRackR">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod_cdt"
+				ModelFrame="IK_BoneTieRod_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BonePowerSteer_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_BoneTieRod_A"
+				ModelFrame="IK_BonePowerSteer_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- PANAR -->
+		<IKBone ModelFrame="IK_PanarFront_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_PanarFront_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- ARMS -->
+	<!-- Front Arms -->
+		<IKBone ModelFrame="IK_BoneLeftArm_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneLeftArm_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneRightArm_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneRightArm_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- SHOCKS -->
+	<!-- Front Shocks -->
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneShockFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_BoneShockFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- Front Shocks -->
+		<IKBone ModelFrame="IK_ShockRearRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ShockRearRight_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_ShockRearLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_ShockRearLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- ANTI ROLL BAR LINKS -->
+	<!-- Links Front -->
+		<IKBone ModelFrame="IK_AntiRollBarFrontLeftLink_B" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AntiRollBarFrontLeft_B"
+				ModelFrame="IK_AntiRollBarFrontLeftLink_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AntiRollBarFrontRightLink_B" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AntiRollBarFrontRight_B"
+				ModelFrame="IK_AntiRollBarFrontRightLink_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	<!-- Links Rear -->
+		<IKBone ModelFrame="IK_AntiRollBarRearRightLink_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_AntiRollBarRearRightLink_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AntiRollBarRearLeftLink_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="IK_AntiRollBarRearLeftLink_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	<!-- ANTI ROLL BAR -->
+	<!-- Anti Roll Bar Front -->
+		<IKBone ModelFrame="IK_AntiRollBarFrontLeft_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_AntiRollBarFrontLeft_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AntiRollBarFrontRight_B" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="IK_AntiRollBarFrontRight_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	<!-- Anti Roll Bar Rear -->
+		<IKBone ModelFrame="IK_AntiRollBarRearLeft_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AntiRollBarRearLeftLink_A"
+				ModelFrame="IK_AntiRollBarRearLeft_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_AntiRollBarRearRight_A" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_AntiRollBarRearRightLink_A"
+				ModelFrame="IK_AntiRollBarRearRight_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	
+	</AutomaticIK>
+</Truck>

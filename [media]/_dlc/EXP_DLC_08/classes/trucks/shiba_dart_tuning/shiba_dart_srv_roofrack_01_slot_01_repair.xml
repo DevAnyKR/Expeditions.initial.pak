@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_roofrack_01_slot_01_repair">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="shiba_dart_srv_roofrack_01" />
+		<InstallSocket Type="ShibaDartSRVRoofrackSlot01" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="shiba_dart_srv_roofrack_01_slot_01_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

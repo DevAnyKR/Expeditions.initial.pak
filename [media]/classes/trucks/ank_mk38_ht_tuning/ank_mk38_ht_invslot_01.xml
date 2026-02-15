@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/ank_mk38_ht_tuning" MeshFrame="ank_mk38_ht_inv_slot_01">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneInvSlot01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ANK_MK38_INV_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ANK_MK38_INV_SLOT_01_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Side" />
+		<RequiredAddon Types="ank_mk38_ht_wings_01, ank_mk38_ht_wings_02" />
+	</GameData>
+</TruckAddon>

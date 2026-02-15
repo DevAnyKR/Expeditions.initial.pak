@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/step_7249_albatross_tuning" MeshFrame="step_7249_albatross_outerframe_01_slot_01_fuel">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_FUEL_NAME"
+		/>
+		<RequiredAddon Types="step_7249_albatross_outerframe_01" />
+		<InstallSocket Type="Step7249AlbatrossOuterframeSlot01" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="step_7249_albatross_outerframe_01_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

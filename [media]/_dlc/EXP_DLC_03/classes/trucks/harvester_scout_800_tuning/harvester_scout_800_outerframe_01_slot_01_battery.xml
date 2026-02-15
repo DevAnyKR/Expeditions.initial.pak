@@ -1,0 +1,37 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5" />
+	<BatteryHide>
+		<Mesh Frame="harvester_scout_outerframe_01_slot_right_battery" HideThreshold="0.0" />
+	</BatteryHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_outerframe_01_slot_right_battery">
+		<Body Collisions="None" Mass="10" ModelFrame="OuterframeSlot_1_cdt">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-0.5"
+				MaxLimit="0.5"
+			>
+				<Motor Damping="0" Spring="10.5" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_outerframe_01" />
+		<InstallSocket Type="HarvesterScout800OuterframeSlotRight" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

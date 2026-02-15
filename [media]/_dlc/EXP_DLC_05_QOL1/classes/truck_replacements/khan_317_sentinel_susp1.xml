@@ -1,0 +1,369 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			CamberAnglePhysics="0"
+			CamberAngleRender="-1"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="6"
+			Torque="full"
+			SteeringJointOffset="0.25"
+			CamberAnglePhysics="0"
+			CamberAngleRender="-1"
+		/>
+	</Wheel>
+	<Flare>
+		<Beacon
+			AspectRatio="1.4"
+			Color="g(169; 115; 0) x 0.6"
+			ColorMultAtDay="0.3"
+			DirAngle="180"
+			Size="0.2"
+			SizeMultAtDay="0.5"
+		/>
+	</Flare>
+	<Body>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="0.5" Spring="20" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-4"
+				MaxLimit="4"
+			>
+				<Motor Damping="3" Spring="200" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Key Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="30"
+			>
+				<Motor Damping="0.005" Spring="0.005" Type="Spring" />
+			</Constraint>
+		</Key>
+		<Belt Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-4"
+				MaxLimit="4"
+			>
+				<Motor Damping="10" Spring="10" Type="Spring" />
+			</Constraint>
+		</Belt>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		_template="TruckDefaultVars"
+		ElectricChargeCapacity="12"
+		SignalRadius="75.0"
+		BackSteerSpeed="0.04"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="70"
+		Responsiveness="0.52"
+		SteerSpeed="0.038"
+		TruckImage="khansentinelmchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_khan_317_sentinel"
+		>
+			<Wheel _template="FrontWheel" Pos="(3.054; 0.428; 0.97)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.054; 0.428; 0.97)" />
+			<Wheel _template="RearWheel" Pos="(0; 0.428; 0.97)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(0; 0.428; 0.97)" />
+		</Wheels>
+		
+		<CompatibleWheels OffsetZ="0.0" Scale="0.49" Type="wheels_khan_317_sentinel" />
+		
+		<SuspensionSocket
+			Default="khan_317_sentinel_suspension_high"
+			Type="s_khan_317_sentinel"
+			MaxWheelRadiusWithoutSuspension="1.0"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.706"
+		/>
+		<Steam Origin="(3.04; 1.154; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(2.889; 1.071; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="trucks/khan_317_sentinel/khan_317_sentinel_reverse" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/khan_317_sentinel/khan_317_sentinel_brakes_squeal" />
+			<Gear			Sound="trucks/khan_317_sentinel/khan_317_sentinel_gear_shift" />
+			<Handbrake		Sound="trucks/khan_317_sentinel/khan_317_sentinel_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/khan_317_sentinel/khan_317_sentinel_handbrake_off" />
+			<AWD			Sound="trucks/hummer_h2/hummer_h2_awd" />
+			<Honk			Sound="trucks/khan_317_sentinel/khan_317_sentinel_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/khan_317_sentinel/khan_317_sentinel_acc" />
+			<EngineStart	Sound="trucks/khan_317_sentinel/khan_317_sentinel_start" />
+			<EngineStop		Sound="trucks/khan_317_sentinel/khan_317_sentinel_stop" />
+			<EngineIdle		Sound="trucks/khan_317_sentinel/khan_317_sentinel_idle" />
+			<EngineIdle_2d	Sound="trucks/khan_317_sentinel/khan_317_sentinel_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/khan_317_sentinel/khan_317_sentinel_low" />
+			<EngineLow_2d	Sound="trucks/khan_317_sentinel/khan_317_sentinel_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/khan_317_sentinel/khan_317_sentinel_high" />
+			<EngineHigh_2d	Sound="trucks/khan_317_sentinel/khan_317_sentinel_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MaxAngle="(1.1; 1.1; 1.1)" MaxFrequency="3" />
+			<Shaker Frame="BoneGearstick" MaxAngle="(2; 2; 2)" MaxFrequency="0.25" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-1.85"
+			MaxX="4.3"
+		/>
+		<LimitedFluid Center="(1.628; 0.695; 0.658)" SizeX="0.890" SizeY="0.201" SizeZ="0.239" Type="Box" ParentFrame="BoneChassis_cdt"/>
+		<LimitedFluid Center="(1.628; 0.695; -0.658)" SizeX="0.890" SizeY="0.201" SizeZ="0.239" Type="Box" ParentFrame="BoneChassis_cdt"/>
+		<GearboxSocket Default="g_khan_317_sentinel_default" Type="gearboxes_scouts_khan_317_sentinel, gearboxes_scouts_heavy_experimental" />
+		<FuelTank DamageCapacity="60" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.0; 1.163; 0.000)" Size="0.6" />
+		<Exhaust
+			Dir="(-0.825; -0.293; -0.484)"
+			IsLight="true"
+			Origin="(-1.075; 0.577; 0.395)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="e_ru_scout_khan_317_sentinel_engine_0" Type="e_ru_scout_modern_khan_317_sentinel, e_scout_light_experimental" />
+		<Driver LegsOffset="(-0.05; 0.05; -0.1)" AnimationSet="Scout" Pos="(1.722; 1.144; 0.425)" SteeringWheelPos="(2.057; 1.531; 0.418)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.989; 0.148; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/khan_317_sentinel_arrows_1" Org="(2.368; 1.524; 0.509)" OutputAngles="(-115; 115)" />
+			<Gauge Dir="(-0.989; 0.148; 0)" InputRange="(0;200)" InputType="speed" Mesh="trucks/arrows/khan_317_sentinel_arrows_1" Org="(2.368; 1.524; 0.328)" OutputAngles="(-116; 116)" />
+			<Gauge Damping="0.99" Dir="(-0.989; 0.148; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/khan_317_sentinel_arrows_2" Org="(2.368; 1.499; 0.509)" OutputAngles="(-126; -186)" />
+			<Gauge Damping="0.99" Dir="(-0.989; 0.148; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/khan_317_sentinel_arrows_2" Org="(2.368; 1.499; 0.328)" OutputAngles="(-127; -233)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2.6; 0.5; -0.25)" Max="(3.45; 1.3; 0.25)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(1.183, 0.644, 0.538)" Max="(2.073, 0.846, 0.777)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(1.183, 0.644, -0.777)" Max="(2.073, 0.846, -0.538)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="Gearbox" Min="(1.85; 0.5; -0.2)" Max="(2.6; 0.95; 0.2)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+
+		<Camera Center="(-0.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/khan_317_sentinel_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/khan_317_sentinel_glass__sh_d.tga"
+				ViewPos="(1.55; 1.9; 0.425)"
+				LimitsHor="(-2.8; 2.4)"
+				LimitsVer="(-0.7; 0.3)"
+				ViewDir="(1; -0.05; 0)"
+				ZoomViewPosOffset="(0.4; 0.0; -0.05)"
+			>
+				<Rear
+					HorTransitionEnd="-1.0"
+					HorTransitionStart="-0.5"
+					ViewPosOffset="(0.35; -0.1; 0.55)"
+				/>
+				<Mirror ClipDir="(-0.95; 0.136; -0.28)" FOVScale="1.1" MeshFrame="mirror_left" ReflectionDir="(-0.95; 0.136; -0.28)" Size="(0.235; 0.18)" Pos="(2.201; 1.599; 0.928)" />
+				<Mirror ClipDir="(-0.848; 0.072; 0.524)" FOVScale="1.3" MeshFrame="mirror_right" ReflectionDir="(-0.848; 0.072; 0.524)" Size="(0.235; 0.18)" Pos="(2.186; 1.599; -0.916)" />
+				<Mirror ClipDir="(-0.939; -0.079; 0.336)" FOVScale="2" MeshFrame="mirror_cab" ReflectionDir="(-0.939; -0.079; 0.336)" Size="(0.235; 0.09)" Pos="(2.085; 1.913; 0)" />
+			</Cockpit>
+			<Roof
+				ViewPos = "(2.1; 3.45; 0.000)"
+				LimitsHor="(-3.5; 3.5)"
+				LimitsVer="(-0.8; 0.5)"
+				ViewDir="(1; -0.05; 0)"
+			/>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleRear" />
+			<Axle Frame="BoneAxleFront" />
+		</Axles>
+		<Inventory MaxLimit="4"/>
+		<DeployCost Cost="0" />
+		<Binocular ParentFrame="BoneCabin_cdt" ViewPosOffset="(0.0; 3.5; 0.0)"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_susp1">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.5;-0.25; 0)"
+			ImpactType="Truck"
+			Mass="1200"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.4125;-0.5; 0)"
+				ImpactType="Truck"
+				Mass="1000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="Belt" ModelFrame="BoneBelt1_cdt" />
+				<Body _template="Belt" ModelFrame="BoneBelt2_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldL_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldR_cdt" />
+				<Body _template="Key" ModelFrame="BoneKey1_cdt">
+					<Body _template="Key" ModelFrame="BoneKey2_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" />
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="TieRodSteer"
+					MinLimit="-30"
+					MaxLimit="30"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.384; 1.059; 0)" />
+			<Flare _template="StopSignal" Pos="(-1.184; 1.246; 0.84)" />
+			<Flare _template="StopSignal" Pos="(-1.184; 1.246; -0.84)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-1.188; 1.064; 0.836)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-1.188; 1.064; -0.836)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.186; 0.982; 0.823)" />
+			<Light _template="ReverseSignal" Pos="(-1.186; 0.982; -0.823)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.186; 0.982; 0.823)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.186; 0.982; -0.823)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.186; 0.982; 0.823)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.186; 0.982; -0.823)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.95; 1.209; 0.528)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.95; 1.209; -0.528)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="StopSignal" Pos="(-1.384; 1.059; 0)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.627; 1.209; 0.528)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.627; 1.209; -0.528)" />
+			<Flare _template="LED" Size="0.04" Pos="(3.677; 1.136; -0.572)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.684; 1.136; -0.544)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.692; 1.136; -0.517)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.701; 1.136; -0.489)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.71; 1.136; -0.462)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.677; 1.136; 0.572)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.684; 1.136; 0.544)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.692; 1.136; 0.517)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.701; 1.136; 0.489)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Size="0.04" Pos="(3.71; 1.136; 0.462)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.184; 1.246; 0.84)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.184; 1.246; -0.84)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.661; 1.187; 0.653)" />
+			<Model _template="HeadLightRay" Org="(3.661; 1.187; -0.653)" />
+			<Flare _template="HeadLight" Pos="(3.627; 1.209; 0.528)" />
+			<Flare _template="HeadLight" Pos="(3.627; 1.209; -0.528)" />
+			<Flare _template="HeadLight" Pos="(3.575; 1.185; 0.654)" />
+			<Flare _template="HeadLight" Pos="(3.575; 1.185; -0.654)" />
+			<Flare _template="BlueStreak" Pos="(3.661; 1.187; 0.653)" />
+			<Flare _template="BlueStreak" Pos="(3.661; 1.187; -0.653)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/khan_317_sentinel_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4.142; 0.963; 0)" />
+	<GameData
+		Country="RU,CAS,US"
+		Price="33000"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		LockedUnconditionally="true"
+		RecoveryPrice="1800"
+	>
+
+		<WinchSocket Pos="(1.385; 0.604; 0.921)" />
+		<WinchSocket Pos="(1.385; 0.604; -0.921)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_KHAN_317_SENTINEL_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgKhan317Sentinel"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="KhanLogo80"
+			UiName="UI_VEHICLE_KHAN_317_SENTINEL_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Position="(12.074; 1.697; -2.988)" InterestPosition="(4.767; 0.977; 0.862)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="default"/>
+			<CameraPos FOV="32.0" Position="(10.906; 2.108; 4.981)" InterestPosition="(5.852; 1.205; 0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_r"/>
+			<CameraPos FOV="32.0" Position="(8.434; 5.305; -1.492)" InterestPosition="(4.03; 0.977; 0.235)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="roof"/>
+			<CameraPos FOV="32.0" Position="(10.906; 2.108; -4.981)" InterestPosition="(5.852; 1.205; -0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_l"/>
+			
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; -3.0)" InterestPosition="(4.7; 1.05; -0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_l_sticker"/>
+			<CameraPos FOV="32.0" Position="(4.75; 1.2; 3.0)" InterestPosition="(6.6; 1.05; 0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_r_sticker"/>
+			<CameraPos FOV="32.0" Position="(8.2; 3.575; -0.65)" InterestPosition="(6.513; 0.631; -0.8)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="capote_sticker"/>
+			<CameraPos FOV="32.0" Position="(5.8; 4.393; -0.288)" InterestPosition="(4.159; 0.631; -0.75)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="roof_sticker"/>
+		</CustomizationCameras>	
+		<AddonSockets _template="DefaultHonkName">
+			<Socket Names="honk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+
+	</GameData>
+	
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRod2" ParentFrame="BoneTieRod1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRack"
+				ModelFrame="BoneTieRod3"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

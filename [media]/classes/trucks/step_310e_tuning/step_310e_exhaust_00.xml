@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/step_310e_tuning" MeshFrame="step_310e_exhaust_00">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Step310eExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.061; -0.998; -0)"
+		IsLight="true"
+		Origin="(0.83; 0.607; -0.232)"
+		Speed="3.82"
+	/>
+</TruckAddon>

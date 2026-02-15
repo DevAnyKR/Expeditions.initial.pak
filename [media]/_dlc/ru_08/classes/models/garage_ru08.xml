@@ -1,0 +1,61 @@
+<ModelBrand
+	InstancedAsModel="true"
+	Instanced="true"
+	DynamicModel="false"
+	ClipCamera="true"
+>
+	<StaticLights>
+		<StaticLight
+			Dir="(0; -1; -0.5)"
+			Pos="(3.495; 8.077; -5.124)"
+			AttenEnd="10"
+			Color="g(255; 220; 125) x 2"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="70"
+			Shadows="true"
+		/>
+		<StaticLight
+			Dir="(0.5; -1; 0)"
+			Pos="(-5.371; 6.447; -8.173)"
+			AttenEnd="6"
+			Color="g(255; 220; 125) x 2"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="70"
+			Shadows="true"
+		/>
+	</StaticLights>
+
+	<PhysicsModel>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(255; 220; 125) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(3.5; 8.076; -4.981)"
+			Size="2.3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="300"
+			AttenStart="27"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(255; 220; 125) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.468; 6.434; -8.098)"
+			Size="2.3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/garage_lmk" />
+
+</ModelBrand>

@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/shiba_dart_srv_tuning" MeshFrame="shiba_dart_srv_supplier_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="miscellenious"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SHIBA_DART_SRV_BACKRACK_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SHIBA_DART_SRV_BACKRACK_01_NAME"
+		/>
+		<InstallSocket Type="ShibaDartSRVInvSlot" />
+	</GameData>
+</TruckAddon>

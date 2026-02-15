@@ -1,0 +1,46 @@
+<ModelBrand Instanced="true" DynamicModel="true"
+	ClipCamera="true" StaticModelWithDynamicParts="true" NeedPreload="true">
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+			<Body Collisions="Dynamic" Mass="7000" NoSoftContacts="true" ModelFrame="truck_cdt">
+			<Constraint
+					AxisLocal="(1; 1; 1)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				>
+					<TwistMotor Damping="60000" Spring="320000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="400" NoSoftContacts="true" ModelFrame="wheels_cdt">
+			<Constraint
+					AxisLocal="(1; 0; 1)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="1200" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Dynamic" Mass="1000" NoSoftContacts="true" ModelFrame="tent_cdt">
+			<Constraint Type="Fixed" BreakOffThreshold="10000" />
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="barrel1_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="300" NoSoftContacts="true" ModelFrame="barrel2_cdt">
+			<Constraint BreakOffThreshold="80" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="60" NoSoftContacts="true" ModelFrame="cone1_cdt">
+			<Constraint BreakOffThreshold="60" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="60" NoSoftContacts="true" ModelFrame="cone2_cdt">
+			<Constraint BreakOffThreshold="60" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="60" NoSoftContacts="true" ModelFrame="cone3_cdt">
+			<Constraint BreakOffThreshold="60" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_module_small_tow_truck_lmk" />
+</ModelBrand>

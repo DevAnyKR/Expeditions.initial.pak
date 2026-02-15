@@ -1,0 +1,66 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Engine" />
+			<Multiplier Multiplier="0.99" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/krs_63_pathfinder_tuning" MeshFrame="krs_63_bumper_00">
+		<Body ImpactType="Truck" Mass="27">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="3"
+				ModelFrame="BoneBumper00Hook_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-9"
+					MaxLimit="50"
+				>
+					<Motor Type="Spring" Spring="4.5" Damping="0.05" />
+				</Constraint>	
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 1" Pos="(4.318; 1.628; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(4.318; 1.628; 0.646)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(4.281; 1.628; 0.832)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(4.318; 1.628; -0.646)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Size="0.3" Pos="(4.281; 1.628; -0.832)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.326; 1.618; 0.742)" />
+			<Model _template="HeadLightRay" Org="(4.326; 1.618; -0.742)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(4.318; 1.628; 0.646)" />
+			<Flare _template="BlueStreak" Pos="(4.318; 1.628; 0.646)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(4.281; 1.628; 0.832)" />
+			<Flare _template="BlueStreak" Pos="(4.281; 1.628; 0.832)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(4.318; 1.628; -0.646)" />
+			<Flare _template="BlueStreak" Pos="(4.318; 1.628; -0.646)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 1.3" Size="0.3" Pos="(4.281; 1.628; -0.832)" />
+			<Flare _template="BlueStreak" Pos="(4.281; 1.628; -0.832)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.332; 1.408; -0.002)" ParentFrame="BoneAddon_cdt" />
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="KRS63Bumper" />
+	</GameData>
+</TruckAddon>

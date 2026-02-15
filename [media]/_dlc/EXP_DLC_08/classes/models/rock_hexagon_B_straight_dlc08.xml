@@ -1,0 +1,12 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	PlantRejectingAnchors="true"
+	NightLightingShadowsAllowCap="true"
+	SkipAdjustHeightMap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_hexagon_B_straight_lmk" />
+</ModelBrand>

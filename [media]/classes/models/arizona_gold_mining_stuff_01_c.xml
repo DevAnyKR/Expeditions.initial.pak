@@ -1,0 +1,26 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false" 
+	Instanced="true"
+	Fence="False"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot.002">
+			<Body _template="Fence" ModelFrame="Bone.039">
+				<Constraint _template="Fence" />
+					<Body _template="Fence" ModelFrame="Bone.042">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.041">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.043">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="Bone.040">
+						<Constraint _template="Fence" />
+					</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

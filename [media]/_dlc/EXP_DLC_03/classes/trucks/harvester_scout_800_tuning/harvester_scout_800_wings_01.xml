@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension"/>
+			<Multiplier Multiplier="0.97" Type="FuelTank"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_wings_01">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="harvester_scout_wings_01_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="0"
+		
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HARVESTER_SCOUT_800_WINGS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HARVESTER_SCOUT_800_WINGS_01_NAME"
+		/>
+		<InstallSocket Type="HarvesterScout800Wings" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

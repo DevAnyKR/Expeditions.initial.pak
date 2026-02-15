@@ -1,0 +1,13 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/cracked_mud__d_a.tga"
+	TextureRelief="overlays/cracked_mud_relief__d_a.tga"
+>
+	<Prebuild
+		DefaultWidth="7"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_cracked_mud__s.tga"
+		SnowmapMask="overlay_cracked_mud__s_d.tga"
+		Layer="2"
+	/>
+</OverlayBrand>

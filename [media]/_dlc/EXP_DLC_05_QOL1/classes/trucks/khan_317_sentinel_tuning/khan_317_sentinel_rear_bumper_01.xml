@@ -1,0 +1,63 @@
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="FuelTank" />
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/khan_317_sentinel_tuning" MeshFrame="khan_317_rear_bumper_01">
+		<Body  Mass="40" ModelFrame="BoneRearBumper01_cdt">
+			<Constraint Type="Rigid" />
+			
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneRearBumper01HookR_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-48"
+					MaxLimit="230"
+				>
+					<Motor Damping="0.02" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.5"
+				ModelFrame="BoneRearBumper01HookL_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-21"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.05" Spring="0.3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="0"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-1.183; 0.449; 0.535)" />
+		<WinchSocket Pos="(-1.183; 0.449; -0.535)" />
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_KHAN_317_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_KHAN_317_01_NAME"
+		/>
+		<InstallSocket Type="Khan317RearBumper" />
+		<RequiredSuspension Types="khan_317_sentinel_suspension_high, khan_317_sentinel_suspension_crawler" />
+	</GameData>
+</TruckAddon>

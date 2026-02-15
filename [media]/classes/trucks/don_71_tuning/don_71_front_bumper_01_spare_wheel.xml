@@ -1,0 +1,36 @@
+<TruckAddon>
+	<WheelBatteryHide>
+		<Mesh Frame="don_71_front_bumper_01_spare_wheel" HideThreshold="0.0" />
+	</WheelBatteryHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/don_71_tuning" MeshFrame="don_71_front_bumper_01_spare_wheel">
+		<Body Collisions="None" Mass="15" ModelFrame="BoneFrontBumper_01_SpareWheel_cdt">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="1.2" Spring="0.5" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="don_71_front_bumper_01" />
+		<InstallSocket Type="Don71Consumables_BF" />
+	</GameData>
+</TruckAddon>

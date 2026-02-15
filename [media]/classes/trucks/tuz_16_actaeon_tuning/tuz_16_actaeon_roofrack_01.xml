@@ -1,0 +1,56 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/tuz_16_tuning" MeshFrame="tuz_16_roofrack">
+		<Body ImpactType="Truck" Mass="75" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.787; 2.766; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.131)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.108)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.087)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.064)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.042)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; -0.021)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.024)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.046)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.068)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.091)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.113)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.766; 0.135)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.131)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.108)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.087)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.064)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.042)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; -0.021)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.024)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.046)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.068)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.091)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.113)" />
+			<Flare _template="LED" Color="g(235; 230; 220) x 0.5" Size=".05" Pos="(1.787; 2.792; 0.135)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 235) x 0.4" Size="0.5" Pos="(1.787; 2.774; 0)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		AddonUnlockByObjective="false"
+		CameraPreset="roof"
+		Category="top"
+		Price="3500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Tuz16Roofrack" />
+	</GameData>
+</TruckAddon>

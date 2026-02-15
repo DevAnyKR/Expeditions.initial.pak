@@ -1,0 +1,39 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_outerframe_01_slot_left_fuel">	
+		<Body Collisions="None" Mass="10" ModelFrame="OuterframeSlot_2_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.002;0.001)"
+				LinearLimitsY="(0;0)"
+				LinearLimitsZ="(-0.002;0.002)"
+			>
+				<Motor Type="Spring" Damping="300" Spring="300" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<TruckData FuelCapacity="15" />
+ 	<FuelHide>
+		<Mesh Frame="harvester_scout_outerframe_01_slot_left_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_FUEL_NAME"
+		/>
+		<RequiredAddon Types="harvester_scout_800_outerframe_01" />
+		<InstallSocket Type="HarvesterScout800OuterframeSlotLeft" />
+		<RequiredSuspension Types="harvester_scout_800_suspension_crawler, harvester_scout_800_suspension_high" />
+	</GameData>
+</TruckAddon>

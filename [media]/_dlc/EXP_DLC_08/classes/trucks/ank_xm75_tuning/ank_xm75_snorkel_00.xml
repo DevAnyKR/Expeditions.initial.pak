@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.183; 3.614; 0.141)" />
+	<PhysicsModel Mesh="trucks/tuning/ank_xm75_tuning" MeshFrame="ank_xm75_snorkel_00" >
+		<Body ImpactType="Truck" Mass="5" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ANK_XM75_SNORKEL_00_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ANK_XM75_SNORKEL_00_NAME"
+		/>
+		<InstallSocket Type="ANKXM75Snorkel" />
+	</GameData>
+</TruckAddon>

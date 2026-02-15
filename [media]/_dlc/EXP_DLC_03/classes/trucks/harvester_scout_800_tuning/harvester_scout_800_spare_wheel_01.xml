@@ -1,0 +1,25 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="harvester_scout_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/harvester_scout_800_tuning" MeshFrame="harvester_scout_wheel_slot">
+		<Body Collisions="None" Mass="5" ModelFrame="BoneAddons">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="HarvesterScout800SpareWheelSlot" />
+	</GameData>
+</TruckAddon>

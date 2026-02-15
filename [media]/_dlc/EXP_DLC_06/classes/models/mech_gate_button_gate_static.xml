@@ -1,0 +1,6 @@
+<_templates Include="models" />
+<ModelBrand IsKeepPhysModelAlways="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,30 @@
+<ModelBrand Instanced="true" InstancedAsModel="true" DynamicModel="false"
+	ClipCamera="true">
+		<StaticLights>
+			<StaticLight
+				Dir="(0.8; -1; -0.4)"
+				Pos="(2.2; 2.16; 1.910)"
+				AttenEnd="3"
+				Color="g(255; 220; 195) x 6"
+				CreateSuperLight="true"
+				InnerCone="0"
+				OuterCone="80"
+				Shadows="true"
+			/>
+		</StaticLights>
+	<PhysicsModel>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(255; 220; 195) x 0.32"
+			Dir="(0; -1; 0)" 
+			Pos="(1.584; 2.16; 1.910)"
+			Size="0.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fob_cabin_lmk" />
+</ModelBrand>

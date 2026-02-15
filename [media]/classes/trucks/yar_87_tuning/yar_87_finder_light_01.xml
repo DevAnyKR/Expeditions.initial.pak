@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="yar_87_finder_light_01" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.253; 1.95; 0.912)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 245; 245) x 1.5" Size=".05" Pos="(1.264; 1.98; 0.933)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 245; 245) x 1.5" Size=".05" Pos="(1.264; 1.93; 0.933)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 245; 245) x 1.5" Size=".05" Pos="(1.264; 1.98; 0.878)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 245; 245) x 1.5" Size=".05" Pos="(1.264; 1.93; 0.878)" />
+			<Flare _template="BlueStreak" AspectRatio="2" Color="g(220; 220; 235) x 0.3" Size="0.5" Pos="(1.264; 1.95; 0.912)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" ExtraColor="g(255; 238; 200)" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FINDER_LIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FINDER_LIGHT_NAME"
+		/>
+		<InstallSocket Type="Yar87SpotlightFinder" />
+	</GameData>
+</TruckAddon>

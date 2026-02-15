@@ -1,0 +1,32 @@
+<ModelBrand 
+	ClipCamera="true"
+	IsKeepPhysModelAlways="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="600" ModelFrame="BoneRoot_cdt">
+		<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube1">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube2">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube3">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube4">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube5">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube6">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+			<Body Collisions="Dynamic" Mass="600" ModelFrame="cube7">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

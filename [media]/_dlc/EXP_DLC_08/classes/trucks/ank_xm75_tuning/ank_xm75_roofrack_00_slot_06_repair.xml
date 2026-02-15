@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/ank_xm75_tuning" MeshFrame="ank_xm75_roofrack_00_slot_06_repair">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsConsumable="true"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REPAIR_NAME"
+		/>
+		<RequiredAddon Types="ank_xm75_roofrack_00" />
+		<InstallSocket Type="ANKXM75RoofrackSlot06" />
+	</GameData>
+	<RepairsHide>
+		<Mesh Frame="ank_xm75_roofrack_00_slot_06_repair" HideThreshold="0.0" />
+	</RepairsHide>
+</TruckAddon>

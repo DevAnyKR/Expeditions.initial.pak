@@ -1,0 +1,14 @@
+<_parent File="yar_87_roofrack_01_slot_01_fuel" />
+<TruckAddon>
+	<TruckData FuelCapacity="15">	
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="roofrack_canister_big_03" />
+	</FuelHide>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/yar_87_tuning" MeshFrame="roofrack_canister_big_03">
+		<Body Collisions="None" ModelFrame="BoneRoofrack01Slot03_cdt" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Yar87Roofrack01Slot03" />
+	</GameData>
+</TruckAddon>

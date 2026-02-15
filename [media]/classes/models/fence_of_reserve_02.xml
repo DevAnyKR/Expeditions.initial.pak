@@ -1,0 +1,6 @@
+<ModelBrand Instanced="true" InstancedAsModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/fence_of_reserve_02_lmk" />
+</ModelBrand>

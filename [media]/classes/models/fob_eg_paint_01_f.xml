@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand 
+	NightLightingShadowsAllowCap="True"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body _template="LightWeight" ModelFrame="fob_eg_paint_01_f" CenterOfMassOffset="(0.0; -0.03; -0.03)" >
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

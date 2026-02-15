@@ -1,0 +1,21 @@
+<TruckAddon>
+	<Snorkel Origin="(1.28; 2.119; -0.878)" />
+	<PhysicsModel Mesh="trucks/tuning/tatra_805_tuning" MeshFrame="tatra_805_snorkel_01" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TATRA_805_SNORKEL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TATRA_805_SNORKEL_01_NAME"
+		/>
+		<InstallSocket Type="Tatra805Snorkel" />
+	</GameData>
+</TruckAddon>
+	

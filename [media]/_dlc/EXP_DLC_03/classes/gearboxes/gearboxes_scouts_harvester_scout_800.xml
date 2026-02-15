@@ -1,0 +1,185 @@
+<_templates Include="trucks"/>
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="120"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.15"
+		Name="g_scout_800_default"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="15.0"
+	>
+		<ReverseGear AngVel="2.0" FuelModifier="0.9" />
+		<HighGear AngVel="10.0" FuelModifier="1.15" />
+		<Gear AngVel="2.0" FuelModifier="1.65" />
+		<Gear AngVel="4.0" FuelModifier="1.45" />
+		<Gear AngVel="7.0" FuelModifier="1.25" />
+		<Gear AngVel="12.0" FuelModifier="1.1" />
+		<Gear AngVel="16.0" FuelModifier="0.95" />
+		<GameData
+			Price="1000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="false" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="false" 
+				IsLowerMinusGearExists="false"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_DEFAULT_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common"/>
+	</Gearbox>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="100"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.1"
+		Name="g_scout_800_highrange"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="20.0"
+	>
+		<ReverseGear AngVel="3.0" FuelModifier="0.9" />
+		<HighGear AngVel="12.0" FuelModifier="1.1" />
+		<Gear AngVel="1.5" FuelModifier="1.7" />
+		<Gear AngVel="3.0" FuelModifier="1.5" />
+		<Gear AngVel="6.0" FuelModifier="1.3" />
+		<Gear AngVel="10.0" FuelModifier="1.15" />
+		<Gear AngVel="16.0" FuelModifier="1.0" />
+		<Gear AngVel="21.0" FuelModifier="0.9" />
+		<GameData
+			Price="6000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="false" 
+				IsLowerMinusGearExists="false"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_HIGHRANGE_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_HIGHRANGE_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common"/>
+	</Gearbox>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="140"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.25"
+		Name="g_scout_800_offroad"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="25.0"
+	>
+		<ReverseGear AngVel="1.5" FuelModifier="0.9" />
+		<HighGear AngVel="8.0" FuelModifier="1.25" />
+		<Gear AngVel="2.5" FuelModifier="1.6" />
+		<Gear AngVel="5.0" FuelModifier="1.4" />
+		<Gear AngVel="9.0" FuelModifier="1.2" />
+		<Gear AngVel="14.0" FuelModifier="1.0" />
+		<GameData
+			Price="10000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+			AddonUnlockByObjective="false"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="true" 
+				IsLowerMinusGearExists="true"
+				IsManualLowGear="true"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_OFFROAD_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_OFFROAD_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common_offroad"/>
+	</Gearbox>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="110"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.25"
+		Name="g_scout_800_finetune"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="35.0"
+	>
+		<ReverseGear AngVel="1.525" FuelModifier="0.9" />
+		<HighGear AngVel="11.0" FuelModifier="1.9" />
+		<Gear AngVel="2.0" FuelModifier="1.7" />
+		<Gear AngVel="4.0" FuelModifier="1.5" />
+		<Gear AngVel="7.0" FuelModifier="1.3" />
+		<Gear AngVel="10.0" FuelModifier="1.1" />
+		<Gear AngVel="14.0" FuelModifier="0.9" />
+		<GameData
+			Price="14000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+			AddonUnlockByObjective="false"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="true" 
+				IsLowerMinusGearExists="true"
+				IsManualReverseGear="true"
+				IsManualHighGear="true"
+				EngineStallAccelLimit= "0.75"
+				
+				ManualHigh1AccelLimit="0.5"
+                FuelModifierManualHigh1="1.7"
+				
+				ManualHigh2AccelLimit="0.74"
+                FuelModifierManualHigh2="1.5"
+				
+				ManualHigh3AccelLimit="0.75"
+                FuelModifierManualHigh3="1.35"
+				
+				ManualHigh4AccelLimit="0.85"
+                FuelModifierManualHigh4="1.2"
+				
+				ManualHighAccelLimit="1.0"
+                FuelModifierManualHigh="1.05"
+				
+				ManualReverse1AccelLimit="0.33"
+				FuelModifierManualReverse1="1.1"
+				
+                ManualReverse2AccelLimit="0.66"
+				FuelModifierManualReverse2="1.0"
+				
+                ManualReverseAccelLimit="1.0"
+				FuelModifierManualReverse="0.9"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_FINETUNE_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_FINETUNE_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common_finetune"/>
+	</Gearbox>
+</GearboxVariants>

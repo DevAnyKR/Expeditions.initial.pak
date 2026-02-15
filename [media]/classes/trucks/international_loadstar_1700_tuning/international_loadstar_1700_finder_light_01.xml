@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_finderlight" >
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddons_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.479; 1.693; 0.934)" />
+			<Flare _template="HeadLight" Color="g(255; 245; 235) x 1.30" Size="0.4" Pos="(1.479; 1.693; 0.934)" />
+			<Flare _template="BlueStreak" Pos="(1.479; 1.693; 0.934)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 10" Pos="(1.479; 1.693; 0.934)" />
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FINDER_LIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FINDER_LIGHT_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700FinderLight" />
+	</GameData>
+</TruckAddon>

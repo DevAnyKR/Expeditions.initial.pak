@@ -1,0 +1,29 @@
+<CombineParticles
+	AirResistance="500.0"
+	SoftDepth="6.0"
+	Wind="(0.1; 0.1; 0)"
+	Gravity="(0.0; 0.01; 0.0)"
+	WindDivergence="60.0"
+	>
+
+	
+	<Texture
+		Diffuse="sfx/particles/godray_dust__d_a.tga"
+		
+	/>
+	
+	<Size Function="(0.1; 0.2; 0.15; 0.1)" Median="0.1" />
+	<Scale Random="0.8" Value="2.3" />
+	<RotationSpeed Random="100" />
+	<Rotation Random="60" />
+	<LifeTime Random="3.0" Value="4.0" />
+	<Color>
+		<Key At="0.2" Value="g(213; 167; 112; 10)" />
+		<Key At="0.4" Value="g(211; 166; 117; 90) x 4.0" />
+		<Key At="0.6" Value="g(208; 163; 120; 60)" />
+		<Key At="0.8" Value="g(205; 160; 123; 10)" />
+	</Color>
+</CombineParticles>
+RollEnd="0.05"
+		RollStart="0.1"
+		RollingMask="sfx/particles/rolling_smoke_mask_small__s_d.tga"

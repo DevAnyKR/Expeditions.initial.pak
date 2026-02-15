@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/cotco_canyon_tuning" MeshFrame="cotco_canyon_spotlight_b">
+		<Body Mass="4" ModelFrame="BoneSpotLight02_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.649; 2.015; -0.317)" />
+			<Model _template="HeadLightRay" Org="(0.649; 2.015; 0.317)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 1.5" Size=".3" Pos="(0.649; 2.015; -0.317)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 1.5" Size=".3" Pos="(0.649; 2.015; 0.317)" />
+			<Flare _template="BlueStreak" Color="g(230; 230; 255) x 0.25" Pos="(0.649; 2.015; -0.317)" />
+			<Flare _template="BlueStreak" Color="g(230; 230; 255) x 0.25" Pos="(0.649; 2.015; 0.317)" />
+		</MainHeadLight>
+		
+	</ModelAttachments>
+	<GameData
+		CameraPreset="supplies_roof"
+		Category="top"
+		IsCustomizable="false"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsConsumable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPOTLIGHTS_DESC"
+			UiIcon30x30="toolHeadLamp30"
+			UiIcon60x60="toolHeadLamp60"
+			UiName="UI_TUNING_ROOFRACK_SPOTLIGHT_B_NAME"
+		/>
+		<RequiredAddon Types="cotco_canyon_spotlight_frame" />
+		<InstallSocket Type="CotcoCanyonSpotlightLamp" />
+	</GameData>
+</TruckAddon>

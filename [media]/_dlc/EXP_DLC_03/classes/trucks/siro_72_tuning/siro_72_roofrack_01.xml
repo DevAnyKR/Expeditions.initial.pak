@@ -1,0 +1,49 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuning/siro_72_tuning" MeshFrame="siro_72_roofrack_01">
+		<Body ImpactType="Truck" Mass="70" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.039; 1.932; 0.59)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.055; 1.932; 0.459)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.0715; 1.932; 0.328)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.039; 1.932; -0.59)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.055; 1.932; -0.459)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(0.0715; 1.932; -0.328)" />
+		</Ignition>
+		<HeadLight>
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.039; 1.932; 0.59)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.055; 1.932; 0.459)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.0715; 1.932; 0.328)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.039; 1.932; -0.59)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.055; 1.932; -0.459)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(0.0715; 1.932; -0.328)" />
+
+			<Flare _template="BlueStreak" Pos="(0.039; 1.932; 0.59)" />
+			<Flare _template="BlueStreak" Pos="(0.055; 1.932; 0.459)" />
+			<Flare _template="BlueStreak" Pos="(0.0715; 1.932; 0.328)" />
+			<Flare _template="BlueStreak" Pos="(0.039; 1.932; -0.59)" />
+			<Flare _template="BlueStreak" Pos="(0.055; 1.932; -0.459)" />
+			<Flare _template="BlueStreak" Pos="(0.0715; 1.932; -0.328)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="4500"
+		UnlockByExploration="false"
+		AddonUnlockByObjective="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_NAME"
+		/>
+		<InstallSocket Type="Siro72Roofrack" />
+	</GameData>
+</TruckAddon>

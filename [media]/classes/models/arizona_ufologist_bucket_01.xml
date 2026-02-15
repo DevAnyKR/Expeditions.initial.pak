@@ -1,0 +1,19 @@
+<_templates Include="models" />
+
+<ModelBrand Instanced="true" AcceptZoneBorderDecals="true" >
+
+	<PhysicsModel>
+			
+		<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone1" Mass="3" DamageMult="0" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="20"/>
+		</Body>
+		
+		<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="bone2" Mass="5" DamageMult="0" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="20"/>
+		</Body>
+
+	</PhysicsModel>
+
+
+		
+</ModelBrand>

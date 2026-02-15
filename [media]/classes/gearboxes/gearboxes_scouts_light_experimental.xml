@@ -1,0 +1,72 @@
+<_templates Include="trucks"/>
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="0.0"
+		CriticalDamageThreshold="1.0"
+		DamageCapacity="150"
+		DamagedConsumptionModifier="0.0"
+		FuelConsumption="1.0"
+		IdleFuelModifier="0.2"
+		Name="g_scout_light_experimental"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="25.0"
+	>
+		<ReverseGear AngVel="1.5" FuelModifier="0.5" />
+		<HighGear AngVel="12.0" FuelModifier="1.8" />
+		<Gear AngVel="2.5" FuelModifier="1.8" />
+		<Gear AngVel="4.5" FuelModifier="1.6" />
+		<Gear AngVel="6.5" FuelModifier="1.4" />
+		<Gear AngVel="9.0" FuelModifier="1.25" />
+		<Gear AngVel="12.0" FuelModifier="1.1" />
+		<Gear AngVel="15.0" FuelModifier="0.95" />
+		<Gear AngVel="18.0" FuelModifier="0.8" />
+		<GameData
+			Price="50000"
+			UnlockByExploration="false"
+			AddonUnlockByObjective="false"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="true" 
+				IsLowerMinusGearExists="true"
+				IsManualLowGear="true"
+				IsManualReverseGear="true"
+				IsManualHighGear="true"
+				EngineStallAccelLimit= "0.7"
+				
+				ManualHigh1AccelLimit="0.5"
+                FuelModifierManualHigh1="1.7"
+				
+				ManualHigh2AccelLimit="0.67"
+                FuelModifierManualHigh2="1.4"
+				
+				ManualHigh3AccelLimit="0.71"
+                FuelModifierManualHigh3="1.15"
+				
+				ManualHigh4AccelLimit="0.85"
+                FuelModifierManualHigh4="0.95"
+				
+				ManualHighAccelLimit="1.0"
+                FuelModifierManualHigh="0.75"
+				
+				ManualReverse1AccelLimit="0.33"
+				FuelModifierManualReverse1="0.65"
+				
+                ManualReverse2AccelLimit="0.66"
+				FuelModifierManualReverse2="0.55"
+				
+                ManualReverseAccelLimit="1.0"
+				FuelModifierManualReverse="0.45"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SCOUT_LIGHT_EXPERIMENTAL_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SCOUT_LIGHT_EXPERIMENTAL_NAME"
+			/>
+		</GameData>
+		<GearboxPenaltiesSettings _template="Common_finetune"/>
+	</Gearbox>
+</GearboxVariants>

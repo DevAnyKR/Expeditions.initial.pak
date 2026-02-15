@@ -1,0 +1,11 @@
+<ModelBrand
+	AcceptZoneBorderDecals="false"
+	Instanced="true"
+	PlantRejectingAnchors="true"
+	NightLightingShadowsAllowCap="true"
+	SkipAdjustHeightMap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" FrictionPreset="Stone"/>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,18 @@
+<ModelBrand
+    DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="build_stage_1">
+	</Subset>
+	
+	<Subset Name="build_stage_0">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+	</Subset>
+	
+    <PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0" />
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/portable_toilet_01_lr_lmk"/>
+</ModelBrand>

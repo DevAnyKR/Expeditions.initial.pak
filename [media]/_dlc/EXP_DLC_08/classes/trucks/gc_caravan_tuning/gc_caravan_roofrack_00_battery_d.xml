@@ -1,0 +1,35 @@
+<TruckAddon>
+	<TruckData ElectricChargeCapacity="5"/>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/gc_caravan_tuning" MeshFrame="gc_caravan_roofrack_00_battery_d">
+		<Body  Mass="20" ModelFrame="BoneInvSlot00SlotC_cdt">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1.5"
+				MaxLimit="0"
+			>
+				<Motor Damping="70" Spring="160" Type="Spring" />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_supplies"
+		Category="top"
+		IsConsumable="true"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_BATTERY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_BATTERY_NAME"
+		/>
+		<RequiredAddon Types="gc_caravan_roofrack_00" />
+		<InstallSocket Type="GCCaravanRoofrackSlotD" />
+	</GameData>
+	<BatteryHide>
+		<Mesh Frame="gc_caravan_roofrack_00_battery_d" HideThreshold="0.0" />
+	</BatteryHide>
+</TruckAddon>

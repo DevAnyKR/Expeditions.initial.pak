@@ -1,0 +1,42 @@
+<TruckAddon>
+	<PhysicsModel AcceptVisualDamage="false" Mesh="trucks/tuning/international_loadstar_1700_tuning" MeshFrame="international_loadstar_1700_front_bumper_slot_fuel">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneAddons_cdt">
+			<Constraint Type="Rigid"/>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneRoofrackFrontBumperSlotFuel_cdt">
+			<Constraint
+				Type="Fixed"
+				LinearLimitsX="(-0.01;0.005)"
+				LinearLimitsY="(-0.003;0.007)"
+				LinearLimitsZ="(-0.003;0.0065)"
+			>
+				<Motor Type="Spring" Damping="300" Spring="300" />
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+
+	<TruckData FuelCapacity="15" />
+	<FuelHide>
+		<Mesh Frame="international_loadstar_1700_front_bumper_slot_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsCustomizable="false"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1" IsConsumable="true"  
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		<RequiredAddon Types="international_loadstar_1700_front_bumper_01, international_loadstar_1700_front_bumper_02" />
+		<InstallSocket Type="InternationalLoadstar1700FrontBumpersSlot" />
+	</GameData>
+</TruckAddon>

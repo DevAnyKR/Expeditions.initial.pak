@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="0.95"
+		/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/arizona_desert_watchtower_lmk" />
+	
+	
+</ModelBrand>

@@ -1,0 +1,19 @@
+<_templates Include="models" />
+<ModelBrand
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	NightLightingShadowsAllowCap="false"
+	Instanced="true"
+
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body Mass="20" Collisions="Dynamic" NoSoftContacts="true" ModelFrame="BonePart1">
+				<Constraint BreakOffThreshold="2" Type="Fixed" />
+				<Body Mass="20" Collisions="Dynamic" NoSoftContacts="true" ModelFrame="BonePart2">
+					<Constraint BreakOffThreshold="2" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

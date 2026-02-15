@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.95" Type="Suspension" />
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuning/tatra_force_t815_7_tuning" MeshFrame="tatra_force_t815_7_wings_01">
+		<Body Collisions="None" Mass="75" ModelFrame="BoneWingsRear_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="75" ModelFrame="BoneWingsFront_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; 1)" DirAngle="90" Size="0.15" Pos="(3.191; 1.417; 1.32)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; -1)" DirAngle="90" Size="0.15" Pos="(3.191; 1.417; -1.32)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; 1)" DirAngle="90" Size="0.15" Pos="(2.671; 1.417; 1.32)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; -1)" DirAngle="90" Size="0.15" Pos="(2.671; 1.417; -1.32)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; 1)" DirAngle="90" Size="0.15" Pos="(0.013; 1.246; 1.199)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; -1)" DirAngle="90" Size="0.15" Pos="(0.013; 1.246; -1.199)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; 1)" Dir="(0; 0; 1)" DirAngle="90" Size="0.15" Pos="(-2.197; 1.248; 1.21)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 156; 112) x 0.7" Dir="(0; 0; -1)" Dir="(0; 0; -1)" DirAngle="90" Size="0.15" Pos="(-2.14; 1.248; -1.21)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="miscellenious"
+		Price="750"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_WINGS_TATRA_FORCE_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_WINGS_TATRA_FORCE_01_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Wings" />
+	</GameData>
+</TruckAddon>
